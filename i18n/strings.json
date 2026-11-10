@@ -1040,16 +1040,16 @@
   ]
  },
  {
-  "id": "af8ad38bca",
-  "src": "Escriba su pregunta sobre ARGOS…",
+  "id": "935f72ad42",
+  "src": "Su pregunta",
   "kind": "attr",
   "pages": [
    "index.html"
   ]
  },
  {
-  "id": "935f72ad42",
-  "src": "Su pregunta",
+  "id": "af8ad38bca",
+  "src": "Escriba su pregunta sobre ARGOS…",
   "kind": "attr",
   "pages": [
    "index.html"
@@ -1144,16 +1144,16 @@
   ]
  },
  {
-  "id": "79439a2584",
-  "src": "Buscar entre los 25 diagramas…",
+  "id": "9aca4c78e1",
+  "src": "Buscar diagrama",
   "kind": "attr",
   "pages": [
    "index.html"
   ]
  },
  {
-  "id": "9aca4c78e1",
-  "src": "Buscar diagrama",
+  "id": "79439a2584",
+  "src": "Buscar entre los 25 diagramas…",
   "kind": "attr",
   "pages": [
    "index.html"
@@ -2352,206 +2352,6 @@
   ]
  },
  {
-  "id": "9e21d3e66f",
-  "src": "Declared compliance does not protect you.<br>Verified compliance does.",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "6e12b3b2cd",
-  "src": "ARGOS is the sovereign AI agent that challenges your systems against GDPR, EHDS and the AI Act — and proves it with technical evidence.",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "5107b31b7d",
-  "src": "Try the assistant",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "19cc58e8c4",
-  "src": "Sanciones UE desde 2018",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "ed1f323d46",
-  "src": "EU fines since 2018",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "978bae6dfc",
-  "src": "IA de alto riesgo exigible",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "59e4095895",
-  "src": "High-risk AI enforceable",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "d39f50d449",
-  "src": "EHDS: aplicación general",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "e0ff822d8b",
-  "src": "EHDS: general application",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "42f7fd01d5",
-  "src": "Datos que salen del perímetro",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "148f72278b",
-  "src": "Data leaving the perimeter",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "d01e266543",
-  "src": "Cero",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "afc6c45769",
-  "src": "Zero",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "70cf9ed9a0",
-  "src": "Ask ARGOS — it answers with text and diagram",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "9a5c1820bc",
-  "src": "Three principles, no fine print",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "b3c029c5c3",
-  "src": "It challenges, not observes",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "ee53020999",
-  "src": "Active probes and synthetic subjects verify what your systems actually do with data: access, transfers and deletions end to end.",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "00314963f9",
-  "src": "AI proposes, the engine disposes",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "f6b3063ddc",
-  "src": "The local model interprets and plans, but every verdict is issued by a deterministic rules engine evaluating evidence. A hallucination cannot become a verdict.",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "2de527b51e",
-  "src": "Nothing leaves the perimeter",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "609e7d3190",
-  "src": "On-premise appliance with no outbound connection: no cloud, no telemetry. The only exportable item, if you decide so, is the signed verifiable credential.",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "60a7db47fb",
-  "src": "Shall we discuss your case?",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "d81de31775",
-  "src": "Health, banking, public sector, industry… Ten documented sectors and a regulatory window that will not wait.",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "e26e79ffc0",
-  "src": "Un producto de Software in a Box · Madrid",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "1523dcec1c",
-  "src": "A product by Software in a Box · Madrid",
-  "kind": "js",
-  "pages": [
-   "index.html"
-  ]
- },
- {
   "id": "3506fcf7a5",
   "src": "Esa pregunta necesita el asistente avanzado de ARGOS, que activamos en las demostraciones personalizadas. Déjenos su correo con el botón «Solicitar demo» o escriba a emilio.mulet@softwareinabox.eu y le responderemos con detalle.",
   "kind": "js",
@@ -2624,8 +2424,24 @@
   ]
  },
  {
+  "id": "19cc58e8c4",
+  "src": "Sanciones UE desde 2018",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
   "id": "c58f50fc9a",
   "src": "26 mar 2027",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "d39f50d449",
+  "src": "EHDS: aplicación general",
   "kind": "js",
   "pages": [
    "index.html"
@@ -2648,6 +2464,22 @@
   ]
  },
  {
+  "id": "d01e266543",
+  "src": "Cero",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "42f7fd01d5",
+  "src": "Datos que salen del perímetro",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
   "id": "832291e8ff",
   "src": "View diagram →",
   "kind": "js",
@@ -2664,8 +2496,24 @@
   ]
  },
  {
+  "id": "ed1f323d46",
+  "src": "EU fines since 2018",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
   "id": "cc4ea1aecd",
   "src": "26 Mar 2027",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "e0ff822d8b",
+  "src": "EHDS: general application",
   "kind": "js",
   "pages": [
    "index.html"
@@ -2682,6 +2530,22 @@
  {
   "id": "a72258be1d",
   "src": "High-risk AI (Annex III)",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "afc6c45769",
+  "src": "Zero",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "148f72278b",
+  "src": "Data leaving the perimeter",
   "kind": "js",
   "pages": [
    "index.html"
