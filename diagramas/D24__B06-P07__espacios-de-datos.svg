@@ -1,0 +1,86 @@
+<svg viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg" font-family="Calibri, Arial, sans-serif">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1F3864"/><stop offset="1" stop-color="#2A4E8A"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D9B33C"/><stop offset="1" stop-color="#C9A227"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#1F3864" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#C9A227"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect width="1600" height="118" fill="url(#hdr)"/>
+  <rect y="118" width="1600" height="6" fill="#C9A227"/>
+  <rect x="40" y="34" rx="14" width="230" height="50" fill="#C9A227"/>
+  <text x="155" y="67" text-anchor="middle" font-size="26" font-weight="bold" fill="#1F3864">D24 · B06-P07</text>
+  <text x="300" y="56" font-size="34" font-weight="bold" fill="#FFFFFF">ARGOS y los espacios de datos federados</text>
+  <text x="300" y="94" font-size="24" fill="#CFE0F5">La credencial verificable como pasaporte de confianza Gaia-X / IDSA</text>
+
+  <!-- Organización -->
+  <g filter="url(#sh)"><rect x="90" y="230" rx="18" width="430" height="330" fill="#F1F8F8" stroke="#1F7A7A" stroke-width="2.5"/></g>
+  <rect x="90" y="230" rx="18" width="430" height="66" fill="#1F7A7A"/>
+  <text x="305" y="274" text-anchor="middle" font-size="25" font-weight="bold" fill="#FFFFFF">SU ORGANIZACIÓN</text>
+  <circle cx="185" cy="380" r="46" fill="#1F3864"/>
+  <text x="185" y="394" text-anchor="middle" font-size="32" font-weight="bold" fill="#C9A227">A</text>
+  <text x="255" y="360" font-size="22" fill="#1E3A3A">ARGOS verifica sus</text>
+  <text x="255" y="390" font-size="22" fill="#1E3A3A">sistemas dentro del</text>
+  <text x="255" y="420" font-size="22" fill="#1E3A3A">perímetro</text>
+  <text x="120" y="480" font-size="20" fill="#41556F">▪  Las evidencias no salen nunca</text>
+  <text x="120" y="515" font-size="20" fill="#41556F">▪  Solo viaja la credencial firmada</text>
+
+  <!-- Pasaporte -->
+  <g filter="url(#sh)"><rect x="590" y="330" rx="16" width="300" height="180" fill="url(#gold)"/></g>
+  <rect x="590" y="330" rx="16" width="300" height="180" fill="none" stroke="#1F3864" stroke-width="3"/>
+  <circle cx="660" cy="395" r="30" fill="#1F3864"/>
+  <path d="M646 395 l10 10 l20 -22" fill="none" stroke="#C9A227" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="740" y="385" font-size="22" font-weight="bold" fill="#1F3864">CREDENCIAL</text>
+  <text x="740" y="415" font-size="22" font-weight="bold" fill="#1F3864">VERIFICABLE</text>
+  <text x="620" y="470" font-size="19" fill="#3A3113">el «pasaporte»: conformidad</text>
+  <text x="620" y="496" font-size="19" fill="#3A3113">demostrable sin exponer nada</text>
+  <line x1="520" y1="420" x2="582" y2="420" stroke="#C9A227" stroke-width="7" marker-end="url(#arw)"/>
+  <line x1="890" y1="420" x2="952" y2="420" stroke="#C9A227" stroke-width="7" marker-end="url(#arw)"/>
+
+  <!-- Espacio de datos -->
+  <g filter="url(#sh)"><rect x="965" y="180" rx="20" width="555" height="530" fill="#F4F6FA" stroke="#1F3864" stroke-width="2.5" stroke-dasharray="16 9"/></g>
+  <rect x="1000" y="152" rx="12" width="480" height="54" fill="#1F3864"/>
+  <text x="1240" y="188" text-anchor="middle" font-size="24" font-weight="bold" fill="#FFFFFF">ESPACIO DE DATOS GAIA-X / IDSA</text>
+
+  <g filter="url(#sh)"><rect x="1010" y="240" rx="12" width="470" height="100" fill="#FFFFFF" stroke="#1F3864" stroke-width="2"/></g>
+  <text x="1245" y="282" text-anchor="middle" font-size="22" font-weight="bold" fill="#1F3864">Orquestador del espacio</text>
+  <text x="1245" y="315" text-anchor="middle" font-size="19" fill="#41556F">exige la credencial como condición de admisión</text>
+
+  <g filter="url(#sh)">
+    <rect x="1010" y="370" rx="12" width="220" height="90" fill="#FFFFFF" stroke="#1F7A7A" stroke-width="2"/>
+    <rect x="1260" y="370" rx="12" width="220" height="90" fill="#FFFFFF" stroke="#1F7A7A" stroke-width="2"/>
+    <rect x="1010" y="480" rx="12" width="220" height="90" fill="#FFFFFF" stroke="#1F7A7A" stroke-width="2"/>
+    <rect x="1260" y="480" rx="12" width="220" height="90" fill="#FFFFFF" stroke="#1F7A7A" stroke-width="2"/>
+  </g>
+  <g text-anchor="middle" font-size="20" fill="#1E3A3A">
+    <text x="1120" y="408">Participante B</text><text x="1120" y="436" font-size="17" fill="#41556F">verifica su credencial</text>
+    <text x="1370" y="408">Participante C</text><text x="1370" y="436" font-size="17" fill="#41556F">comparte con confianza</text>
+    <text x="1120" y="518">Participante D</text><text x="1120" y="546" font-size="17" fill="#41556F">políticas ODRL</text>
+    <text x="1370" y="518">Participante E</text><text x="1370" y="546" font-size="17" fill="#41556F">acceso condicionado</text>
+  </g>
+  <text x="1245" y="640" text-anchor="middle" font-size="20" font-style="italic" fill="#41556F">ARGOS también verifica el otro lado: que los datos recibidos</text>
+  <text x="1245" y="668" text-anchor="middle" font-size="20" font-style="italic" fill="#41556F">se usan y retienen según las políticas ODRL aceptadas</text>
+
+  <!-- Experiencia -->
+  <g filter="url(#sh)"><rect x="90" y="620" rx="16" width="800" height="150" fill="#FBF6E2" stroke="#C9A227" stroke-width="3"/></g>
+  <text x="490" y="668" text-anchor="middle" font-size="23" font-weight="bold" fill="#8A6D12">El mismo marco de confianza de los demostradores SEDIA</text>
+  <text x="490" y="706" text-anchor="middle" font-size="21" fill="#3A3113">Global Data Care (salud) · PROCUREDATA (compras) · EcoDataNet (economía circular)</text>
+  <text x="490" y="740" text-anchor="middle" font-size="20" fill="#3A3113">construidos por Software in a Box sobre Gaia-X/IDSA con credenciales verificables</text>
+
+  <!-- Banda inferior -->
+  <g filter="url(#sh)"><rect x="80" y="820" rx="14" width="1440" height="100" fill="#1F3864"/></g>
+  <rect x="80" y="820" rx="14" width="14" height="100" fill="#C9A227"/>
+  <text x="800" y="862" text-anchor="middle" font-size="25" font-weight="bold" fill="#FFFFFF">En un espacio de datos, la confianza es la condición de acceso</text>
+  <text x="800" y="898" text-anchor="middle" font-size="21" fill="#CFE0F5">La credencial de ARGOS sustituye la autodeclaración de los cuestionarios por evidencia verificable por cualquier participante.</text>
+
+  <text x="1560" y="975" text-anchor="end" font-size="16" fill="#9AA7BB">ARGOS · Software in a Box</text>
+</svg>

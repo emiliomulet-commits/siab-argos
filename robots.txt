@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /kb/
+Sitemap: https://argos.softwareinabox.eu/sitemap.xml

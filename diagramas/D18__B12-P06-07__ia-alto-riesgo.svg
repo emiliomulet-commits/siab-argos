@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg" font-family="Calibri, Arial, sans-serif">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1F3864"/><stop offset="1" stop-color="#2A4E8A"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#1F3864" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1F7A7A"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect width="1600" height="118" fill="url(#hdr)"/>
+  <rect y="118" width="1600" height="6" fill="#C9A227"/>
+  <rect x="40" y="34" rx="14" width="270" height="50" fill="#C9A227"/>
+  <text x="175" y="67" text-anchor="middle" font-size="25" font-weight="bold" fill="#1F3864">D18 · B12-P06/07</text>
+  <text x="340" y="56" font-size="34" font-weight="bold" fill="#FFFFFF">Sistemas de IA de alto riesgo: del censo a la evidencia</text>
+  <text x="340" y="94" font-size="24" fill="#CFE0F5">Reglamento (UE) 2024/1689 · obligaciones exigibles desde el 2 de agosto de 2026</text>
+
+  <!-- Paso 1: censo -->
+  <g filter="url(#sh)"><rect x="80" y="180" rx="18" width="660" height="560" fill="#F1F8F8" stroke="#1F7A7A" stroke-width="2.5"/></g>
+  <rect x="80" y="180" rx="18" width="660" height="72" fill="#1F7A7A"/>
+  <text x="410" y="227" text-anchor="middle" font-size="27" font-weight="bold" fill="#FFFFFF">PASO 1 · Censo completo de sistemas de IA</text>
+  <text x="410" y="295" text-anchor="middle" font-size="21" font-style="italic" fill="#4E7676">El paso más difícil: no se puede clasificar lo que no está inventariado</text>
+  <g font-size="21" fill="#1E3A3A">
+    <text x="120" y="345">▪  ARGOS aflora los sistemas de IA reales, incluida la «IA en la sombra»</text>
+    <text x="120" y="383">▪  Detecta flujos de datos hacia servicios de IA externos sin contrato</text>
+    <text x="120" y="421">▪  Clasifica el censo frente a los ámbitos del anexo III</text>
+  </g>
+  <text x="120" y="475" font-size="22" font-weight="bold" fill="#1F3864">Ámbitos de alto riesgo (anexo III), entre otros:</text>
+  <g font-size="19" text-anchor="middle">
+    <rect x="115" y="495" rx="10" width="190" height="46" fill="#FFFFFF" stroke="#1F7A7A"/><text x="210" y="524" fill="#1E3A3A">biometría</text>
+    <rect x="320" y="495" rx="10" width="220" height="46" fill="#FFFFFF" stroke="#1F7A7A"/><text x="430" y="524" fill="#1E3A3A">infraestructuras críticas</text>
+    <rect x="555" y="495" rx="10" width="160" height="46" fill="#FFFFFF" stroke="#1F7A7A"/><text x="635" y="524" fill="#1E3A3A">educación</text>
+    <rect x="115" y="555" rx="10" width="190" height="46" fill="#FFFFFF" stroke="#1F7A7A"/><text x="210" y="584" fill="#1E3A3A">empleo y RR. HH.</text>
+    <rect x="320" y="555" rx="10" width="220" height="46" fill="#FFFFFF" stroke="#1F7A7A"/><text x="430" y="584" fill="#1E3A3A">servicios esenciales</text>
+    <rect x="555" y="555" rx="10" width="160" height="46" fill="#FFFFFF" stroke="#1F7A7A"/><text x="635" y="584" fill="#1E3A3A">crédito y scoring</text>
+  </g>
+  <text x="120" y="660" font-size="20" font-style="italic" fill="#41556F">La calificación jurídica la hace el equipo de cumplimiento,</text>
+  <text x="120" y="688" font-size="20" font-style="italic" fill="#41556F">pero sobre un censo completo — no sobre suposiciones.</text>
+
+  <line x1="740" y1="460" x2="812" y2="460" stroke="#1F7A7A" stroke-width="7" marker-end="url(#arw)"/>
+
+  <!-- Paso 2: verificación -->
+  <g filter="url(#sh)"><rect x="825" y="180" rx="18" width="695" height="560" fill="#F4F6FA" stroke="#1F3864" stroke-width="2.5"/></g>
+  <rect x="825" y="180" rx="18" width="695" height="72" fill="#1F3864"/>
+  <text x="1172" y="227" text-anchor="middle" font-size="27" font-weight="bold" fill="#FFFFFF">PASO 2 · Verificación de obligaciones técnicas</text>
+  <g font-size="22" fill="#26324A">
+    <rect x="865" y="285" rx="10" width="615" height="58" fill="#FFFFFF" stroke="#B8C4D8"/><text x="895" y="322"><tspan font-weight="bold" fill="#1F3864">Art. 12</tspan> · registro de eventos: existe y funciona</text>
+    <rect x="865" y="357" rx="10" width="615" height="58" fill="#FFFFFF" stroke="#B8C4D8"/><text x="895" y="394"><tspan font-weight="bold" fill="#1F3864">Art. 13</tspan> · transparencia y documentación disponible</text>
+    <rect x="865" y="429" rx="10" width="615" height="58" fill="#FFFFFF" stroke="#B8C4D8"/><text x="895" y="466"><tspan font-weight="bold" fill="#1F3864">Art. 14</tspan> · mecanismos de supervisión humana</text>
+    <rect x="865" y="501" rx="10" width="615" height="58" fill="#FFFFFF" stroke="#B8C4D8"/><text x="895" y="538"><tspan font-weight="bold" fill="#1F3864">Arts. 9-10</tspan> · gestión de riesgos y gobernanza de datos</text>
+    <rect x="865" y="573" rx="10" width="615" height="58" fill="#FFFFFF" stroke="#B8C4D8"/><text x="895" y="610"><tspan font-weight="bold" fill="#1F3864">Art. 15</tspan> · precisión, robustez y ciberseguridad</text>
+  </g>
+  <text x="865" y="680" font-size="20" font-style="italic" fill="#41556F">ARGOS produce la evidencia; la evaluación de conformidad</text>
+  <text x="865" y="708" font-size="20" font-style="italic" fill="#41556F">formal sigue los cauces que el Reglamento establece.</text>
+
+  <!-- Banda inferior -->
+  <g filter="url(#sh)"><rect x="80" y="790" rx="16" width="1440" height="130" fill="#1F3864"/></g>
+  <rect x="80" y="790" rx="16" width="14" height="130" fill="#C9A227"/>
+  <circle cx="200" cy="855" r="40" fill="#C0392B"/>
+  <text x="200" y="847" text-anchor="middle" font-size="18" font-weight="bold" fill="#FFFFFF">2 AGO</text>
+  <text x="200" y="871" text-anchor="middle" font-size="18" font-weight="bold" fill="#FFFFFF">2026</text>
+  <text x="270" y="843" font-size="26" font-weight="bold" fill="#FFFFFF">Las obligaciones de alto riesgo ya son exigibles</text>
+  <text x="270" y="883" font-size="22" fill="#CFE0F5">Un sistema de IA fuera del censo no puede estar en el análisis de riesgo: ARGOS convierte esa ausencia en hallazgo.</text>
+
+  <text x="1560" y="975" text-anchor="end" font-size="16" fill="#9AA7BB">ARGOS · Software in a Box</text>
+</svg>

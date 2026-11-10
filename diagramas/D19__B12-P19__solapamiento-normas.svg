@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg" font-family="Calibri, Arial, sans-serif">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1F3864"/><stop offset="1" stop-color="#2A4E8A"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#1F3864" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1F7A7A"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect width="1600" height="118" fill="url(#hdr)"/>
+  <rect y="118" width="1600" height="6" fill="#C9A227"/>
+  <rect x="40" y="34" rx="14" width="230" height="50" fill="#C9A227"/>
+  <text x="155" y="67" text-anchor="middle" font-size="26" font-weight="bold" fill="#1F3864">D19 · B12-P19</text>
+  <text x="300" y="56" font-size="34" font-weight="bold" fill="#FFFFFF">El solapamiento entre normas, convertido en ventaja</text>
+  <text x="300" y="94" font-size="24" fill="#CFE0F5">Una única evidencia produce veredictos simultáneos en todas las normas del perfil</text>
+
+  <!-- Evidencia -->
+  <g filter="url(#sh)"><rect x="100" y="360" rx="18" width="420" height="240" fill="#1F7A7A"/></g>
+  <rect x="100" y="360" rx="18" width="420" height="14" fill="#C9A227"/>
+  <text x="310" y="425" text-anchor="middle" font-size="27" font-weight="bold" fill="#FFFFFF">UNA EVIDENCIA</text>
+  <text x="310" y="470" text-anchor="middle" font-size="22" fill="#DFF0F0">registro de accesos a la</text>
+  <text x="310" y="500" text-anchor="middle" font-size="22" fill="#DFF0F0">historia clínica electrónica</text>
+  <text x="310" y="550" text-anchor="middle" font-size="19" font-style="italic" fill="#BFE3E3">capturada una sola vez, con sello temporal</text>
+
+  <!-- Flechas -->
+  <g fill="none" stroke="#1F7A7A" stroke-width="6">
+    <path d="M520 420 Q 700 300 858 250" marker-end="url(#arw)"/>
+    <path d="M520 460 Q 700 420 858 420" marker-end="url(#arw)"/>
+    <path d="M520 500 Q 700 540 858 590" marker-end="url(#arw)"/>
+    <path d="M520 540 Q 700 660 858 760" marker-end="url(#arw)"/>
+  </g>
+
+  <!-- Cuatro veredictos -->
+  <g filter="url(#sh)">
+    <rect x="870" y="190" rx="14" width="630" height="120" fill="#F4F6FA" stroke="#1F3864" stroke-width="2"/>
+    <rect x="870" y="360" rx="14" width="630" height="120" fill="#F4F6FA" stroke="#1F3864" stroke-width="2"/>
+    <rect x="870" y="530" rx="14" width="630" height="120" fill="#F4F6FA" stroke="#1F3864" stroke-width="2"/>
+    <rect x="870" y="700" rx="14" width="630" height="120" fill="#F4F6FA" stroke="#1F3864" stroke-width="2"/>
+  </g>
+  <g>
+    <rect x="895" y="215" rx="9" width="130" height="42" fill="#1F3864"/><text x="960" y="243" text-anchor="middle" font-size="21" font-weight="bold" fill="#FFFFFF">RGPD</text>
+    <text x="1050" y="238" font-size="21" fill="#26324A">art. 5.1.f y 32 · integridad y</text>
+    <text x="1050" y="268" font-size="21" fill="#26324A">confidencialidad del tratamiento</text>
+    <text x="1465" y="285" text-anchor="end" font-size="18" font-weight="bold" fill="#2E8B57">→ veredicto propio</text>
+
+    <rect x="895" y="385" rx="9" width="130" height="42" fill="#1F7A7A"/><text x="960" y="413" text-anchor="middle" font-size="21" font-weight="bold" fill="#FFFFFF">EHDS</text>
+    <text x="1050" y="408" font-size="21" fill="#26324A">trazabilidad del acceso a los datos</text>
+    <text x="1050" y="438" font-size="21" fill="#26324A">de salud, consultable por el paciente</text>
+    <text x="1465" y="455" text-anchor="end" font-size="18" font-weight="bold" fill="#2E8B57">→ veredicto propio</text>
+
+    <rect x="895" y="555" rx="9" width="130" height="42" fill="#26437A"/><text x="960" y="583" text-anchor="middle" font-size="21" font-weight="bold" fill="#FFFFFF">ENS</text>
+    <text x="1050" y="578" font-size="21" fill="#26324A">control y registro de accesos</text>
+    <text x="1050" y="608" font-size="21" fill="#26324A">en categoría alta</text>
+    <text x="1465" y="625" text-anchor="end" font-size="18" font-weight="bold" fill="#2E8B57">→ veredicto propio</text>
+
+    <rect x="895" y="725" rx="9" width="130" height="42" fill="#2E8F8F"/><text x="960" y="753" text-anchor="middle" font-size="21" font-weight="bold" fill="#FFFFFF">NIS2</text>
+    <text x="1050" y="748" font-size="21" fill="#26324A">art. 21 · políticas de control de</text>
+    <text x="1050" y="778" font-size="21" fill="#26324A">acceso y gestión de riesgos</text>
+    <text x="1465" y="795" text-anchor="end" font-size="18" font-weight="bold" fill="#2E8B57">→ veredicto propio</text>
+  </g>
+
+  <!-- Nota catálogo -->
+  <g filter="url(#sh)"><rect x="100" y="660" rx="14" width="420" height="160" fill="#FBF6E2" stroke="#C9A227" stroke-width="2.5"/></g>
+  <text x="310" y="705" text-anchor="middle" font-size="22" font-weight="bold" fill="#8A6D12">Cómo lo consigue el catálogo</text>
+  <text x="310" y="742" text-anchor="middle" font-size="19" fill="#3A3113">cada control está relacionado con</text>
+  <text x="310" y="770" text-anchor="middle" font-size="19" fill="#3A3113">todas las obligaciones que lo exigen,</text>
+  <text x="310" y="798" text-anchor="middle" font-size="19" fill="#3A3113">en todas las normas del perfil</text>
+
+  <!-- Banda inferior -->
+  <g filter="url(#sh)"><rect x="80" y="870" rx="14" width="1440" height="64" fill="#1F3864"/></g>
+  <rect x="80" y="870" rx="14" width="14" height="64" fill="#C9A227"/>
+  <text x="800" y="912" text-anchor="middle" font-size="24" font-weight="bold" fill="#FFFFFF">Una campaña, lecturas para todas las normas: sin duplicar verificaciones ni molestar dos veces a los sistemas</text>
+
+  <text x="1560" y="975" text-anchor="end" font-size="16" fill="#9AA7BB">ARGOS · Software in a Box</text>
+</svg>
