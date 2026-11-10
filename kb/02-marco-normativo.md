@@ -16,7 +16,7 @@ El Espacio Europeo de Datos de Salud (Reglamento (UE) 2025/327) está en vigor d
 
 ## ¿Qué verifica ARGOS del Reglamento de IA?
 
-Verifica las obligaciones aplicables a los sistemas de IA que la organización utiliza: registro de eventos, transparencia, supervisión humana, gestión de riesgos y documentación técnica, con especial atención a los sistemas de alto riesgo del anexo III, cuyas obligaciones son exigibles desde el 2 de agosto de 2026. Además, ARGOS aplica sobre sí mismo esas mismas obligaciones de forma voluntaria.
+Verifica las obligaciones aplicables a los sistemas de IA que la organización utiliza: registro de eventos, transparencia, supervisión humana, gestión de riesgos y documentación técnica, con especial atención a los sistemas de alto riesgo del anexo III, cuyas obligaciones serán exigibles desde el 2 de diciembre de 2027 (Reglamento (UE) 2026/1744). Además, ARGOS aplica sobre sí mismo esas mismas obligaciones de forma voluntaria.
 
 ## ¿Cubre ARGOS la normativa española?
 

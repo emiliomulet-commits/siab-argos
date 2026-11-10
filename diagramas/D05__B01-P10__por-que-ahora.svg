@@ -68,10 +68,10 @@
 
     <circle cx="820" cy="730" r="17" fill="#C0392B"/>
     <text x="820" y="660" text-anchor="middle" font-size="24" font-weight="bold" fill="#C0392B">2 ago 2026</text>
-    <text x="820" y="690" text-anchor="middle" font-size="20" font-weight="bold" fill="#C0392B">YA EXIGIBLE</text>
-    <text x="820" y="775" text-anchor="middle" font-size="20" fill="#41556F">IA de alto riesgo</text>
-    <text x="820" y="800" text-anchor="middle" font-size="20" fill="#41556F">(Regl. 2024/1689,</text>
-    <text x="820" y="825" text-anchor="middle" font-size="20" fill="#41556F">anexo III)</text>
+    <text x="820" y="690" text-anchor="middle" font-size="20" font-weight="bold" fill="#C0392B">YA APLICABLE</text>
+    <text x="820" y="775" text-anchor="middle" font-size="20" fill="#41556F">Reglamento de IA:</text>
+    <text x="820" y="800" text-anchor="middle" font-size="20" fill="#41556F">aplicación general;</text>
+    <text x="820" y="825" text-anchor="middle" font-size="20" fill="#41556F">alto riesgo: 2 dic 2027</text>
 
     <circle cx="1130" cy="730" r="17" fill="#C9A227"/>
     <text x="1130" y="690" text-anchor="middle" font-size="24" font-weight="bold" fill="#1F3864">26 mar 2027</text>

@@ -24,7 +24,7 @@ ARGOS cuenta con el diseño completo documentado: el informe de diseño en cinco
 
 ## ¿Cuál es la hoja de ruta de ARGOS?
 
-El calendario del producto está alineado con el regulatorio: las obligaciones de alto riesgo del Reglamento de IA son exigibles desde agosto de 2026 y la aplicación general del EHDS llega en marzo de 2027, con obligaciones escalonadas hasta 2035. El piloto sanitario, las certificaciones (ENS, ISO 27001/27701, ISO 42001, Gaia-X, AEPD) y la extensión sectorial siguen esa secuencia.
+El calendario del producto está alineado con el regulatorio: las obligaciones de alto riesgo del Reglamento de IA serán exigibles desde diciembre de 2027 y la aplicación general del EHDS llega en marzo de 2027, con obligaciones escalonadas hasta 2035. El piloto sanitario, las certificaciones (ENS, ISO 27001/27701, ISO 42001, Gaia-X, AEPD) y la extensión sectorial siguen esa secuencia.
 
 ## ¿Dónde puedo obtener más información o contactar?
 

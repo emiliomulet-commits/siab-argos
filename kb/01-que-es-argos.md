@@ -40,7 +40,7 @@ No. ARGOS es una herramienta de apoyo que les da lo que hoy no tienen: visibilid
 
 ## ¿Por qué es urgente una herramienta así ahora?
 
-Tres cifras y dos fechas. Las autoridades europeas de protección de datos han impuesto más de 5.880 millones de euros en sanciones desde 2018, con 1.200 millones solo en 2024, y la tendencia es creciente. Las obligaciones para sistemas de IA de alto riesgo del Reglamento (UE) 2024/1689 son exigibles desde el 2 de agosto de 2026, y el Espacio Europeo de Datos de Salud (Reglamento 2025/327) alcanza su aplicación general el 26 de marzo de 2027. Ninguna organización dispone hoy de una herramienta que verifique de forma integrada ese conjunto normativo sobre sus sistemas reales.
+Tres cifras y dos fechas. Las autoridades europeas de protección de datos han impuesto más de 5.880 millones de euros en sanciones desde 2018, con 1.200 millones solo en 2024, y la tendencia es creciente. Las obligaciones para sistemas de IA de alto riesgo del Reglamento (UE) 2024/1689 serán exigibles desde el 2 de diciembre de 2027, tras el aplazamiento aprobado en 2026 (Reglamento (UE) 2026/1744), y el Espacio Europeo de Datos de Salud (Reglamento 2025/327) alcanza su aplicación general el 26 de marzo de 2027. Ninguna organización dispone hoy de una herramienta que verifique de forma integrada ese conjunto normativo sobre sus sistemas reales.
 
 ## ¿Para quién está pensado ARGOS?
 

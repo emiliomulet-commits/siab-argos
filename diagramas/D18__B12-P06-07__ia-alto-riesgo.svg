@@ -17,7 +17,7 @@
   <rect x="40" y="34" rx="14" width="270" height="50" fill="#C9A227"/>
   <text x="175" y="67" text-anchor="middle" font-size="25" font-weight="bold" fill="#1F3864">D18 · B12-P06/07</text>
   <text x="340" y="56" font-size="34" font-weight="bold" fill="#FFFFFF">Sistemas de IA de alto riesgo: del censo a la evidencia</text>
-  <text x="340" y="94" font-size="24" fill="#CFE0F5">Reglamento (UE) 2024/1689 · obligaciones exigibles desde el 2 de agosto de 2026</text>
+  <text x="340" y="94" font-size="24" fill="#CFE0F5">Reglamento (UE) 2024/1689 · alto riesgo exigible desde el 2 de diciembre de 2027 (Regl. 2026/1744)</text>
 
   <!-- Paso 1: censo -->
   <g filter="url(#sh)"><rect x="80" y="180" rx="18" width="660" height="560" fill="#F1F8F8" stroke="#1F7A7A" stroke-width="2.5"/></g>
