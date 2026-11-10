@@ -12,3 +12,7 @@
 
 ## Contacto
 - emilio.mulet@softwareinabox.eu · +34 601 398 868 · Madrid
+
+## Idiomas / Languages
+- [Español](https://argos.softwareinabox.eu/)
+- [English](https://argos.softwareinabox.eu/en/)
