@@ -4,10 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ARGOS — Cumplimiento verificado, no declarado · RGPD, EHDS y Reglamento de IA</title>
+<meta property="og:image" content="https://argos.softwareinabox.eu/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://argos.softwareinabox.eu/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
 <meta name="description" content="ARGOS es el agente de IA soberano que reta a sus sistemas frente al RGPD, el EHDS y el Reglamento de IA y lo demuestra con evidencia técnica. Pregunte al asistente.">
 <meta property="og:title" content="ARGOS — Cumplimiento verificado, no declarado">
 <meta property="og:description" content="El agente de IA soberano que reta a sus sistemas frente al RGPD, el EHDS y el Reglamento de IA. Con asistente y 25 diagramas.">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://argos.softwareinabox.eu/">
 <meta property="og:url" content="https://argos.softwareinabox.eu/">
 <meta property="og:locale" content="es_ES">
 <link rel="stylesheet" href="https://www.softwareinabox.eu/assets/fonts.css">
@@ -406,6 +413,84 @@ window.ARGOS_API = false; /* poner true cuando exista el proxy de IA (p. ej. un 
     return Promise.resolve(new Response("{}", {status:200, headers:{"Content-Type":"application/json"}})); return f(u, o); }; })();
 </script>
 <link rel="alternate" type="text/plain" title="llms.txt" href="https://argos.softwareinabox.eu/llms.txt">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://argos.softwareinabox.eu/#app",
+   "name": "ARGOS",
+   "url": "https://argos.softwareinabox.eu/",
+   "applicationCategory": "BusinessApplication",
+   "operatingSystem": "Appliance on-premise",
+   "description": "Agente de IA soberano que verifica de forma activa el cumplimiento del RGPD, el EHDS, el Reglamento de IA, NIS2 y el Data Act sobre los sistemas reales de una organización, y emite la evidencia como credencial verificable.",
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.softwareinabox.eu/#organization",
+    "name": "Software in a Box",
+    "url": "https://www.softwareinabox.eu/"
+   },
+   "inLanguage": "es",
+   "image": "https://argos.softwareinabox.eu/assets/og.jpg"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://argos.softwareinabox.eu/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿ARGOS accede a datos personales reales?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí, en la fase de descubrimiento y clasificación, con conectores de solo lectura. Todo ocurre dentro de su perímetro, con el modelo ejecutándose en local y aplicando minimización: se conservan clasificaciones y huellas, no copias masivas de contenido. El propio acceso de ARGOS queda registrado y auditado."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Los sujetos sintéticos plantean algún problema de protección de datos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Son identidades ficticias con datos verosímiles que no pertenecen a ninguna persona real, por lo que las pruebas no generan riesgo para ningún interesado. Al terminar la campaña, ARGOS los elimina y verifica su propio borrado."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué ocurre cuando ARGOS detecta un incumplimiento?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "El hallazgo se registra con su evidencia y su veredicto, entra en el plan de remediación y se notifica a los perfiles internos que usted configure. ARGOS no comunica nada a ninguna autoridad ni a terceros: esa decisión es siempre del responsable del tratamiento."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Las evidencias tienen valor ante la AEPD o un auditor?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Se generan con sello temporal, cadena de custodia criptográfica y la regla de evaluación explícita, y el informe se firma como credencial verificable. Son íntegras y trazables; su valoración corresponde a la autoridad o al auditor, que puede comprobar por sí mismo que no se han alterado."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Si un veredicto es erróneo, ¿quién responde?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ARGOS es una herramienta de apoyo bajo supervisión humana. Cada veredicto referencia la regla y la evidencia exactas, y las decisiones con efectos jurídicos las toma siempre el equipo de cumplimiento: la IA propone, el motor dispone y la persona decide."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Puede ARGOS convertirse en una puerta de entrada de riesgo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Usa conectores de solo lectura, no tiene conexión saliente, recibe actualizaciones firmadas en un solo sentido, se endurece conforme al ENS categoría alta e ISO 27001 y ejecuta sus propias sondas sobre sí mismo."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
