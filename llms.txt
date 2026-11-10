@@ -17,3 +17,4 @@
 - [Español](https://argos.softwareinabox.eu/)
 - [English](https://argos.softwareinabox.eu/en/)
 - [Français](https://argos.softwareinabox.eu/fr/)
+- [Deutsch](https://argos.softwareinabox.eu/de/)
