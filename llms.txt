@@ -1,0 +1,14 @@
+# ARGOS · Software in a Box
+
+> ARGOS es un agente de IA soberano de cumplimiento normativo de datos. Reta de forma activa a los sistemas de información frente al RGPD, el Espacio Europeo de Datos Sanitarios (EHDS) y el Reglamento de IA, y emite veredictos con evidencia técnica verificable. Funciona on-premise, sin conexión saliente.
+
+- [Web de ARGOS](https://argos.softwareinabox.eu/): presentación, asistente de demostración y 25 diagramas de arquitectura.
+- [Software in a Box](https://www.softwareinabox.eu/): empresa que desarrolla ARGOS, COGNITIV y Espacios de datos federados.
+
+## Principios
+- Reta, no observa: sondas activas y sujetos sintéticos verifican accesos, cesiones y borrados de extremo a extremo.
+- La IA propone, el motor dispone: los veredictos los emite un motor determinista de reglas.
+- Nada sale del perímetro: appliance local, sin nube ni telemetría.
+
+## Contacto
+- emilio.mulet@softwareinabox.eu · +34 601 398 868 · Madrid

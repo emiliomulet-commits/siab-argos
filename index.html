@@ -10,12 +10,10 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://argos.softwareinabox.eu/">
 <meta property="og:locale" content="es_ES">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.softwareinabox.eu/assets/fonts.css">
 <style>
 :root{
-  --navy:#1F3864; --navy-deep:#152944; --navy-soft:#2A4E8A;
+  --navy:#1F3864; --navy-deep:#0B1F3A; --argos:#6C4CF1; --argos-soft:#EEEAFE; --navy-soft:#2A4E8A;
   --teal:#1F7A7A; --teal-soft:#EAF4F4;
   --gold:#C9A227; --gold-soft:#FBF6E2;
   --bone:#F6F7F9; --card:#FFFFFF;
@@ -26,7 +24,7 @@
 *{box-sizing:border-box; margin:0; padding:0;}
 html,body{height:100%;}
 body{
-  font-family:'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+  font-family:'Hanken Grotesk', 'Segoe UI', system-ui, sans-serif;
   background:var(--bone); color:var(--ink);
   font-size:15px; line-height:1.55;
   display:flex; flex-direction:column; height:100vh; overflow:hidden;
@@ -305,6 +303,10 @@ header{position:sticky; top:0; z-index:30;}
 .cta-final{background:var(--navy-deep); color:#FFF; padding:46px 24px; text-align:center;}
 .cta-final h2{font-size:23px; font-weight:600; margin-bottom:10px;}
 .cta-final p{color:#B9CBE8; font-size:15px; max-width:560px; margin:0 auto 22px; line-height:1.6;}
+.cta-final .btn-oro{font-size:15px; font-weight:600; border-radius:var(--radius); padding:12px 28px; display:inline-block;}
+h1,h2,h3,.marca h1{font-family:'Montserrat', 'Segoe UI', system-ui, sans-serif;}
+.marca-icono{background:var(--argos)!important; color:#FFF!important; font-family:'Montserrat',sans-serif; font-weight:800;}
+.pie-legal{max-width:1080px; margin:10px auto 0; display:flex; gap:16px; flex-wrap:wrap; font-size:12.5px;}
 
 footer{background:#0E1C30; color:#8FA3C4; padding:18px 24px; font-size:12.5px;}
 .pie-int{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
@@ -346,6 +348,7 @@ window.ARGOS_API = false; /* poner true cuando exista el proxy de IA (p. ej. un 
   window.fetch = function(u, o){ if(!window.ARGOS_API && typeof u === "string" && u.indexOf("api/") === 0)
     return Promise.resolve(new Response("{}", {status:200, headers:{"Content-Type":"application/json"}})); return f(u, o); }; })();
 </script>
+<link rel="alternate" type="text/plain" title="llms.txt" href="https://argos.softwareinabox.eu/llms.txt">
 </head>
 <body>
 
@@ -354,7 +357,7 @@ window.ARGOS_API = false; /* poner true cuando exista el proxy de IA (p. ej. un 
     <div class="marca-icono" aria-hidden="true">A</div>
     <div>
       <h1>ARGOS</h1>
-      <p>Cumplimiento verificado, no declarado · RGPD · EHDS · Reglamento de IA · <a href="https://www.softwareinabox.eu/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">de Software in a Box</a></p>
+      <p>Cumplimiento verificado, no declarado · RGPD · EHDS · Reglamento de IA · por <a href="https://www.softwareinabox.eu/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Software in a Box</a></p>
     </div>
   </div>
   <div class="estado"><span class="punto" aria-hidden="true"></span><span class="estado-texto">Agente en línea · perímetro cerrado</span>
@@ -441,6 +444,7 @@ window.ARGOS_API = false; /* poner true cuando exista el proxy de IA (p. ej. un 
     <span id="i18n-pie-nota">Un producto de Software in a Box · Madrid</span>
     <span>ARGOS · <a href="https://www.softwareinabox.eu/" style="color:inherit">www.softwareinabox.eu</a> · <a href="https://cognitiv.softwareinabox.eu/" style="color:inherit">COGNITIV</a> · <a href="https://datos.softwareinabox.eu/" style="color:inherit">Espacios de datos</a></span>
   </div>
+  <div class="pie-legal"><span>© 2026 Software in a Box</span><a href="https://www.softwareinabox.eu/aviso-legal.html">Aviso legal</a><a href="https://www.softwareinabox.eu/privacidad.html">Privacidad</a><a href="https://www.softwareinabox.eu/cookies.html">Cookies</a></div>
 </footer>
 
 <div class="capa" id="galeria" role="dialog" aria-modal="true" aria-label="Galería de diagramas">
