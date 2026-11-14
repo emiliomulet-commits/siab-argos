@@ -21,3 +21,6 @@
 - [Nederlands](https://argos.softwareinabox.eu/nl/)
 - [Português](https://argos.softwareinabox.eu/pt/)
 - [Italiano](https://argos.softwareinabox.eu/it/)
+- [Dansk](https://argos.softwareinabox.eu/da/)
+- [Français (Belgique)](https://argos.softwareinabox.eu/fr-be/)
+- [Nederlands (België)](https://argos.softwareinabox.eu/nl-be/)
