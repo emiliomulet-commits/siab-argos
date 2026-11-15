@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /kb/
+Disallow: /taskforce/
 Sitemap: https://argos.softwareinabox.eu/sitemap.xml
