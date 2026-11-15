@@ -1,0 +1,7 @@
+name = "argos-chat"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+# Secreto obligatorio (no se guarda aquí):  wrangler secret put ANTHROPIC_API_KEY
+[vars]
+MODEL = "claude-haiku-5-5"
+LIMITE_DIA = "30"
