@@ -118,6 +118,8 @@ main{
 }
 .sugeridas button:hover{border-color:var(--teal); color:var(--teal);}
 
+.aviso-ia{font-size:12px;line-height:1.45;color:var(--ink-soft);padding:6px 16px 10px;margin:0}
+.aviso-ia a{color:var(--argos);font-weight:600}
 .entrada{
   display:flex; gap:9px; padding:12px 20px 16px; flex-shrink:0;
   border-top:1px solid var(--line); background:var(--card);
@@ -407,7 +409,8 @@ footer a:hover{color:var(--gold);}
 }
 </style>
 <script>
-window.ARGOS_API = false; /* poner true cuando exista el proxy de IA (p. ej. un Cloudflare Worker en /api/) */
+window.ARGOS_API = false; /* registro y contacto: sin servidor propio (contacto por correo) */
+window.ARGOS_CHAT_URL = "https://argos-chat.emilio-mulet-b52.workers.dev/chat"; /* capa 3: proxy de IA en Cloudflare Workers */
 (function(){ const f = window.fetch.bind(window);
   window.fetch = function(u, o){ if(!window.ARGOS_API && typeof u === "string" && u.indexOf("api/") === 0)
     return Promise.resolve(new Response("{}", {status:200, headers:{"Content-Type":"application/json"}})); return f(u, o); }; })();
@@ -554,6 +557,7 @@ window.ARGOS_API = false; /* poner true cuando exista el proxy de IA (p. ej. un 
       <input id="campo" type="text" placeholder="Escreva a sua pergunta sobre o ARGOS…" autocomplete="off" aria-label="A sua pergunta">
       <button type="submit" id="enviar">Enviar</button>
     </form>
+    <p class="aviso-ia" id="i18n-avisoia">As perguntas que não constam na base de dados são respondidas por um modelo de IA na nuvem (Anthropic), com base na base de conhecimento do ARGOS. Não introduza dados pessoais. Na sua organização, o ARGOS funciona localmente. <a href="https://www.softwareinabox.eu/pt/privacidade.html" target="_blank" rel="noopener">Privacidade</a></p>
   </section>
 
   <!-- ══ Visor de diagramas ══ -->
@@ -733,6 +737,8 @@ window.ARGOS_API = false; /* poner true cuando exista el proxy de IA (p. ej. un 
 <script data-i18n="skip">
 /* Textos ES/EN del antiguo botón de idioma. Ya no se aplican: cada idioma tiene su URL (/en/, /fr/…) con el HTML traducido. */
 var I18N_LANDING = {
+  "avisoia": {es:'Las preguntas que no están en el banco las responde un modelo de IA en la nube (Anthropic) a partir de la base de conocimiento de ARGOS. No escriba datos personales. En su organización, ARGOS funciona en local. <a href="https://www.softwareinabox.eu/pt/privacidade.html" target="_blank" rel="noopener">Privacidad</a>',
+              en:'Questions not in the answer bank are handled by a cloud AI model (Anthropic) using the ARGOS knowledge base. Please do not enter personal data. Inside your organisation, ARGOS runs locally. <a href="https://www.softwareinabox.eu/pt/privacidade.html" target="_blank" rel="noopener">Privacy</a>'},
   "hero-titulo":{es:"El cumplimiento declarado no le protege.<br>El verificado, sí.",
                  en:"Declared compliance does not protect you.<br>Verified compliance does."},
   "hero-sub":{es:"ARGOS es el agente de IA soberano que reta a sus sistemas frente al RGPD, el EHDS y el Reglamento de IA — y lo demuestra con evidencia técnica.",
@@ -1258,7 +1264,7 @@ async function responder(pregunta, claveForzada){
   /* capa 3: razonamiento con IA sobre la base de conocimiento (streaming) */
 
   /* ── sin proxy de IA publicado (web estática): respuesta guiada ── */
-  if(!window.ARGOS_API){
+  if(!window.ARGOS_CHAT_URL){
     añadirMensaje("argos", IDIOMA==="en"
       ? "That question needs ARGOS's advanced assistant, which we enable in personalised demos. Leave us your email with the \"Request a demo\" button, or write to emilio.mulet@softwareinabox.eu, and we will answer you in detail."
       : "Essa pergunta precisa do assistente avançado do ARGOS, que ativamos nas demonstrações personalizadas. Deixe-nos o seu e-mail com o botão «Pedir uma demonstração» ou escreva para emilio.mulet@softwareinabox.eu e responder-lhe-emos em detalhe.", {votable:false});
@@ -1269,7 +1275,7 @@ async function responder(pregunta, claveForzada){
   indicadorEscribiendo(true);
   let div = null, cuerpo = null, bruto = "", errorMsj = null;
   try{
-    const resp = await fetch("api/chat.php", {
+    const resp = await fetch(window.ARGOS_CHAT_URL, {
       method:"POST", headers:{"Content-Type":"application/json"},
       body:JSON.stringify({messages:historial.slice(-10), idioma:IDIOMA})
     });

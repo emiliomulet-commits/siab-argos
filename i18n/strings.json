@@ -120,6 +120,14 @@
   ]
  },
  {
+  "id": "dd008096b9",
+  "src": "Las preguntas que no están en el banco las responde un modelo de IA en la nube (Anthropic) a partir de la base de conocimiento de ARGOS. No escriba datos personales. En su organización, ARGOS funciona en local. <a href=\"https://www.softwareinabox.eu/privacidad.html\" target=\"_blank\" rel=\"noopener\">Privacidad</a>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
   "id": "ac101ee099",
   "src": "Diagrama",
   "kind": "html",
@@ -1040,16 +1048,16 @@
   ]
  },
  {
-  "id": "af8ad38bca",
-  "src": "Escriba su pregunta sobre ARGOS…",
+  "id": "935f72ad42",
+  "src": "Su pregunta",
   "kind": "attr",
   "pages": [
    "index.html"
   ]
  },
  {
-  "id": "935f72ad42",
-  "src": "Su pregunta",
+  "id": "af8ad38bca",
+  "src": "Escriba su pregunta sobre ARGOS…",
   "kind": "attr",
   "pages": [
    "index.html"
@@ -1144,16 +1152,16 @@
   ]
  },
  {
-  "id": "79439a2584",
-  "src": "Buscar entre los 25 diagramas…",
+  "id": "9aca4c78e1",
+  "src": "Buscar diagrama",
   "kind": "attr",
   "pages": [
    "index.html"
   ]
  },
  {
-  "id": "9aca4c78e1",
-  "src": "Buscar diagrama",
+  "id": "79439a2584",
+  "src": "Buscar entre los 25 diagramas…",
   "kind": "attr",
   "pages": [
    "index.html"
