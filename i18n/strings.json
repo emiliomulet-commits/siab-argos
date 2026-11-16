@@ -8,8 +8,8 @@
   ]
  },
  {
-  "id": "af2c11c6c1",
-  "src": "<span class=\"marca-icono\" aria-hidden=\"true\">A</span><span class=\"nm\">ARGOS</span><span class=\"div\" aria-hidden=\"true\"></span><span class=\"sub\">Software in a Box</span>",
+  "id": "0b3e860bc1",
+  "src": "<span class=\"nm\">ARG<span class=\"o\">O</span>S</span><span class=\"tg\">verificado, no declarado</span>",
   "kind": "html",
   "pages": [
    "index.html"
@@ -1016,14 +1016,6 @@
   ]
  },
  {
-  "id": "58eb938d9a",
-  "src": "<span class=\"marca-icono\" aria-hidden=\"true\">A</span><span>ARGOS</span>",
-  "kind": "html",
-  "pages": [
-   "index.html"
-  ]
- },
- {
   "id": "743e2412d1",
   "src": "ARGOS · 25 diagramas",
   "kind": "html",
@@ -1096,16 +1088,8 @@
   ]
  },
  {
-  "id": "c5e576136c",
-  "src": "<span class=\"marca-icono\" aria-hidden=\"true\">A</span><span class=\"pt\">Asistente ARGOS</span><span class=\"pl\" aria-hidden=\"true\">+</span>",
-  "kind": "html",
-  "pages": [
-   "index.html"
-  ]
- },
- {
-  "id": "6dcd4ce23d",
-  "src": "A",
+  "id": "38fd657404",
+  "src": "Asistente ARGOS",
   "kind": "html",
   "pages": [
    "index.html"
@@ -1264,16 +1248,16 @@
   ]
  },
  {
-  "id": "af8ad38bca",
-  "src": "Escriba su pregunta sobre ARGOS…",
+  "id": "935f72ad42",
+  "src": "Su pregunta",
   "kind": "attr",
   "pages": [
    "index.html"
   ]
  },
  {
-  "id": "935f72ad42",
-  "src": "Su pregunta",
+  "id": "af8ad38bca",
+  "src": "Escriba su pregunta sobre ARGOS…",
   "kind": "attr",
   "pages": [
    "index.html"
@@ -1336,14 +1320,6 @@
   ]
  },
  {
-  "id": "38fd657404",
-  "src": "Asistente ARGOS",
-  "kind": "attr",
-  "pages": [
-   "index.html"
-  ]
- },
- {
   "id": "320d7ca9b9",
   "src": "Ocultar diagrama",
   "kind": "attr",
@@ -1392,16 +1368,16 @@
   ]
  },
  {
-  "id": "00686c432b",
-  "src": "Ampliar",
+  "id": "59b93805ba",
+  "src": "Ampliar diagrama",
   "kind": "attr",
   "pages": [
    "index.html"
   ]
  },
  {
-  "id": "59b93805ba",
-  "src": "Ampliar diagrama",
+  "id": "00686c432b",
+  "src": "Ampliar",
   "kind": "attr",
   "pages": [
    "index.html"
@@ -1424,16 +1400,16 @@
   ]
  },
  {
-  "id": "79439a2584",
-  "src": "Buscar entre los 25 diagramas…",
+  "id": "9aca4c78e1",
+  "src": "Buscar diagrama",
   "kind": "attr",
   "pages": [
    "index.html"
   ]
  },
  {
-  "id": "9aca4c78e1",
-  "src": "Buscar diagrama",
+  "id": "79439a2584",
+  "src": "Buscar entre los 25 diagramas…",
   "kind": "attr",
   "pages": [
    "index.html"
