@@ -633,6 +633,34 @@ footer{background:#000;color:#fff;padding:60px 0 40px;font-size:14px}
 @media(max-width:900px){.panel .chat{height:auto!important}}
 body.panel-abierto .i18n-sw{display:none}
 .panel .aviso-ia{color:#AFC0D2;padding:8px 6px 0}.panel .aviso-ia a{color:#C9B8FF}
+/* ── v3.1 · panel redimensionable ── */
+.ph-acc{margin-left:auto;display:flex;gap:10px;align-items:center}
+.ph-acc .x{margin-left:0}
+.pbtn{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);background:none;color:#fff;display:flex;align-items:center;justify-content:center}
+.pbtn:hover,.pbtn[aria-pressed="true"]{border-color:var(--gold);background:rgba(255,255,255,.08)}
+.pbtn svg{width:18px;height:18px}
+.rsz{position:absolute;left:0;top:0;bottom:0;width:10px;cursor:ew-resize;z-index:3}
+.rsz:before{content:'';position:absolute;left:3px;top:50%;width:4px;height:56px;margin-top:-28px;border-radius:3px;background:rgba(255,255,255,.28);transition:background .15s}
+.rsz:hover:before,.rsz:focus-visible:before,.panel.arrastrando .rsz:before{background:var(--gold)}
+.panel.arrastrando{transition:none;user-select:none}
+.panel.max{left:16px!important;right:16px!important;top:16px!important;bottom:16px!important;width:auto!important}
+.panel.max .rsz{display:none}
+.panel main{grid-template-columns:var(--chat-w,minmax(380px,44%)) 12px minmax(0,1fr);gap:0}
+.split{cursor:col-resize;position:relative}
+.split:before{content:'';position:absolute;left:4px;top:50%;width:4px;height:56px;margin-top:-28px;border-radius:3px;background:rgba(255,255,255,.28)}
+.split:hover:before,.panel.arrastrando .split:before{background:var(--gold)}
+.panel.sin-visor main{grid-template-columns:1fr}
+.panel.sin-visor .visor,.panel.sin-visor .split{display:none}
+.panel.sin-visor .msj .figura-inline{display:block;margin-top:10px;background:#FFF;border:1px solid var(--line);border-radius:10px;padding:6px;cursor:zoom-in;max-width:760px}
+.panel.sin-visor .msj .figura-inline svg{width:100%;height:auto;display:block;border-radius:5px}
+.panel.sin-visor .msj .figura-inline figcaption{font-size:11.5px;color:var(--ink-faint);padding:5px 4px 2px}
+.panel.sin-visor .chat-hilo{padding-left:max(6px,calc((100% - 860px)/2));padding-right:max(6px,calc((100% - 860px)/2))}
+/* preguntas sugeridas en una sola fila desplazable: dejan sitio a la respuesta */
+.panel .sugeridas{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;padding:8px 6px 10px;-webkit-mask-image:linear-gradient(90deg,#000 92%,transparent);mask-image:linear-gradient(90deg,#000 92%,transparent)}
+.panel .sugeridas button{white-space:nowrap;flex:none}
+.panel .chat-hilo{flex:1;min-height:120px}
+@media(max-width:1100px){.panel main{grid-template-columns:1fr}.split,#panel-visor{display:none}.rsz{display:none}}
+@media(max-width:860px){#panel-max{display:none}}
 
 </style>
 <script>
@@ -910,8 +938,13 @@ window.ARGOS_CHAT_URL = "https://argos-chat.emilio-mulet-b52.workers.dev/chat"; 
  <div class="ph">
   <span class="marca-icono" aria-hidden="true">A</span>
   <div><b id="ph-t">Assistant ARGOS</b><small><span class="punto" aria-hidden="true"></span><span class="estado-texto">Agent en ligne · périmètre fermé</span></small></div>
-  <button class="x" type="button" id="panel-cerrar" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="ph-acc">
+   <button class="pbtn" type="button" id="panel-visor" aria-pressed="false" aria-label="Masquer le schéma" title="Masquer le schéma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M13 4v16"/></svg></button>
+   <button class="pbtn" type="button" id="panel-max" aria-pressed="false" aria-label="Plein écran" title="Plein écran"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+   <button class="x" type="button" id="panel-cerrar" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
  </div>
+ <div class="rsz" id="panel-rsz" role="separator" aria-orientation="vertical" aria-label="Faites glisser pour redimensionner" title="Faites glisser pour redimensionner" tabindex="0"></div>
  <main>
   <!-- ══ Panel de chat ══ -->
   <section class="chat" aria-label="Conversation avec ARGOS">
@@ -4016,6 +4049,51 @@ if(!cargarConv()){
 
   /* los botones de diagrama del chat ya no necesitan desplazar la página */
   if(location.hash === "#asistente") abrirPanel();
+})();
+
+/* ════════════ v3.1 · panel redimensionable: arrastrar el borde, dividir chat y diagrama, pantalla completa ════════════ */
+(function(){
+  const panel = document.getElementById("asistente");
+  const main = panel.querySelector("main"), visor = main.querySelector(".visor"), chat = main.querySelector(".chat");
+  const split = document.createElement("div"); split.className = "split"; split.setAttribute("aria-hidden", "true");
+  main.insertBefore(split, visor);
+  const TX = {max: "Plein écran", min: "Quitter le plein écran", ocultar: "Masquer le schéma", mostrar: "Afficher le schéma"};
+  const guarda = (k, v) => { try{ localStorage.setItem("argos-panel-" + k, v); }catch(e){} };
+  const lee = k => { try{ return localStorage.getItem("argos-panel-" + k); }catch(e){ return null; } };
+  const ancho = () => window.innerWidth;
+
+  function setAncho(w){ w = Math.max(560, Math.min(ancho() - 32, w)); panel.style.width = w + "px"; return w; }
+  function setChat(w){ const tot = main.getBoundingClientRect().width; w = Math.max(320, Math.min(tot - 340, w)); main.style.setProperty("--chat-w", w + "px"); return w; }
+  const w0 = +lee("w"); if(w0 && ancho() > 1100) setAncho(w0);
+  const c0 = +lee("chat"); if(c0) main.style.setProperty("--chat-w", c0 + "px");
+
+  function arrastre(el, mover, fin){
+    el.addEventListener("pointerdown", e => {
+      if(e.button !== 0) return; e.preventDefault();
+      el.setPointerCapture(e.pointerId); panel.classList.add("arrastrando");
+      const mv = ev => mover(ev);
+      const up = ev => { el.removeEventListener("pointermove", mv); el.removeEventListener("pointerup", up); panel.classList.remove("arrastrando"); fin(); };
+      el.addEventListener("pointermove", mv); el.addEventListener("pointerup", up);
+    });
+  }
+  const rsz = document.getElementById("panel-rsz");
+  arrastre(rsz, ev => { const r = panel.getBoundingClientRect(); setAncho(r.right - ev.clientX); },
+           () => guarda("w", Math.round(panel.getBoundingClientRect().width)));
+  rsz.addEventListener("keydown", e => {
+    if(e.key !== "ArrowLeft" && e.key !== "ArrowRight") return; e.preventDefault();
+    const w = setAncho(panel.getBoundingClientRect().width + (e.key === "ArrowLeft" ? 60 : -60)); guarda("w", w);
+  });
+  arrastre(split, ev => { setChat(ev.clientX - main.getBoundingClientRect().left - 14); },
+           () => guarda("chat", Math.round(chat.getBoundingClientRect().width)));
+  split.addEventListener("dblclick", () => { main.style.removeProperty("--chat-w"); guarda("chat", ""); });
+
+  const bMax = document.getElementById("panel-max"), bVis = document.getElementById("panel-visor");
+  function pintaMax(on){ panel.classList.toggle("max", on); bMax.setAttribute("aria-pressed", on); bMax.title = on ? TX.min : TX.max; bMax.setAttribute("aria-label", bMax.title); }
+  function pintaVis(oculto){ panel.classList.toggle("sin-visor", oculto); bVis.setAttribute("aria-pressed", oculto); bVis.title = oculto ? TX.mostrar : TX.ocultar; bVis.setAttribute("aria-label", bVis.title); }
+  bMax.onclick = () => { const on = !panel.classList.contains("max"); pintaMax(on); guarda("max", on ? "1" : ""); };
+  bVis.onclick = () => { const o = !panel.classList.contains("sin-visor"); pintaVis(o); guarda("visor", o ? "0" : ""); };
+  pintaMax(lee("max") === "1"); pintaVis(lee("visor") === "0");
+  window.addEventListener("resize", () => { if(panel.style.width && ancho() > 1100) setAncho(parseFloat(panel.style.width)); });
 })();
 
 </script>
