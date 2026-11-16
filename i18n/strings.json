@@ -1344,8 +1344,32 @@
   ]
  },
  {
+  "id": "320d7ca9b9",
+  "src": "Ocultar diagrama",
+  "kind": "attr",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "7808857ffa",
+  "src": "Pantalla completa",
+  "kind": "attr",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
   "id": "4b0816bbd5",
   "src": "Cerrar",
+  "kind": "attr",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "954be4e6f2",
+  "src": "Arrastre para cambiar el tamaño",
   "kind": "attr",
   "pages": [
    "index.html"
@@ -2930,6 +2954,22 @@
  {
   "id": "fef9bd6e4d",
   "src": "<div class=\"go\"><button type=\"button\">",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "0c6bd6b277",
+  "src": "Reducir",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "79ea1cb984",
+  "src": "Mostrar diagrama",
   "kind": "js",
   "pages": [
    "index.html"
