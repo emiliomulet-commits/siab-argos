@@ -2950,5 +2950,181 @@
   "pages": [
    "index.html"
   ]
+ },
+ {
+  "id": "6d91c70e9c",
+  "src": "Animación",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "37372137f9",
+  "src": "Ver vídeo con locución",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "fefc3bbba4",
+  "src": "Presentación por escenas",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "eb11d7d87a",
+  "src": "Diagrama fijo",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "38d0fd124b",
+  "src": "Animado",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "43c84cf4f3",
+  "src": "(en español)",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "189d368686",
+  "src": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M11 5 6 9H2v6h4l5 4z\"/><path d=\"M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14\"/></svg>",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "950268ee17",
+  "src": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"12\" rx=\"1\"/><path d=\"M12 16v4M8 20h8\"/></svg>",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "969cb78cfa",
+  "src": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"m21 15-5-5L5 21\"/></svg>",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "b8469613f1",
+  "src": "<div class=\"anim-lb\"><iframe src=\"",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "acd3f4f5db",
+  "src": "?modo=video\" title=\"",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "518570e2e2",
+  "src": "\" allow=\"autoplay; fullscreen\" allowfullscreen></iframe></div>",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "e2de66264a",
+  "src": "<div class=\"anim-wrap\">",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "4f778872a7",
+  "src": "<div class=\"anim-marco\"><iframe src=\"",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "7380758b21",
+  "src": "?modo=web&embed=1\" title=\"",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "5eaf6be463",
+  "src": "\" loading=\"lazy\" allow=\"fullscreen\"></iframe></div>",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "8e4e791ab8",
+  "src": "<div class=\"anim-acc\">",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "c2927a098f",
+  "src": "<button type=\"button\" class=\"pri\" data-a=\"video\">",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "e3942c17c3",
+  "src": "<a href=\"",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "a576b0d2ef",
+  "src": "\" target=\"_blank\" rel=\"noopener\">",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "0832131f92",
+  "src": "<button type=\"button\" data-a=\"fijo\">",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "552f53c929",
+  "src": "tag anim",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
  }
 ]
