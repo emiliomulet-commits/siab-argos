@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D03 · Wat is een synthetisch subject? · Geanimeerde presentatie</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://www.softwareinabox.eu/assets/fonts.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#0B1F3A;color:#fff;font-family:'Hanken Grotesk',system-ui,sans-serif;overflow:hidden}
+#wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#stage{width:100%;height:100%;display:block}
+.ui{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:14px;padding:12px 18px;background:linear-gradient(0deg,rgba(5,14,26,.92),rgba(5,14,26,0));transition:opacity .3s}
+body.ui-off .ui{opacity:0;pointer-events:none}
+body.idle .ui{opacity:0}
+.ui button{font:inherit;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:8px;height:38px;min-width:38px;padding:0 12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:14px}
+.ui button:hover,.ui button:focus-visible{border-color:#C9A227;outline:none}
+.ui svg{width:18px;height:18px}
+.scenes{display:flex;gap:6px;flex:1;min-width:0}
+.scenes button{flex:1;min-width:0;height:auto;padding:6px 8px;display:block;text-align:left;font-size:12.5px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative}
+.scenes button b{display:block;font-size:11px;color:#C9A227}
+.scenes button i{position:absolute;left:0;bottom:0;height:3px;background:#C9A227;width:0;border-radius:2px}
+.scenes button.on{border-color:#C9A227;background:rgba(201,162,39,.15)}
+.hint{font-size:12.5px;color:#AFC0D2;white-space:nowrap}
+#start{position:fixed;inset:0;display:none;align-items:flex-end;justify-content:center;padding-bottom:110px;pointer-events:none}
+#start span{background:rgba(5,14,26,.75);border:1px solid rgba(201,162,39,.6);border-radius:999px;padding:10px 20px;font-size:15px;color:#fff}
+body.pres.at-start #start,body.video.at-start #start{display:flex}
+body.video #start span{pointer-events:auto;cursor:pointer;font-size:17px;padding:14px 26px}
+body.video .hint{display:none}
+body.web .hint,body.web #fs{display:none}
+body.web .scenes button span{display:none}
+.rm-note{position:fixed;top:14px;left:50%;transform:translateX(-50%);background:rgba(5,14,26,.8);border-radius:999px;padding:8px 16px;font-size:13px;display:none}
+body.reduced .rm-note{display:block}
+body.embed .ui{padding:6px 8px;gap:6px}
+body.embed .ui button{height:28px;min-width:28px;padding:0 6px;border-radius:6px}
+body.embed .ui svg{width:14px;height:14px}
+body.embed .scenes button{padding:3px 5px}
+body.embed .scenes button b{font-size:10px}
+body.embed .hint,body.embed #fs{display:none}
+body.embed .ui{opacity:0}
+body.embed:hover .ui,body.embed.at-end .ui{opacity:1}
+@media(max-width:760px){.scenes button span{display:none}.hint{display:none}}
+#voz-btn{position:fixed;top:14px;right:16px;z-index:5;font:600 14px 'Hanken Grotesk',system-ui,sans-serif;color:#fff;background:rgba(11,31,58,.82);border:1px solid #C9A227;border-radius:999px;padding:9px 16px;cursor:pointer;transition:background .2s}#voz-btn:hover,#voz-btn:focus-visible{background:#C9A227;color:#0B1F3A;outline:none}#voz-btn[hidden]{display:none}body.embed #voz-btn{top:8px;right:8px;padding:6px 12px;font-size:12.5px}@media(max-width:760px){#voz-btn{top:8px;right:8px;padding:7px 12px;font-size:13px}}
+</style>
+</head>
+<body class="at-start">
+<div id="wrap">
+<svg id="stage" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="st-t st-d" font-family="'Hanken Grotesk',system-ui,sans-serif">
+<title id="st-t">Wat is een synthetisch subject?</title><desc id="st-d">Een fictieve identiteit die echte systemen test zonder risico voor wie dan ook: generatie, invoer, tracering, uitoefening van rechten, controle van wissing en geverifieerde verwijdering.</desc>
+<defs>
+ <linearGradient id="bgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1F3A"/><stop offset="1" stop-color="#1F3864"/></linearGradient>
+ <radialGradient id="glowG"><stop offset="0" stop-color="#C9A227" stop-opacity=".55"/><stop offset="1" stop-color="#C9A227" stop-opacity="0"/></radialGradient>
+ <linearGradient id="scanG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9A227" stop-opacity="0"/><stop offset=".5" stop-color="#F3D36B" stop-opacity=".9"/><stop offset="1" stop-color="#C9A227" stop-opacity="0"/></linearGradient>
+ <marker id="arr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1D7A74"/></marker>
+ <filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity=".25"/></filter>
+ <clipPath id="clip5"><rect x="580" y="452" width="440" height="226" rx="16"/></clipPath>
+</defs>
+<rect width="1600" height="900" fill="url(#bgG)"/>
+<g id="grid" opacity=".07" stroke="#fff"><path d="M0 0V900"/><path d="M80 0V900"/><path d="M160 0V900"/><path d="M240 0V900"/><path d="M320 0V900"/><path d="M400 0V900"/><path d="M480 0V900"/><path d="M560 0V900"/><path d="M640 0V900"/><path d="M720 0V900"/><path d="M800 0V900"/><path d="M880 0V900"/><path d="M960 0V900"/><path d="M1040 0V900"/><path d="M1120 0V900"/><path d="M1200 0V900"/><path d="M1280 0V900"/><path d="M1360 0V900"/><path d="M1440 0V900"/><path d="M1520 0V900"/><path d="M1600 0V900"/><path d="M0 0H1600"/><path d="M0 80H1600"/><path d="M0 160H1600"/><path d="M0 240H1600"/><path d="M0 320H1600"/><path d="M0 400H1600"/><path d="M0 480H1600"/><path d="M0 560H1600"/><path d="M0 640H1600"/><path d="M0 720H1600"/><path d="M0 800H1600"/><path d="M0 880H1600"/></g>
+
+<g id="cam">
+ <g id="head">
+  <g id="chip"><rect x="60" y="40" width="210" height="50" rx="12" fill="#C9A227"/><text x="165" y="73" text-anchor="middle" font-size="22" font-weight="700" fill="#0B1F3A" data-w="140.0">D03 · B01-P04</text></g>
+  <text id="title" x="300" y="70" font-family="Montserrat,sans-serif" font-size="36" font-weight="700" fill="#fff" data-full="Wat is een synthetisch subject?" data-w="528.7"></text>
+  <text id="sub" x="300" y="108" font-size="22" fill="#C9D6E8" data-full="Een fictieve identiteit die echte systemen test zonder risico voor wie dan ook" data-w="833.6"></text>
+  <rect id="subline" x="0" y="115" width="0" height="4" rx="2" fill="#C9A227"/>
+ </g>
+ <path id="a12" class="arw" d="M524 283H574" fill="none" stroke="#1D7A74" stroke-width="6" marker-end="url(#arr)"/><path id="a23" class="arw" d="M1024 283H1074" fill="none" stroke="#1D7A74" stroke-width="6" marker-end="url(#arr)"/><path id="a34" class="arw" d="M1300 400V446" fill="none" stroke="#1D7A74" stroke-width="6" marker-end="url(#arr)"/><path id="a45" class="arw" d="M1076 565H1026" fill="none" stroke="#1D7A74" stroke-width="6" marker-end="url(#arr)"/><path id="a56" class="arw" d="M576 565H526" fill="none" stroke="#1D7A74" stroke-width="6" marker-end="url(#arr)"/>
+ <g class="box" id="b1" filter="url(#sh)">
+<rect class="bbg" x="80" y="170" width="440" height="226" rx="16" fill="#F4F6FA" stroke="#1F3864" stroke-width="2.5"/>
+<rect class="bglow" x="80" y="170" width="440" height="226" rx="16" fill="none" stroke="#C9A227" stroke-width="5" opacity="0"/>
+<g class="num"><circle cx="128" cy="222" r="28" fill="#1F3864"/><text x="128" y="232" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="28" font-weight="700" fill="#fff" data-w="11.0">1</text></g>
+<text class="bt" x="172" y="232" font-family="Montserrat,sans-serif" font-size="27" font-weight="700" fill="#1F3864" data-full="Generatie" data-w="161.3"></text>
+<text class="bl" x="112" y="274" font-size="20" fill="#2A3445" data-w="299.5">ARGOS maakt een fictieve identiteit</text>
+<text class="bl" x="112" y="302" font-size="20" fill="#2A3445" data-w="260.4">met geloofwaardige gegevens die</text>
+<text class="bl" x="112" y="330" font-size="20" fill="#2A3445" data-w="315.3">van geen enkel echt persoon zijn.</text>
+<text class="btag" x="112" y="370" font-size="19" font-style="italic" fill="#1D7A74" data-w="283.6">Geen betrokkenen = geen AVG-risico</text>
+</g><g class="box" id="b2" filter="url(#sh)">
+<rect class="bbg" x="580" y="170" width="440" height="226" rx="16" fill="#F4F6FA" stroke="#1F3864" stroke-width="2.5"/>
+<rect class="bglow" x="580" y="170" width="440" height="226" rx="16" fill="none" stroke="#C9A227" stroke-width="5" opacity="0"/>
+<g class="num"><circle cx="628" cy="222" r="28" fill="#1F3864"/><text x="628" y="232" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="28" font-weight="700" fill="#fff" data-w="16.5">2</text></g>
+<text class="bt" x="672" y="232" font-family="Montserrat,sans-serif" font-size="27" font-weight="700" fill="#1F3864" data-full="Invoer" data-w="181.7"></text>
+<text class="bl" x="612" y="274" font-size="20" fill="#2A3445" data-w="287.1">Ze komt in de systemen van de klant</text>
+<text class="bl" x="612" y="302" font-size="20" fill="#2A3445" data-w="238.6">via de gebruikelijke kanalen:</text>
+<text class="bl" x="612" y="330" font-size="20" fill="#2A3445" data-w="281.9">formulieren, aanmeldingen, apps.</text>
+<text class="btag" x="612" y="370" font-size="19" font-style="italic" fill="#1D7A74" data-w="244.7">Zoals een echte klant zou doen</text>
+<g class="ti" data-b="2" data-i="0"><g class="ico "><g transform="translate(894 348) scale(1.1667)" fill="none" stroke="#1F3864" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5" />   <path d="M14 2v4a2 2 0 0 0 2 2h4" />   <path d="M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /></g></g></g>
+<g class="ti" data-b="2" data-i="1"><g class="ico "><g transform="translate(934 348) scale(1.1667)" fill="none" stroke="#1F3864" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />   <circle cx="9" cy="7" r="4" />   <line x1="19" x2="19" y1="8" y2="14" />   <line x1="22" x2="16" y1="11" y2="11" /></g></g></g>
+<g class="ti" data-b="2" data-i="2"><g class="ico "><g transform="translate(974 348) scale(1.1667)" fill="none" stroke="#1F3864" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2" />   <path d="M12 18h.01" /></g></g></g>
+</g><g class="box" id="b3" filter="url(#sh)">
+<rect class="bbg" x="1080" y="170" width="440" height="226" rx="16" fill="#F4F6FA" stroke="#1F3864" stroke-width="2.5"/>
+<rect class="bglow" x="1080" y="170" width="440" height="226" rx="16" fill="none" stroke="#C9A227" stroke-width="5" opacity="0"/>
+<g class="num"><circle cx="1128" cy="222" r="28" fill="#1F3864"/><text x="1128" y="232" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="28" font-weight="700" fill="#fff" data-w="16.6">3</text></g>
+<text class="bt" x="1172" y="232" font-family="Montserrat,sans-serif" font-size="27" font-weight="700" fill="#1F3864" data-full="Tracering" data-w="181.0"></text>
+<text class="bl" x="1112" y="274" font-size="20" fill="#2A3445" data-w="281.7">ARGOS volgt de verspreiding:</text>
+<text class="bl" x="1112" y="302" font-size="20" fill="#2A3445" data-w="318.0">waar ze wordt gekopieerd, wie ze kan lezen,</text>
+<text class="bl" x="1112" y="330" font-size="20" fill="#2A3445" data-w="279.0">naar welke systemen en derden ze reist.</text>
+<text class="btag" x="1112" y="370" font-size="19" font-style="italic" fill="#1D7A74" data-w="181.3">De echte datakaart</text>
+<g class="ti" data-b="3" data-i="0"><g class="ico "><g transform="translate(1394 348) scale(1.1667)" fill="none" stroke="#1F3864" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" />   <path d="M3 5V19A9 3 0 0 0 21 19V5" />   <path d="M3 12A9 3 0 0 0 21 12" /></g></g></g>
+<g class="ti" data-b="3" data-i="1"><g class="ico "><g transform="translate(1434 348) scale(1.1667)" fill="none" stroke="#1F3864" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></g></g></g>
+<g class="ti" data-b="3" data-i="2"><g class="ico "><g transform="translate(1474 348) scale(1.1667)" fill="none" stroke="#1F3864" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />   <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />   <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />   <path d="M10 6h4" />   <path d="M10 10h4" />   <path d="M10 14h4" />   <path d="M10 18h4" /></g></g></g>
+</g><g class="box" id="b4" filter="url(#sh)">
+<rect class="bbg" x="1080" y="452" width="440" height="226" rx="16" fill="#EEF6F5" stroke="#1D7A74" stroke-width="2.5"/>
+<rect class="bglow" x="1080" y="452" width="440" height="226" rx="16" fill="none" stroke="#C9A227" stroke-width="5" opacity="0"/>
+<g class="num"><circle cx="1128" cy="504" r="28" fill="#1D7A74"/><text x="1128" y="514" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="28" font-weight="700" fill="#fff" data-w="19.3">4</text></g>
+<text class="bt" x="1172" y="514" font-family="Montserrat,sans-serif" font-size="27" font-weight="700" fill="#1D7A74" data-full="Uitoefening van rechten" data-w="302.3"></text>
+<text class="bl" x="1112" y="556" font-size="20" fill="#2A3445" data-w="285.1">Vraagt inzage of wissing aan</text>
+<text class="bl" x="1112" y="584" font-size="20" fill="#2A3445" data-w="255.9">voor het subject via het officiële kanaal</text>
+<text class="bl" x="1112" y="612" font-size="20" fill="#2A3445" data-w="246.8">en meet het volledige proces.</text>
+<text class="btag" x="1112" y="652" font-size="19" font-style="italic" fill="#1F3864" data-w="257.3">Tegen de wettelijke termijn van 1 maand</text>
+<g class="ti" data-b="4" data-i="0"><g class="ico "><g transform="translate(1434 630) scale(1.1667)" fill="none" stroke="#1D7A74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" />   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></g></g></g>
+<g class="ti" data-b="4" data-i="1"><g class="ico "><g transform="translate(1474 630) scale(1.1667)" fill="none" stroke="#1D7A74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" x2="14" y1="2" y2="2" />   <line x1="12" x2="15" y1="14" y2="11" />   <circle cx="12" cy="14" r="8" /></g></g></g>
+</g><g class="box" id="b5" filter="url(#sh)">
+<rect class="bbg" x="580" y="452" width="440" height="226" rx="16" fill="#EEF6F5" stroke="#1D7A74" stroke-width="2.5"/>
+<rect class="bglow" x="580" y="452" width="440" height="226" rx="16" fill="none" stroke="#C9A227" stroke-width="5" opacity="0"/>
+<g class="num"><circle cx="628" cy="504" r="28" fill="#1D7A74"/><text x="628" y="514" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="28" font-weight="700" fill="#fff" data-w="16.7">5</text></g>
+<text class="bt" x="672" y="514" font-family="Montserrat,sans-serif" font-size="27" font-weight="700" fill="#1D7A74" data-full="Controle van wissing" data-w="329.7"></text>
+<text class="bl" x="612" y="556" font-size="20" fill="#2A3445" data-w="280.4">Inspecteert elke opslag opnieuw</text>
+<text class="bl" x="612" y="584" font-size="20" fill="#2A3445" data-w="320.8">waar ze opdook: primair, replica’s,</text>
+<text class="bl" x="612" y="612" font-size="20" fill="#2A3445" data-w="284.0">indexen, exports en kopieën.</text>
+<text class="btag" x="612" y="652" font-size="19" font-style="italic" fill="#1F3864" data-w="307.7">Blijft het bestaan → bevinding met bewijs</text>
+</g><g class="box" id="b6" filter="url(#sh)">
+<rect class="bbg" x="80" y="452" width="440" height="226" rx="16" fill="#EEF6F5" stroke="#1D7A74" stroke-width="2.5"/>
+<rect class="bglow" x="80" y="452" width="440" height="226" rx="16" fill="none" stroke="#C9A227" stroke-width="5" opacity="0"/>
+<g class="num"><circle cx="128" cy="504" r="28" fill="#1D7A74"/><text x="128" y="514" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="28" font-weight="700" fill="#fff" data-w="17.8">6</text></g>
+<text class="bt" x="172" y="514" font-family="Montserrat,sans-serif" font-size="27" font-weight="700" fill="#1D7A74" data-full="Geverifieerde verwijdering" data-w="313.4"></text>
+<text class="bl" x="112" y="556" font-size="20" fill="#2A3445" data-w="262.8">Bij het afsluiten van de campagne</text>
+<text class="bl" x="112" y="584" font-size="20" fill="#2A3445" data-w="255.1">verwijdert ARGOS het subject en controleert</text>
+<text class="bl" x="112" y="612" font-size="20" fill="#2A3445" data-w="284.0">zijn eigen wissing met zijn probes.</text>
+<text class="btag" x="112" y="652" font-size="19" font-style="italic" fill="#1F3864" data-w="243.0">Dezelfde standaard die het eist</text>
+</g>
+ <rect id="scan" x="520" y="452" width="60" height="226" fill="url(#scanG)" opacity="0" clip-path="url(#clip5)"/>
+ <g id="copies"><g class="copy" data-i="0"><rect x="-22" y="-14" width="44" height="28" rx="5" fill="#FFF8E1" stroke="#C9A227" stroke-width="2"/><rect x="-14" y="-4" width="26" height="4" rx="2" fill="#1F3864"/><rect x="-14" y="4" width="18" height="4" rx="2" fill="#8FA3BD"/></g><g class="copy" data-i="1"><rect x="-22" y="-14" width="44" height="28" rx="5" fill="#FFF8E1" stroke="#C9A227" stroke-width="2"/><rect x="-14" y="-4" width="26" height="4" rx="2" fill="#1F3864"/><rect x="-14" y="4" width="18" height="4" rx="2" fill="#8FA3BD"/></g><g class="copy" data-i="2"><rect x="-22" y="-14" width="44" height="28" rx="5" fill="#FFF8E1" stroke="#C9A227" stroke-width="2"/><rect x="-14" y="-4" width="26" height="4" rx="2" fill="#1F3864"/><rect x="-14" y="4" width="18" height="4" rx="2" fill="#8FA3BD"/></g></g>
+ <g id="alert"><g class="ico "><g transform="translate(0 0) scale(1.2500)" fill="none" stroke="#C0392B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />   <path d="M12 9v4" />   <path d="M12 17h.01" /></g></g></g>
+ <g id="shield6"><g class="ico "><g transform="translate(0 0) scale(1.8333)" fill="none" stroke="#C9A227" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />   <path d="m9 12 2 2 4-4" /></g></g></g>
+ <g id="ficha"><g id="fichaIn">
+ <rect x="-75" y="-46" width="150" height="92" rx="10" fill="#FFF8E1" stroke="#C9A227" stroke-width="3"/>
+ <path d="M-75 -36a10 10 0 0 1 10-10h130a10 10 0 0 1 10 10v12h-150z" fill="#C9A227"/>
+ <text x="0" y="-30" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="800" letter-spacing="1.5" fill="#0B1F3A" data-w="134.5">SYNTHETISCH SUBJECT</text>
+ <circle cx="-48" cy="0" r="11" fill="none" stroke="#1F3864" stroke-width="2.5"/><path d="M-64 32a16 12 0 0 1 32 0" fill="none" stroke="#1F3864" stroke-width="2.5"/>
+ <rect class="fl" x="-22" y="-12" width="82" height="6" rx="3" fill="#1F3864"/><rect class="fl" x="-22" y="0" width="58" height="6" rx="3" fill="#8FA3BD"/>
+ <g id="stamp" transform="translate(20 26) rotate(-8)"><rect x="-42" y="-11" width="84" height="22" rx="4" fill="#FFF8E1" stroke="#C0392B" stroke-width="2.2"/><text x="0" y="5" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12.5" font-weight="800" letter-spacing="2" fill="#C0392B" data-w="73.4">FICTIEF</text></g>
+ <rect id="fichaRed" x="-75" y="-46" width="150" height="92" rx="10" fill="none" stroke="#C0392B" stroke-width="4" opacity="0"/>
+</g></g>
+ <g id="band" filter="url(#sh)">
+  <rect x="80" y="702" width="1440" height="118" rx="18" fill="#0E2547" stroke="#2C4A7A"/>
+  <rect x="80" y="702" width="10" height="118" rx="5" fill="#C9A227"/>
+  <g id="bandEye"><g transform="translate(118 721) scale(1)"><rect x="2" y="2" width="76" height="76" rx="18" fill="#0B1F3A"/><g fill="none" stroke-linecap="round"><path d="M13 41C20 28 29 22 40 22S60 28 67 41" stroke="#fff" stroke-width="4"/><path d="M24 41C28 34 33.5 31 40 31S52 34 56 41" stroke="#fff" stroke-width="4" opacity=".7"/><path d="M13 41C20 54 29 60 40 60S60 54 67 41" stroke="#6C4CF1" stroke-width="4"/></g><circle cx="40" cy="42" r="6.5" fill="#C9A227"/></g></g>
+  <text id="finT" x="230" y="751" font-family="Montserrat,sans-serif" font-size="32" font-weight="700" fill="#fff" data-full="Tests met echt gedrag, nul risico voor mensen" data-w="1076.5"></text>
+  <text id="fin1" x="230" y="791" font-size="21" fill="#D5DEE8" data-full="De hele cyclus wordt vastgelegd in de bewijsketen met tijdstempel en cryptografische vingerafdruk." data-w="931.8"></text>
+  <g id="chain">
+   <g class="lk"><g class="ico "><g transform="translate(1380 728) scale(1.6667)" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />   <polyline points="12 6 12 12 16 14" /></g></g></g>
+   <path id="lkl" d="M1426 748H1446" stroke="#C9A227" stroke-width="3" stroke-dasharray="4 4"/>
+   <g class="lk"><g class="ico "><g transform="translate(1452 728) scale(1.6667)" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4" />   <path d="M14 13.12c0 2.38 0 6.38-1 8.88" />   <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02" />   <path d="M2 12a10 10 0 0 1 18-6" />   <path d="M2 16h.01" />   <path d="M21.8 16c.2-2 .131-5.354 0-6" />   <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2" />   <path d="M8.65 22c.21-.66.45-1.32.57-2" />   <path d="M9 6.8a6 6 0 0 1 9 5.2v2" /></g></g></g>
+  </g>
+ </g>
+ <text id="pie" x="1520" y="878" text-anchor="end" font-size="15" fill="#8FA3BD" data-w="387.6">ARGOS · Visuele kennisbank · Software in a Box</text>
+ <text id="nota" x="80" y="878" font-size="13" fill="#8FA3BD" data-w="633.2">De kaart, de kopieën en de gemarkeerde opslag zijn illustratief: ze tonen geen concrete systemen of bevindingen.</text>
+</g>
+
+<g id="intro">
+ <circle cx="800" cy="360" r="190" fill="url(#glowG)" id="introGlow"/>
+ <g id="introEye"><g transform="translate(700 260) scale(2.5)"><rect x="2" y="2" width="76" height="76" rx="18" fill="#0B1F3A"/><g fill="none" stroke-linecap="round"><path class="lid1" d="M13 41C20 28 29 22 40 22S60 28 67 41" stroke="#fff" stroke-width="4"/><path class="lid2" d="M24 41C28 34 33.5 31 40 31S52 34 56 41" stroke="#fff" stroke-width="4" opacity=".7"/><path class="lid3" d="M13 41C20 54 29 60 40 60S60 54 67 41" stroke="#6C4CF1" stroke-width="4"/></g><circle class="pupil" cx="40" cy="42" r="6.5" fill="#C9A227"/></g></g>
+ <text id="introT" x="800" y="560" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="54" font-weight="700" fill="#fff" data-full="Wat is een synthetisch subject?" data-w="793.1"></text>
+</g>
+<g id="outro" opacity="0">
+ <rect x="0" y="0" width="1600" height="900" fill="#0B1F3A" opacity=".94"/>
+ <g id="outEye"><g transform="translate(680 250) scale(1.5)"><rect x="2" y="2" width="76" height="76" rx="18" fill="#0B1F3A"/><g fill="none" stroke-linecap="round"><path d="M13 41C20 28 29 22 40 22S60 28 67 41" stroke="#fff" stroke-width="4"/><path d="M24 41C28 34 33.5 31 40 31S52 34 56 41" stroke="#fff" stroke-width="4" opacity=".7"/><path d="M13 41C20 54 29 60 40 60S60 54 67 41" stroke="#6C4CF1" stroke-width="4"/></g><circle cx="40" cy="42" r="6.5" fill="#C9A227"/></g></g>
+ <text x="820" y="300" font-family="Montserrat,sans-serif" font-size="64" font-weight="700" fill="#fff" letter-spacing="2" data-w="250.3">ARG<tspan fill="#C9A227">O</tspan>S</text>
+ <text x="822" y="340" font-size="16" font-weight="700" letter-spacing="5" fill="#AFC0D2" data-w="352.8">VERIFIED COMPLIANCE AGENT</text>
+ <text x="800" y="450" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="40" font-weight="700" fill="#fff" data-w="703.4">Echt gedrag, nul risico</text>
+</g>
+</svg>
+</div>
+<div id="start"><span>Druk op → of de spatiebalk om te beginnen</span></div>
+<p class="rm-note">Movimiento reducido: se muestra el diagrama completo. <button id="rm-play" style="margin-left:8px">Animatie bekijken</button></p>
+<div class="ui" role="toolbar" aria-label="Bediening van de presentatie">
+ <button id="play" aria-label="Afspelen"><svg viewBox="0 0 24 24" fill="currentColor"><path id="pi" d="M8 5v14l11-7z"/></svg></button>
+ <button id="prev" aria-label="Vorige scène"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+ <button id="next" aria-label="Volgende scène"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+ <div class="scenes" id="scenes"></div>
+ <button id="replay" aria-label="Opnieuw bekijken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button>
+ <button id="fs" aria-label="Volledig scherm (F)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+ <span class="hint">← → espacio · 1–8 · F · H oculta</span>
+</div>
+<button id="voz-btn" type="button" hidden aria-pressed="false">🔊 Voice-over aan</button>
+<script>/* ajusta el cuerpo de letra solo si la traducción no cabe en su recuadro */
+(() => { const sv = document.getElementById("stage"), cam = document.getElementById("cam") || sv, R = cam.getScreenCTM().inverse();
+  const box = el => { const b = el.getBBox(), m = R.multiply(el.getScreenCTM()); return {x: m.a*b.x + m.e, y: m.d*b.y + m.f, w: b.width*m.a, h: b.height*m.d, m}; };
+  const rects = [...sv.querySelectorAll("rect")].filter(r => !r.closest("defs,marker,pattern,clipPath,mask")).map(box).filter(b => b.w > 40 && b.h > 18 && b.w < 1500);
+  sv.querySelectorAll("text[data-w]").forEach(t => {
+    const w = +t.dataset.w, full = t.getAttribute("data-full"), old = t.textContent; if(full) t.textContent = full;
+    const L = t.getComputedTextLength(), a = t.getAttribute("text-anchor") || getComputedStyle(t).textAnchor, m = R.multiply(t.getScreenCTM());
+    const x0 = +(t.getAttribute("x") || 0), y0 = +(t.getAttribute("y") || 0), fs = parseFloat(getComputedStyle(t).fontSize);
+    const px = m.a*x0 + m.e, py = m.d*(y0 - fs*.35) + m.f;
+    const host = rects.filter(r => px >= r.x - 2 && px <= r.x + r.w + 2 && py >= r.y && py <= r.y + r.h).sort((p, q) => p.w*p.h - q.w*q.h)[0];
+    let room = Infinity;
+    if(host){ const pad = 10; room = (a === "middle" ? 2*Math.min(px - host.x, host.x + host.w - px) : a === "end" ? px - host.x : host.x + host.w - px) - pad; room /= m.a; }
+    else room = Math.max(w*1.3, 60);
+    if(host && room < w*.98) room = Math.max(w*1.3, 60);   /* el recuadro hallado no contiene ni el original: no es su contenedor */
+    if(full) t.textContent = old;
+    if(L > room && room > 0){ t.setAttribute("font-size", (fs*Math.max(.6, room/L)).toFixed(1)); t.style.fontSize = ""; }
+  }); })();
+</script>
+<script src="/presentaciones/assets/gsap.min.js"></script>
+<script>
+(function(){
+const SCENES = ["Opening", "Generatie", "Invoer", "Tracering", "Uitoefening van rechten", "Controle van wissing", "Geverifieerde verwijdering", "Afsluiting"];
+const q = new URLSearchParams(location.search);
+const VOZ = q.get("modo") === "video";
+const WEB = q.get("modo") === "web" || VOZ;
+document.body.classList.add(VOZ ? "video" : WEB ? "web" : "pres");
+if(q.get("embed")) document.body.classList.add("embed");
+if(VOZ) document.querySelector("#start span").textContent = "▶ Bekijken met voice-over (geluid aan)";
+const $ = s => document.querySelector(s), $$ = s => Array.from(document.querySelectorAll(s));
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- utilidades */
+const cam = $("#cam"), C = {x:800, y:450, s:1};
+const applyCam = () => cam.setAttribute("transform", `translate(${800 - C.x*C.s} ${450 - C.y*C.s}) scale(${C.s})`);
+const camTo = (x, y, s, d=1.1) => gsap.to(C, {x, y, s, duration:d, ease:"power3.inOut", onUpdate:applyCam});
+function tw(el, dur){                       // máquina de escribir
+  const full = el.getAttribute("data-full"), o = {n:0};
+  return gsap.to(o, {n:full.length, duration:dur, ease:"none", onUpdate:() => { el.textContent = full.slice(0, Math.round(o.n)); }});
+}
+function prepDraw(p){ const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; return L; }
+const draw = (p, d) => gsap.to(p, {strokeDashoffset:0, duration:d, ease:"power2.out"});
+const fmt = n => "€ " + String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " mln";
+
+/* ---------- estado inicial */
+applyCam();
+const lids = $$("#introEye path"); lids.forEach(prepDraw);
+const arws = $$(".arw"); arws.forEach(prepDraw);
+const sub = $("#sub"); sub.textContent = sub.getAttribute("data-full");
+const iF = sub.textContent.indexOf("fictieve");
+const ux = sub.getStartPositionOfChar(iF).x, uw = sub.getSubStringLength(iF, 8);
+$("#subline").setAttribute("x", ux); sub.textContent = "";
+gsap.set("#introGlow", {scale:0, svgOrigin:"800 360"});
+gsap.set("#introEye", {opacity:0});
+gsap.set("#introEye .pupil", {scale:0, transformOrigin:"50% 50%"});
+gsap.set(["#chip", "#band", "#pie", "#nota", ".box", "#ficha", ".copy", "#alert", "#shield6", ".ti", "#scan"], {opacity:0});
+gsap.set("#chip", {x:-60});
+gsap.set(".box", {scale:.9, transformOrigin:"50% 50%"});
+gsap.set(".box .bl, .box .btag", {opacity:0});
+gsap.set(".lk", {scale:0, transformOrigin:"50% 50%"}); gsap.set("#stamp", {opacity:0});
+gsap.set(".fl", {scaleX:0, transformOrigin:"0% 50%"});
+gsap.set("#ficha", {x:450, y:156, scale:.8});
+gsap.set("#alert", {x:968, y:628});
+gsap.set("#shield6", {x:428, y:416});
+gsap.set("#band", {y:60});
+gsap.set("#lkl", {opacity:0});
+gsap.set(".arw", {opacity:0});
+const bt = n => $(`#b${n} .bt`);
+function boxIn(n, at){                      // entra una caja: aparece, se escribe el título y caen las líneas
+  tl.to(`#b${n}`, {opacity:1, scale:1, duration:.5, ease:"back.out(1.8)"}, at)
+    .to(`#b${n} .bglow`, {opacity:1, duration:.2}, at)
+    .add(tw(bt(n), .55), `${at}+.25`)
+    .to(`#b${n} .bl`, {opacity:1, duration:.3, stagger:.15}, `${at}+.7`)
+    .to(`#b${n} .btag`, {opacity:1, duration:.35}, `${at}+1.25`);
+}
+const glowOff = (n, at) => tl.to(`#b${n} .bglow`, {opacity:0, duration:.4}, at);
+function travel(n, at, d=.8){ tl.to("#ficha", {x:{1:450,2:950,3:1450,4:1450,5:950,6:450}[n], y:{1:156,2:156,3:156,4:438,5:438,6:438}[n], duration:d, ease:"power2.inOut"}, at); }
+
+/* ---------- línea de tiempo (ritmo de anuncio, ~36 s) */
+const tl = gsap.timeline({paused:true, defaults:{ease:"power3.out"}});
+// 1 · Apertura
+tl.addLabel("s1")
+  .to("#introEye", {opacity:1, duration:.25}, "s1")
+  .to("#introGlow", {scale:1, duration:.8, ease:"expo.out"}, "s1")
+  .add(lids.map((p, i) => draw(p, .55).delay(i * .12)), "s1+=.1")
+  .to("#introEye .pupil", {scale:1, duration:.45, ease:"back.out(3)"}, "s1+=.75")
+  .add(tw($("#introT"), 1.0), "s1+=.9")
+  .to("#intro", {y:-120, opacity:0, duration:.6, ease:"power2.in"}, "s1+=2.3")
+  .to("#chip", {x:0, opacity:1, duration:.5, ease:"back.out(2)"}, "s1+=2.6")
+  .add(tw($("#title"), .7), "s1+=2.7")
+  .add(tw($("#sub"), 1.1), "s1+=3.3")
+  .to("#subline", {attr:{width:uw}, duration:.45, ease:"power2.inOut"}, "s1+=4.4")
+  .to({}, {duration:.3});
+// 2 · Generación
+tl.addLabel("s2").add(camTo(300, 275, 1.75, 1), "s2");
+boxIn(1, "s2+=.3");
+tl.to("#ficha", {opacity:1, duration:.2}, "s2+=1.1")
+  .fromTo("#fichaIn", {scale:.2, rotation:-20, transformOrigin:"50% 50%"}, {scale:1, rotation:0, duration:.6, ease:"back.out(2.4)"}, "s2+=1.1")
+  .to(".fl", {scaleX:1, duration:.35, stagger:.18, ease:"power2.out"}, "s2+=1.5")
+  .to("#stamp", {opacity:1, duration:.1}, "s2+=2.2").from("#stamp rect, #stamp text", {scale:2.2, transformOrigin:"50% 50%", duration:.35, ease:"back.out(2)"}, "s2+=2.2")
+  .to({}, {duration:.6});
+// 3 · Introducción
+tl.addLabel("s3").add(camTo(800, 275, 1.75, 1), "s3")
+  .set("#a12", {opacity:1}, "s3").add(draw($("#a12"), .5), "s3+=.2");
+glowOff(1, "s3");
+travel(2, "s3+=.35");
+boxIn(2, "s3+=.5");
+tl.to('.ti[data-b="2"]', {opacity:1, duration:.25, stagger:.25}, "s3+=1.9")
+  .fromTo('.ti[data-b="2"]', {y:10}, {y:0, duration:.35, stagger:.25, ease:"back.out(3)"}, "s3+=1.9")
+  .to({}, {duration:.6});
+// 4 · Seguimiento
+tl.addLabel("s4").add(camTo(1300, 275, 1.75, 1), "s4")
+  .set("#a23", {opacity:1}, "s4").add(draw($("#a23"), .5), "s4+=.2");
+glowOff(2, "s4");
+travel(3, "s4+=.35");
+boxIn(3, "s4+=.5");
+tl.to('.ti[data-b="3"]', {opacity:1, duration:.25, stagger:.2}, "s4+=1.7");
+[1408,1448,1488].forEach((tx, i) => {
+  const c = `.copy[data-i="${i}"]`;
+  tl.set(c, {x:1450, y:156, scale:.4, opacity:1}, `s4+=${2.0 + i * .3}`)
+    .to(c, {x:tx, y:362, scale:.7, duration:.7, ease:"power2.inOut"}, `s4+=${2.0 + i * .3}`)
+    .to(c, {opacity:0, scale:.3, duration:.25}, `s4+=${2.7 + i * .3}`)
+    .fromTo(`.ti[data-b="3"][data-i="${i}"]`, {scale:1}, {scale:1.35, transformOrigin:"50% 50%", duration:.15, yoyo:true, repeat:1}, `s4+=${2.7 + i * .3}`);
+});
+tl.to({}, {duration:.5});
+// 5 · Ejercicio de derechos
+tl.addLabel("s5").to(".copy", {opacity:0, duration:.3}, "s5").add(camTo(1300, 557, 1.75, .9), "s5")
+  .set("#a34", {opacity:1}, "s5").add(draw($("#a34"), .45), "s5+=.2");
+glowOff(3, "s5");
+travel(4, "s5+=.3");
+boxIn(4, "s5+=.45");
+tl.to('.ti[data-b="4"]', {opacity:1, duration:.25, stagger:.3}, "s5+=1.8")
+  .fromTo('.ti[data-b="4"]', {scale:.4, transformOrigin:"50% 50%"}, {scale:1, duration:.4, stagger:.3, ease:"back.out(3)"}, "s5+=1.8")
+  .to('.ti[data-b="4"][data-i="1"] line:nth-of-type(2)', {rotation:360, svgOrigin:"12 14", duration:1.6, ease:"none"}, "s5+=2.4")
+  .to({}, {duration:.3});
+// 6 · Verificación de borrado
+tl.addLabel("s6").add(camTo(800, 557, 1.75, .9), "s6")
+  .set("#a45", {opacity:1}, "s6").add(draw($("#a45"), .45), "s6+=.2");
+glowOff(4, "s6");
+travel(5, "s6+=.3");
+boxIn(5, "s6+=.45");
+tl.to("#scan", {opacity:1, duration:.2}, "s6+=1.8")
+  .fromTo("#scan", {attr:{x:520}}, {attr:{x:1020}, duration:1.4, ease:"power1.inOut"}, "s6+=1.8")
+  .to("#scan", {opacity:0, duration:.2}, "s6+=3.2")
+  .to("#fichaRed", {opacity:1, duration:.15, yoyo:true, repeat:3}, "s6+=3.0")
+  .to("#alert", {opacity:1, duration:.25}, "s6+=3.1")
+  .fromTo("#alert", {scale:.3, transformOrigin:"50% 50%"}, {scale:1, duration:.4, ease:"back.out(4)"}, "s6+=3.1")
+  .to("#b5 .bbg", {stroke:"#C0392B", duration:.2, yoyo:true, repeat:1}, "s6+=3.1")
+  .to({}, {duration:.4});
+// 7 · Eliminación verificada
+tl.addLabel("s7").add(camTo(300, 557, 1.75, .9), "s7")
+  .set("#a56", {opacity:1}, "s7").add(draw($("#a56"), .45), "s7+=.2");
+glowOff(5, "s7");
+travel(6, "s7+=.3");
+boxIn(6, "s7+=.45");
+tl.to("#fichaIn", {scale:.2, opacity:0, duration:.6, ease:"back.in(2)", transformOrigin:"50% 50%"}, "s7+=1.9")
+  .to("#shield6", {opacity:1, duration:.25}, "s7+=2.5")
+  .fromTo("#shield6", {scale:.3, transformOrigin:"50% 50%"}, {scale:1, duration:.5, ease:"back.out(3)"}, "s7+=2.5")
+  .to({}, {duration:.5});
+// 8 · Cierre
+tl.addLabel("s8").add(camTo(800, 450, 1, 1.1), "s8");
+glowOff(6, "s8");
+tl.to("#band", {y:0, opacity:1, duration:.6, ease:"expo.out"}, "s8+=.5")
+  .add(tw($("#finT"), .9), "s8+=.8")
+  .add(tw($("#fin1"), 1.3), "s8+=1.6")
+  .to(".lk", {scale:1, duration:.4, stagger:.35, ease:"back.out(3)"}, "s8+=2.3")
+  .to("#lkl", {opacity:1, duration:.3}, "s8+=2.6")
+  .to(["#pie", "#nota"], {opacity:1, duration:.5}, "s8+=2.4")
+  .to(".box .bglow", {opacity:1, duration:.15, stagger:.1}, "s8+=3.0")
+  .to(".box .bglow", {opacity:0, duration:.4, stagger:.06}, "s8+=3.8")
+  .to("#outro", {opacity:1, duration:.6}, "s8+=4.6")
+  .fromTo("#outEye", {scale:.6, transformOrigin:"50% 50%"}, {scale:1, duration:.6, ease:"back.out(2)"}, "s8+=4.6")
+  .to({}, {duration:1.6})
+  .to("#outro", {opacity:0, duration:.6})
+  .addLabel("end");
+
+/* ---------- controles */
+const labels = SCENES.map((_, i) => tl.labels["s" + (i + 1)]).concat(tl.labels.end);
+const sc = $("#scenes");
+SCENES.forEach((n, i) => { const b = document.createElement("button"); b.innerHTML = `<b>${i + 1}</b><span>${n}</span><i></i>`; b.title = `${i + 1} · ${n}`; b.onclick = () => go(i); sc.appendChild(b); });
+const sbtn = $$(".scenes button");
+const cur = () => { const t = tl.time(); let k = 0; labels.forEach((l, i) => { if(i < SCENES.length && t >= l - .001) k = i; }); return k; };
+function paint(){
+  const t = tl.time(), k = cur();
+  sbtn.forEach((b, i) => { b.classList.toggle("on", i === k); const a = labels[i], z = labels[i + 1]; b.querySelector("i").style.width = (t >= z ? 100 : t <= a ? 0 : (t - a) / (z - a) * 100) + "%"; });
+  $("#pi").setAttribute("d", tl.isActive() || (seg && seg.isActive()) || (window.D03 && D03.vozOn && D03.vozOn()) ? "M7 5h4v14H7zM13 5h4v14h-4z" : "M8 5v14l11-7z");
+  document.body.classList.toggle("at-start", t < .01);
+  document.body.classList.toggle("at-end", t >= tl.duration() - .05);
+}
+gsap.ticker.add(paint);
+let seg = null;
+function stopSeg(){ if(seg){ seg.kill(); seg = null; } }
+function go(i){                     // ir al principio de la escena i y reproducirla
+  stopSeg(); tl.pause(); i = Math.max(0, Math.min(SCENES.length - 1, i));
+  tl.seek(labels[i], false);
+  if(WEB){ tl.play(); return; }
+  seg = tl.tweenFromTo(labels[i], labels[i + 1], {ease:"none"});
+}
+function next(){
+  if(seg && seg.isActive()){ const k = cur(); stopSeg(); tl.seek(labels[k + 1], false); return; }   // terminar la escena en curso
+  const t = tl.time(), k = cur();
+  if(t >= labels[SCENES.length] - .01) return;
+  go(t - labels[k] < .02 ? k : k + 1);
+}
+function prev(){
+  if(seg && seg.isActive()){ go(cur()); return; }
+  const t = tl.time(), k = cur();
+  go(t - labels[k] < .02 ? k - 1 : k);
+}
+function toggle(){
+  if(WEB){ if(tl.time() >= tl.duration() - .01){ go(0); return; } tl.paused() ? tl.play() : tl.pause(); return; }
+  if(seg && seg.isActive()){ seg.pause(); return; }
+  if(seg && seg.paused() && seg.progress() < 1){ seg.resume(); return; }
+  next();
+}
+$("#play").onclick = toggle; $("#next").onclick = next; $("#prev").onclick = prev;
+$("#replay").onclick = () => go(0);
+const fs = () => document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen().catch(() => {});
+$("#fs").onclick = fs;
+document.addEventListener("keydown", e => {
+  if(e.target.closest && e.target.closest("button") && (e.key === " " || e.key === "Enter")) return;
+  if(["ArrowRight", "PageDown", " "].includes(e.key)){ e.preventDefault(); next(); }
+  else if(["ArrowLeft", "PageUp"].includes(e.key)){ e.preventDefault(); prev(); }
+  else if(e.key === "f" || e.key === "F") fs();
+  else if(e.key === "h" || e.key === "H") document.body.classList.toggle("ui-off");
+  else if(e.key === "Home") go(0);
+  else if(/^[1-8]$/.test(e.key)) go(+e.key - 1);
+});
+if(!WEB) $("#wrap").addEventListener("click", next);
+
+
+/* ---------- locución sincronizada (modo vídeo): [escena, desfase en la escena, segundo del audio] */
+const ANCH = [["s1", 0, 0.0], ["s2", 0, 2.59], ["s3", 0, 9.98], ["s4", 0, 14.73], ["s5", 0, 21.65], ["s6", 0, 25.84], ["s7", 0, 32.67], ["s8", 0, 38.41], ["s8", 6.8, 43.15]].map(([l, o, a]) => [a, tl.labels[l] + o]);
+const SYNC = [];
+ANCH.forEach(([a, t], i) => {
+  SYNC.push([a, t]);
+  const n = ANCH[i + 1]; if(!n) return;
+  const dt = n[1] - t, da = n[0] - a;
+  if(da > dt + .1) SYNC.push([a + dt - .05, n[1] - .05]);      // la animación va a 1x y espera a la voz
+});
+function a2t(a){
+  for(let i = SYNC.length - 1; i >= 0; i--) if(a >= SYNC[i][0]){
+    const [a0, t0] = SYNC[i], n = SYNC[i + 1];
+    return Math.min(tl.duration(), n ? t0 + (a - a0) * (n[1] - t0) / (n[0] - a0) : t0 + (a - a0));
+  }
+  return 0;
+}
+const t2a = t => { let a = 0; SYNC.forEach(([sa, st]) => { if(st <= t + .001) a = sa; }); return a; };
+let vozOn = () => false;
+let vozActiva = false, au = null;
+function enableVoz(){
+  if(vozActiva) return; vozActiva = true;
+  au = new Audio("voz-d03.mp3"); au.preload = "auto"; run = false;
+  const clock = () => endAt !== null ? au.duration + (performance.now() - endAt) / 1000 : au.currentTime;
+  au.onended = () => { endAt = performance.now(); };
+  vozOn = () => run;
+  gsap.ticker.add(() => {
+    if(!run) return;
+    const t = a2t(clock()); tl.seek(t, false);
+    if(t >= tl.duration() - .001){ run = false; endAt = null; }
+  });
+  const from = a => { tl.pause(); stopSeg(); endAt = null; au.currentTime = a; tl.seek(a2t(a), false); };
+  const play = () => { run = true; return au.play().catch(() => { run = false; }); };
+  const pause = () => { au.pause(); run = false; };
+  const tg = () => { if(run){ pause(); return; } if(tl.time() >= tl.duration() - .01 || endAt !== null){ from(0); } play(); };
+  $("#play").onclick = tg; $("#start span").onclick = tg;
+  $("#replay").onclick = () => { from(0); play(); };
+  $("#next").onclick = () => { const k = cur(); if(k + 1 < SCENES.length){ from(t2a(labels[k + 1])); play(); } };
+  $("#prev").onclick = () => { const k = cur(); from(t2a(labels[Math.max(0, k - (tl.time() - labels[k] < 1 ? 1 : 0))])); play(); };
+  sbtn.forEach((b, i) => b.onclick = () => { from(t2a(labels[i])); play(); });
+  $("#wrap").addEventListener("click", tg);
+  document.addEventListener("keydown", e => {
+    if(e.key === " "){ e.preventDefault(); e.stopImmediatePropagation(); tg(); }
+    else if(e.key === "ArrowRight"){ e.stopImmediatePropagation(); $("#next").onclick(); }
+    else if(e.key === "ArrowLeft"){ e.stopImmediatePropagation(); $("#prev").onclick(); }
+    else if(/^[1-9]$/.test(e.key) && sbtn[+e.key - 1]){ e.stopImmediatePropagation(); sbtn[+e.key - 1].onclick(); }
+  }, true);
+  return {from, play};
+}
+if(VOZ && !reduced){ const v = enableVoz(); if(q.get("auto") === "1"){ v.from(0); v.play(); } } /* auto=1: arranca con sonido si el navegador lo permite; si no, espera el clic */
+/* dentro de la web (ventana emergente): avisa al terminar para cerrarse y volver al punto de partida */
+/* barra estrecha: la fila de escenas no se desborda sobre los botones */
+(() => { const st = document.createElement("style"); st.textContent = ".scenes{overflow:hidden}@media(max-width:520px){.scenes{display:none}}"; document.head.appendChild(st); })();
+if(window.parent !== window && (WEB || VOZ) && new URLSearchParams(location.search).get("embed") !== "1"){
+  /* barra inferior: botón de cerrar (y Esc) que cierra la ventana emergente de la web */
+  const cerrarLb = () => { try { window.parent.postMessage({argos: "cerrar"}, "*"); } catch(e){} };
+  const fsb = document.getElementById("fs");
+  if(fsb && !document.getElementById("cerrar-lb")){
+    const cb = document.createElement("button"); cb.id = "cerrar-lb"; cb.type = "button";
+    cb.setAttribute("aria-label", "Sluiten (Esc)"); cb.title = "Sluiten (Esc)";
+    cb.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+    cb.style.cssText = "border-color:#C9A227;color:#C9A227";
+    cb.addEventListener("click", e => { e.stopPropagation(); cerrarLb(); });
+    fsb.parentNode.appendChild(cb);
+  }
+  document.addEventListener("keydown", e => { if(e.key === "Escape" && !document.fullscreenElement) cerrarLb(); });
+  /* el primer botón es Reproducir/Pausa: lo indicamos al pasar el ratón */
+  const pb = document.getElementById("play");
+  if(pb) gsap.ticker.add(() => { const pausa = (document.getElementById("pi") || {}).getAttribute?.("d")?.startsWith("M7 5h4"); const t = pausa ? "Pauze (spatie)" : "Afspelen (spatie)"; if(pb.title !== t){ pb.title = t; pb.setAttribute("aria-label", t); } });
+}
+if(window.parent !== window && (WEB || VOZ)){
+  let armado = false, avisado = false;
+  gsap.ticker.add(() => {
+    const t = tl.time(), d = tl.duration();
+    if(t > .3 && t < d - 1) { armado = true; avisado = false; }
+    if(armado && !avisado && t >= d - .05){ avisado = true; armado = false; try { window.parent.postMessage({argos: "fin"}, "*"); } catch(e){} }
+  });
+}
+
+/* modo web: botón opcional de locución (arranca en silencio) */
+const vb = $("#voz-btn");
+if(WEB && !VOZ && !q.get("render")){
+  vb.hidden = false;
+  const pinta = () => { const on = vozActiva && !au.muted; vb.textContent = on ? "🔇 Dempen" : "🔊 Voice-over aan"; vb.setAttribute("aria-pressed", on); };
+  vb.onclick = e => {
+    e.stopPropagation();
+    if(!vozActiva){ document.body.classList.remove("reduced"); tl.pause(); const v = enableVoz(); v.from(0); v.play(); }
+    else au.muted = !au.muted;
+    pinta();
+  };
+  pinta();
+}
+/* modo web: arranca al verse; el ratón quieto oculta los controles en pantalla completa */
+if(reduced){
+  document.body.classList.add("reduced");
+  tl.seek(tl.labels.end, false); gsap.set("#outro", {opacity:0});
+  $("#rm-play").onclick = () => { document.body.classList.remove("reduced"); go(0); if(!WEB) tl.play(); };
+} else if(WEB && !VOZ){
+  const io = new IntersectionObserver(es => es.forEach(en => { if(vozActiva) return; if(en.isIntersecting && tl.time() === 0) tl.play(); else if(!en.isIntersecting) tl.pause(); }), {threshold:.4});
+  io.observe($("#stage"));
+}
+let idleT; document.addEventListener("mousemove", () => { document.body.classList.remove("idle"); clearTimeout(idleT); idleT = setTimeout(() => { if(document.fullscreenElement) document.body.classList.add("idle"); }, 2500); });
+window.D03 = {tl, go, a2t, vozOn:() => vozOn()};
+})();
+</script>
+</body>
+</html>

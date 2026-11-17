@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D05 · Warum ist ein solches Werkzeug gerade jetzt dringend? · Animierte Präsentation</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://www.softwareinabox.eu/assets/fonts.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#0B1F3A;color:#fff;font-family:'Hanken Grotesk',system-ui,sans-serif;overflow:hidden}
+#wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#stage{width:100%;height:100%;display:block}
+.ui{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:14px;padding:12px 18px;background:linear-gradient(0deg,rgba(5,14,26,.92),rgba(5,14,26,0));transition:opacity .3s}
+body.ui-off .ui{opacity:0;pointer-events:none}
+body.idle .ui{opacity:0}
+.ui button{font:inherit;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:8px;height:38px;min-width:38px;padding:0 12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:14px}
+.ui button:hover,.ui button:focus-visible{border-color:#C9A227;outline:none}
+.ui svg{width:18px;height:18px}
+.scenes{display:flex;gap:6px;flex:1;min-width:0}
+.scenes button{flex:1;min-width:0;height:auto;padding:6px 8px;display:block;text-align:left;font-size:12.5px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative}
+.scenes button b{display:block;font-size:11px;color:#C9A227}
+.scenes button i{position:absolute;left:0;bottom:0;height:3px;background:#C9A227;width:0;border-radius:2px}
+.scenes button.on{border-color:#C9A227;background:rgba(201,162,39,.15)}
+.hint{font-size:12.5px;color:#AFC0D2;white-space:nowrap}
+#start{position:fixed;inset:0;display:none;align-items:flex-end;justify-content:center;padding-bottom:110px;pointer-events:none}
+#start span{background:rgba(5,14,26,.75);border:1px solid rgba(201,162,39,.6);border-radius:999px;padding:10px 20px;font-size:15px;color:#fff}
+body.pres.at-start #start,body.video.at-start #start{display:flex}
+body.video #start span{pointer-events:auto;cursor:pointer;font-size:17px;padding:14px 26px}
+body.video .hint{display:none}
+body.web .hint,body.web #fs{display:none}
+body.web .scenes button span{display:none}
+.rm-note{position:fixed;top:14px;left:50%;transform:translateX(-50%);background:rgba(5,14,26,.8);border-radius:999px;padding:8px 16px;font-size:13px;display:none}
+body.reduced .rm-note{display:block}
+body.embed .ui{padding:6px 8px;gap:6px}
+body.embed .ui button{height:28px;min-width:28px;padding:0 6px;border-radius:6px}
+body.embed .ui svg{width:14px;height:14px}
+body.embed .scenes button{padding:3px 5px}
+body.embed .scenes button b{font-size:10px}
+body.embed .hint,body.embed #fs{display:none}
+body.embed .ui{opacity:0}
+body.embed:hover .ui,body.embed.at-end .ui{opacity:1}
+@media(max-width:760px){.scenes button span{display:none}.hint{display:none}}
+</style>
+<style>#voz-btn{position:fixed;top:14px;right:16px;z-index:5;font:600 14px 'Hanken Grotesk',system-ui,sans-serif;color:#fff;background:rgba(11,31,58,.82);border:1px solid #C9A227;border-radius:999px;padding:9px 16px;cursor:pointer;transition:background .2s}#voz-btn:hover,#voz-btn:focus-visible{background:#C9A227;color:#0B1F3A;outline:none}#voz-btn[hidden]{display:none}@media(max-width:760px){#voz-btn{top:8px;right:8px;padding:7px 12px;font-size:13px}}</style>
+</head>
+<body class="at-start">
+<div id="wrap">
+<svg id="stage" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="st-t st-d" font-family="'Hanken Grotesk',system-ui,sans-serif">
+<title id="st-t">Warum ist ein solches Werkzeug gerade jetzt dringend?</title><desc id="st-d">Steigende Bußgelder und ein Regulierungskalender mit verbindlichen Fristen: die KI-Verordnung und der EHDS. Kein Werkzeug prüft heute das gesamte europäische Paket auf den realen Systemen. Der Kalender wartet nicht: prüfen, bevor man geprüft wird.</desc>
+<defs>
+ <linearGradient id="bgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1F3A"/><stop offset="1" stop-color="#1F3864"/></linearGradient>
+ <radialGradient id="glowG"><stop offset="0" stop-color="#C9A227" stop-opacity=".55"/><stop offset="1" stop-color="#C9A227" stop-opacity="0"/></radialGradient>
+ <linearGradient id="scanG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9A227" stop-opacity="0"/><stop offset=".5" stop-color="#F3D36B" stop-opacity=".9"/><stop offset="1" stop-color="#C9A227" stop-opacity="0"/></linearGradient>
+ <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#C9A227"/></marker>
+ <filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity=".25"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bgG)"/>
+<g id="grid" opacity=".07" stroke="#fff"><path d="M0 0V900"/><path d="M80 0V900"/><path d="M160 0V900"/><path d="M240 0V900"/><path d="M320 0V900"/><path d="M400 0V900"/><path d="M480 0V900"/><path d="M560 0V900"/><path d="M640 0V900"/><path d="M720 0V900"/><path d="M800 0V900"/><path d="M880 0V900"/><path d="M960 0V900"/><path d="M1040 0V900"/><path d="M1120 0V900"/><path d="M1200 0V900"/><path d="M1280 0V900"/><path d="M1360 0V900"/><path d="M1440 0V900"/><path d="M1520 0V900"/><path d="M1600 0V900"/><path d="M0 0H1600"/><path d="M0 80H1600"/><path d="M0 160H1600"/><path d="M0 240H1600"/><path d="M0 320H1600"/><path d="M0 400H1600"/><path d="M0 480H1600"/><path d="M0 560H1600"/><path d="M0 640H1600"/><path d="M0 720H1600"/><path d="M0 800H1600"/><path d="M0 880H1600"/></g>
+
+<g id="cam">
+ <g id="head">
+  <g id="chip"><rect x="60" y="40" width="210" height="50" rx="12" fill="#C9A227"/><text x="165" y="73" text-anchor="middle" font-size="22" font-weight="700" fill="#0B1F3A" data-w="140.0">D05 · B01-P10</text></g>
+  <text id="title" x="300" y="70" font-family="Montserrat,sans-serif" font-size="36" font-weight="700" fill="#fff" data-full="Warum ist ein solches Werkzeug gerade jetzt dringend?" data-w="905.7"></text>
+  <text id="sub" x="300" y="108" font-size="22" fill="#C9D6E8" data-full="Steigende Bußgelder + Regulierungskalender mit verbindlichen Fristen" data-w="651.6"></text>
+  <rect id="subline" x="377" y="115" width="0" height="4" rx="2" fill="#C9A227"/>
+  <g class="ico tick"><g transform="translate(1478 46) scale(1.6666666666666667)" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></g></g>
+ </g>
+
+ <!-- sanciones -->
+ <g id="pSan" filter="url(#sh)">
+  <rect x="80" y="150" width="620" height="350" rx="18" fill="#F4F6FA"/>
+  <text x="390" y="196" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="24" font-weight="700" fill="#1F3864" data-w="478.0">Kumulierte DSGVO-Bußgelder in der EU</text>
+  <g class="ico gavel"><g transform="translate(112 222) scale(1.25)" fill="none" stroke="#C0392B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 13-8.381 8.38a1 1 0 0 1-3.001-3l8.384-8.381" /><path d="m16 16 6-6" /><path d="m21.5 10.5-8-8" /><path d="m8 8 6-6" /><path d="m8.5 7.5 8 8" /></g></g>
+  <text id="num" x="152" y="250" font-family="Montserrat,sans-serif" font-size="46" font-weight="800" fill="#C0392B" data-w="215.7">7.100 Mio. €</text>
+  <text x="116" y="286" font-size="20" fill="#7A2A22" data-w="252.5">DSGVO-Bußgelder seit 2018</text>
+  <text x="116" y="314" font-size="18" fill="#7A2A22" data-w="182.4">1.200 Mio. € allein 2025</text>
+  <g id="eu" role="img" aria-label="Emblema de la Unión Europea"><g transform="translate(116 336) scale(0.8571428571428571) translate(-768 -206)"><rect x="768" y="206" width="63.0" height="42" fill="#003399"/><g fill="#FFCC00"><polygon points="799.50,210.67 800.02,212.28 801.72,212.28 800.35,213.28 800.87,214.89 799.50,213.89 798.13,214.89 798.65,213.28 797.28,212.28 798.98,212.28"/><polygon points="806.50,212.54 807.02,214.15 808.72,214.15 807.35,215.15 807.87,216.76 806.50,215.77 805.13,216.76 805.65,215.15 804.28,214.15 805.98,214.15"/><polygon points="811.62,217.67 812.15,219.28 813.84,219.28 812.47,220.28 813.00,221.89 811.62,220.89 810.25,221.89 810.78,220.28 809.41,219.28 811.10,219.28"/><polygon points="813.50,224.67 814.02,226.28 815.72,226.28 814.35,227.28 814.87,228.89 813.50,227.89 812.13,228.89 812.65,227.28 811.28,226.28 812.98,226.28"/><polygon points="811.62,231.67 812.15,233.28 813.84,233.28 812.47,234.28 813.00,235.89 811.62,234.89 810.25,235.89 810.78,234.28 809.41,233.28 811.10,233.28"/><polygon points="806.50,236.79 807.02,238.40 808.72,238.40 807.35,239.40 807.87,241.01 806.50,240.02 805.13,241.01 805.65,239.40 804.28,238.40 805.98,238.40"/><polygon points="799.50,238.67 800.02,240.28 801.72,240.28 800.35,241.28 800.87,242.89 799.50,241.89 798.13,242.89 798.65,241.28 797.28,240.28 798.98,240.28"/><polygon points="792.50,236.79 793.02,238.40 794.72,238.40 793.35,239.40 793.87,241.01 792.50,240.02 791.13,241.01 791.65,239.40 790.28,238.40 791.98,238.40"/><polygon points="787.38,231.67 787.90,233.28 789.59,233.28 788.22,234.28 788.75,235.89 787.38,234.89 786.00,235.89 786.53,234.28 785.16,233.28 786.85,233.28"/><polygon points="785.50,224.67 786.02,226.28 787.72,226.28 786.35,227.28 786.87,228.89 785.50,227.89 784.13,228.89 784.65,227.28 783.28,226.28 784.98,226.28"/><polygon points="787.38,217.67 787.90,219.28 789.59,219.28 788.22,220.28 788.75,221.89 787.38,220.89 786.00,221.89 786.53,220.28 785.16,219.28 786.85,219.28"/><polygon points="792.50,212.54 793.02,214.15 794.72,214.15 793.35,215.15 793.87,216.76 792.50,215.77 791.13,216.76 791.65,215.15 790.28,214.15 791.98,214.15"/></g></g></g>
+  <text x="180" y="356" font-size="12.5" fill="#5A6B85" class="eucap" data-w="144.2">Bußgelder der Behörden</text>
+  <text x="180" y="372" font-size="12.5" fill="#5A6B85" class="eucap" data-w="143.5">der EU (DLA Piper, 2026)</text>
+  <line x1="360" y1="462" x2="690" y2="462" stroke="#C5CEDB" stroke-width="2"/>
+  <g class="bar"><rect class="br" x="372" y="428" width="40" height="34" rx="3" fill="#1D7A74"/><text x="392" y="484" text-anchor="middle" font-size="15" fill="#5A6B85" data-w="33.6">2020</text></g><g class="bar"><rect class="br" x="426" y="404" width="40" height="58" rx="3" fill="#1D7A74"/><text x="446" y="484" text-anchor="middle" font-size="15" fill="#5A6B85" data-w="33.6">2021</text></g><g class="bar"><rect class="br" x="480" y="376" width="40" height="86" rx="3" fill="#1D7A74"/><text x="500" y="484" text-anchor="middle" font-size="15" fill="#5A6B85" data-w="33.6">2022</text></g><g class="bar"><rect class="br" x="534" y="344" width="40" height="118" rx="3" fill="#1D7A74"/><text x="554" y="484" text-anchor="middle" font-size="15" fill="#5A6B85" data-w="33.6">2023</text></g><g class="bar"><rect class="br" x="588" y="304" width="40" height="158" rx="3" fill="#1D7A74"/><text x="608" y="484" text-anchor="middle" font-size="15" fill="#5A6B85" data-w="33.6">2024</text></g><g class="bar"><rect class="br" x="642" y="256" width="40" height="206" rx="3" fill="#C0392B"/><text x="662" y="484" text-anchor="middle" font-size="15" fill="#5A6B85" data-w="33.6">2025</text></g>
+ </g>
+
+ <!-- tres fuerzas -->
+ <g id="pFz" filter="url(#sh)">
+  <rect x="740" y="150" width="780" height="350" rx="18" fill="#1D3A66"/>
+  <rect x="740" y="150" width="10" height="350" rx="5" fill="#C9A227"/>
+  <text x="790" y="206" font-family="Montserrat,sans-serif" font-size="27" font-weight="700" fill="#fff" data-w="328.4">Drei Kräfte treffen zusammen</text>
+  <g class="fz" data-i="0"><circle cx="806" cy="272" r="22" fill="rgba(201,162,39,.14)" stroke="#C9A227" stroke-width="1.5"/><g class="ico fzi"><g transform="translate(794 260) scale(1.0)" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6" /><path d="m22 7-8.5 8.5-5-5L2 17" /></g></g><text x="842" y="279" font-family="Montserrat,sans-serif" font-size="20" font-weight="700" fill="#C9A227" data-w="7.8">1</text><text x="868" y="272" font-size="20" fill="#fff" data-w="367.0">Der Sanktionsdruck wächst Jahr für Jahr</text></g><g class="fz" data-i="1"><circle cx="806" cy="344" r="22" fill="rgba(201,162,39,.14)" stroke="#C9A227" stroke-width="1.5"/><g class="ico fzi"><g transform="translate(794 332) scale(1.0)" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 14v2.2l1.6 1" /><path d="M16 2v3" /><path d="M21 7.338V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h2.338" /><path d="M3 9h5.859" /><path d="M8 2v3" /><circle cx="16" cy="16" r="6" /></g></g><text x="842" y="351" font-family="Montserrat,sans-serif" font-size="20" font-weight="700" fill="#C9A227" data-w="11.8">2</text><text x="868" y="344" font-size="20" fill="#fff" data-w="456.4">Zwei Verordnungen mit harten Fristen kommen ins Spiel:</text><text x="868" y="368" font-size="20" fill="#C9D6E8" data-w="269.4">die KI-Verordnung und der EHDS</text></g><g class="fz" data-i="2"><circle cx="806" cy="416" r="22" fill="rgba(201,162,39,.14)" stroke="#C9A227" stroke-width="1.5"/><g class="ico fzi"><g transform="translate(794 404) scale(1.0)" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13.5 8.5-5 5" /><path d="m8.5 8.5 5 5" /><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></g></g><text x="842" y="423" font-family="Montserrat,sans-serif" font-size="20" font-weight="700" fill="#C9A227" data-w="11.8">3</text><text x="868" y="416" font-size="20" fill="#fff" data-w="394.1">Kein Werkzeug prüft heute das gesamte</text><text x="868" y="440" font-size="20" fill="#C9D6E8" data-w="395.0">europäische Paket auf den realen Systemen</text></g>
+  <rect id="hole" x="776" y="394" width="720" height="84" rx="12" fill="none" stroke="#E0675B" stroke-width="2.5" stroke-dasharray="9 7" opacity="0"/>
+  <g id="fill3" opacity="0">
+   <rect x="1334" y="404" width="156" height="64" rx="12" fill="#C9A227"/>
+   <g transform="translate(1342 409) scale(.68)"><rect x="2" y="2" width="76" height="76" rx="18" fill="#0B1F3A"/><g fill="none" stroke-linecap="round"><path class="lid1" d="M13 41C20 28 29 22 40 22S60 28 67 41" stroke="#fff" stroke-width="4"/><path class="lid2" d="M24 41C28 34 33.5 31 40 31S52 34 56 41" stroke="#fff" stroke-width="4" opacity=".7"/><path class="lid3" d="M13 41C20 54 29 60 40 60S60 54 67 41" stroke="#6C4CF1" stroke-width="4"/></g><circle class="pupil" cx="40" cy="42" r="6.5" fill="#C9A227"/></g>
+   <text x="1404" y="442" font-family="Montserrat,sans-serif" font-size="17" font-weight="800" fill="#0B1F3A" data-w="64.4">ARGOS</text>
+  </g>
+ </g>
+
+ <!-- línea de tiempo -->
+ <g id="pTl" filter="url(#sh)">
+  <rect x="80" y="530" width="1440" height="270" rx="18" fill="#F4F6FA"/>
+  <g id="spain">
+   <text x="112" y="566" font-size="13" font-weight="700" letter-spacing="1.5" fill="#1F3864" data-w="176.6">IN SPANIEN BEAUFSICHTIGEN</text>
+   <g class="badge"><rect x="318" y="550" width="128" height="24" rx="12" fill="#fff" stroke="#1F3864"/><text x="382" y="567" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3864" data-w="75.9">AEPD · Daten</text></g>
+   <g class="badge"><rect x="454" y="550" width="128" height="24" rx="12" fill="#fff" stroke="#1F3864"/><text x="518" y="567" text-anchor="middle" font-size="13" font-weight="700" fill="#1F3864" data-w="58.8">AESIA · KI</text></g>
+  </g>
+  <g class="ico cal"><g transform="translate(1470 548) scale(1.1666666666666667)" fill="none" stroke="#1F3864" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 14v2.2l1.6 1" /><path d="M16 2v3" /><path d="M21 7.338V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h2.338" /><path d="M3 9h5.859" /><path d="M8 2v3" /><circle cx="16" cy="16" r="6" /></g></g>
+  <path id="tline" d="M150 681H1452" stroke="#1F3864" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path id="tarrow" d="M1448 668L1474 681L1448 694z" fill="#1F3864"/>
+  <g class="ms" data-i="0"><text x="230" y="640" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="23" font-weight="700" fill="#1F3864" data-w="53.3">2018</text><circle class="msring" cx="230" cy="681" r="22" fill="none" stroke="#1D7A74" stroke-width="3" opacity="0"/><circle class="msdot" cx="230" cy="681" r="14" fill="#1D7A74"/><g class="ico "><g transform="translate(221 672) scale(0.75)" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18" /><path d="m19 8 3 8a5 5 0 0 1-6 0zV7" /><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" /><path d="m5 8 3 8a5 5 0 0 1-6 0zV7" /><path d="M7 21h10" /></g></g><text x="230" y="722" text-anchor="middle" font-size="18" fill="#3A4659" data-w="128.1">DSGVO anwendbar:</text><text x="230" y="745" text-anchor="middle" font-size="18" fill="#3A4659" data-w="128.9">Beginn des</text><text x="230" y="768" text-anchor="middle" font-size="18" fill="#3A4659" data-w="99.7">Sanktionszyklus</text></g><g class="ms" data-i="1"><text x="520" y="640" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="23" font-weight="700" fill="#1F3864" data-w="111.1">März 2025</text><circle class="msring" cx="520" cy="681" r="22" fill="none" stroke="#1D7A74" stroke-width="3" opacity="0"/><circle class="msdot" cx="520" cy="681" r="14" fill="#1D7A74"/><g class="ico "><g transform="translate(511 672) scale(0.75)" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v4" /><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M14 9h-4" /><path d="M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" /><path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" /></g></g><text x="520" y="722" text-anchor="middle" font-size="18" fill="#3A4659" data-w="114.2">EHDS in Kraft</text><text x="520" y="745" text-anchor="middle" font-size="18" fill="#3A4659" data-w="129.2">(VO 2025/327)</text></g><g class="ms" data-i="2"><text x="820" y="628" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="23" font-weight="700" fill="#C0392B" data-w="129.4">2. Aug. 2026</text><text x="820" y="652" text-anchor="middle" font-size="15" font-weight="800" fill="#C0392B" class="ya" data-w="98.9">BEREITS ANWENDBAR</text><circle class="msring" cx="820" cy="681" r="22" fill="none" stroke="#C0392B" stroke-width="3" opacity="0"/><circle class="msdot" cx="820" cy="681" r="14" fill="#C0392B"/><g class="ico "><g transform="translate(811 672) scale(0.75)" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v2" /><path d="M12 2v2" /><path d="M17 20v2" /><path d="M17 2v2" /><path d="M2 12h2" /><path d="M2 17h2" /><path d="M2 7h2" /><path d="M20 12h2" /><path d="M20 17h2" /><path d="M20 7h2" /><path d="M7 20v2" /><path d="M7 2v2" /><rect x="4" y="4" width="16" height="16" rx="2" /><rect x="8" y="8" width="8" height="8" rx="1" /></g></g><text x="820" y="722" text-anchor="middle" font-size="18" fill="#3A4659" data-w="144.6">KI-Verordnung:</text><text x="820" y="745" text-anchor="middle" font-size="18" fill="#3A4659" data-w="150.8">allgemeine Geltung;</text><text x="820" y="768" text-anchor="middle" font-size="18" fill="#3A4659" data-w="177.2">Hochrisiko: 2. Dez. 2027</text></g><g class="ms" data-i="3"><text x="1130" y="640" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="23" font-weight="700" fill="#1F3864" data-w="146.4">26. März 2027</text><circle class="msring" cx="1130" cy="681" r="22" fill="none" stroke="#C9A227" stroke-width="3" opacity="0"/><circle class="msdot" cx="1130" cy="681" r="14" fill="#C9A227"/><g class="ico "><g transform="translate(1121 672) scale(0.75)" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v4" /><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M14 9h-4" /><path d="M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" /><path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" /></g></g><text x="1130" y="722" text-anchor="middle" font-size="18" fill="#3A4659" data-w="135.9">EHDS: allgemeine</text><text x="1130" y="745" text-anchor="middle" font-size="18" fill="#3A4659" data-w="132.2">Geltung im Gesundheitswesen</text></g><g class="ms" data-i="4"><text x="1390" y="640" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="23" font-weight="700" fill="#1F3864" data-w="56.0">2035</text><circle class="msring" cx="1390" cy="681" r="22" fill="none" stroke="#1D7A74" stroke-width="3" opacity="0"/><circle class="msdot" cx="1390" cy="681" r="14" fill="#1D7A74"/><g class="ico "><g transform="translate(1381 672) scale(0.75)" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v4" /><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M14 9h-4" /><path d="M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" /><path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" /></g></g><text x="1390" y="722" text-anchor="middle" font-size="18" fill="#3A4659" data-w="154.5">EHDS: gestaffelte Pflichten</text><text x="1390" y="745" text-anchor="middle" font-size="18" fill="#3A4659" data-w="189.4">vollständig</text></g>
+  <g id="hoy" visibility="hidden">
+   <path id="hoyline" d="M962 600V790" stroke="#C0392B" stroke-width="3" stroke-dasharray="8 7" fill="none"/>
+   <rect x="923" y="566" width="78" height="34" rx="8" fill="#C0392B"/>
+   <text x="962" y="590" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="19" font-weight="800" fill="#fff" data-w="44.0">HEUTE</text>
+  </g>
+ </g>
+ <rect id="scan" x="140" y="600" width="60" height="190" fill="url(#scanG)" opacity="0"/>
+
+ <text id="tag" x="800" y="842" text-anchor="middle" font-size="25" font-style="italic" fill="#fff" data-full="Der Kalender wartet nicht: prüfen, bevor man geprüft wird." data-w="641.3"></text>
+ <text id="pie" x="1520" y="882" text-anchor="end" font-size="15" fill="#8FA3BD" data-w="387.6">ARGOS · Visuelle Wissensbasis · Software in a Box</text>
+ <text id="src" x="80" y="882" font-size="12.5" fill="#8FA3BD" data-w="612.4">Quellen: DLA Piper (Januar 2026) · Verordnungen (EU) 2024/1689, 2026/1744 und 2025/327 · Balken illustrativ</text>
+</g>
+
+<g id="intro">
+ <circle cx="800" cy="360" r="190" fill="url(#glowG)" id="introGlow"/>
+ <g id="introEye"><g transform="translate(700 260) scale(2.5)"><rect x="2" y="2" width="76" height="76" rx="18" fill="#0B1F3A"/><g fill="none" stroke-linecap="round"><path class="lid1" d="M13 41C20 28 29 22 40 22S60 28 67 41" stroke="#fff" stroke-width="4"/><path class="lid2" d="M24 41C28 34 33.5 31 40 31S52 34 56 41" stroke="#fff" stroke-width="4" opacity=".7"/><path class="lid3" d="M13 41C20 54 29 60 40 60S60 54 67 41" stroke="#6C4CF1" stroke-width="4"/></g><circle class="pupil" cx="40" cy="42" r="6.5" fill="#C9A227"/></g></g>
+ <text id="introT" x="800" y="560" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="50" font-weight="700" fill="#fff" data-full="Warum ist ein solches Werkzeug gerade jetzt dringend?" data-w="1257.9"></text>
+</g>
+<g id="outro" opacity="0">
+ <rect x="0" y="0" width="1600" height="900" fill="#0B1F3A" opacity=".94"/>
+ <g id="outEye"><g transform="translate(680 250) scale(1.5)"><rect x="2" y="2" width="76" height="76" rx="18" fill="#0B1F3A"/><g fill="none" stroke-linecap="round"><path class="lid1" d="M13 41C20 28 29 22 40 22S60 28 67 41" stroke="#fff" stroke-width="4"/><path class="lid2" d="M24 41C28 34 33.5 31 40 31S52 34 56 41" stroke="#fff" stroke-width="4" opacity=".7"/><path class="lid3" d="M13 41C20 54 29 60 40 60S60 54 67 41" stroke="#6C4CF1" stroke-width="4"/></g><circle class="pupil" cx="40" cy="42" r="6.5" fill="#C9A227"/></g></g>
+ <text x="820" y="300" font-family="Montserrat,sans-serif" font-size="64" font-weight="700" fill="#fff" letter-spacing="2" data-w="250.3">ARG<tspan fill="#C9A227">O</tspan>S</text>
+ <text x="822" y="340" font-size="16" font-weight="700" letter-spacing="5" fill="#AFC0D2" data-w="352.8">VERIFIED COMPLIANCE AGENT</text>
+ <text x="800" y="450" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="40" font-weight="700" fill="#fff" data-w="682.6">Prüfen, bevor man geprüft wird</text>
+</g>
+
+</svg>
+</div>
+<div id="start"><span>Drücken Sie → oder die Leertaste, um zu beginnen</span></div>
+<p class="rm-note">Movimiento reducido: se muestra el diagrama completo. <button id="rm-play" style="margin-left:8px">Animation ansehen</button></p>
+<div class="ui" role="toolbar" aria-label="Steuerung der Präsentation">
+ <button id="play" aria-label="Abspielen"><svg viewBox="0 0 24 24" fill="currentColor"><path id="pi" d="M8 5v14l11-7z"/></svg></button>
+ <button id="prev" aria-label="Vorherige Szene"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+ <button id="next" aria-label="Nächste Szene"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+ <div class="scenes" id="scenes"></div>
+ <button id="replay" aria-label="Erneut ansehen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button>
+ <button id="fs" aria-label="Vollbild (F)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+ <span class="hint">← → espacio · 1–7 · F · H oculta</span>
+</div>
+<button id="voz-btn" hidden aria-pressed="false">🔊 Sprecher aktivieren</button>
+
+<script>/* ajusta el cuerpo de letra solo si la traducción no cabe en su recuadro */
+(() => { const sv = document.getElementById("stage"), cam = document.getElementById("cam") || sv, R = cam.getScreenCTM().inverse();
+  const box = el => { const b = el.getBBox(), m = R.multiply(el.getScreenCTM()); return {x: m.a*b.x + m.e, y: m.d*b.y + m.f, w: b.width*m.a, h: b.height*m.d, m}; };
+  const rects = [...sv.querySelectorAll("rect")].filter(r => !r.closest("defs,marker,pattern,clipPath,mask")).map(box).filter(b => b.w > 40 && b.h > 18 && b.w < 1500);
+  sv.querySelectorAll("text[data-w]").forEach(t => {
+    const w = +t.dataset.w, full = t.getAttribute("data-full"), old = t.textContent; if(full) t.textContent = full;
+    const L = t.getComputedTextLength(), a = t.getAttribute("text-anchor") || getComputedStyle(t).textAnchor, m = R.multiply(t.getScreenCTM());
+    const x0 = +(t.getAttribute("x") || 0), y0 = +(t.getAttribute("y") || 0), fs = parseFloat(getComputedStyle(t).fontSize);
+    const px = m.a*x0 + m.e, py = m.d*(y0 - fs*.35) + m.f;
+    const host = rects.filter(r => px >= r.x - 2 && px <= r.x + r.w + 2 && py >= r.y && py <= r.y + r.h).sort((p, q) => p.w*p.h - q.w*q.h)[0];
+    let room = Infinity;
+    if(host){ const pad = 10; room = (a === "middle" ? 2*Math.min(px - host.x, host.x + host.w - px) : a === "end" ? px - host.x : host.x + host.w - px) - pad; room /= m.a; }
+    else room = Math.max(w*1.3, 60);
+    if(host && room < w*.98) room = Math.max(w*1.3, 60);   /* el recuadro hallado no contiene ni el original: no es su contenedor */
+    if(full) t.textContent = old;
+    if(L > room && room > 0){ t.setAttribute("font-size", (fs*Math.max(.6, room/L)).toFixed(1)); t.style.fontSize = ""; }
+  }); })();
+</script>
+<script src="/presentaciones/assets/gsap.min.js"></script>
+<script>
+(function(){
+const SCENES = ["Einstieg", "Die Frage", "Bußgelder steigen", "Die Zeit läuft", "Drei Kräfte", "ARGOS füllt die Lücke", "Abschluss"];
+const q = new URLSearchParams(location.search);
+const VOZ = q.get("modo") === "video";
+const WEB = q.get("modo") === "web" || VOZ;
+document.body.classList.add(VOZ ? "video" : WEB ? "web" : "pres");
+if(VOZ) document.querySelector("#start span").textContent = "▶ Mit Sprecher ansehen (Ton an)";
+const $ = s => document.querySelector(s), $$ = s => Array.from(document.querySelectorAll(s));
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const cam = $("#cam"), C = {x:800, y:450, s:1};
+const applyCam = () => cam.setAttribute("transform", `translate(${800 - C.x*C.s} ${450 - C.y*C.s}) scale(${C.s})`);
+const camTo = (x, y, s, d=1.1, e="power3.inOut") => gsap.to(C, {x, y, s, duration:d, ease:e, onUpdate:applyCam});
+function tw(el, dur){
+  const full = el.getAttribute("data-full"), o = {n:0};
+  return gsap.to(o, {n:full.length, duration:dur, ease:"none", onUpdate:() => { el.textContent = full.slice(0, Math.round(o.n)); }});
+}
+function prepDraw(p){ const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; return L; }
+const draw = (p, d) => gsap.to(p, {strokeDashoffset:0, duration:d, ease:"power2.out"});
+const fmt = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " Mio. €";
+
+/* subrayado de «fechas exigibles» */
+const sub = $("#sub"); sub.textContent = sub.getAttribute("data-full");
+const W = "verbindlichen Fristen", iD = sub.textContent.indexOf(W);
+const ux = sub.getStartPositionOfChar(iD).x, uw = sub.getSubStringLength(iD, W.length);
+$("#subline").setAttribute("x", ux); sub.textContent = "";
+
+/* ---------- estado inicial */
+applyCam();
+const lids = $$("#introEye path"); lids.forEach(prepDraw);
+prepDraw($("#tline")); prepDraw($("#hoyline"));
+gsap.set("#introGlow", {scale:0, svgOrigin:"800 360"});
+gsap.set("#introEye", {opacity:0});
+gsap.set("#introEye .pupil", {scale:0, transformOrigin:"50% 50%"});
+gsap.set(["#chip", "#pSan", "#pFz", "#pTl", "#pie", "#src", ".tick"], {opacity:0});
+gsap.set("#chip", {x:-60});
+gsap.set("#pSan", {x:-200}); gsap.set("#pFz", {x:200}); gsap.set("#pTl", {y:120});
+gsap.set(".br", {scaleY:0, transformOrigin:"50% 100%"});
+gsap.set(["#eu", ".eucap", ".gavel", "#tarrow", ".ya", "#spain", ".badge", ".cal"], {opacity:0});
+gsap.set(".ms", {opacity:0, y:14});
+gsap.set("#hoy rect, #hoy text", {opacity:0, y:-30});
+gsap.set(".fz", {opacity:0, x:40});
+gsap.set("#num", {opacity:0});
+
+/* ---------- línea de tiempo (ritmo de anuncio, ~29 s) */
+const tl = gsap.timeline({paused:true, defaults:{ease:"power3.out"}});
+// 1 · Apertura
+tl.addLabel("s1")
+  .to("#introEye", {opacity:1, duration:.25}, "s1")
+  .to("#introGlow", {scale:1, duration:.8, ease:"expo.out"}, "s1")
+  .add(lids.map((p, i) => draw(p, .55).delay(i * .12)), "s1+=.1")
+  .to("#introEye .pupil", {scale:1, duration:.45, ease:"back.out(3)"}, "s1+=.75")
+  .add(tw($("#introT"), 1.2), "s1+=.9")
+  .to({}, {duration:.3});
+// 2 · Planteamiento
+tl.addLabel("s2")
+  .to("#intro", {y:-120, opacity:0, duration:.6, ease:"power2.in"}, "s2")
+  .to("#chip", {x:0, opacity:1, duration:.5, ease:"back.out(2)"}, "s2+=.4")
+  .add(tw($("#title"), .9), "s2+=.5")
+  .add(tw($("#sub"), 1.1), "s2+=1.3")
+  .to("#subline", {attr:{width:uw}, duration:.45, ease:"power2.inOut"}, "s2+=2.45")
+  .to(".tick", {opacity:1, duration:.3}, "s2+=1.4")
+  .fromTo(".tick path", {rotation:0, svgOrigin:"12 12"}, {rotation:360, duration:1.4, ease:"steps(12)"}, "s2+=1.5")
+  .to({}, {duration:.3});
+// 3 · Las sanciones suben
+const cnt = {v:0};
+tl.addLabel("s3")
+  .add(camTo(390, 330, 1.55, 1), "s3")
+  .to("#pSan", {x:0, opacity:1, duration:.7, ease:"expo.out"}, "s3+=.2")
+  .to(".br", {scaleY:1, duration:.45, stagger:.22, ease:"back.out(1.6)"}, "s3+=.7")
+  .set("#num", {opacity:1}, "s3+=.8")
+  .fromTo(cnt, {v:0}, {v:7100, duration:1.7, ease:"power2.out", onUpdate:() => { $("#num").textContent = fmt(cnt.v); }}, "s3+=.8")
+  .to(".gavel", {opacity:1, duration:.2}, "s3+=1.0")
+  .fromTo(".gavel", {rotation:-25, transformOrigin:"50% 50%"}, {rotation:12, duration:.18, yoyo:true, repeat:3, ease:"power1.inOut"}, "s3+=1.05")
+  .to("#eu", {opacity:1, duration:.4}, "s3+=2.2")
+  .fromTo("#eu", {scale:.4, transformOrigin:"50% 50%"}, {scale:1, duration:.5, ease:"back.out(3)"}, "s3+=2.2")
+  .to(".eucap", {opacity:1, duration:.4}, "s3+=2.5")
+  .to(".bar:last-child .br", {fill:"#E04B3B", duration:.25, yoyo:true, repeat:3}, "s3+=2.3")
+  .to({}, {duration:.5});
+// 4 · El calendario corre
+tl.addLabel("s4")
+  .add(camTo(480, 670, 1.5, .9), "s4")
+  .to("#pTl", {y:0, opacity:1, duration:.7, ease:"expo.out"}, "s4+=.1")
+  .add(draw($("#tline"), 3.2).eventCallback("onStart", null), "s4+=.6")
+  .to(".cal", {opacity:1, duration:.3}, "s4+=.6")
+  .add(camTo(1120, 670, 1.5, 3.1, "power1.inOut"), "s4+=.8");
+$$(".ms").forEach((m, i) => {
+  const at = `s4+=${.75 + i * .62}`;
+  tl.to(m, {opacity:1, y:0, duration:.4, ease:"back.out(2)"}, at)
+    .fromTo(m.querySelector(".msring"), {opacity:.9, scale:.6, transformOrigin:"50% 50%"}, {opacity:0, scale:1.8, duration:.7, ease:"power2.out"}, at);
+});
+tl.to(".ya", {opacity:1, duration:.15, yoyo:true, repeat:4}, "s4+=2.1")
+  .to("#tarrow", {opacity:1, duration:.3}, "s4+=3.7")
+  .add(camTo(800, 665, 1.05, .8), "s4+=4.1")
+  .to("#hoy rect, #hoy text", {opacity:1, y:0, duration:.45, ease:"bounce.out"}, "s4+=4.5")
+  .add(draw($("#hoyline"), .5), "s4+=4.8")
+  .to("#spain", {opacity:1, duration:.3}, "s4+=5.0")
+  .to(".badge", {opacity:1, duration:.3, stagger:.15}, "s4+=5.1")
+  .to({}, {duration:.5});
+// 5 · Tres fuerzas
+tl.addLabel("s5")
+  .add(camTo(1130, 330, 1.42, 1), "s5")
+  .to("#pFz", {x:0, opacity:1, duration:.7, ease:"expo.out"}, "s5+=.2")
+  .to(".fz", {opacity:1, x:0, duration:.45, stagger:.55, ease:"back.out(1.8)"}, "s5+=.7")
+  .to("#hole", {opacity:1, duration:.3}, "s5+=2.2")
+  .fromTo("#hole", {strokeDashoffset:0}, {strokeDashoffset:-64, duration:1.6, ease:"none"}, "s5+=2.2")
+  .to(".fz[data-i='2'] .fzi g", {stroke:"#E0675B", duration:.25, yoyo:true, repeat:3}, "s5+=2.3")
+  .to({}, {duration:.4});
+// 6 · ARGOS llena el hueco
+tl.addLabel("s6")
+  .add(camTo(800, 470, 1, 1), "s6")
+  .to("#fill3", {opacity:1, duration:.4}, "s6+=.7")
+  .fromTo("#fill3", {scale:.3, transformOrigin:"50% 50%"}, {scale:1, duration:.55, ease:"back.out(2.5)"}, "s6+=.7")
+  .to("#hole", {stroke:"#C9A227", duration:.4}, "s6+=.9")
+  .to(".fz[data-i='2'] .fzi g", {stroke:"#C9A227", duration:.3}, "s6+=.9")
+  .to("#scan", {opacity:1, duration:.2}, "s6+=1.2")
+  .fromTo("#scan", {attr:{x:140}}, {attr:{x:930}, duration:1.3, ease:"power1.inOut"}, "s6+=1.2")
+  .to("#scan", {opacity:0, duration:.25}, "s6+=2.5")
+  .to(".msdot", {scale:1.25, transformOrigin:"50% 50%", duration:.15, yoyo:true, repeat:1, stagger:.25}, "s6+=1.3")
+  .add(tw($("#tag"), 1.5), "s6+=2.2")
+  .to({}, {duration:.6});
+// 7 · Cierre
+tl.addLabel("s7")
+  .to("#hole", {opacity:0, duration:.4}, "s7")
+  .to(["#pie", "#src"], {opacity:1, duration:.5}, "s7+=.2")
+  .to("#outro", {opacity:1, duration:.6}, "s7+=1.0")
+  .fromTo("#outEye", {scale:.6, transformOrigin:"50% 50%"}, {scale:1, duration:.6, ease:"back.out(2)"}, "s7+=1.0")
+  .to({}, {duration:1.5})
+  .to("#outro", {opacity:0, duration:.6})
+  .addLabel("end");
+
+/* ---------- controles (idénticos al D01) */
+const labels = SCENES.map((_, i) => tl.labels["s" + (i + 1)]).concat(tl.labels.end);
+const sc = $("#scenes");
+SCENES.forEach((n, i) => { const b = document.createElement("button"); b.innerHTML = `<b>${i + 1}</b><span>${n}</span><i></i>`; b.title = `${i + 1} · ${n}`; b.onclick = () => go(i); sc.appendChild(b); });
+const sbtn = $$(".scenes button");
+const cur = () => { const t = tl.time(); let k = 0; labels.forEach((l, i) => { if(i < SCENES.length && t >= l - .001) k = i; }); return k; };
+let seg = null;
+let vozOn = () => false;
+function paint(){
+  const t = tl.time(), k = cur();
+  sbtn.forEach((b, i) => { b.classList.toggle("on", i === k); const a = labels[i], z = labels[i + 1]; b.querySelector("i").style.width = (t >= z ? 100 : t <= a ? 0 : (t - a) / (z - a) * 100) + "%"; });
+  $("#pi").setAttribute("d", tl.isActive() || (seg && seg.isActive()) || vozOn() ? "M7 5h4v14H7zM13 5h4v14h-4z" : "M8 5v14l11-7z");
+  document.body.classList.toggle("at-start", t < .01);
+}
+gsap.ticker.add(paint);
+function stopSeg(){ if(seg){ seg.kill(); seg = null; } }
+function go(i){
+  stopSeg(); tl.pause(); i = Math.max(0, Math.min(SCENES.length - 1, i));
+  tl.seek(labels[i], false);
+  if(WEB){ tl.play(); return; }
+  seg = tl.tweenFromTo(labels[i], labels[i + 1], {ease:"none"});
+}
+function next(){
+  if(seg && seg.isActive()){ const k = cur(); stopSeg(); tl.seek(labels[k + 1], false); return; }
+  const t = tl.time(), k = cur();
+  if(t >= labels[SCENES.length] - .01) return;
+  go(t - labels[k] < .02 ? k : k + 1);
+}
+function prev(){
+  if(seg && seg.isActive()){ go(cur()); return; }
+  const t = tl.time(), k = cur();
+  go(t - labels[k] < .02 ? k - 1 : k);
+}
+function toggle(){
+  if(WEB){ if(tl.time() >= tl.duration() - .01){ go(0); return; } tl.paused() ? tl.play() : tl.pause(); return; }
+  if(seg && seg.isActive()){ seg.pause(); return; }
+  if(seg && seg.paused() && seg.progress() < 1){ seg.resume(); return; }
+  next();
+}
+$("#play").onclick = toggle; $("#next").onclick = next; $("#prev").onclick = prev;
+$("#replay").onclick = () => go(0);
+const fs = () => document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen().catch(() => {});
+$("#fs").onclick = fs;
+document.addEventListener("keydown", e => {
+  if(e.target.closest && e.target.closest("button") && (e.key === " " || e.key === "Enter")) return;
+  if(["ArrowRight", "PageDown", " "].includes(e.key)){ e.preventDefault(); next(); }
+  else if(["ArrowLeft", "PageUp"].includes(e.key)){ e.preventDefault(); prev(); }
+  else if(e.key === "f" || e.key === "F") fs();
+  else if(e.key === "h" || e.key === "H") document.body.classList.toggle("ui-off");
+  else if(e.key === "Home") go(0);
+  else if(/^[1-7]$/.test(e.key)) go(+e.key - 1);
+});
+if(!WEB) $("#wrap").addEventListener("click", next);
+
+/* ---------- locución sincronizada (modo vídeo): [escena, desfase en la escena, segundo del audio] */
+const SYNC = [["s1",0,0],["s2",0,2.5],["s3",0,7.4],["s3",.8,8.6],["s3",2.2,15.3],["s4",0,19.0],["s4",1.99,21.0],
+  ["s4",2.61,27.6],["s4",3.23,30.5],["s4",4.5,31.0],["s5",0,32.1],["s5",1.8,35.4],["s5",2.2,36.0],["s6",0,40.6],["s6",2.2,42.8],["s7",0,46.4]]
+  .map(([l, o, a]) => [a, tl.labels[l] + o]);
+function a2t(a){
+  for(let i = SYNC.length - 1; i >= 0; i--) if(a >= SYNC[i][0]){
+    const [a0, t0] = SYNC[i], n = SYNC[i + 1];
+    return Math.min(tl.duration(), n ? t0 + (a - a0) * (n[1] - t0) / (n[0] - a0) : t0 + (a - a0));
+  }
+  return 0;
+}
+const t2a = t => { let a = 0; SYNC.forEach(([sa, st]) => { if(st <= t + .001) a = sa; }); return a; };
+let vozActiva = false, au = null;
+function enableVoz(){
+  if(vozActiva) return; vozActiva = true;
+  au = new Audio("voz-d05.mp3"); au.preload = "auto";
+  let endAt = null, run = false;
+  const clock = () => endAt !== null ? au.duration + (performance.now() - endAt) / 1000 : au.currentTime;
+  au.onended = () => { endAt = performance.now(); };
+  vozOn = () => run;
+  gsap.ticker.add(() => {
+    if(!run) return;
+    const t = a2t(clock()); tl.seek(t, false);
+    if(t >= tl.duration() - .001){ run = false; endAt = null; }
+  });
+  const from = a => { tl.pause(); stopSeg(); endAt = null; au.currentTime = a; tl.seek(a2t(a), false); };
+  const play = () => { run = true; return au.play().catch(() => { run = false; }); };
+  const pause = () => { au.pause(); run = false; };
+  const tg = () => { if(run){ pause(); return; } if(tl.time() >= tl.duration() - .01 || endAt !== null){ from(0); } play(); };
+  $("#play").onclick = tg; $("#start span").onclick = tg;
+  $("#replay").onclick = () => { from(0); play(); };
+  $("#next").onclick = () => { const k = cur(); if(k + 1 < SCENES.length){ from(t2a(labels[k + 1])); play(); } };
+  $("#prev").onclick = () => { const k = cur(); from(t2a(labels[Math.max(0, k - (tl.time() - labels[k] < 1 ? 1 : 0))])); play(); };
+  sbtn.forEach((b, i) => b.onclick = () => { from(t2a(labels[i])); play(); });
+  $("#wrap").addEventListener("click", tg);
+  document.addEventListener("keydown", e => {
+    if(e.key === " "){ e.preventDefault(); e.stopImmediatePropagation(); tg(); }
+    else if(e.key === "ArrowRight"){ e.stopImmediatePropagation(); $("#next").onclick(); }
+    else if(e.key === "ArrowLeft"){ e.stopImmediatePropagation(); $("#prev").onclick(); }
+    else if(/^[1-7]$/.test(e.key)){ e.stopImmediatePropagation(); sbtn[+e.key - 1].onclick(); }
+  }, true);
+  return {from, play};
+}
+if(VOZ && !reduced){ const v = enableVoz(); if(q.get("auto") === "1"){ v.from(0); v.play(); } } /* auto=1: arranca con sonido si el navegador lo permite; si no, espera el clic */
+/* dentro de la web (ventana emergente): avisa al terminar para cerrarse y volver al punto de partida */
+/* barra estrecha: la fila de escenas no se desborda sobre los botones */
+(() => { const st = document.createElement("style"); st.textContent = ".scenes{overflow:hidden}@media(max-width:520px){.scenes{display:none}}"; document.head.appendChild(st); })();
+if(window.parent !== window && (WEB || VOZ) && new URLSearchParams(location.search).get("embed") !== "1"){
+  /* barra inferior: botón de cerrar (y Esc) que cierra la ventana emergente de la web */
+  const cerrarLb = () => { try { window.parent.postMessage({argos: "cerrar"}, "*"); } catch(e){} };
+  const fsb = document.getElementById("fs");
+  if(fsb && !document.getElementById("cerrar-lb")){
+    const cb = document.createElement("button"); cb.id = "cerrar-lb"; cb.type = "button";
+    cb.setAttribute("aria-label", "Schließen (Esc)"); cb.title = "Schließen (Esc)";
+    cb.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+    cb.style.cssText = "border-color:#C9A227;color:#C9A227";
+    cb.addEventListener("click", e => { e.stopPropagation(); cerrarLb(); });
+    fsb.parentNode.appendChild(cb);
+  }
+  document.addEventListener("keydown", e => { if(e.key === "Escape" && !document.fullscreenElement) cerrarLb(); });
+  /* el primer botón es Reproducir/Pausa: lo indicamos al pasar el ratón */
+  const pb = document.getElementById("play");
+  if(pb) gsap.ticker.add(() => { const pausa = (document.getElementById("pi") || {}).getAttribute?.("d")?.startsWith("M7 5h4"); const t = pausa ? "Pause (Leertaste)" : "Abspielen (Leertaste)"; if(pb.title !== t){ pb.title = t; pb.setAttribute("aria-label", t); } });
+}
+if(window.parent !== window && (WEB || VOZ)){
+  let armado = false, avisado = false;
+  gsap.ticker.add(() => {
+    const t = tl.time(), d = tl.duration();
+    if(t > .3 && t < d - 1) { armado = true; avisado = false; }
+    if(armado && !avisado && t >= d - .05){ avisado = true; armado = false; try { window.parent.postMessage({argos: "fin"}, "*"); } catch(e){} }
+  });
+}
+
+/* modo web: botón opcional de locución (arranca en silencio) */
+const vb = $("#voz-btn");
+if(WEB && !VOZ){
+  vb.hidden = false;
+  const pinta = () => { const on = vozActiva && !au.muted; vb.innerHTML = on ? "🔇 Stumm" : "🔊 Sprecher aktivieren"; vb.setAttribute("aria-pressed", on); };
+  vb.onclick = e => {
+    e.stopPropagation();
+    if(!vozActiva){ document.body.classList.remove("reduced"); tl.pause(); const v = enableVoz(); v.from(0); v.play(); }
+    else au.muted = !au.muted;
+    pinta();
+  };
+  pinta();
+}
+
+if(reduced){
+  document.body.classList.add("reduced");
+  tl.seek(labels[SCENES.length - 1] + .9, false); gsap.set("#outro", {opacity:0});
+  $("#rm-play").onclick = () => { document.body.classList.remove("reduced"); go(0); if(!WEB) tl.play(); };
+} else if(WEB && !VOZ){
+  const io = new IntersectionObserver(es => es.forEach(en => { if(vozActiva) return; if(en.isIntersecting && tl.time() === 0) tl.play(); else if(!en.isIntersecting) tl.pause(); }), {threshold:.4});
+  io.observe($("#stage"));
+}
+let idleT; document.addEventListener("mousemove", () => { document.body.classList.remove("idle"); clearTimeout(idleT); idleT = setTimeout(() => { if(document.fullscreenElement) document.body.classList.add("idle"); }, 2500); });
+window.D05 = {tl, go, a2t};
+})();
+</script>
+</body>
+</html>
