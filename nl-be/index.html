@@ -673,6 +673,25 @@ body.panel-abierto .i18n-sw{display:none}
 .pill .marca-img,.ph .marca-img{width:42px;height:42px}
 @media(max-width:600px){.brand .tg{display:none}}
 
+/* v3.3 · diagramas animados */
+.anim-marco{aspect-ratio:16/9;width:100%;border-radius:8px;overflow:hidden;background:#0B1F3A;box-shadow:0 1px 3px rgba(11,31,58,.18)}
+.anim-marco iframe{width:100%;height:100%;border:0;display:block}
+.anim-acc{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.anim-acc button,.anim-acc a{display:inline-flex;align-items:center;gap:7px;font:inherit;font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px;border:1px solid var(--line,#D6DEE8);background:#fff;color:var(--navy,#0B1F3A);text-decoration:none;cursor:pointer}
+.anim-acc svg{width:16px;height:16px;flex:none}
+.anim-acc .pri{background:var(--navy,#0B1F3A);border-color:var(--navy,#0B1F3A);color:#fff}
+.anim-acc .pri svg{color:var(--gold,#C9A227)}
+.anim-acc button:hover,.anim-acc a:hover{border-color:var(--gold,#C9A227)}
+.lightbox.con-video .contenido{background:#0B1F3A;padding:0;overflow:hidden;width:min(1500px,96vw,calc(92vh*16/9))}
+.anim-lb{aspect-ratio:16/9;width:100%}
+.anim-lb iframe{width:100%;height:100%;border:0;display:block}
+.tc .tag.anim{background:var(--navy,#0B1F3A);color:#fff;border-color:var(--navy,#0B1F3A)}
+.tc .go button.vid{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;height:42px;font-size:14.5px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}
+.tc .go button.vid:hover{background:rgba(255,255,255,.1);border-color:var(--gold,#C9A227)}
+.tc .go button.vid svg{width:17px;height:17px;color:var(--gold,#C9A227)}
+.anim-wrap{width:100%;align-self:flex-start}
+.lightbox{z-index:3000}
+
 </style>
 <script>
 window.ARGOS_API = false; /* registro y contacto: sin servidor propio (contacto por correo) */
@@ -4105,6 +4124,52 @@ if(!cargarConv()){
   bVis.onclick = () => { const o = !panel.classList.contains("sin-visor"); pintaVis(o); guarda("visor", o ? "0" : ""); };
   pintaMax(lee("max") === "1"); pintaVis(lee("visor") === "0");
   window.addEventListener("resize", () => { if(panel.style.width && ancho() > 1100) setAncho(parseFloat(panel.style.width)); });
+})();
+
+/* ════════════ v3.3 · diagramas animados: animación sin sonido en el visor + vídeo con locución opcional ════════════ */
+(function(){
+  const ANIM = {"B01-P02": "/presentaciones/d01/"};
+  const TX = {anim: "Animatie", video: "Video met voice-over bekijken", pres: "Presentatie per scène", fijo: "Statisch diagram", badge: "Geanimeerd", es: "(in het Spaans)"};
+  const lb = document.getElementById("lightbox"), lbc = document.getElementById("lb-contenido");
+  const IC = {
+    vol: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>',
+    pres: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M12 16v4M8 20h8"/></svg>',
+    img: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m21 15-5-5L5 21"/></svg>'
+  };
+  const esp = document.documentElement.lang.slice(0, 2) === "es" ? "" : " " + TX.es;
+  function verVideo(url){
+    lbc.innerHTML = '<div class="anim-lb"><iframe src="/' + url + '?modo=video" title="' + TX.video + '" allow="autoplay; fullscreen" allowfullscreen></iframe></div>';
+    lb.classList.add("abierta", "con-video");
+    document.getElementById("lb-cerrar").focus();
+  }
+  function cerrar(){ if(lb.classList.contains("con-video")){ lb.classList.remove("con-video"); lbc.innerHTML = ""; } }
+  new MutationObserver(() => { if(!lb.classList.contains("abierta")) cerrar(); }).observe(lb, {attributes: true, attributeFilter: ["class"]});
+
+  const base = mostrarDiagrama;
+  mostrarDiagrama = function(clave){
+    base(clave);
+    const url = ANIM[clave]; if(!url) return;
+    const lz = document.getElementById("visor-lienzo");
+    lz.innerHTML = '<div class="anim-wrap">' +
+      '<div class="anim-marco"><iframe src="/' + url + '?modo=web&embed=1" title="' + TX.anim + ' · ' + DIAGRAMAS[clave].d + '" loading="lazy" allow="fullscreen"></iframe></div>' +
+      '<div class="anim-acc">' +
+        '<button type="button" class="pri" data-a="video">' + IC.vol + '<span>' + TX.video + esp + '</span></button>' +
+        '<a href="/' + url + '" target="_blank" rel="noopener">' + IC.pres + '<span>' + TX.pres + '</span></a>' +
+        '<button type="button" data-a="fijo">' + IC.img + '<span>' + TX.fijo + '</span></button>' +
+      '</div></div>';
+    lz.querySelector('[data-a="video"]').onclick = () => verVideo(url);
+    lz.querySelector('[data-a="fijo"]').onclick = () => abrirLightbox(clave);
+  };
+
+  /* tarjetas de «Lo más consultado»: distintivo y acceso directo al vídeo */
+  document.querySelectorAll("#cards .tc").forEach(tc => {
+    const tags = tc.querySelectorAll(".tag"), clave = tags[1] && tags[1].textContent, url = ANIM[clave];
+    if(!url) return;
+    const b = document.createElement("span"); b.className = "tag anim"; b.textContent = "▶ " + TX.badge; tags[1].after(b);
+    const v = document.createElement("button"); v.type = "button"; v.className = "vid"; v.innerHTML = IC.vol + "<span>" + TX.video + esp + "</span>";
+    v.onclick = () => verVideo(url);
+    tc.querySelector(".go").appendChild(v);
+  });
 })();
 
 </script>
