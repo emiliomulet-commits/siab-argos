@@ -24,7 +24,7 @@ Los componentes son públicos; el producto no. El valor de ARGOS está en el cat
 
 ## Nunca nos han sancionado. ¿Por qué invertir ahora?
 
-Porque la ausencia de sanción no es evidencia de cumplimiento: es evidencia de que aún no ha habido inspección, brecha o denuncia. Cuando cualquiera de las tres llegue, la diferencia entre semanas de reconstrucción y horas de expediente la marca lo que tenga verificado ese día. Y el calendario corre: las obligaciones de IA de alto riesgo ya son exigibles y el EHDS llega en marzo de 2027 para el sector salud.
+Porque la ausencia de sanción no es evidencia de cumplimiento: es evidencia de que aún no ha habido inspección, brecha o denuncia. Cuando cualquiera de las tres llegue, la diferencia entre semanas de reconstrucción y horas de expediente la marca lo que tenga verificado ese día. Y el calendario corre: el EHDS llega en marzo de 2027 para el sector salud y las obligaciones de IA de alto riesgo, el 2 de diciembre de 2027.
 
 ## ¿Cuál es el retorno de la inversión de ARGOS?
 
