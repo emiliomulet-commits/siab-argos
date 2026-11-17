@@ -381,6 +381,15 @@ function enableVoz(){
   return {from, play};
 }
 if(VOZ && !reduced){ const v = enableVoz(); if(q.get("auto") === "1"){ v.from(0); v.play(); } } /* auto=1: arranca con sonido si el navegador lo permite; si no, espera el clic */
+/* dentro de la web (ventana emergente): avisa al terminar para cerrarse y volver al punto de partida */
+if(window.parent !== window && (WEB || VOZ)){
+  let armado = false, avisado = false;
+  gsap.ticker.add(() => {
+    const t = tl.time(), d = tl.duration();
+    if(t > .3 && t < d - 1) { armado = true; avisado = false; }
+    if(armado && !avisado && t >= d - .05){ avisado = true; armado = false; try { window.parent.postMessage({argos: "fin"}, "*"); } catch(e){} }
+  });
+}
 
 /* modo web: botón opcional de locución (arranca en silencio) */
 const vb = $("#voz-btn");

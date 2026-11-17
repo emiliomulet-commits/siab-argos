@@ -4132,17 +4132,42 @@ if(!cargarConv()){
     img: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m21 15-5-5L5 21"/></svg>'
   };
   const esp = document.documentElement.lang.slice(0, 2) === "es" ? "" : " " + TX.es;
-  function verVideo(url){
+  /* punto de partida: al cerrar la animación (sola o con la X) se vuelve exactamente ahí */
+  let origen = null;
+  function guardarOrigen(ctx){
+    const gal = document.getElementById("galeria");
+    origen = Object.assign({y: window.scrollY, el: document.activeElement, gal: !!(gal && gal.classList.contains("abierta")), galY: gal ? (gal.querySelector(".galeria-grid, .grid") || gal).scrollTop : 0}, ctx || {});
+  }
+  function volverOrigen(){
+    const o = origen; origen = null; if(!o) return;
+    if(o.gal && typeof abrirGaleria === "function"){
+      abrirGaleria();
+      requestAnimationFrame(() => { const it = o.d && [...document.querySelectorAll(".galeria-item")].find(b => (b.dataset.buscar || "").startsWith(o.d.toLowerCase() + " "));
+        if(it){ it.scrollIntoView({block: "center"}); it.focus({preventScroll: true}); } });
+      return;
+    }
+    window.scrollTo({top: o.y, behavior: "instant"});
+    if(o.el && o.el.focus && document.contains(o.el)) o.el.focus({preventScroll: true});
+    requestAnimationFrame(() => window.scrollTo({top: o.y, behavior: "instant"}));
+  }
+  window.addEventListener("message", e => {
+    if(!e.data || e.data.argos !== "fin" || !lb.classList.contains("con-video")) return;
+    const f = lbc.querySelector("iframe"); if(!f || e.source !== f.contentWindow) return;
+    setTimeout(() => { if(lb.classList.contains("con-video")) lb.classList.remove("abierta"); }, 900);
+  });
+  function verVideo(url, ctx){
+    if(!lb.classList.contains("con-video")) guardarOrigen(Object.assign({d: (url.match(/\/d(\d\d)\//) || [])[1] && "D" + url.match(/\/d(\d\d)\//)[1]}, ctx));
     lbc.innerHTML = '<div class="anim-lb"><iframe src="' + url + '?modo=video&auto=1" title="' + TX.video + '" allow="autoplay; fullscreen" allowfullscreen></iframe></div>';
     lb.classList.add("abierta", "con-video");
     document.getElementById("lb-cerrar").focus();
   }
-  function verAnim(url){
+  function verAnim(url, ctx){
+    if(!lb.classList.contains("con-video")) guardarOrigen(Object.assign({d: (url.match(/\/d(\d\d)\//) || [])[1] && "D" + url.match(/\/d(\d\d)\//)[1]}, ctx));
     lbc.innerHTML = '<div class="anim-lb"><iframe src="' + url + '?modo=web' + (innerWidth < 760 ? '&embed=1' : '') + '" title="' + TX.ver + '" allow="autoplay; fullscreen" allowfullscreen></iframe></div>';
     lb.classList.add("abierta", "con-video");
     document.getElementById("lb-cerrar").focus();
   }
-  function cerrar(){ if(lb.classList.contains("con-video")){ lb.classList.remove("con-video"); lbc.innerHTML = ""; } }
+  function cerrar(){ if(lb.classList.contains("con-video")){ lb.classList.remove("con-video"); lbc.innerHTML = ""; volverOrigen(); } }
   new MutationObserver(() => { if(!lb.classList.contains("abierta")) cerrar(); }).observe(lb, {attributes: true, attributeFilter: ["class"]});
 
   const base = mostrarDiagrama;
@@ -4175,7 +4200,7 @@ if(!cargarConv()){
       const s = document.createElement("span"); s.className = "play-wm"; s.setAttribute("role", "button"); s.tabIndex = 0;
       s.title = TX.video + esp; s.setAttribute("aria-label", TX.video + esp + " · " + DIAGRAMAS[clave].d);
       s.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>';
-      const go = e => { e.preventDefault(); e.stopPropagation(); document.getElementById("galeria")?.classList.remove("abierta"); verVideo(url); };
+      const go = e => { e.preventDefault(); e.stopPropagation(); const g = document.getElementById("galeria"); const ctx = {el: s, gal: !!(g && g.classList.contains("abierta"))}; g?.classList.remove("abierta"); verVideo(url, ctx); };
       s.addEventListener("click", go); s.addEventListener("keydown", e => { if(e.key === "Enter" || e.key === " ") go(e); });
       w.appendChild(s);
     });
