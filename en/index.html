@@ -4128,7 +4128,8 @@ if(!cargarConv()){
 
 /* ════════════ v3.3 · diagramas animados: animación sin sonido en el visor + vídeo con locución opcional ════════════ */
 (function(){
-  const ANIM = {"B01-P02": "/presentaciones/d01/"};
+  const ANIM = {};   /* D01 y D06–D25 tienen versión animada */
+  for(const [k, v] of Object.entries(DIAGRAMAS)){ const n = +v.d.slice(1); if(n === 1 || n >= 6) ANIM[k] = "/presentaciones/d" + v.d.slice(1) + "/"; }
   const TX = {anim: "Animation", video: "Watch video with voiceover", pres: "Scene-by-scene presentation", fijo: "Static diagram", badge: "Animated", es: "(in Spanish)"};
   const lb = document.getElementById("lightbox"), lbc = document.getElementById("lb-contenido");
   const IC = {

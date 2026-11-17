@@ -13,3 +13,8 @@ Generado con `build_d01.py`, `build_d02.py`, `build_d03.py`, `build_d04.py` y `b
 En D04, W3C VC y Gaia-X aparecen como etiquetas de texto, no como logotipos.
 D03 aún sin locución.
 D05 con locución (`?modo=video`) y MP4. Fechas de D05 comprobadas: Reglamento (UE) 2026/1744 (alto riesgo IA, 2 dic 2027) y Reglamento (UE) 2025/327, art. 105 (EHDS).
+Generado con `build_d01.py` (fuera del repositorio). Piloto D01 publicado el 17/11/2026, pendiente de aprobación; no está enlazado desde la web ni indexado.
+
+## D06–D25 (motor genérico)
+
+`assets/motor.js` anima el diagrama fijo de `/diagramas/` escena a escena (cámara, texto que se escribe, flechas que se dibujan, recuadros que se iluminan). Cada carpeta `dNN/` lleva `index.html` (escenas y tiempos), `voz.mp3` (locución ElevenLabs, voz Martin Osborne, modelo v4) y `argos-dNN.mp4` (1080p). Modos: presentación (por defecto), `?modo=web` (sin sonido) y `?modo=video` (con locución).
