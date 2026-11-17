@@ -386,7 +386,52 @@ document.addEventListener("keydown", e => {
 if(!WEB) $("#wrap").addEventListener("click", next);
 
 
-let vozOn = () => false; /*VOZ*/
+/* ---------- locución sincronizada (modo vídeo): [escena, desfase en la escena, segundo del audio] */
+const ANCH = [["s1", 0, 0], ["s2", 0, 2.6], ["s3", 0, 10.4], ["s4", 0, 14.7], ["s5", 0, 20.2], ["s6", 0, 24.7], ["s7", 0, 30.4], ["s8", 0, 35.4], ["s8", 6.8, 40.9]].map(([l, o, a]) => [a, tl.labels[l] + o]);
+const SYNC = [];
+ANCH.forEach(([a, t], i) => {
+  SYNC.push([a, t]);
+  const n = ANCH[i + 1]; if(!n) return;
+  const dt = n[1] - t, da = n[0] - a;
+  if(da > dt + .1) SYNC.push([a + dt - .05, n[1] - .05]);      // la animación va a 1x y espera a la voz
+});
+function a2t(a){
+  for(let i = SYNC.length - 1; i >= 0; i--) if(a >= SYNC[i][0]){
+    const [a0, t0] = SYNC[i], n = SYNC[i + 1];
+    return Math.min(tl.duration(), n ? t0 + (a - a0) * (n[1] - t0) / (n[0] - a0) : t0 + (a - a0));
+  }
+  return 0;
+}
+const t2a = t => { let a = 0; SYNC.forEach(([sa, st]) => { if(st <= t + .001) a = sa; }); return a; };
+let vozOn = () => false;
+if(VOZ && !reduced){
+  const au = new Audio("voz-d03.mp3"); au.preload = "auto";
+  let endAt = null, run = false;
+  const clock = () => endAt !== null ? au.duration + (performance.now() - endAt) / 1000 : au.currentTime;
+  au.onended = () => { endAt = performance.now(); };
+  vozOn = () => run;
+  gsap.ticker.add(() => {
+    if(!run) return;
+    const t = a2t(clock()); tl.seek(t, false);
+    if(t >= tl.duration() - .001){ run = false; endAt = null; }
+  });
+  const from = a => { tl.pause(); stopSeg(); endAt = null; au.currentTime = a; tl.seek(a2t(a), false); };
+  const play = () => { au.play().catch(() => {}); run = true; };
+  const pause = () => { au.pause(); run = false; };
+  const tg = () => { if(run){ pause(); return; } if(tl.time() >= tl.duration() - .01 || endAt !== null){ from(0); } play(); };
+  $("#play").onclick = tg; $("#start span").onclick = tg;
+  $("#replay").onclick = () => { from(0); play(); };
+  $("#next").onclick = () => { const k = cur(); if(k + 1 < SCENES.length){ from(t2a(labels[k + 1])); play(); } };
+  $("#prev").onclick = () => { const k = cur(); from(t2a(labels[Math.max(0, k - (tl.time() - labels[k] < 1 ? 1 : 0))])); play(); };
+  sbtn.forEach((b, i) => b.onclick = () => { from(t2a(labels[i])); play(); });
+  $("#wrap").addEventListener("click", tg);
+  document.addEventListener("keydown", e => {
+    if(e.key === " "){ e.preventDefault(); e.stopImmediatePropagation(); tg(); }
+    else if(e.key === "ArrowRight"){ e.stopImmediatePropagation(); $("#next").onclick(); }
+    else if(e.key === "ArrowLeft"){ e.stopImmediatePropagation(); $("#prev").onclick(); }
+    else if(/^[1-9]$/.test(e.key) && sbtn[+e.key - 1]){ e.stopImmediatePropagation(); sbtn[+e.key - 1].onclick(); }
+  }, true);
+}
 /* modo web: arranca al verse; el ratón quieto oculta los controles en pantalla completa */
 if(reduced){
   document.body.classList.add("reduced");
@@ -397,7 +442,7 @@ if(reduced){
   io.observe($("#stage"));
 }
 let idleT; document.addEventListener("mousemove", () => { document.body.classList.remove("idle"); clearTimeout(idleT); idleT = setTimeout(() => { if(document.fullscreenElement) document.body.classList.add("idle"); }, 2500); });
-window.D03 = {tl, go, vozOn:() => vozOn()};
+window.D03 = {tl, go, a2t, vozOn:() => vozOn()};
 })();
 </script>
 </body>
