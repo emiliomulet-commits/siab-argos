@@ -12,4 +12,4 @@ El emblema de la UE se usa de forma informativa, sin sugerir vínculo ni aval de
 Generado con `build_d01.py`, `build_d02.py`, `build_d03.py`, `build_d04.py` y `build_d05.py` (fuera del repositorio). D01, D02, D03, D04 y D05 publicadas el 17/11/2026, pendientes de aprobación; no están enlazadas desde la web ni indexadas. Locución: ElevenLabs, voz Martín Osborne (`?modo=video`).
 En D04, W3C VC y Gaia-X aparecen como etiquetas de texto, no como logotipos.
 D03 aún sin locución.
-D05 aún sin locución. Fechas de D05 comprobadas: Reglamento (UE) 2026/1744 (alto riesgo IA, 2 dic 2027) y Reglamento (UE) 2025/327, art. 105 (EHDS).
+D05 con locución (`?modo=video`) y MP4. Fechas de D05 comprobadas: Reglamento (UE) 2026/1744 (alto riesgo IA, 2 dic 2027) y Reglamento (UE) 2025/327, art. 105 (EHDS).
