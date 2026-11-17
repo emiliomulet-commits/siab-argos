@@ -4149,8 +4149,9 @@ if(!cargarConv()){
     requestAnimationFrame(() => window.scrollTo({top: o.y, behavior: "instant"}));
   }
   window.addEventListener("message", e => {
-    if(!e.data || e.data.argos !== "fin" || !lb.classList.contains("con-video")) return;
+    if(!e.data || (e.data.argos !== "fin" && e.data.argos !== "cerrar") || !lb.classList.contains("con-video")) return;
     const f = lbc.querySelector("iframe"); if(!f || e.source !== f.contentWindow) return;
+    if(e.data.argos === "cerrar"){ lb.classList.remove("abierta"); return; }
     setTimeout(() => { if(lb.classList.contains("con-video")) lb.classList.remove("abierta"); }, 900);
   });
   function verVideo(url, ctx){
