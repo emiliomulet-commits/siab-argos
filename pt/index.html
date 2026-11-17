@@ -4121,7 +4121,7 @@ if(!cargarConv()){
 (function(){
   const ANIM = {};   /* D01–D25 tienen versión animada */
   const LGS = ["en", "fr", "de", "nl", "pt"];   /* idiomas con presentaciones traducidas (texto y locución) */
-  const LG = document.documentElement.lang.slice(0, 2), SUB = LGS.includes(LG) ? LG + "/" : "";
+  const LG = (location.pathname.match(/^\/([a-z]{2})(?:-[a-z]{2})?\//) || [0, "es"])[1], SUB = LGS.includes(LG) ? LG + "/" : "";
   for(const [k, v] of Object.entries(DIAGRAMAS)){ const n = +v.d.slice(1); if(n >= 1 && n <= 25) ANIM[k] = "/presentaciones/d" + v.d.slice(1) + "/" + SUB; }
   const TX = {anim: "Animação", video: "Ver vídeo com locução", pres: "Apresentação por cenas", fijo: "Diagrama estático", badge: "Animado com áudio", ver: "Ver animação", es: "(em espanhol)"};
   const lb = document.getElementById("lightbox"), lbc = document.getElementById("lb-contenido");
@@ -4158,13 +4158,13 @@ if(!cargarConv()){
   });
   function verVideo(url, ctx){
     if(!lb.classList.contains("con-video")) guardarOrigen(Object.assign({d: (url.match(/\/d(\d\d)\//) || [])[1] && "D" + url.match(/\/d(\d\d)\//)[1]}, ctx));
-    lbc.innerHTML = '<div class="anim-lb"><iframe src="/' + url + '?modo=video&auto=1" title="' + TX.video + '" allow="autoplay; fullscreen" allowfullscreen></iframe></div>';
+    lbc.innerHTML = '<div class="anim-lb"><iframe src="' + url + '?modo=video&auto=1" title="' + TX.video + '" allow="autoplay; fullscreen" allowfullscreen></iframe></div>';
     lb.classList.add("abierta", "con-video");
     document.getElementById("lb-cerrar").focus();
   }
   function verAnim(url, ctx){
     if(!lb.classList.contains("con-video")) guardarOrigen(Object.assign({d: (url.match(/\/d(\d\d)\//) || [])[1] && "D" + url.match(/\/d(\d\d)\//)[1]}, ctx));
-    lbc.innerHTML = '<div class="anim-lb"><iframe src="/' + url + '?modo=web' + (innerWidth < 760 ? '&embed=1' : '') + '" title="' + TX.ver + '" allow="autoplay; fullscreen" allowfullscreen></iframe></div>';
+    lbc.innerHTML = '<div class="anim-lb"><iframe src="' + url + '?modo=web' + (innerWidth < 760 ? '&embed=1' : '') + '" title="' + TX.ver + '" allow="autoplay; fullscreen" allowfullscreen></iframe></div>';
     lb.classList.add("abierta", "con-video");
     document.getElementById("lb-cerrar").focus();
   }
@@ -4177,11 +4177,11 @@ if(!cargarConv()){
     const url = ANIM[clave]; if(!url) return;
     const lz = document.getElementById("visor-lienzo");
     lz.innerHTML = '<div class="anim-wrap">' +
-      '<div class="anim-marco"><iframe src="/' + url + '?modo=web&embed=1" title="' + TX.anim + ' · ' + DIAGRAMAS[clave].d + '" loading="lazy" allow="fullscreen"></iframe></div>' +
+      '<div class="anim-marco"><iframe src="' + url + '?modo=web&embed=1" title="' + TX.anim + ' · ' + DIAGRAMAS[clave].d + '" loading="lazy" allow="fullscreen"></iframe></div>' +
       '<div class="anim-acc">' +
         '<button type="button" data-a="anim">' + IC.play + '<span>' + TX.ver + esp + '</span></button>' +
         '<button type="button" class="pri" data-a="video">' + IC.vol + '<span>' + TX.video + esp + '</span></button>' +
-        '<a href="/' + url + '" target="_blank" rel="noopener">' + IC.pres + '<span>' + TX.pres + '</span></a>' +
+        '<a href="' + url + '" target="_blank" rel="noopener">' + IC.pres + '<span>' + TX.pres + '</span></a>' +
         '<button type="button" data-a="fijo">' + IC.img + '<span>' + TX.fijo + '</span></button>' +
       '</div></div>';
     lz.querySelector('[data-a="anim"]').onclick = () => verAnim(url);

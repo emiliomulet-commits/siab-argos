@@ -347,7 +347,7 @@ def redirect_stub(url):
 
 
 def loc_url(u, lang):
-    if not u or u.startswith(("#", "mailto:", "tel:", "data:", "javascript:", "{")):
+    if not u or u.startswith(("#", "mailto:", "tel:", "data:", "javascript:", "{", "'")):
         return u
     m = re.match(r"^(https?://)([^/]+)(/[^?#]*)?([?#].*)?$", u)
     if m:
