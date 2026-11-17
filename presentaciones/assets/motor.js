@@ -176,7 +176,7 @@ function enableVoz(){
   vozOn = () => run;
   gsap.ticker.add(() => { if(!run) return; const t = Math.min(clock(), tl.duration()); tl.seek(t, false); if(t >= tl.duration() - .001){ run = false; endAt = null; } });
   const from = a => { tl.pause(); stopSeg(); endAt = null; au.currentTime = Math.min(a, FIN); tl.seek(a, false); };
-  const play = () => { au.play().catch(() => {}); run = true; };
+  const play = () => { run = true; return au.play().catch(() => { run = false; }); };
   const tg = () => { if(run){ au.pause(); run = false; return; } if(tl.time() >= tl.duration() - .01 || endAt !== null) from(0); play(); };
   $("#play").onclick = tg; $("#start span").onclick = tg; $("#replay").onclick = () => { from(0); play(); };
   $("#next").onclick = () => { const k = cur(); if(k + 1 < N){ from(labels[k + 1]); play(); } };
@@ -191,7 +191,7 @@ function enableVoz(){
   }, true);
   return {from, play};
 }
-if(VOZ && !reduced) enableVoz();
+if(VOZ && !reduced){ const v = enableVoz(); if(q.get("auto") === "1"){ v.from(0); v.play(); } } /* auto=1: arranca con sonido si el navegador lo permite; si no, espera el clic */
 
 /* modo web: botón opcional de locución (arranca en silencio) */
 const vb = document.createElement("button");
