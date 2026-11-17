@@ -33,8 +33,8 @@
     <text x="544" y="485">2022</text><text x="604" y="485">2023</text><text x="664" y="485">2024+</text>
   </g>
   
-  <text x="115" y="300" font-size="42" font-weight="bold" fill="#C0392B">&gt; 5.880 M€</text><text x="115" y="338" font-size="25" fill="#8E3A30">en sanciones desde 2018</text>
-  <text x="115" y="372" font-size="21" fill="#8E3A30">1.200 M€ solo en 2024</text>
+  <text x="115" y="300" font-size="42" font-weight="bold" fill="#C0392B">7.100 M€</text><text x="115" y="338" font-size="25" fill="#8E3A30">en sanciones desde 2018</text>
+  <text x="115" y="372" font-size="21" fill="#8E3A30">1.200 M€ solo en 2025</text>
 
   <!-- Panel mensaje -->
   <g filter="url(#sh)"><rect x="740" y="180" rx="18" width="780" height="330" fill="#1F3864"/></g>

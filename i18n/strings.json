@@ -1368,16 +1368,16 @@
   ]
  },
  {
-  "id": "59b93805ba",
-  "src": "Ampliar diagrama",
+  "id": "00686c432b",
+  "src": "Ampliar",
   "kind": "attr",
   "pages": [
    "index.html"
   ]
  },
  {
-  "id": "00686c432b",
-  "src": "Ampliar",
+  "id": "59b93805ba",
+  "src": "Ampliar diagrama",
   "kind": "attr",
   "pages": [
    "index.html"
@@ -1568,8 +1568,8 @@
   ]
  },
  {
-  "id": "a01b4b0f37",
-  "src": "Tres relojes corren a la vez: el Reglamento de IA se aplica desde el 2 de agosto de 2026 y sus obligaciones de alto riesgo llegan el 2 de diciembre de 2027 (Reglamento (UE) 2026/1744), el EHDS despliega su calendario hasta 2035, y las sanciones RGPD acumulan más de 5.880 millones de euros desde 2018. La verificación continua deja de ser opcional.",
+  "id": "de5e22a28c",
+  "src": "Tres relojes corren a la vez: el Reglamento de IA se aplica desde el 2 de agosto de 2026 y sus obligaciones de alto riesgo llegan el 2 de diciembre de 2027 (Reglamento (UE) 2026/1744), el EHDS despliega su calendario hasta 2035, y las sanciones RGPD acumulan unos 7.100 millones de euros desde 2018. La verificación continua deja de ser opcional.",
   "kind": "js",
   "pages": [
    "index.html"
@@ -2688,8 +2688,8 @@
   ]
  },
  {
-  "id": "ebcf0f0fa6",
-  "src": "&gt;5.880 M€",
+  "id": "c8d9865308",
+  "src": "7.100 M€",
   "kind": "js",
   "pages": [
    "index.html"
@@ -2760,8 +2760,8 @@
   ]
  },
  {
-  "id": "6b72ab95b8",
-  "src": "&gt;€5,880 M",
+  "id": "64c7baecca",
+  "src": "€7,100 M",
   "kind": "js",
   "pages": [
    "index.html"

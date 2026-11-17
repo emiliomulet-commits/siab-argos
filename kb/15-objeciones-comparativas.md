@@ -72,7 +72,7 @@ El DLP bloquea movimientos de datos en tiempo real según reglas técnicas; ARGO
 
 ## La dirección no lo ve prioritario. ¿Cómo justifico el proyecto internamente?
 
-Con las tres cifras que la dirección entiende: la exposición (más de 5.880 millones de euros en sanciones europeas desde 2018, con la curva acelerando), el calendario (IA de alto riesgo ya exigible; EHDS en 2027) y el coste actual oculto (horas de equipo y consultoría dedicadas a reconstruir evidencia que ARGOS produce de forma continua). El piloto acotado es el instrumento: pocas semanas después, la conversación con la dirección ya no es teórica, es sobre los hallazgos de sus propios sistemas.
+Con las tres cifras que la dirección entiende: la exposición (unos 7.100 millones de euros en sanciones europeas desde 2018, con la curva acelerando), el calendario (IA de alto riesgo ya exigible; EHDS en 2027) y el coste actual oculto (horas de equipo y consultoría dedicadas a reconstruir evidencia que ARGOS produce de forma continua). El piloto acotado es el instrumento: pocas semanas después, la conversación con la dirección ya no es teórica, es sobre los hallazgos de sus propios sistemas.
 
 ## ¿Y si la normativa cambia y la inversión queda obsoleta?
 
