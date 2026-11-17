@@ -4141,7 +4141,7 @@ if(!cargarConv()){
     document.getElementById("lb-cerrar").focus();
   }
   function verAnim(url){
-    lbc.innerHTML = '<div class="anim-lb"><iframe src="' + url + '?modo=web" title="' + TX.ver + '" allow="autoplay; fullscreen" allowfullscreen></iframe></div>';
+    lbc.innerHTML = '<div class="anim-lb"><iframe src="' + url + '?modo=web' + (innerWidth < 760 ? '&embed=1' : '') + '" title="' + TX.ver + '" allow="autoplay; fullscreen" allowfullscreen></iframe></div>';
     lb.classList.add("abierta", "con-video");
     document.getElementById("lb-cerrar").focus();
   }
