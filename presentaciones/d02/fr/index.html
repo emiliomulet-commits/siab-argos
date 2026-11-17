@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D02 · Que signifie qu’ARGOS « met à l’épreuve » les systèmes ? · Présentation animée</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://www.softwareinabox.eu/assets/fonts.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#0B1F3A;color:#fff;font-family:'Hanken Grotesk',system-ui,sans-serif;overflow:hidden}
+#wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#stage{width:100%;height:100%;display:block}
+.ui{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:14px;padding:12px 18px;background:linear-gradient(0deg,rgba(5,14,26,.92),rgba(5,14,26,0));transition:opacity .3s}
+body.ui-off .ui{opacity:0;pointer-events:none}
+body.idle .ui{opacity:0}
+.ui button{font:inherit;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:8px;height:38px;min-width:38px;padding:0 12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:14px}
+.ui button:hover,.ui button:focus-visible{border-color:#C9A227;outline:none}
+.ui svg{width:18px;height:18px}
+.scenes{display:flex;gap:6px;flex:1;min-width:0}
+.scenes button{flex:1;min-width:0;height:auto;padding:6px 8px;display:block;text-align:left;font-size:12.5px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative}
+.scenes button b{display:block;font-size:11px;color:#C9A227}
+.scenes button i{position:absolute;left:0;bottom:0;height:3px;background:#C9A227;width:0;border-radius:2px}
+.scenes button.on{border-color:#C9A227;background:rgba(201,162,39,.15)}
+.hint{font-size:12.5px;color:#AFC0D2;white-space:nowrap}
+#start{position:fixed;inset:0;display:none;align-items:flex-end;justify-content:center;padding-bottom:110px;pointer-events:none}
+#start span{background:rgba(5,14,26,.75);border:1px solid rgba(201,162,39,.6);border-radius:999px;padding:10px 20px;font-size:15px;color:#fff}
+body.pres.at-start #start,body.video.at-start #start{display:flex}
+body.video #start span{pointer-events:auto;cursor:pointer;font-size:17px;padding:14px 26px}
+body.video .hint{display:none}
+body.web .hint,body.web #fs{display:none}
+body.web .scenes button span{display:none}
+.rm-note{position:fixed;top:14px;left:50%;transform:translateX(-50%);background:rgba(5,14,26,.8);border-radius:999px;padding:8px 16px;font-size:13px;display:none}
+body.reduced .rm-note{display:block}
+body.embed .ui{padding:6px 8px;gap:6px}
+body.embed .ui button{height:28px;min-width:28px;padding:0 6px;border-radius:6px}
+body.embed .ui svg{width:14px;height:14px}
+body.embed .scenes button{padding:3px 5px}
+body.embed .scenes button b{font-size:10px}
+body.embed .hint,body.embed #fs{display:none}
+body.embed .ui{opacity:0}
+body.embed:hover .ui,body.embed.at-end .ui{opacity:1}
+@media(max-width:760px){.scenes button span{display:none}.hint{display:none}}
+#voz-btn{position:fixed;top:14px;right:16px;z-index:5;font:600 14px 'Hanken Grotesk',system-ui,sans-serif;color:#fff;background:rgba(11,31,58,.82);border:1px solid #C9A227;border-radius:999px;padding:9px 16px;cursor:pointer;transition:background .2s}#voz-btn:hover,#voz-btn:focus-visible{background:#C9A227;color:#0B1F3A;outline:none}#voz-btn[hidden]{display:none}body.embed #voz-btn{top:8px;right:8px;padding:6px 12px;font-size:12.5px}@media(max-width:760px){#voz-btn{top:8px;right:8px;padding:7px 12px;font-size:13px}}
+</style>
+</head>
+<body class="at-start">
+<div id="wrap">
+<svg id="stage" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="st-t st-d" font-family="'Hanken Grotesk',system-ui,sans-serif">
+<title id="st-t">Que signifie qu’ARGOS « met à l’épreuve » les systèmes ?</title><desc id="st-d">Sept familles de sondes actives : vérification par le comportement, pas par la déclaration. Chaque sonde produit des preuves horodatées qui alimentent le moteur d’évaluation déterministe.</desc>
+<defs>
+ <linearGradient id="bgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1F3A"/><stop offset="1" stop-color="#1F3864"/></linearGradient>
+ <radialGradient id="glowG"><stop offset="0" stop-color="#C9A227" stop-opacity=".55"/><stop offset="1" stop-color="#C9A227" stop-opacity="0"/></radialGradient>
+ <radialGradient id="coreG" cx=".5" cy=".4"><stop offset="0" stop-color="#2C4F8A"/><stop offset="1" stop-color="#14325E"/></radialGradient>
+ <linearGradient id="sweepG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9A227" stop-opacity="0"/><stop offset="1" stop-color="#F3D36B" stop-opacity=".55"/></linearGradient>
+ <clipPath id="coreClip"><circle cx="800" cy="455" r="122"/></clipPath>
+ <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#C9A227"/></marker>
+ <filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity=".25"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bgG)"/>
+<g id="grid" opacity=".07" stroke="#fff"><path d="M0 0V900"/><path d="M80 0V900"/><path d="M160 0V900"/><path d="M240 0V900"/><path d="M320 0V900"/><path d="M400 0V900"/><path d="M480 0V900"/><path d="M560 0V900"/><path d="M640 0V900"/><path d="M720 0V900"/><path d="M800 0V900"/><path d="M880 0V900"/><path d="M960 0V900"/><path d="M1040 0V900"/><path d="M1120 0V900"/><path d="M1200 0V900"/><path d="M1280 0V900"/><path d="M1360 0V900"/><path d="M1440 0V900"/><path d="M1520 0V900"/><path d="M1600 0V900"/><path d="M0 0H1600"/><path d="M0 80H1600"/><path d="M0 160H1600"/><path d="M0 240H1600"/><path d="M0 320H1600"/><path d="M0 400H1600"/><path d="M0 480H1600"/><path d="M0 560H1600"/><path d="M0 640H1600"/><path d="M0 720H1600"/><path d="M0 800H1600"/><path d="M0 880H1600"/></g>
+
+<g id="cam">
+ <g id="head">
+  <g id="chip"><rect x="60" y="40" width="210" height="50" rx="12" fill="#C9A227"/><text x="165" y="73" text-anchor="middle" font-size="22" font-weight="700" fill="#0B1F3A" data-w="140.0">D02 · B01-P03</text></g>
+  <text id="title" x="300" y="70" font-family="Montserrat,sans-serif" font-size="34" font-weight="700" fill="#fff" data-full="Que signifie qu’ARGOS « met à l’épreuve » les systèmes ?" data-w="862.7"></text>
+  <text id="sub" x="300" y="108" font-size="22" fill="#C9D6E8" data-full="Sept familles de sondes actives : vérification par le comportement, pas par la déclaration" data-w="841.5"></text>
+  <rect id="subline" x="0" y="115" width="0" height="4" rx="2" fill="#C9A227"/>
+ </g>
+
+ <g id="rays"><path class="ray" id="r0" d="M800.0 322.0L800.0 235.0" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/><path class="ray" id="r1" d="M924.0 407.0L1113.6 333.6" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/><path class="ray" id="r2" d="M932.2 469.6L1121.5 490.6" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/><path class="ray" id="r3" d="M893.7 549.4L992.6 649.1" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/><path class="ray" id="r4" d="M706.3 549.4L607.4 649.1" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/><path class="ray" id="r5" d="M667.8 469.6L478.5 490.6" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/><path class="ray" id="r6" d="M676.0 407.0L486.4 333.6" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/></g>
+
+ <g id="core">
+  <circle id="halo" cx="800" cy="455" r="165" fill="url(#glowG)" opacity="0"/>
+  <circle cx="800" cy="455" r="125" fill="url(#coreG)" filter="url(#sh)"/>
+  <g clip-path="url(#coreClip)" id="sweepWrap" opacity="0">
+   <path id="sweep" d="M800 455L925 455A125 125 0 0 0 871.7 352.6Z" fill="url(#sweepG)"/>
+   <circle cx="800" cy="455" r="82.5" fill="none" stroke="#fff" stroke-opacity=".12"/>
+   <circle cx="800" cy="455" r="41.2" fill="none" stroke="#fff" stroke-opacity=".12"/>
+  </g>
+  <circle id="ring" cx="800" cy="455" r="125" fill="none" stroke="#C9A227" stroke-width="7" transform="rotate(-90 800 455)"/>
+  <g id="coreTxt" text-anchor="middle">
+   <text x="800" y="443" font-family="Montserrat,sans-serif" font-size="34" font-weight="800" fill="#fff" data-w="136.0">MOTEUR</text>
+   <text x="800" y="483" font-family="Montserrat,sans-serif" font-size="34" font-weight="800" fill="#fff" data-w="180.9">DE TESTS</text>
+   <text x="800" y="517" font-size="18" fill="#C9D6E8" data-w="191.0">tests actifs ARGOS</text>
+  </g>
+ </g>
+
+ <g id="cards"><g class="card" id="k0" data-cx="800.0" data-cy="193.0"><rect x="595.0" y="151.0" width="410" height="84" rx="12" fill="#1D7A74" stroke="#1D7A74" stroke-width="3"/><rect class="kglow" x="591.0" y="147.0" width="418" height="92" rx="15" fill="none" stroke="#C9A227" stroke-width="4" opacity="0"/><g class="ico "><g transform="translate(613.0 174.0) scale(1.5833333333333333)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="5" />
+  <path d="M2 21a8 8 0 0 1 10.434-7.62" />
+  <circle cx="18" cy="18" r="3" />
+  <path d="m22 22-1.9-1.9" /></g></g><text x="667.0" y="187.0" font-family="Montserrat,sans-serif" font-size="21" font-weight="700" fill="#fff" data-w="220.3">1 · Sujets synthétiques</text><text class="kd" x="667.0" y="214.0" font-size="16.5" fill="#DDF2EF" data-w="315.5">introduit des identités fictives et les suit</text><g class="tick" opacity="0"><g class="ico "><g transform="translate(971.0 137.0) scale(1.25)" fill="none" stroke="#C9A227" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+  <path d="m16 9-5.5 5.5L8 12" /></g></g></g></g><g class="card" id="k1" data-cx="1222.2" data-cy="291.6"><rect x="1017.2" y="249.6" width="410" height="84" rx="12" fill="#F1F8F7" stroke="#1D7A74" stroke-width="3"/><rect class="kglow" x="1013.2" y="245.6" width="418" height="92" rx="15" fill="none" stroke="#C9A227" stroke-width="4" opacity="0"/><g class="ico "><g transform="translate(1035.1890005327361 272.6456719130118) scale(1.5833333333333333)" fill="none" stroke="#1D7A74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+  <circle cx="11.5" cy="14.5" r="2.5" />
+  <path d="M13.3 16.3 15 18" /></g></g><text x="1089.2" y="285.6" font-family="Montserrat,sans-serif" font-size="21" font-weight="700" fill="#14325E" data-w="253.3">2 · Tests des droits</text><text class="kd" x="1089.2" y="312.6" font-size="16.5" fill="#3D4B5F" data-w="329.9">exerce accès et effacement, mesure le circuit</text><g class="tick" opacity="0"><g class="ico "><g transform="translate(1393.1890005327361 235.64567191301182) scale(1.25)" fill="none" stroke="#C9A227" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+  <path d="m16 9-5.5 5.5L8 12" /></g></g></g></g><g class="card" id="k2" data-cx="1326.5" data-cy="513.3"><rect x="1121.5" y="471.3" width="410" height="84" rx="12" fill="#F1F8F7" stroke="#1D7A74" stroke-width="3"/><rect class="kglow" x="1117.5" y="467.3" width="418" height="92" rx="15" fill="none" stroke="#C9A227" stroke-width="4" opacity="0"/><g class="ico "><g transform="translate(1139.4610725781847 494.30048469655435) scale(1.5833333333333333)" fill="none" stroke="#1D7A74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21" />
+  <path d="m5.082 11.09 8.828 8.828" /></g></g><text x="1193.5" y="507.3" font-family="Montserrat,sans-serif" font-size="21" font-weight="700" fill="#14325E" data-w="213.5">3 · Effacement effectif</text><text class="kd" x="1193.5" y="534.3" font-size="16.5" fill="#3D4B5F" data-w="264.2">vérifie que la donnée n’existe plus</text><g class="tick" opacity="0"><g class="ico "><g transform="translate(1497.4610725781847 457.30048469655435) scale(1.25)" fill="none" stroke="#C9A227" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+  <path d="m16 9-5.5 5.5L8 12" /></g></g></g></g><g class="card" id="k3" data-cx="1034.3" data-cy="691.1"><rect x="829.3" y="649.1" width="410" height="84" rx="12" fill="#F1F8F7" stroke="#1D7A74" stroke-width="3"/><rect class="kglow" x="825.3" y="645.1" width="418" height="92" rx="15" fill="none" stroke="#C9A227" stroke-width="4" opacity="0"/><g class="ico "><g transform="translate(847.2972191234815 672.0538433904338) scale(1.5833333333333333)" fill="none" stroke="#1D7A74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14" />
+  <path d="M5 2h14" />
+  <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
+  <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" /></g></g><text x="901.3" y="685.1" font-family="Montserrat,sans-serif" font-size="21" font-weight="700" fill="#14325E" data-w="144.9">4 · Conservation</text><text class="kd" x="901.3" y="712.1" font-size="16.5" fill="#3D4B5F" data-w="283.7">compare durées déclarées et réelles</text><g class="tick" opacity="0"><g class="ico "><g transform="translate(1205.2972191234815 635.0538433904338) scale(1.25)" fill="none" stroke="#C9A227" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+  <path d="m16 9-5.5 5.5L8 12" /></g></g></g></g><g class="card" id="k4" data-cx="565.7" data-cy="691.1"><rect x="360.7" y="649.1" width="410" height="84" rx="12" fill="#F1F8F7" stroke="#1D7A74" stroke-width="3"/><rect class="kglow" x="356.7" y="645.1" width="418" height="92" rx="15" fill="none" stroke="#C9A227" stroke-width="4" opacity="0"/><g class="ico "><g transform="translate(378.70278087651866 672.0538433904338) scale(1.5833333333333333)" fill="none" stroke="#1D7A74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="16" r="1" />
+  <rect x="3" y="10" width="18" height="12" rx="2" />
+  <path d="M7 10V7a5 5 0 0 1 10 0v3" /></g></g><text x="432.7" y="685.1" font-family="Montserrat,sans-serif" font-size="21" font-weight="700" fill="#14325E" data-w="221.3">5 · Chiffrement et accès</text><text class="kd" x="432.7" y="712.1" font-size="16.5" fill="#3D4B5F" data-w="262.0">vérifie que les contrôles fonctionnent</text><g class="tick" opacity="0"><g class="ico "><g transform="translate(736.7027808765187 635.0538433904338) scale(1.25)" fill="none" stroke="#C9A227" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+  <path d="m16 9-5.5 5.5L8 12" /></g></g></g></g><g class="card" id="k5" data-cx="273.5" data-cy="513.3"><rect x="68.5" y="471.3" width="410" height="84" rx="12" fill="#F1F8F7" stroke="#1D7A74" stroke-width="3"/><rect class="kglow" x="64.5" y="467.3" width="418" height="92" rx="15" fill="none" stroke="#C9A227" stroke-width="4" opacity="0"/><g class="ico "><g transform="translate(86.53892742181517 494.30048469655435) scale(1.5833333333333333)" fill="none" stroke="#1D7A74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h8.5a1 1 0 010 7h-11a1 1 0 000 7H15" />
+  <circle cx="18" cy="19" r="3" />
+  <circle cx="6" cy="5" r="3" /></g></g><text x="140.5" y="507.3" font-family="Montserrat,sans-serif" font-size="21" font-weight="700" fill="#14325E" data-w="194.4">6 · Flux et lignage</text><text class="kd" x="140.5" y="534.3" font-size="16.5" fill="#3D4B5F" data-w="253.4">détecte transferts et sorties de l’EEE</text><g class="tick" opacity="0"><g class="ico "><g transform="translate(444.5389274218152 457.30048469655435) scale(1.25)" fill="none" stroke="#C9A227" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+  <path d="m16 9-5.5 5.5L8 12" /></g></g></g></g><g class="card" id="k6" data-cx="377.8" data-cy="291.6"><rect x="172.8" y="249.6" width="410" height="84" rx="12" fill="#F1F8F7" stroke="#1D7A74" stroke-width="3"/><rect class="kglow" x="168.8" y="245.6" width="418" height="92" rx="15" fill="none" stroke="#C9A227" stroke-width="4" opacity="0"/><g class="ico "><g transform="translate(190.81099946726385 272.6456719130118) scale(1.5833333333333333)" fill="none" stroke="#1D7A74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h8" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="m3 17 2 2 4-4" />
+  <path d="m3 7 2 2 4-4" /></g></g><text x="244.8" y="285.6" font-family="Montserrat,sans-serif" font-size="21" font-weight="700" fill="#14325E" data-w="165.1">7 · Traçabilité</text><text class="kd" x="244.8" y="312.6" font-size="16.5" fill="#3D4B5F" data-w="296.3">journaux d’événements complets et fiables</text><g class="tick" opacity="0"><g class="ico "><g transform="translate(548.8109994672639 235.64567191301182) scale(1.25)" fill="none" stroke="#C9A227" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+  <path d="m16 9-5.5 5.5L8 12" /></g></g></g></g></g>
+ <g id="pulses"><circle class="pulse" id="e0" r="7" fill="#F3D36B" stroke="#C9A227" stroke-width="2"/><circle class="pulse" id="e1" r="7" fill="#F3D36B" stroke="#C9A227" stroke-width="2"/><circle class="pulse" id="e2" r="7" fill="#F3D36B" stroke="#C9A227" stroke-width="2"/><circle class="pulse" id="e3" r="7" fill="#F3D36B" stroke="#C9A227" stroke-width="2"/><circle class="pulse" id="e4" r="7" fill="#F3D36B" stroke="#C9A227" stroke-width="2"/><circle class="pulse" id="e5" r="7" fill="#F3D36B" stroke="#C9A227" stroke-width="2"/><circle class="pulse" id="e6" r="7" fill="#F3D36B" stroke="#C9A227" stroke-width="2"/></g>
+
+ <path id="evArr" d="M800 590L800 744" fill="none" stroke="#C9A227" stroke-width="5" marker-end="url(#arr)"/>
+ <g id="band" filter="url(#sh)">
+  <rect x="80" y="752" width="1440" height="80" rx="16" fill="#0E2547" stroke="#2C4A7A"/>
+  <rect x="80" y="752" width="10" height="80" rx="5" fill="#C9A227"/>
+  <g class="ico stampI"><g transform="translate(112 770) scale(1.8333333333333333)" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-6 0c0 2 1 2 1 3.5V13" />
+  <path d="M20 15.5a2.5 2.5 0 0 0-2.5-2.5h-11A2.5 2.5 0 0 0 4 15.5V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1z" />
+  <path d="M5 22h14" /></g></g>
+  <text id="ev1" x="180" y="786" font-family="Montserrat,sans-serif" font-size="25" font-weight="700" fill="#fff" data-full="Chaque sonde produit des preuves horodatées" data-w="664.4"></text>
+  <text id="ev2" x="180" y="816" font-size="20" fill="#D5DEE8" data-full="qui alimentent le moteur d’évaluation déterministe." data-w="457.8"></text>
+  <g id="cntChip"><rect x="1206" y="769" width="290" height="46" rx="23" fill="#14325E" stroke="#C9A227"/>
+   <g class="ico "><g transform="translate(1222 778) scale(1.1666666666666667)" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" />
+  <path d="M12 6v6l4 2" /></g></g>
+   <text x="1262" y="800" font-size="19" fill="#fff" data-w="198.4"><tspan id="cnt" font-weight="800" fill="#F3D36B">0/7</tspan> preuves scellées</text></g>
+ </g>
+ <text id="pie" x="1520" y="872" text-anchor="end" font-size="15" fill="#8FA3BD" data-w="387.6">ARGOS · Base de connaissances visuelle · Software in a Box</text>
+ <text id="src" x="80" y="872" font-size="13" fill="#8FA3BD" data-w="568.1">Les parcours animés sont illustratifs : ils ne représentent ni systèmes ni tests réels d’un client.</text>
+</g>
+
+<g id="intro">
+ <circle cx="800" cy="360" r="190" fill="url(#glowG)" id="introGlow"/>
+ <g id="introEye"><g transform="translate(700 260) scale(2.5)"><rect x="2" y="2" width="76" height="76" rx="18" fill="#0B1F3A"/><g fill="none" stroke-linecap="round"><path class="lid1" d="M13 41C20 28 29 22 40 22S60 28 67 41" stroke="#fff" stroke-width="4"/><path class="lid2" d="M24 41C28 34 33.5 31 40 31S52 34 56 41" stroke="#fff" stroke-width="4" opacity=".7"/><path class="lid3" d="M13 41C20 54 29 60 40 60S60 54 67 41" stroke="#6C4CF1" stroke-width="4"/></g><circle class="pupil" cx="40" cy="42" r="6.5" fill="#C9A227"/></g></g>
+ <text id="introT" x="800" y="560" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="50" font-weight="700" fill="#fff" data-full="Que signifie qu’ARGOS « met à l’épreuve » les systèmes ?" data-w="1268.6"></text>
+</g>
+<g id="outro" opacity="0">
+ <rect x="0" y="0" width="1600" height="900" fill="#0B1F3A" opacity=".94"/>
+ <g id="outEye"><g transform="translate(680 250) scale(1.5)"><rect x="2" y="2" width="76" height="76" rx="18" fill="#0B1F3A"/><g fill="none" stroke-linecap="round"><path class="lid1" d="M13 41C20 28 29 22 40 22S60 28 67 41" stroke="#fff" stroke-width="4"/><path class="lid2" d="M24 41C28 34 33.5 31 40 31S52 34 56 41" stroke="#fff" stroke-width="4" opacity=".7"/><path class="lid3" d="M13 41C20 54 29 60 40 60S60 54 67 41" stroke="#6C4CF1" stroke-width="4"/></g><circle class="pupil" cx="40" cy="42" r="6.5" fill="#C9A227"/></g></g>
+ <text x="820" y="300" font-family="Montserrat,sans-serif" font-size="64" font-weight="700" fill="#fff" letter-spacing="2" data-w="250.3">ARG<tspan fill="#C9A227">O</tspan>S</text>
+ <text x="822" y="340" font-size="16" font-weight="700" letter-spacing="5" fill="#AFC0D2" data-w="352.8">VERIFIED COMPLIANCE AGENT</text>
+ <text x="800" y="450" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="38" font-weight="700" fill="#fff" data-w="1052.4">Vérification par le comportement, pas par la déclaration</text>
+</g>
+</svg>
+</div>
+<div id="start"><span>Appuyez sur → ou sur la barre d’espace pour commencer</span></div>
+<p class="rm-note">Movimiento reducido: se muestra el diagrama completo. <button id="rm-play" style="margin-left:8px">Voir l’animation</button></p>
+<div class="ui" role="toolbar" aria-label="Commandes de la présentation">
+ <button id="play" aria-label="Lire"><svg viewBox="0 0 24 24" fill="currentColor"><path id="pi" d="M8 5v14l11-7z"/></svg></button>
+ <button id="prev" aria-label="Scène précédente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+ <button id="next" aria-label="Scène suivante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+ <div class="scenes" id="scenes"></div>
+ <button id="replay" aria-label="Revoir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button>
+ <button id="fs" aria-label="Plein écran (F)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+ <span class="hint">← → espacio · 1–7 · F · H oculta</span>
+</div>
+<button id="voz-btn" type="button" hidden aria-pressed="false">🔊 Activer la voix off</button>
+<script>/* ajusta el cuerpo de letra solo si la traducción no cabe en su recuadro */
+(() => { const sv = document.getElementById("stage"), cam = document.getElementById("cam") || sv, R = cam.getScreenCTM().inverse();
+  const box = el => { const b = el.getBBox(), m = R.multiply(el.getScreenCTM()); return {x: m.a*b.x + m.e, y: m.d*b.y + m.f, w: b.width*m.a, h: b.height*m.d, m}; };
+  const rects = [...sv.querySelectorAll("rect")].filter(r => !r.closest("defs,marker,pattern,clipPath,mask")).map(box).filter(b => b.w > 40 && b.h > 18 && b.w < 1500);
+  sv.querySelectorAll("text[data-w]").forEach(t => {
+    const w = +t.dataset.w, full = t.getAttribute("data-full"), old = t.textContent; if(full) t.textContent = full;
+    const L = t.getComputedTextLength(), a = t.getAttribute("text-anchor") || getComputedStyle(t).textAnchor, m = R.multiply(t.getScreenCTM());
+    const x0 = +(t.getAttribute("x") || 0), y0 = +(t.getAttribute("y") || 0), fs = parseFloat(getComputedStyle(t).fontSize);
+    const px = m.a*x0 + m.e, py = m.d*(y0 - fs*.35) + m.f;
+    const host = rects.filter(r => px >= r.x - 2 && px <= r.x + r.w + 2 && py >= r.y && py <= r.y + r.h).sort((p, q) => p.w*p.h - q.w*q.h)[0];
+    let room = Infinity;
+    if(host){ const pad = 10; room = (a === "middle" ? 2*Math.min(px - host.x, host.x + host.w - px) : a === "end" ? px - host.x : host.x + host.w - px) - pad; room /= m.a; }
+    else room = Math.max(w*1.3, 60);
+    if(host && room < w*.98) room = Math.max(w*1.3, 60);   /* el recuadro hallado no contiene ni el original: no es su contenedor */
+    if(full) t.textContent = old;
+    if(L > room && room > 0){ t.setAttribute("font-size", (fs*Math.max(.6, room/L)).toFixed(1)); t.style.fontSize = ""; }
+  }); })();
+</script>
+<script src="/presentaciones/assets/gsap.min.js"></script>
+<script>
+(function(){
+const SCENES = ["Ouverture", "La question", "Moteur de tests", "Sondes 1–3", "Sondes 4–7", "Preuves", "Clôture"];
+const q = new URLSearchParams(location.search);
+const VOZ = q.get("modo") === "video";
+const WEB = q.get("modo") === "web" || VOZ;
+document.body.classList.add(VOZ ? "video" : WEB ? "web" : "pres");
+if(q.get("embed")) document.body.classList.add("embed");
+if(VOZ) document.querySelector("#start span").textContent = "▶ Voir avec la voix off (son activé)";
+const $ = s => document.querySelector(s), $$ = s => Array.from(document.querySelectorAll(s));
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- utilidades */
+const cam = $("#cam"), C = {x:800, y:450, s:1};
+const applyCam = () => cam.setAttribute("transform", `translate(${800 - C.x*C.s} ${450 - C.y*C.s}) scale(${C.s})`);
+const camTo = (x, y, s, d=1.1) => gsap.to(C, {x, y, s, duration:d, ease:"power3.inOut", onUpdate:applyCam});
+function tw(el, dur){                       // máquina de escribir
+  const full = el.getAttribute("data-full"), o = {n:0};
+  return gsap.to(o, {n:full.length, duration:dur, ease:"none", onUpdate:() => { el.textContent = full.slice(0, Math.round(o.n)); }});
+}
+function prepDraw(p){ const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; return L; }
+const draw = (p, d) => gsap.to(p, {strokeDashoffset:0, duration:d, ease:"power2.out"});
+
+/* subrayado de «comportamiento» */
+const sub = $("#sub"); sub.textContent = sub.getAttribute("data-full");
+const iD = sub.textContent.indexOf("comportement");
+const ux = sub.getStartPositionOfChar(iD).x, uw = sub.getSubStringLength(iD, 12);
+$("#subline").setAttribute("x", ux); sub.textContent = "";
+
+/* ---------- estado inicial */
+applyCam();
+const lids = $$("#introEye path"); lids.forEach(prepDraw);
+const rays = $$(".ray"); rays.forEach(prepDraw); prepDraw($("#evArr"));
+const ringL = prepDraw($("#ring"));
+gsap.set("#introGlow", {scale:0, svgOrigin:"800 360"});
+gsap.set("#introEye", {opacity:0});
+gsap.set("#introEye .pupil", {scale:0, transformOrigin:"50% 50%"});
+gsap.set(["#chip", "#core", "#band", "#pie", "#src", "#evArr"], {opacity:0});
+gsap.set("#chip", {x:-60});
+gsap.set("#core", {scale:.2, svgOrigin:"800 455"});
+gsap.set("#coreTxt", {opacity:0});
+gsap.set(".card", {opacity:0});
+$$(".card").forEach(c => gsap.set(c, {scale:.3, svgOrigin:`${c.dataset.cx} ${c.dataset.cy}`}));
+gsap.set(".pulse", {opacity:0});
+gsap.set("#band", {y:60});
+
+/* barrido de radar del motor: bucle independiente */
+const fxLoop = gsap.timeline({repeat:-1, paused:true});
+fxLoop.fromTo("#sweep", {rotation:0}, {rotation:360, svgOrigin:"800 455", duration:2.4, ease:"none"});
+
+/* posiciones para los pulsos de evidencia (de cada sonda al motor) */
+const ends = rays.map(p => { const L = p.getTotalLength(); return [p.getPointAtLength(L), p.getPointAtLength(0)]; });
+const cnt = {v:0};
+
+/* ---------- línea de tiempo (ritmo de anuncio) */
+const tl = gsap.timeline({paused:true, defaults:{ease:"power3.out"}});
+// 1 · Apertura
+tl.addLabel("s1")
+  .to("#introEye", {opacity:1, duration:.25}, "s1")
+  .to("#introGlow", {scale:1, duration:.8, ease:"expo.out"}, "s1")
+  .add(lids.map((p, i) => draw(p, .55).delay(i * .12)), "s1+=.1")
+  .to("#introEye .pupil", {scale:1, duration:.45, ease:"back.out(3)"}, "s1+=.75")
+  .add(tw($("#introT"), 1.2), "s1+=.9")
+  .to({}, {duration:.5});
+// 2 · Planteamiento
+tl.addLabel("s2")
+  .to("#intro", {y:-120, opacity:0, duration:.6, ease:"power2.in"}, "s2")
+  .to("#chip", {x:0, opacity:1, duration:.5, ease:"back.out(2)"}, "s2+=.4")
+  .add(tw($("#title"), .9), "s2+=.5")
+  .add(tw($("#sub"), 1.3), "s2+=1.35")
+  .to("#subline", {attr:{width:uw}, duration:.45, ease:"power2.inOut"}, "s2+=2.7")
+  .to({}, {duration:.4});
+// 3 · Motor de retos
+tl.addLabel("s3")
+  .add(camTo(800, 455, 1.75, 1), "s3")
+  .to("#core", {opacity:1, scale:1, duration:.7, ease:"back.out(1.7)"}, "s3+=.3")
+  .to("#ring", {strokeDashoffset:0, duration:.9, ease:"power2.inOut"}, "s3+=.5")
+  .to("#coreTxt", {opacity:1, duration:.4}, "s3+=1.0")
+  .fromTo("#coreTxt", {y:12}, {y:0, duration:.5}, "s3+=1.0")
+  .to("#sweepWrap", {opacity:1, duration:.4}, "s3+=1.3")
+  .add(() => fxLoop.play(), "s3+=1.3")
+  .to("#halo", {opacity:1, duration:.3, yoyo:true, repeat:1}, "s3+=1.6")
+  .to({}, {duration:.6});
+// 4 · Sondas 1–3
+tl.addLabel("s4").add(camTo(1050, 390, 1.18, 1), "s4");
+[0, 1, 2].forEach((i, n) => probe(i, `s4+=${.5 + n * .75}`));
+tl.to({}, {duration:.5});
+// 5 · Sondas 4–7
+tl.addLabel("s5").add(camTo(650, 500, 1.1, 1), "s5");
+[3, 4, 5, 6].forEach((i, n) => probe(i, `s5+=${.45 + n * .6}`));
+tl.to({}, {duration:.5});
+function probe(i, at){
+  const c = $("#k" + i), r = rays[i];
+  tl.to(r, {strokeDashoffset:0, duration:.35, ease:"power2.out"}, at)
+    .to(c, {opacity:1, scale:1, duration:.5, ease:"back.out(2.2)"}, `${at}+.25`)
+    .to(c.querySelector(".kglow"), {opacity:1, duration:.15}, `${at}+.3`)
+    .to(c.querySelector(".kglow"), {opacity:0, duration:.5}, `${at}+.75`)
+    .fromTo(c.querySelector(".ico g"), {scale:1.35, svgOrigin:`${+c.dataset.cx - 166} ${c.dataset.cy}`}, {scale:1, duration:.4, ease:"back.out(3)"}, `${at}+.35`);
+}
+// 6 · Evidencias
+tl.addLabel("s6")
+  .add(camTo(800, 450, 1, 1), "s6")
+  .to(".ray", {stroke:"#8FA3BD", strokeWidth:3, duration:.5}, "s6+=.2");
+rays.forEach((r, i) => {
+  const [a, b] = ends[i], at = `s6+=${.6 + i * .22}`;
+  tl.set("#e" + i, {attr:{cx:a.x, cy:a.y}}, at)
+    .to("#e" + i, {opacity:1, duration:.1}, at)
+    .to("#e" + i, {attr:{cx:b.x, cy:b.y}, duration:.6, ease:"power2.in"}, at)
+    .to("#e" + i, {opacity:0, duration:.12}, `${at}+.55`)
+    .to(`#k${i} .tick`, {opacity:1, duration:.25}, `${at}+.1`)
+    .fromTo(`#k${i} .tick`, {scale:.2, transformOrigin:"50% 50%"}, {scale:1, duration:.4, ease:"back.out(3)"}, `${at}+.1`);
+});
+tl.to("#halo", {opacity:1, duration:.25, yoyo:true, repeat:3}, "s6+=1.2")
+  .set("#evArr", {opacity:1}, "s6+=2.3").add(draw($("#evArr"), .5), "s6+=2.3")
+  .to("#band", {y:0, opacity:1, duration:.6, ease:"expo.out"}, "s6+=2.5")
+  .add(tw($("#ev1"), .9), "s6+=2.9")
+  .add(tw($("#ev2"), .9), "s6+=3.7")
+  .fromTo(cnt, {v:0}, {v:7, duration:1.4, ease:"none", onUpdate:() => { $("#cnt").textContent = Math.round(cnt.v) + "/7"; }}, "s6+=3.0")
+  .fromTo(".stampI", {rotation:-30, transformOrigin:"50% 50%"}, {rotation:0, duration:.5, ease:"back.out(4)"}, "s6+=3.0")
+  .to({}, {duration:.6});
+// 7 · Cierre
+tl.addLabel("s7")
+  .to(["#pie", "#src"], {opacity:1, duration:.5}, "s7")
+  .to("#outro", {opacity:1, duration:.6}, "s7+=1.0")
+  .fromTo("#outEye", {scale:.6, transformOrigin:"50% 50%"}, {scale:1, duration:.6, ease:"back.out(2)"}, "s7+=1.0")
+  .to({}, {duration:1.8})
+  .to("#outro", {opacity:0, duration:.6})
+  .addLabel("end");
+
+/* ---------- controles */
+const labels = SCENES.map((_, i) => tl.labels["s" + (i + 1)]).concat(tl.labels.end);
+const sc = $("#scenes");
+SCENES.forEach((n, i) => { const b = document.createElement("button"); b.innerHTML = `<b>${i + 1}</b><span>${n}</span><i></i>`; b.title = `${i + 1} · ${n}`; b.onclick = () => go(i); sc.appendChild(b); });
+const sbtn = $$(".scenes button");
+const cur = () => { const t = tl.time(); let k = 0; labels.forEach((l, i) => { if(i < SCENES.length && t >= l - .001) k = i; }); return k; };
+function paint(){
+  const t = tl.time(), k = cur();
+  sbtn.forEach((b, i) => { b.classList.toggle("on", i === k); const a = labels[i], z = labels[i + 1]; b.querySelector("i").style.width = (t >= z ? 100 : t <= a ? 0 : (t - a) / (z - a) * 100) + "%"; });
+  $("#pi").setAttribute("d", tl.isActive() || (seg && seg.isActive()) || (window.D02 && D02.vozOn && D02.vozOn()) ? "M7 5h4v14H7zM13 5h4v14h-4z" : "M8 5v14l11-7z");
+  document.body.classList.toggle("at-start", t < .01);
+  document.body.classList.toggle("at-end", t >= tl.duration() - .05);
+}
+gsap.ticker.add(paint);
+let seg = null;
+function stopSeg(){ if(seg){ seg.kill(); seg = null; } }
+function go(i){                     // ir al principio de la escena i y reproducirla
+  stopSeg(); tl.pause(); i = Math.max(0, Math.min(SCENES.length - 1, i));
+  fxLoop.pause();
+  tl.seek(labels[i], false);
+  if(i >= 2) fxLoop.play();
+  if(WEB){ tl.play(); return; }
+  seg = tl.tweenFromTo(labels[i], labels[i + 1], {ease:"none"});
+}
+function next(){
+  if(seg && seg.isActive()){ const k = cur(); stopSeg(); tl.seek(labels[k + 1], false); return; }   // terminar la escena en curso
+  const t = tl.time(), k = cur();
+  if(t >= labels[SCENES.length] - .01) return;
+  go(t - labels[k] < .02 ? k : k + 1);
+}
+function prev(){
+  if(seg && seg.isActive()){ go(cur()); return; }
+  const t = tl.time(), k = cur();
+  go(t - labels[k] < .02 ? k - 1 : k);
+}
+function toggle(){
+  if(WEB){ if(tl.time() >= tl.duration() - .01){ go(0); return; } tl.paused() ? tl.play() : tl.pause(); return; }
+  if(seg && seg.isActive()){ seg.pause(); return; }
+  if(seg && seg.paused() && seg.progress() < 1){ seg.resume(); return; }
+  next();
+}
+$("#play").onclick = toggle; $("#next").onclick = next; $("#prev").onclick = prev;
+$("#replay").onclick = () => go(0);
+const fs = () => document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen().catch(() => {});
+$("#fs").onclick = fs;
+document.addEventListener("keydown", e => {
+  if(e.target.closest && e.target.closest("button") && (e.key === " " || e.key === "Enter")) return;
+  if(["ArrowRight", "PageDown", " "].includes(e.key)){ e.preventDefault(); next(); }
+  else if(["ArrowLeft", "PageUp"].includes(e.key)){ e.preventDefault(); prev(); }
+  else if(e.key === "f" || e.key === "F") fs();
+  else if(e.key === "h" || e.key === "H") document.body.classList.toggle("ui-off");
+  else if(e.key === "Home") go(0);
+  else if(/^[1-7]$/.test(e.key)) go(+e.key - 1);
+});
+if(!WEB) $("#wrap").addEventListener("click", next);
+
+
+/* ---------- locución sincronizada (modo vídeo): [escena, desfase en la escena, segundo del audio] */
+const SYNC = [["s1", 0, 0.0], ["s1", 2.2, 3.46], ["s2", 0, 4.4], ["s2", 2.7, 6.95], ["s3", 0, 8.75], ["s3", 1.3, 10.31], ["s4", 0, 12.12], ["s4", 0.5, 12.5], ["s4", 1.25, 15.22], ["s4", 2.0, 18.18], ["s5", 0, 19.29], ["s5", 0.45, 19.98], ["s5", 1.05, 22.84], ["s5", 1.65, 25.94], ["s5", 2.25, 28.4], ["s6", 0, 29.67], ["s6", 0.6, 30.39], ["s6", 2.5, 31.61], ["s6", 3.7, 32.64], ["s7", 0, 32.81], ["s7", 1.0, 33.33], ["s7", 2.8, 38.16]].map(([l, o, a]) => [a, tl.labels[l] + o]);
+function a2t(a){
+  for(let i = SYNC.length - 1; i >= 0; i--) if(a >= SYNC[i][0]){
+    const [a0, t0] = SYNC[i], n = SYNC[i + 1];
+    return Math.min(tl.duration(), n ? t0 + (a - a0) * (n[1] - t0) / (n[0] - a0) : t0 + (a - a0));
+  }
+  return 0;
+}
+const t2a = t => { let a = 0; SYNC.forEach(([sa, st]) => { if(st <= t + .001) a = sa; }); return a; };
+let vozOn = () => false;
+let vozActiva = false, au = null;
+function enableVoz(){
+  if(vozActiva) return; vozActiva = true;
+  au = new Audio("voz-d02.mp3"); au.preload = "auto"; run = false;
+  const clock = () => endAt !== null ? au.duration + (performance.now() - endAt) / 1000 : au.currentTime;
+  au.onended = () => { endAt = performance.now(); };
+  vozOn = () => run;
+  gsap.ticker.add(() => {
+    if(!run) return;
+    const t = a2t(clock()); tl.seek(t, false);
+    if(t >= tl.duration() - .001){ run = false; endAt = null; }
+  });
+  const from = a => { tl.pause(); stopSeg(); fxLoop.pause(); endAt = null; au.currentTime = a; tl.seek(a2t(a), false); if(a2t(a) >= labels[2]) fxLoop.play(); };
+  const play = () => { run = true; return au.play().catch(() => { run = false; }); };
+  const pause = () => { au.pause(); run = false; };
+  const tg = () => { if(run){ pause(); return; } if(tl.time() >= tl.duration() - .01 || endAt !== null){ from(0); } play(); };
+  $("#play").onclick = tg; $("#start span").onclick = tg;
+  $("#replay").onclick = () => { from(0); play(); };
+  $("#next").onclick = () => { const k = cur(); if(k + 1 < SCENES.length){ from(t2a(labels[k + 1])); play(); } };
+  $("#prev").onclick = () => { const k = cur(); from(t2a(labels[Math.max(0, k - (tl.time() - labels[k] < 1 ? 1 : 0))])); play(); };
+  sbtn.forEach((b, i) => b.onclick = () => { from(t2a(labels[i])); play(); });
+  $("#wrap").addEventListener("click", tg);
+  document.addEventListener("keydown", e => {
+    if(e.key === " "){ e.preventDefault(); e.stopImmediatePropagation(); tg(); }
+    else if(e.key === "ArrowRight"){ e.stopImmediatePropagation(); $("#next").onclick(); }
+    else if(e.key === "ArrowLeft"){ e.stopImmediatePropagation(); $("#prev").onclick(); }
+    else if(/^[1-7]$/.test(e.key)){ e.stopImmediatePropagation(); sbtn[+e.key - 1].onclick(); }
+  }, true);
+  return {from, play};
+}
+if(VOZ && !reduced){ const v = enableVoz(); if(q.get("auto") === "1"){ v.from(0); v.play(); } } /* auto=1: arranca con sonido si el navegador lo permite; si no, espera el clic */
+/* dentro de la web (ventana emergente): avisa al terminar para cerrarse y volver al punto de partida */
+/* barra estrecha: la fila de escenas no se desborda sobre los botones */
+(() => { const st = document.createElement("style"); st.textContent = ".scenes{overflow:hidden}@media(max-width:520px){.scenes{display:none}}"; document.head.appendChild(st); })();
+if(window.parent !== window && (WEB || VOZ) && new URLSearchParams(location.search).get("embed") !== "1"){
+  /* barra inferior: botón de cerrar (y Esc) que cierra la ventana emergente de la web */
+  const cerrarLb = () => { try { window.parent.postMessage({argos: "cerrar"}, "*"); } catch(e){} };
+  const fsb = document.getElementById("fs");
+  if(fsb && !document.getElementById("cerrar-lb")){
+    const cb = document.createElement("button"); cb.id = "cerrar-lb"; cb.type = "button";
+    cb.setAttribute("aria-label", "Fermer (Échap)"); cb.title = "Fermer (Échap)";
+    cb.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+    cb.style.cssText = "border-color:#C9A227;color:#C9A227";
+    cb.addEventListener("click", e => { e.stopPropagation(); cerrarLb(); });
+    fsb.parentNode.appendChild(cb);
+  }
+  document.addEventListener("keydown", e => { if(e.key === "Escape" && !document.fullscreenElement) cerrarLb(); });
+  /* el primer botón es Reproducir/Pausa: lo indicamos al pasar el ratón */
+  const pb = document.getElementById("play");
+  if(pb) gsap.ticker.add(() => { const pausa = (document.getElementById("pi") || {}).getAttribute?.("d")?.startsWith("M7 5h4"); const t = pausa ? "Pause (espace)" : "Lire (espace)"; if(pb.title !== t){ pb.title = t; pb.setAttribute("aria-label", t); } });
+}
+if(window.parent !== window && (WEB || VOZ)){
+  let armado = false, avisado = false;
+  gsap.ticker.add(() => {
+    const t = tl.time(), d = tl.duration();
+    if(t > .3 && t < d - 1) { armado = true; avisado = false; }
+    if(armado && !avisado && t >= d - .05){ avisado = true; armado = false; try { window.parent.postMessage({argos: "fin"}, "*"); } catch(e){} }
+  });
+}
+
+/* modo web: botón opcional de locución (arranca en silencio) */
+const vb = $("#voz-btn");
+if(WEB && !VOZ && !q.get("render")){
+  vb.hidden = false;
+  const pinta = () => { const on = vozActiva && !au.muted; vb.textContent = on ? "🔇 Couper le son" : "🔊 Activer la voix off"; vb.setAttribute("aria-pressed", on); };
+  vb.onclick = e => {
+    e.stopPropagation();
+    if(!vozActiva){ document.body.classList.remove("reduced"); tl.pause(); const v = enableVoz(); v.from(0); v.play(); }
+    else au.muted = !au.muted;
+    pinta();
+  };
+  pinta();
+}
+
+/* modo web: arranca al verse; el ratón quieto oculta los controles en pantalla completa */
+if(reduced){
+  document.body.classList.add("reduced");
+  tl.seek(labels[SCENES.length - 1] + 1.1, false); gsap.set("#outro", {opacity:0});
+  $("#rm-play").onclick = () => { document.body.classList.remove("reduced"); go(0); if(!WEB) tl.play(); };
+} else if(WEB && !VOZ){
+  const io = new IntersectionObserver(es => es.forEach(en => { if(vozActiva) return; if(en.isIntersecting && tl.time() === 0) tl.play(); else if(!en.isIntersecting) tl.pause(); }), {threshold:.4});
+  io.observe($("#stage"));
+}
+let idleT; document.addEventListener("mousemove", () => { document.body.classList.remove("idle"); clearTimeout(idleT); idleT = setTimeout(() => { if(document.fullscreenElement) document.body.classList.add("idle"); }, 2500); });
+window.D02 = {tl, go, a2t, dots:fxLoop, vozOn:() => vozOn()};
+})();
+</script>
+</body>
+</html>

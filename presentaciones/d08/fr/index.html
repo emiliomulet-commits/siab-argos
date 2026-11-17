@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D08 · De la règle juridique au test technique · Présentation animée</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://www.softwareinabox.eu/assets/fonts.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#0B1F3A;color:#fff;font-family:'Hanken Grotesk',system-ui,sans-serif;overflow:hidden}
+#wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#stage{width:100%;height:100%;display:block}
+.ui{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:14px;padding:12px 18px;background:linear-gradient(0deg,rgba(5,14,26,.92),rgba(5,14,26,0));transition:opacity .3s}
+body.ui-off .ui{opacity:0;pointer-events:none}
+body.idle .ui{opacity:0}
+.ui button{font:inherit;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:8px;height:38px;min-width:38px;padding:0 12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:14px}
+.ui button:hover,.ui button:focus-visible{border-color:#C9A227;outline:none}
+.ui svg{width:18px;height:18px}
+.scenes{display:flex;gap:6px;flex:1;min-width:0}
+.scenes button{flex:1;min-width:0;height:auto;padding:6px 8px;display:block;text-align:left;font-size:12.5px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative}
+.scenes button b{display:block;font-size:11px;color:#C9A227}
+.scenes button i{position:absolute;left:0;bottom:0;height:3px;background:#C9A227;width:0;border-radius:2px}
+.scenes button.on{border-color:#C9A227;background:rgba(201,162,39,.15)}
+.hint{font-size:12.5px;color:#AFC0D2;white-space:nowrap}
+#start{position:fixed;inset:0;display:none;align-items:flex-end;justify-content:center;padding-bottom:110px;pointer-events:none}
+#start span{background:rgba(5,14,26,.75);border:1px solid rgba(201,162,39,.6);border-radius:999px;padding:10px 20px;font-size:15px;color:#fff}
+body.pres.at-start #start,body.video.at-start #start{display:flex}
+body.video #start span{pointer-events:auto;cursor:pointer;font-size:17px;padding:14px 26px}
+body.video .hint{display:none}
+body.web .hint,body.web #fs{display:none}
+body.web .scenes button span{display:none}
+.rm-note{position:fixed;top:14px;left:50%;transform:translateX(-50%);background:rgba(5,14,26,.8);border-radius:999px;padding:8px 16px;font-size:13px;display:none}
+body.reduced .rm-note{display:block}
+body.embed .ui{padding:6px 8px;gap:6px}
+body.embed .ui button{height:28px;min-width:28px;padding:0 6px;border-radius:6px}
+body.embed .ui svg{width:14px;height:14px}
+body.embed .scenes button{padding:3px 5px}
+body.embed .scenes button b{font-size:10px}
+body.embed .hint,body.embed #fs{display:none}
+body.embed .ui{opacity:0}
+body.embed:hover .ui,body.embed.at-end .ui{opacity:1}
+@media(max-width:760px){.scenes button span{display:none}.hint{display:none}}
+</style>
+</head>
+<body class="at-start">
+<div id="wrap">
+<svg id="stage" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="De la norma jurídica a la prueba técnica">
+<g id="cam" font-family="Calibri, Arial, sans-serif">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1F3864"/><stop offset="1" stop-color="#2A4E8A"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#1F3864" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect width="1600" height="118" fill="url(#hdr)"/>
+  <rect y="118" width="1600" height="6" fill="#C9A227"/>
+  <rect x="40" y="34" rx="14" width="230" height="50" fill="#C9A227"/>
+  <text x="155" y="67" text-anchor="middle" font-size="26" font-weight="bold" fill="#1F3864" data-w="150.5">D08 · B02-P02</text>
+  <text x="300" y="56" font-size="34" font-weight="bold" fill="#FFFFFF" data-w="558.1">De la règle juridique au test technique</text>
+  <text x="300" y="94" font-size="24" fill="#CFE0F5" data-w="646.7">La chaîne de traçabilité qui régit tout le catalogue d’ARGOS</text>
+
+  <!-- Cinco chevrones -->
+  <g filter="url(#sh)">
+    <path d="M80 220 L330 220 L380 300 L330 380 L80 380 L130 300 Z" fill="#1F3864"/>
+    <path d="M360 220 L610 220 L660 300 L610 380 L360 380 L410 300 Z" fill="#26437A"/>
+    <path d="M640 220 L890 220 L940 300 L890 380 L640 380 L690 300 Z" fill="#1F7A7A"/>
+    <path d="M920 220 L1170 220 L1220 300 L1170 380 L920 380 L970 300 Z" fill="#2E8F8F"/>
+    <path d="M1200 220 L1470 220 L1520 300 L1470 380 L1200 380 L1250 300 Z" fill="#C9A227"/>
+  </g>
+  <g text-anchor="middle" font-size="29" font-weight="bold" fill="#FFFFFF">
+    <text x="245" y="290" data-w="98.0">NORME</text>
+    <text x="525" y="290" data-w="153.4">OBLIGATION</text>
+    <text x="805" y="290" data-w="116.1">CONTRÔLE</text>
+    <text x="1085" y="290" data-w="131.2">PREUVE</text>
+    <text x="1370" y="290" fill="#1F3864" data-w="136.5">VERDICT</text>
+  </g>
+  <g text-anchor="middle" font-size="19" fill="#E4ECF7">
+    <text x="245" y="330" data-w="86.8">article du</text><text x="245" y="354" data-w="88.9">règlement</text>
+    <text x="525" y="330" data-w="117.6">devoir concret</text><text x="525" y="354" data-w="92.6">et vérifiable</text>
+    <text x="805" y="330" data-w="139.9">test exécutable</text><text x="805" y="354" data-w="113.9">sur les systèmes</text>
+    <text x="1085" y="330" data-w="127.5">donnée technique</text><text x="1085" y="354" data-w="110.4">horodatée</text>
+    <text x="1370" y="330" fill="#3A3113" data-w="86.1">conforme /</text><text x="1370" y="354" fill="#3A3113" data-w="98.8">non conforme</text>
+  </g>
+
+  <!-- Ejemplo aplicado -->
+  <text x="110" y="470" font-size="27" font-weight="bold" fill="#1F3864" data-w="558.4">Exemple réel : limitation de la durée de conservation</text>
+  <g filter="url(#sh)">
+    <rect x="80" y="500" rx="14" width="280" height="230" fill="#F4F6FA" stroke="#1F3864" stroke-width="2"/>
+    <rect x="380" y="500" rx="14" width="280" height="230" fill="#F4F6FA" stroke="#1F3864" stroke-width="2"/>
+    <rect x="680" y="500" rx="14" width="280" height="230" fill="#F1F8F8" stroke="#1F7A7A" stroke-width="2"/>
+    <rect x="980" y="500" rx="14" width="280" height="230" fill="#F1F8F8" stroke="#1F7A7A" stroke-width="2"/>
+    <rect x="1280" y="500" rx="14" width="240" height="230" fill="#FBF6E2" stroke="#C9A227" stroke-width="2.5"/>
+  </g>
+  <g font-size="21" fill="#26324A">
+    <text x="105" y="545" font-weight="bold" fill="#1F3864" data-w="135.1">Art. 5.1.e RGPD</text>
+    <text x="105" y="585" data-w="130.2">Les données ne sont</text>
+    <text x="105" y="613" data-w="144.0">pas conservées plus</text>
+    <text x="105" y="641" data-w="179.1">longtemps que nécessaire</text>
+    <text x="105" y="669" data-w="146.1">à leur finalité.</text>
+
+    <text x="405" y="545" font-weight="bold" fill="#1F3864" data-w="92.3">Obligation</text>
+    <text x="405" y="585" data-w="148.5">Chaque traitement</text>
+    <text x="405" y="613" data-w="159.7">respecte la durée de</text>
+    <text x="405" y="641" data-w="170.5">conservation déclarée</text>
+    <text x="405" y="669" data-w="95.2">dans le RoPA.</text>
+
+    <text x="705" y="545" font-weight="bold" fill="#1F7A7A" data-w="64.4">Contrôle</text>
+    <text x="705" y="585" data-w="175.5">Confronter la conservation</text>
+    <text x="705" y="613" data-w="147.7">déclarée aux</text>
+    <text x="705" y="641" data-w="175.8">enregistrements existants</text>
+    <text x="705" y="669" data-w="169.9">dans chaque dépôt.</text>
+
+    <text x="1005" y="545" font-weight="bold" fill="#1F7A7A" data-w="82.2">Preuve</text>
+    <text x="1005" y="585" data-w="163.0">12 480 enregistrements de</text>
+    <text x="1005" y="613" data-w="167.7">2019 encore présents</text>
+    <text x="1005" y="641" data-w="147.6">dans la BD historique</text>
+    <text x="1005" y="669" data-w="165.8">(sceau : 2026-09-07).</text>
+
+    <text x="1305" y="545" font-weight="bold" fill="#8A6D12" data-w="83.3">Verdict</text>
+    <text x="1305" y="590" font-size="25" font-weight="bold" fill="#C0392B" data-w="161.8">NON CONFORME</text>
+    <text x="1305" y="628" data-w="131.8">Règle R-054 du</text>
+    <text x="1305" y="656" data-w="112.9">catalogue v3.2</text>
+    <text x="1305" y="684" data-w="171.9">→ plan de remédiation</text>
+  </g>
+
+  <!-- Banda inferior -->
+  <g filter="url(#sh)"><rect x="80" y="790" rx="16" width="1440" height="120" fill="#1F3864"/></g>
+  <rect x="80" y="790" rx="16" width="14" height="120" fill="#C9A227"/>
+  <text x="800" y="840" text-anchor="middle" font-size="26" font-weight="bold" fill="#FFFFFF" data-w="444.0">Traçabilité complète dans les deux sens</text>
+  <text x="800" y="878" text-anchor="middle" font-size="22" fill="#CFE0F5" data-w="1382.2">De tout verdict on remonte à l’article qui l’exige ; de tout article, aux tests qui le vérifient. Catalogue en standards ouverts : OSCAL et ODRL.</text>
+
+  <text x="1560" y="975" text-anchor="end" font-size="16" fill="#9AA7BB" data-w="169.4">ARGOS · Software in a Box</text>
+</g>
+<g id="outro" opacity="0">
+ <rect x="-400" y="-400" width="2400" height="1800" fill="#0B1F3A" opacity=".95"/>
+ <g id="outMark">
+  <image href="/assets/brand/argos-symbol.svg" x="560" y="330" width="170" height="170"/>
+  <text x="760" y="425" font-family="Montserrat,sans-serif" font-size="78" font-weight="700" fill="#fff" letter-spacing="3" data-w="307.8">ARG<tspan fill="#C9A227">O</tspan>S</text>
+  <text x="764" y="472" font-family="Hanken Grotesk,sans-serif" font-size="19" font-weight="700" letter-spacing="6" fill="#AFC0D2" data-w="420.5">VERIFIED COMPLIANCE AGENT</text>
+ </g>
+</g>
+</svg>
+</div>
+<div id="start"><span>Appuyez sur → ou sur la barre d’espace pour commencer</span></div>
+<p class="rm-note">Movimiento reducido: se muestra el diagrama completo. <button id="rm-play" style="margin-left:8px">Voir l’animation</button></p>
+<div class="ui" role="toolbar" aria-label="Commandes de la présentation">
+ <button id="play" aria-label="Lire"><svg viewBox="0 0 24 24" fill="currentColor"><path id="pi" d="M8 5v14l11-7z"/></svg></button>
+ <button id="prev" aria-label="Scène précédente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+ <button id="next" aria-label="Scène suivante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+ <div class="scenes" id="scenes"></div>
+ <button id="replay" aria-label="Revoir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button>
+ <button id="fs" aria-label="Plein écran (F)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+ <span class="hint">← → espacio · 1–4 · F · H oculta</span>
+</div>
+<script>/* ajusta el cuerpo de letra solo si la traducción no cabe en su recuadro */
+(() => { const sv = document.getElementById("stage"), cam = document.getElementById("cam") || sv, R = cam.getScreenCTM().inverse();
+  const box = el => { const b = el.getBBox(), m = R.multiply(el.getScreenCTM()); return {x: m.a*b.x + m.e, y: m.d*b.y + m.f, w: b.width*m.a, h: b.height*m.d, m}; };
+  const rects = [...sv.querySelectorAll("rect")].filter(r => !r.closest("defs,marker,pattern,clipPath,mask")).map(box).filter(b => b.w > 40 && b.h > 18 && b.w < 1500);
+  sv.querySelectorAll("text[data-w]").forEach(t => {
+    const w = +t.dataset.w, full = t.getAttribute("data-full"), old = t.textContent; if(full) t.textContent = full;
+    const L = t.getComputedTextLength(), a = t.getAttribute("text-anchor") || getComputedStyle(t).textAnchor, m = R.multiply(t.getScreenCTM());
+    const x0 = +(t.getAttribute("x") || 0), y0 = +(t.getAttribute("y") || 0), fs = parseFloat(getComputedStyle(t).fontSize);
+    const px = m.a*x0 + m.e, py = m.d*(y0 - fs*.35) + m.f;
+    const host = rects.filter(r => px >= r.x - 2 && px <= r.x + r.w + 2 && py >= r.y && py <= r.y + r.h).sort((p, q) => p.w*p.h - q.w*q.h)[0];
+    let room = Infinity;
+    if(host){ const pad = 10; room = (a === "middle" ? 2*Math.min(px - host.x, host.x + host.w - px) : a === "end" ? px - host.x : host.x + host.w - px) - pad; room /= m.a; }
+    else room = Math.max(w*1.3, 60);
+    if(host && room < w*.98) room = Math.max(w*1.3, 60);   /* el recuadro hallado no contiene ni el original: no es su contenedor */
+    if(full) t.textContent = old;
+    if(L > room && room > 0){ t.setAttribute("font-size", (fs*Math.max(.6, room/L)).toFixed(1)); t.style.fontSize = ""; }
+  }); })();
+</script>
+<script src="/presentaciones/assets/gsap.min.js"></script>
+<script>window.ANIM = {"escenas": [{"r": [0, 0, 1600, 124], "t": 0.0, "n": "Ouverture"}, {"r": [70, 205, 1460, 185], "t": 8.51, "n": "Norme obligation contrôle"}, {"r": [70, 440, 1460, 300], "t": 16.83, "n": "Un exemple réel"}, {"r": null, "t": 31.71, "n": "Clôture"}], "fin": 38.11, "audio": "voz.mp3", "ui": {"Pulse → o la barra espaciadora para empezar": "Appuyez sur → ou sur la barre d’espace pour commencer", "Movimiento reducido: se muestra el diagrama completo.": "Mouvement réduit : le schéma complet est affiché.", "Ver animación": "Voir l’animation", "Controles de la presentación": "Commandes de la présentation", "Reproducir": "Lire", "Escena anterior": "Scène précédente", "Escena siguiente": "Scène suivante", "Volver a ver": "Revoir", "Pantalla completa (F)": "Plein écran (F)", "oculta": "masque", "espacio": "espace", "Presentación animada": "Présentation animée", "Cerrar (Esc)": "Fermer (Échap)", "Pausa (espacio)": "Pause (espace)", "Reproducir (espacio)": "Lire (espace)", "▶ Ver con locución (sonido activado)": "▶ Voir avec la voix off (son activé)", "🔇 Silenciar": "🔇 Couper le son", "🔊 Activar locución": "🔊 Activer la voix off", "Apertura": "Ouverture", "Cierre": "Clôture", "Planteamiento": "La question", "Lo declarado": "Le déclaré", "Lo efectivo": "L’effectif", "La brecha": "L’écart", "ARGOS cierra la brecha": "ARGOS comble l’écart", "Motor de retos": "Moteur de tests", "Sondas 1–3": "Sondes 1–3", "Sondas 4–7": "Sondes 4–7", "Evidencias": "Preuves", "Generación": "Génération", "Introducción": "Introduction", "Seguimiento": "Suivi", "Ejercicio de derechos": "Exercice des droits", "Verificación de borrado": "Vérif. de l’effacement", "Eliminación verificada": "Suppression vérifiée", "La campaña": "La campagne", "Informe y plan": "Rapport et plan", "RoPA y DPIA": "RoPA et AIPD", "La credencial": "L’attestation", "La comprueba un tercero": "Un tiers la vérifie", "Las sanciones suben": "Les sanctions montent", "El calendario corre": "Le temps presse", "Tres fuerzas": "Trois forces", "ARGOS llena el hueco": "ARGOS comble le vide"}};</script>
+<script src="/presentaciones/assets/motor.js"></script>
+</body>
+</html>
