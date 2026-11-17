@@ -404,7 +404,7 @@ function enableVoz(){
     if(t >= tl.duration() - .001){ run = false; endAt = null; }
   });
   const from = a => { tl.pause(); stopSeg(); dotsLoop.pause(); endAt = null; au.currentTime = a; tl.seek(a2t(a), false); if(a2t(a) >= labels[3]) dotsLoop.play(); };
-  const play = () => { au.play().catch(() => {}); run = true; };
+  const play = () => { run = true; return au.play().catch(() => { run = false; }); };
   const pause = () => { au.pause(); run = false; };
   const tg = () => { if(run){ pause(); return; } if(tl.time() >= tl.duration() - .01 || endAt !== null){ from(0); } play(); };
   $("#play").onclick = tg; $("#start span").onclick = tg;
@@ -421,7 +421,7 @@ function enableVoz(){
   }, true);
   return {from, play};
 }
-if(VOZ && !reduced) enableVoz();
+if(VOZ && !reduced){ const v = enableVoz(); if(q.get("auto") === "1"){ v.from(0); v.play(); } } /* auto=1: arranca con sonido si el navegador lo permite; si no, espera el clic */
 
 /* modo web: botón opcional de locución (arranca en silencio) */
 const vb = $("#voz-btn");
