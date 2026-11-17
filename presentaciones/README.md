@@ -19,3 +19,4 @@ Generado con `build_d01.py` (fuera del repositorio). Piloto D01 publicado el 17/
 `assets/motor.js` anima el diagrama fijo de `/diagramas/` escena a escena (cámara, texto que se escribe, flechas que se dibujan, recuadros que se iluminan). Cada carpeta `dNN/` lleva `index.html` (escenas y tiempos), `voz.mp3` (locución ElevenLabs, voz Martin Osborne, modelo v4) y `argos-dNN.mp4` (1080p). Modos: presentación (por defecto), `?modo=web` (sin sonido) y `?modo=video` (con locución).
 D03 y D04 con locución sincronizada (`add_voice.py`, fuera del repositorio) y MP4 desde el 17/11/2026.
 D04 enlazada desde el visor de la web y con botón opcional «Activar locución» en `?modo=web` (como D01 y D05).
+D02 y D03 con modo incrustado (`?embed=1`) y botón «Activar locución». Revisión del 17/11/2026: las 25 presentaciones cargan sin errores en los tres modos; enlazadas desde la web (visor y tarjetas, botón «Ver animación»).
