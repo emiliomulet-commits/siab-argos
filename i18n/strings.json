@@ -872,8 +872,8 @@
   ]
  },
  {
-  "id": "438e3f6032",
-  "src": "Proceso de implantación. <a class=\"lk\" href=\"diagramas/D12__B05-P01__tres-tallas.svg\" target=\"_blank\" rel=\"noopener\">Ver las tres tallas</a>",
+  "id": "e557558784",
+  "src": "Proceso de implantación. <a class=\"lk\" href=\"diagramas/miniaturas/D12__B05-P01__tres-tallas.webp\" target=\"_blank\" rel=\"noopener\">Ver las tres tallas</a>",
   "kind": "html",
   "pages": [
    "index.html"
@@ -1368,16 +1368,16 @@
   ]
  },
  {
-  "id": "59b93805ba",
-  "src": "Ampliar diagrama",
+  "id": "00686c432b",
+  "src": "Ampliar",
   "kind": "attr",
   "pages": [
    "index.html"
   ]
  },
  {
-  "id": "00686c432b",
-  "src": "Ampliar",
+  "id": "59b93805ba",
+  "src": "Ampliar diagrama",
   "kind": "attr",
   "pages": [
    "index.html"
@@ -2624,6 +2624,22 @@
   ]
  },
  {
+  "id": "b042baa132",
+  "src": "<img class=\"dg\" src=\"",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "8c2084f017",
+  "src": "\" alt=\"",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
   "id": "3506fcf7a5",
   "src": "Esa pregunta necesita el asistente avanzado de ARGOS, que activamos en las demostraciones personalizadas. Déjenos su correo con el botón «Solicitar demo» o escriba a emilio.mulet@softwareinabox.eu y le responderemos con detalle.",
   "kind": "js",
@@ -2904,6 +2920,14 @@
   ]
  },
  {
+  "id": "a18dbb65b9",
+  "src": "/diagramas/miniaturas/' + d.a.replace(/\\.svg$/, '.webp') + '",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
   "id": "ea1a49508e",
   "src": "<div class=\"tags\"><span class=\"tag\">",
   "kind": "js",
@@ -2984,8 +3008,8 @@
   ]
  },
  {
-  "id": "38d0fd124b",
-  "src": "Animado",
+  "id": "019f742f2b",
+  "src": "Animado con audio",
   "kind": "js",
   "pages": [
    "index.html"
@@ -3048,8 +3072,8 @@
   ]
  },
  {
-  "id": "acd3f4f5db",
-  "src": "?modo=video\" title=\"",
+  "id": "a3fd1b8795",
+  "src": "?modo=video&auto=1\" title=\"",
   "kind": "js",
   "pages": [
    "index.html"
@@ -3146,6 +3170,14 @@
  {
   "id": "0832131f92",
   "src": "<button type=\"button\" data-a=\"fijo\">",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "f3095c8727",
+  "src": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M8 5.5v13l11-6.5z\"/></svg>",
   "kind": "js",
   "pages": [
    "index.html"
