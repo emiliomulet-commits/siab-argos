@@ -685,7 +685,7 @@ body.panel-abierto .i18n-sw{display:none}
 .lightbox.con-video .contenido{background:#0B1F3A;padding:0;overflow:hidden;width:min(1500px,96vw,calc(92vh*16/9))}
 .anim-lb{aspect-ratio:16/9;width:100%}
 .anim-lb iframe{width:100%;height:100%;border:0;display:block}
-.tc .tag.anim{background:var(--navy,#0B1F3A);color:#fff;border-color:var(--navy,#0B1F3A)}button.tag.anim{font:inherit;cursor:pointer;transition:background .2s,color .2s,border-color .2s}button.tag.anim:hover,button.tag.anim:focus-visible{background:#C9A227;color:#0B1F3A;border-color:#C9A227;outline:none}
+.tc .tag.anim{background:var(--navy,#0B1F3A);color:#fff;border-color:var(--navy,#0B1F3A)}.wm-wrap{position:relative;display:block}.wm-wrap>img{display:block}.play-wm{position:absolute;left:50%;top:50%;width:64px;height:64px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(11,31,58,.55);border:2px solid rgba(255,255,255,.9);box-shadow:0 4px 18px rgba(0,0,0,.35);display:grid;place-items:center;cursor:pointer;opacity:.88;transition:background .2s,opacity .2s,transform .2s;backdrop-filter:blur(2px)}.play-wm svg{width:28px;height:28px;fill:#fff;margin-left:4px}.play-wm:hover,.play-wm:focus-visible,.wm-wrap:hover .play-wm{background:#C9A227;border-color:#C9A227;opacity:1;outline:none;transform:translate(-50%,-50%) scale(1.08)}.play-wm:hover svg,.play-wm:focus-visible svg,.wm-wrap:hover .play-wm svg{fill:#0B1F3A}.galeria-item .play-wm{width:40px;height:40px}.galeria-item .play-wm svg{width:18px;height:18px;margin-left:2px}a.th .play-wm{width:46px;height:46px}a.th .play-wm svg{width:20px;height:20px;margin-left:3px}button.tag.anim{font:inherit;cursor:pointer;transition:background .2s,color .2s,border-color .2s}button.tag.anim:hover,button.tag.anim:focus-visible{background:#C9A227;color:#0B1F3A;border-color:#C9A227;outline:none}
 .tc .go button.vid{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;height:42px;font-size:14.5px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}
 .tc .go button.vid:hover{background:rgba(255,255,255,.1);border-color:var(--gold,#C9A227)}
 .tc .go button.vid svg{width:17px;height:17px;color:var(--gold,#C9A227)}
@@ -4162,6 +4162,27 @@ if(!cargarConv()){
     lz.querySelector('[data-a="video"]').onclick = () => verVideo(url);
     lz.querySelector('[data-a="fijo"]').onclick = () => abrirLightbox(clave);
   };
+
+  /* marca de agua «Play» sobre todas las miniaturas: abre la animación con audio */
+  const claveDeImg = img => { const m = (img.getAttribute("src") || "").match(/\/(D\d\d)__/); if(!m) return null;
+    for(const [k, v] of Object.entries(DIAGRAMAS)) if(v.d === m[1]) return k; return null; };
+  function marcaPlay(){
+    document.querySelectorAll('img[src*="/miniaturas/D"]').forEach(img => {
+      if(img.dataset.wm || img.closest("#visor-lienzo, #lb-contenido, .figura-inline, .lightbox")) return;
+      const clave = claveDeImg(img), url = clave && ANIM[clave]; if(!url) return;
+      img.dataset.wm = "1";
+      const w = document.createElement("span"); w.className = "wm-wrap"; img.before(w); w.appendChild(img);
+      const s = document.createElement("span"); s.className = "play-wm"; s.setAttribute("role", "button"); s.tabIndex = 0;
+      s.title = TX.video + esp; s.setAttribute("aria-label", TX.video + esp + " · " + DIAGRAMAS[clave].d);
+      s.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>';
+      const go = e => { e.preventDefault(); e.stopPropagation(); document.getElementById("galeria")?.classList.remove("abierta"); verVideo(url); };
+      s.addEventListener("click", go); s.addEventListener("keydown", e => { if(e.key === "Enter" || e.key === " ") go(e); });
+      w.appendChild(s);
+    });
+  }
+  marcaPlay();
+  let wmPend = false;
+  new MutationObserver(() => { if(wmPend) return; wmPend = true; requestAnimationFrame(() => { wmPend = false; marcaPlay(); }); }).observe(document.body, {childList: true, subtree: true});
 
   /* tarjetas de «Lo más consultado»: distintivo y acceso directo al vídeo */
   document.querySelectorAll("#cards .tc").forEach(tc => {
