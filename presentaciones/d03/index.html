@@ -448,6 +448,25 @@ function enableVoz(){
 }
 if(VOZ && !reduced){ const v = enableVoz(); if(q.get("auto") === "1"){ v.from(0); v.play(); } } /* auto=1: arranca con sonido si el navegador lo permite; si no, espera el clic */
 /* dentro de la web (ventana emergente): avisa al terminar para cerrarse y volver al punto de partida */
+/* barra estrecha: la fila de escenas no se desborda sobre los botones */
+(() => { const st = document.createElement("style"); st.textContent = ".scenes{overflow:hidden}@media(max-width:520px){.scenes{display:none}}"; document.head.appendChild(st); })();
+if(window.parent !== window && (WEB || VOZ) && new URLSearchParams(location.search).get("embed") !== "1"){
+  /* barra inferior: botón de cerrar (y Esc) que cierra la ventana emergente de la web */
+  const cerrarLb = () => { try { window.parent.postMessage({argos: "cerrar"}, "*"); } catch(e){} };
+  const fsb = document.getElementById("fs");
+  if(fsb && !document.getElementById("cerrar-lb")){
+    const cb = document.createElement("button"); cb.id = "cerrar-lb"; cb.type = "button";
+    cb.setAttribute("aria-label", "Cerrar (Esc)"); cb.title = "Cerrar (Esc)";
+    cb.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+    cb.style.cssText = "border-color:#C9A227;color:#C9A227";
+    cb.addEventListener("click", e => { e.stopPropagation(); cerrarLb(); });
+    fsb.parentNode.appendChild(cb);
+  }
+  document.addEventListener("keydown", e => { if(e.key === "Escape" && !document.fullscreenElement) cerrarLb(); });
+  /* el primer botón es Reproducir/Pausa: lo indicamos al pasar el ratón */
+  const pb = document.getElementById("play");
+  if(pb) gsap.ticker.add(() => { const pausa = (document.getElementById("pi") || {}).getAttribute?.("d")?.startsWith("M7 5h4"); const t = pausa ? "Pausa (espacio)" : "Reproducir (espacio)"; if(pb.title !== t){ pb.title = t; pb.setAttribute("aria-label", t); } });
+}
 if(window.parent !== window && (WEB || VOZ)){
   let armado = false, avisado = false;
   gsap.ticker.add(() => {
