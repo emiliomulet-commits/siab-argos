@@ -9,4 +9,4 @@ Cada infografía de la base gráfica (D01–D25) puede tener una versión animad
 Animación con GSAP (`assets/gsap.min.js`, licencia estándar gratuita de GSAP). Iconos de línea de Lucide (licencia ISC) redibujados con el estilo de ARGOS.
 El emblema de la UE se usa de forma informativa, sin sugerir vínculo ni aval de la UE (condiciones de uso por terceros de la Comisión Europea).
 
-Generado con `build_d01.py` (fuera del repositorio). Piloto D01 publicado el 17/11/2026, pendiente de aprobación; no está enlazado desde la web ni indexado.
+Generado con `build_d01.py` y `build_d02.py` (fuera del repositorio). D01 y D02 publicadas el 17/11/2026, pendientes de aprobación; no están enlazadas desde la web ni indexadas. Locución: ElevenLabs, voz Martín Osborne (`?modo=video`).
