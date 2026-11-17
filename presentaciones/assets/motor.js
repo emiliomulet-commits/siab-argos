@@ -4,6 +4,7 @@
    tiempos de la locución, de modo que la versión web, la de presentación y la de vídeo comparten ritmo.
    window.ANIM = {escenas:[{r:[x,y,w,h]|null, t:inicio_s, n:"nombre"}], fin:segundos_de_audio, audio:"voz.mp3"} */
 (function(){
+const U = t => (window.ANIM && window.ANIM.ui && window.ANIM.ui[t]) || t;   /* textos de interfaz traducibles */
 const st = document.createElement("style");
 st.textContent = "#voz-btn{position:fixed;top:14px;right:16px;z-index:5;font:600 14px 'Hanken Grotesk',system-ui,sans-serif;color:#fff;background:rgba(11,31,58,.82);border:1px solid #C9A227;border-radius:999px;padding:9px 16px;cursor:pointer;transition:background .2s}#voz-btn:hover,#voz-btn:focus-visible{background:#C9A227;color:#0B1F3A;outline:none}#voz-btn[hidden]{display:none}body.embed #voz-btn{top:8px;right:8px;padding:6px 12px;font-size:12.5px}@media(max-width:760px){#voz-btn{top:8px;right:8px;padding:7px 12px;font-size:13px}}";
 document.head.appendChild(st);
@@ -12,7 +13,7 @@ const q = new URLSearchParams(location.search);
 const VOZ = q.get("modo") === "video", WEB = q.get("modo") === "web" || VOZ;
 document.body.classList.add(VOZ ? "video" : WEB ? "web" : "pres");
 if(q.get("embed")) document.body.classList.add("embed");
-if(VOZ) $("#start span").textContent = "▶ Ver con locución (sonido activado)";
+if(VOZ) $("#start span").textContent = U("▶ Ver con locución (sonido activado)");
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const svg = $("#stage"), cam = $("#cam"), W = 1600, H = 1000;
 const E = A.escenas, N = E.length, FIN = A.fin, OUT = 2.6;
@@ -201,7 +202,7 @@ if(window.parent !== window && (WEB || VOZ) && new URLSearchParams(location.sear
   const fsb = document.getElementById("fs");
   if(fsb && !document.getElementById("cerrar-lb")){
     const cb = document.createElement("button"); cb.id = "cerrar-lb"; cb.type = "button";
-    cb.setAttribute("aria-label", "Cerrar (Esc)"); cb.title = "Cerrar (Esc)";
+    cb.setAttribute("aria-label", U("Cerrar (Esc)")); cb.title = U("Cerrar (Esc)");
     cb.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
     cb.style.cssText = "border-color:#C9A227;color:#C9A227";
     cb.addEventListener("click", e => { e.stopPropagation(); cerrarLb(); });
@@ -210,7 +211,7 @@ if(window.parent !== window && (WEB || VOZ) && new URLSearchParams(location.sear
   document.addEventListener("keydown", e => { if(e.key === "Escape" && !document.fullscreenElement) cerrarLb(); });
   /* el primer botón es Reproducir/Pausa: lo indicamos al pasar el ratón */
   const pb = document.getElementById("play");
-  if(pb) gsap.ticker.add(() => { const pausa = (document.getElementById("pi") || {}).getAttribute?.("d")?.startsWith("M7 5h4"); const t = pausa ? "Pausa (espacio)" : "Reproducir (espacio)"; if(pb.title !== t){ pb.title = t; pb.setAttribute("aria-label", t); } });
+  if(pb) gsap.ticker.add(() => { const pausa = (document.getElementById("pi") || {}).getAttribute?.("d")?.startsWith("M7 5h4"); const t = pausa ? U("Pausa (espacio)") : U("Reproducir (espacio)"); if(pb.title !== t){ pb.title = t; pb.setAttribute("aria-label", t); } });
 }
 if(window.parent !== window && (WEB || VOZ)){
   let armado = false, avisado = false;
@@ -226,7 +227,7 @@ const vb = document.createElement("button");
 vb.id = "voz-btn"; vb.type = "button"; vb.hidden = true; vb.setAttribute("aria-pressed", "false"); document.body.appendChild(vb);
 if(WEB && !VOZ && !q.get("render")){
   vb.hidden = false;
-  const pinta = () => { const on = vozActiva && !au.muted; vb.textContent = on ? "🔇 Silenciar" : "🔊 Activar locución"; vb.setAttribute("aria-pressed", on); };
+  const pinta = () => { const on = vozActiva && !au.muted; vb.textContent = on ? U("🔇 Silenciar") : U("🔊 Activar locución"); vb.setAttribute("aria-pressed", on); };
   vb.onclick = e => {
     e.stopPropagation();
     if(!vozActiva){ document.body.classList.remove("reduced"); tl.pause(); const v = enableVoz(); v.from(0); v.play(); }

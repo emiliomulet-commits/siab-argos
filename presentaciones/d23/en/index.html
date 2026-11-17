@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D23 · Which certifications is ARGOS pursuing as a product? · Animated presentation</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://www.softwareinabox.eu/assets/fonts.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#0B1F3A;color:#fff;font-family:'Hanken Grotesk',system-ui,sans-serif;overflow:hidden}
+#wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#stage{width:100%;height:100%;display:block}
+.ui{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:14px;padding:12px 18px;background:linear-gradient(0deg,rgba(5,14,26,.92),rgba(5,14,26,0));transition:opacity .3s}
+body.ui-off .ui{opacity:0;pointer-events:none}
+body.idle .ui{opacity:0}
+.ui button{font:inherit;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:8px;height:38px;min-width:38px;padding:0 12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:14px}
+.ui button:hover,.ui button:focus-visible{border-color:#C9A227;outline:none}
+.ui svg{width:18px;height:18px}
+.scenes{display:flex;gap:6px;flex:1;min-width:0}
+.scenes button{flex:1;min-width:0;height:auto;padding:6px 8px;display:block;text-align:left;font-size:12.5px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative}
+.scenes button b{display:block;font-size:11px;color:#C9A227}
+.scenes button i{position:absolute;left:0;bottom:0;height:3px;background:#C9A227;width:0;border-radius:2px}
+.scenes button.on{border-color:#C9A227;background:rgba(201,162,39,.15)}
+.hint{font-size:12.5px;color:#AFC0D2;white-space:nowrap}
+#start{position:fixed;inset:0;display:none;align-items:flex-end;justify-content:center;padding-bottom:110px;pointer-events:none}
+#start span{background:rgba(5,14,26,.75);border:1px solid rgba(201,162,39,.6);border-radius:999px;padding:10px 20px;font-size:15px;color:#fff}
+body.pres.at-start #start,body.video.at-start #start{display:flex}
+body.video #start span{pointer-events:auto;cursor:pointer;font-size:17px;padding:14px 26px}
+body.video .hint{display:none}
+body.web .hint,body.web #fs{display:none}
+body.web .scenes button span{display:none}
+.rm-note{position:fixed;top:14px;left:50%;transform:translateX(-50%);background:rgba(5,14,26,.8);border-radius:999px;padding:8px 16px;font-size:13px;display:none}
+body.reduced .rm-note{display:block}
+body.embed .ui{padding:6px 8px;gap:6px}
+body.embed .ui button{height:28px;min-width:28px;padding:0 6px;border-radius:6px}
+body.embed .ui svg{width:14px;height:14px}
+body.embed .scenes button{padding:3px 5px}
+body.embed .scenes button b{font-size:10px}
+body.embed .hint,body.embed #fs{display:none}
+body.embed .ui{opacity:0}
+body.embed:hover .ui,body.embed.at-end .ui{opacity:1}
+@media(max-width:760px){.scenes button span{display:none}.hint{display:none}}
+</style>
+</head>
+<body class="at-start">
+<div id="wrap">
+<svg id="stage" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="¿Qué certificaciones persigue ARGOS como producto?">
+<g id="cam" font-family="Calibri, Arial, sans-serif">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1F3864"/><stop offset="1" stop-color="#2A4E8A"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#1F3864" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect width="1600" height="118" fill="url(#hdr)"/>
+  <rect y="118" width="1600" height="6" fill="#C9A227"/>
+  <rect x="40" y="34" rx="14" width="230" height="50" fill="#C9A227"/>
+  <text x="155" y="67" text-anchor="middle" font-size="26" font-weight="bold" fill="#1F3864" data-w="150.5">D23 · B07-P01</text>
+  <text x="300" y="56" font-size="34" font-weight="bold" fill="#FFFFFF" data-w="759.0">Which certifications is ARGOS pursuing as a product?</text>
+  <text x="300" y="94" font-size="24" fill="#CFE0F5" data-w="763.0">A compliance tool is only credible if it is certified itself</text>
+
+  <!-- Frontón -->
+  <g filter="url(#sh)"><path d="M180 320 L800 185 L1420 320 L1420 380 L180 380 Z" fill="#1F3864"/></g>
+  <text x="800" y="300" text-anchor="middle" font-size="28" font-weight="bold" fill="#FFFFFF" data-w="673.5">TRUST VERIFIED BY INDEPENDENT THIRD PARTIES</text>
+  <text x="800" y="352" text-anchor="middle" font-size="21" fill="#CFE0F5" data-w="533.8">the same standard ARGOS demands of the systems it verifies</text>
+
+  <!-- Cuatro pilares -->
+  <g filter="url(#sh)">
+    <rect x="200" y="410" rx="14" width="290" height="360" fill="#F4F6FA" stroke="#1F3864" stroke-width="2.5"/>
+    <rect x="510" y="410" rx="14" width="290" height="360" fill="#F1F8F8" stroke="#1F7A7A" stroke-width="2.5"/>
+    <rect x="820" y="410" rx="14" width="290" height="360" fill="#F1F8F8" stroke="#1F7A7A" stroke-width="2.5"/>
+    <rect x="1130" y="410" rx="14" width="290" height="360" fill="#FBF6E2" stroke="#C9A227" stroke-width="3"/>
+  </g>
+
+  <rect x="200" y="410" rx="14" width="290" height="60" fill="#1F3864"/>
+  <text x="345" y="450" text-anchor="middle" font-size="24" font-weight="bold" fill="#FFFFFF" data-w="129.2">1 · Security</text>
+  <g text-anchor="middle" font-size="22" fill="#26324A">
+    <text x="345" y="525" font-weight="bold" data-w="173.4">ENS HIGH category</text>
+    <text x="345" y="565" font-weight="bold" data-w="163.5">ISO 27001 · 27701</text>
+    <text x="345" y="625" font-size="19" fill="#41556F" data-w="172.5">condition for access to the</text>
+    <text x="345" y="652" font-size="19" fill="#41556F" data-w="173.2">Spanish public sector</text>
+    <text x="345" y="679" font-size="19" fill="#41556F" data-w="143.3">and health sector (SNS)</text>
+  </g>
+
+  <rect x="510" y="410" rx="14" width="290" height="60" fill="#1F7A7A"/>
+  <text x="655" y="450" text-anchor="middle" font-size="24" font-weight="bold" fill="#FFFFFF" data-w="162.7">2 · AI management</text>
+  <g text-anchor="middle" font-size="22" fill="#1E3A3A">
+    <text x="655" y="525" font-weight="bold" data-w="91.9">ISO 42001</text>
+    <text x="655" y="565" font-weight="bold" data-w="161.7">AI Act</text>
+    <text x="655" y="625" font-size="19" fill="#41556F" data-w="200.4">Arts. 12, 13 and 14 adopted</text>
+    <text x="655" y="652" font-size="19" fill="#41556F" data-w="200.8">voluntarily: logging,</text>
+    <text x="655" y="679" font-size="19" fill="#41556F" data-w="202.9">transparency, oversight</text>
+  </g>
+
+  <rect x="820" y="410" rx="14" width="290" height="60" fill="#1F7A7A"/>
+  <text x="965" y="450" text-anchor="middle" font-size="24" font-weight="bold" fill="#FFFFFF" data-w="129.1">3 · Sovereignty</text>
+  <g text-anchor="middle" font-size="22" fill="#1E3A3A">
+    <text x="965" y="525" font-weight="bold" data-w="112.8">Gaia-X Label</text>
+    <text x="965" y="565" font-weight="bold" data-w="163.7">Trust List</text>
+    <text x="965" y="625" font-size="19" fill="#41556F" data-w="167.1">verified via GXDCH:</text>
+    <text x="965" y="652" font-size="19" fill="#41556F" data-w="187.8">the credential is issued by a</text>
+    <text x="965" y="679" font-size="19" fill="#41556F" data-w="210.5">service that is itself accredited</text>
+  </g>
+
+  <rect x="1130" y="410" rx="14" width="290" height="60" fill="#C9A227"/>
+  <text x="1275" y="450" text-anchor="middle" font-size="24" font-weight="bold" fill="#1F3864" data-w="226.1">4 · Data protection</text>
+  <g text-anchor="middle" font-size="22" fill="#3A3113">
+    <text x="1275" y="525" font-weight="bold" data-w="165.3">Art. 42 GDPR seal</text>
+    <text x="1275" y="565" font-weight="bold" data-w="186.7">(Europrivacy) · AEPD</text>
+    <text x="1275" y="625" font-size="19" fill="#6B5A1E" data-w="175.7">and adherence to an Art. 40</text>
+    <text x="1275" y="652" font-size="19" fill="#6B5A1E" data-w="159.0">code of conduct:</text>
+    <text x="1275" y="679" font-size="19" fill="#6B5A1E" data-w="191.5">the DPO’s natural language</text>
+  </g>
+
+  <!-- Matiz importante -->
+  <g filter="url(#sh)"><rect x="180" y="805" rx="16" width="1240" height="125" fill="#1F3864"/></g>
+  <rect x="180" y="805" rx="16" width="14" height="125" fill="#C9A227"/>
+  <text x="800" y="848" text-anchor="middle" font-size="25" font-weight="bold" fill="#FFFFFF" data-w="678.6">An honest caveat: ARGOS does not certify your organisation — it prepares it</text>
+  <text x="800" y="884" text-anchor="middle" font-size="20" fill="#CFE0F5" data-w="655.3">Certification is for accredited bodies; ARGOS keeps the complete, verifiable</text><text x="800" y="911" text-anchor="middle" font-size="20" fill="#CFE0F5" data-w="603.3">technical file so that the process starts with everything done.</text>
+
+  <text x="1560" y="975" text-anchor="end" font-size="16" fill="#9AA7BB" data-w="169.4">ARGOS · Software in a Box</text>
+</g>
+<g id="outro" opacity="0">
+ <rect x="-400" y="-400" width="2400" height="1800" fill="#0B1F3A" opacity=".95"/>
+ <g id="outMark">
+  <image href="/assets/brand/argos-symbol.svg" x="560" y="330" width="170" height="170"/>
+  <text x="760" y="425" font-family="Montserrat,sans-serif" font-size="78" font-weight="700" fill="#fff" letter-spacing="3" data-w="307.8">ARG<tspan fill="#C9A227">O</tspan>S</text>
+  <text x="764" y="472" font-family="Hanken Grotesk,sans-serif" font-size="19" font-weight="700" letter-spacing="6" fill="#AFC0D2" data-w="420.5">VERIFIED COMPLIANCE AGENT</text>
+ </g>
+</g>
+</svg>
+</div>
+<div id="start"><span>Press → or the space bar to start</span></div>
+<p class="rm-note">Movimiento reducido: se muestra el diagrama completo. <button id="rm-play" style="margin-left:8px">Play animation</button></p>
+<div class="ui" role="toolbar" aria-label="Presentation controls">
+ <button id="play" aria-label="Play"><svg viewBox="0 0 24 24" fill="currentColor"><path id="pi" d="M8 5v14l11-7z"/></svg></button>
+ <button id="prev" aria-label="Previous scene"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+ <button id="next" aria-label="Next scene"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+ <div class="scenes" id="scenes"></div>
+ <button id="replay" aria-label="Watch again"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button>
+ <button id="fs" aria-label="Full screen (F)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+ <span class="hint">← → espacio · 1–5 · F · H oculta</span>
+</div>
+<script>/* ajusta el cuerpo de letra solo si la traducción no cabe en su recuadro */
+(() => { const sv = document.getElementById("stage"), cam = document.getElementById("cam") || sv, R = cam.getScreenCTM().inverse();
+  const box = el => { const b = el.getBBox(), m = R.multiply(el.getScreenCTM()); return {x: m.a*b.x + m.e, y: m.d*b.y + m.f, w: b.width*m.a, h: b.height*m.d, m}; };
+  const rects = [...sv.querySelectorAll("rect")].filter(r => !r.closest("defs,marker,pattern,clipPath,mask")).map(box).filter(b => b.w > 40 && b.h > 18 && b.w < 1500);
+  sv.querySelectorAll("text[data-w]").forEach(t => {
+    const w = +t.dataset.w, full = t.getAttribute("data-full"), old = t.textContent; if(full) t.textContent = full;
+    const L = t.getComputedTextLength(), a = t.getAttribute("text-anchor") || getComputedStyle(t).textAnchor, m = R.multiply(t.getScreenCTM());
+    const x0 = +(t.getAttribute("x") || 0), y0 = +(t.getAttribute("y") || 0), fs = parseFloat(getComputedStyle(t).fontSize);
+    const px = m.a*x0 + m.e, py = m.d*(y0 - fs*.35) + m.f;
+    const host = rects.filter(r => px >= r.x - 2 && px <= r.x + r.w + 2 && py >= r.y && py <= r.y + r.h).sort((p, q) => p.w*p.h - q.w*q.h)[0];
+    let room = Infinity;
+    if(host){ const pad = 10; room = (a === "middle" ? 2*Math.min(px - host.x, host.x + host.w - px) : a === "end" ? px - host.x : host.x + host.w - px) - pad; room /= m.a; }
+    else room = Math.max(w*1.3, 60);
+    if(full) t.textContent = old;
+    if(L > room && room > 0){ t.setAttribute("font-size", (fs*Math.max(.6, room/L)).toFixed(1)); t.style.fontSize = ""; }
+  }); })();
+</script>
+<script src="/presentaciones/assets/gsap.min.js"></script>
+<script>window.ANIM = {"escenas": [{"r": [0, 0, 1600, 124], "t": 0.0, "n": "Opening"}, {"r": [170, 170, 1270, 220], "t": 6.65, "n": "Trust verified by"}, {"r": [190, 395, 620, 390], "t": 12.03, "n": "Security the National"}, {"r": [810, 395, 620, 390], "t": 22.21, "n": "Sovereignty the Gaia-X"}, {"r": null, "t": 28.35, "n": "Close"}], "fin": 34.27, "audio": "voz.mp3", "ui": {"Pulse → o la barra espaciadora para empezar": "Press → or the space bar to start", "Movimiento reducido: se muestra el diagrama completo.": "Reduced motion: the full diagram is shown.", "Ver animación": "Play animation", "Controles de la presentación": "Presentation controls", "Reproducir": "Play", "Escena anterior": "Previous scene", "Escena siguiente": "Next scene", "Volver a ver": "Watch again", "Pantalla completa (F)": "Full screen (F)", "oculta": "hides", "espacio": "space", "Presentación animada": "Animated presentation", "Cerrar (Esc)": "Close (Esc)", "Pausa (espacio)": "Pause (space)", "Reproducir (espacio)": "Play (space)", "▶ Ver con locución (sonido activado)": "▶ Watch with voiceover (sound on)", "🔇 Silenciar": "🔇 Mute", "🔊 Activar locución": "🔊 Turn on voiceover", "Apertura": "Opening", "Cierre": "Close", "Planteamiento": "The question", "Lo declarado": "Declared", "Lo efectivo": "Actual", "La brecha": "The gap", "ARGOS cierra la brecha": "ARGOS closes the gap", "Motor de retos": "Challenge engine", "Sondas 1–3": "Probes 1–3", "Sondas 4–7": "Probes 4–7", "Evidencias": "Evidence", "Generación": "Generation", "Introducción": "Introduction", "Seguimiento": "Tracking", "Ejercicio de derechos": "Exercise of rights", "Verificación de borrado": "Erasure check", "Eliminación verificada": "Verified deletion", "La campaña": "The campaign", "Informe y plan": "Report and plan", "RoPA y DPIA": "RoPA and DPIA", "La credencial": "The credential", "La comprueba un tercero": "A third party checks it", "Las sanciones suben": "Fines are rising", "El calendario corre": "The clock is ticking", "Tres fuerzas": "Three forces", "ARGOS llena el hueco": "ARGOS fills the gap"}};</script>
+<script src="/presentaciones/assets/motor.js"></script>
+</body>
+</html>
