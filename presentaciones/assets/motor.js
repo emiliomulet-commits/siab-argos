@@ -4,6 +4,9 @@
    tiempos de la locución, de modo que la versión web, la de presentación y la de vídeo comparten ritmo.
    window.ANIM = {escenas:[{r:[x,y,w,h]|null, t:inicio_s, n:"nombre"}], fin:segundos_de_audio, audio:"voz.mp3"} */
 (function(){
+const st = document.createElement("style");
+st.textContent = "#voz-btn{position:fixed;top:14px;right:16px;z-index:5;font:600 14px 'Hanken Grotesk',system-ui,sans-serif;color:#fff;background:rgba(11,31,58,.82);border:1px solid #C9A227;border-radius:999px;padding:9px 16px;cursor:pointer;transition:background .2s}#voz-btn:hover,#voz-btn:focus-visible{background:#C9A227;color:#0B1F3A;outline:none}#voz-btn[hidden]{display:none}body.embed #voz-btn{top:8px;right:8px;padding:6px 12px;font-size:12.5px}@media(max-width:760px){#voz-btn{top:8px;right:8px;padding:7px 12px;font-size:13px}}";
+document.head.appendChild(st);
 const A = window.ANIM, $ = s => document.querySelector(s), $$ = s => Array.from(document.querySelectorAll(s));
 const q = new URLSearchParams(location.search);
 const VOZ = q.get("modo") === "video", WEB = q.get("modo") === "web" || VOZ;
@@ -163,8 +166,10 @@ document.addEventListener("keydown", e => {
 if(!WEB) $("#wrap").addEventListener("click", next);
 
 /* ---------- modo vídeo: la locución marca el tiempo */
-if(VOZ && !reduced){
-  const au = new Audio(A.audio); au.preload = "auto";
+let vozActiva = false, au = null;
+function enableVoz(){
+  if(vozActiva) return; vozActiva = true;
+  au = new Audio(A.audio); au.preload = "auto";
   let endAt = null, run = false;
   const clock = () => endAt !== null ? au.duration + (performance.now() - endAt)/1000 : au.currentTime;
   au.onended = () => { endAt = performance.now(); };
@@ -184,6 +189,23 @@ if(VOZ && !reduced){
     else if(e.key === "ArrowLeft"){ e.stopImmediatePropagation(); $("#prev").onclick(); }
     else if(/^[1-9]$/.test(e.key) && +e.key <= N){ e.stopImmediatePropagation(); sbtn[+e.key - 1].onclick(); }
   }, true);
+  return {from, play};
+}
+if(VOZ && !reduced) enableVoz();
+
+/* modo web: botón opcional de locución (arranca en silencio) */
+const vb = document.createElement("button");
+vb.id = "voz-btn"; vb.type = "button"; vb.hidden = true; vb.setAttribute("aria-pressed", "false"); document.body.appendChild(vb);
+if(WEB && !VOZ && !q.get("render")){
+  vb.hidden = false;
+  const pinta = () => { const on = vozActiva && !au.muted; vb.textContent = on ? "🔇 Silenciar" : "🔊 Activar locución"; vb.setAttribute("aria-pressed", on); };
+  vb.onclick = e => {
+    e.stopPropagation();
+    if(!vozActiva){ document.body.classList.remove("reduced"); tl.pause(); const v = enableVoz(); v.from(0); v.play(); }
+    else au.muted = !au.muted;
+    pinta();
+  };
+  pinta();
 }
 
 if(reduced){
@@ -191,7 +213,7 @@ if(reduced){
   tl.seek(FIN, false);
   $("#rm-play").onclick = () => { document.body.classList.remove("reduced"); go(0); if(!WEB) tl.play(); };
 } else if(WEB && !VOZ){
-  const io = new IntersectionObserver(es => es.forEach(en => { if(en.isIntersecting && tl.time() === 0) tl.play(); else if(!en.isIntersecting) tl.pause(); }), {threshold:.4});
+  const io = new IntersectionObserver(es => es.forEach(en => { if(vozActiva) return; if(en.isIntersecting && tl.time() === 0) tl.play(); else if(!en.isIntersecting) tl.pause(); }), {threshold:.4});
   io.observe(svg);
 }
 let idleT; document.addEventListener("mousemove", () => { document.body.classList.remove("idle"); clearTimeout(idleT); idleT = setTimeout(() => { if(document.fullscreenElement) document.body.classList.add("idle"); }, 2500); });
