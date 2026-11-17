@@ -847,10 +847,10 @@ window.ARGOS_CHAT_URL = "https://argos-chat.emilio-mulet-b52.workers.dev/chat"; 
   <div class="wrap">
     <div class="head"><div class="eyebrow">Como funciona</div><h2>Como trabalha o ARGOS</h2><p class="sub">O ARGOS converte cada obrigação legal num teste executado sobre os seus sistemas reais. É assim que funciona uma campanha de verificação.</p></div>
     <ol class="steps">
-      <li><a class="th" href="/diagramas/D06__B03-P01__arquitectura-7-capas.svg" target="_blank" rel="noopener"><img src="/diagramas/D06__B03-P01__arquitectura-7-capas.svg" alt="Diagrama da arquitetura de sete camadas" loading="lazy"></a><div class="tx"><h3>Inventaria e classifica</h3><p>Descobre os seus sistemas, localiza os dados pessoais e mapeia por onde circulam, com conectores só de leitura.</p></div></li>
-      <li><a class="th" href="/diagramas/D03__B01-P04__sujeto-sintetico.svg" target="_blank" rel="noopener"><img src="/diagramas/D03__B01-P04__sujeto-sintetico.svg" alt="Diagrama do titular sintético" loading="lazy"></a><div class="tx"><h3>Põe os sistemas à prova</h3><p>Introduz titulares sintéticos, exerce pedidos de acesso e apagamento de teste e verifica se o apagamento acontece de facto.</p></div></li>
-      <li><a class="th" href="/diagramas/D07__B03-P02__ia-propone-motor-dispone.svg" target="_blank" rel="noopener"><img src="/diagramas/D07__B03-P02__ia-propone-motor-dispone.svg" alt="Diagrama: a IA propõe, o motor decide" loading="lazy"></a><div class="tx"><h3>Emite veredictos</h3><p>Um motor de regras determinista avalia cada evidência. O modelo de IA propõe; nunca decide o veredicto.</p></div></li>
-      <li><a class="th" href="/diagramas/D10__B04-P06-07__evidencia-credencial.svg" target="_blank" rel="noopener"><img src="/diagramas/D10__B04-P06-07__evidencia-credencial.svg" alt="Diagrama da evidência como credencial verificável" loading="lazy"></a><div class="tx"><h3>Assina a evidência</h3><p>O relatório é emitido como credencial verificável: um terceiro verifica a sua integridade sem ver os dados.</p></div></li>
+      <li><a class="th" href="/diagramas/miniaturas/D06__B03-P01__arquitectura-7-capas.webp" target="_blank" rel="noopener"><img src="/diagramas/miniaturas/D06__B03-P01__arquitectura-7-capas.webp" alt="Diagrama da arquitetura de sete camadas" loading="lazy"></a><div class="tx"><h3>Inventaria e classifica</h3><p>Descobre os seus sistemas, localiza os dados pessoais e mapeia por onde circulam, com conectores só de leitura.</p></div></li>
+      <li><a class="th" href="/diagramas/miniaturas/D03__B01-P04__sujeto-sintetico.webp" target="_blank" rel="noopener"><img src="/diagramas/miniaturas/D03__B01-P04__sujeto-sintetico.webp" alt="Diagrama do titular sintético" loading="lazy"></a><div class="tx"><h3>Põe os sistemas à prova</h3><p>Introduz titulares sintéticos, exerce pedidos de acesso e apagamento de teste e verifica se o apagamento acontece de facto.</p></div></li>
+      <li><a class="th" href="/diagramas/miniaturas/D07__B03-P02__ia-propone-motor-dispone.webp" target="_blank" rel="noopener"><img src="/diagramas/miniaturas/D07__B03-P02__ia-propone-motor-dispone.webp" alt="Diagrama: a IA propõe, o motor decide" loading="lazy"></a><div class="tx"><h3>Emite veredictos</h3><p>Um motor de regras determinista avalia cada evidência. O modelo de IA propõe; nunca decide o veredicto.</p></div></li>
+      <li><a class="th" href="/diagramas/miniaturas/D10__B04-P06-07__evidencia-credencial.webp" target="_blank" rel="noopener"><img src="/diagramas/miniaturas/D10__B04-P06-07__evidencia-credencial.webp" alt="Diagrama da evidência como credencial verificável" loading="lazy"></a><div class="tx"><h3>Assina a evidência</h3><p>O relatório é emitido como credencial verificável: um terceiro verifica a sua integridade sem ver os dados.</p></div></li>
     </ol>
   </div>
 </section>
@@ -923,7 +923,7 @@ window.ARGOS_CHAT_URL = "https://argos-chat.emilio-mulet-b52.workers.dev/chat"; 
       </ol>
       <p style="margin-top:22px;font-size:15.5px;color:var(--ink-soft)">O valor chega desde a primeira fase: o inventário e o registo diferencial estão disponíveis antes da primeira campanha.</p>
     </div>
-    <figure><img src="/diagramas/D13__B05-P03__proceso-implantacion.svg" alt="Diagrama do processo de implementação do ARGOS" loading="lazy"><figcaption>Processo de implementação. <a class="lk" href="/diagramas/D12__B05-P01__tres-tallas.svg" target="_blank" rel="noopener">Ver os três tamanhos</a></figcaption></figure>
+    <figure><img src="/diagramas/miniaturas/D13__B05-P03__proceso-implantacion.webp" alt="Diagrama do processo de implementação do ARGOS" loading="lazy"><figcaption>Processo de implementação. <a class="lk" href="/diagramas/miniaturas/D12__B05-P01__tres-tallas.webp" target="_blank" rel="noopener">Ver os três tamanhos</a></figcaption></figure>
   </div>
 </section>
 
@@ -4058,7 +4058,7 @@ if(!cargarConv()){
     const d = DIAGRAMAS[clave]; if(!d) continue;
     const el = document.createElement("article"); el.className = "tc";
     el.innerHTML =
-      '<button class="art" type="button" aria-label="' + d.t.replace(/"/g, "&quot;") + '"><img loading="lazy" alt="" src="/diagramas/' + d.a + '"></button>' +
+      '<button class="art" type="button" aria-label="' + d.t.replace(/"/g, "&quot;") + '"><img loading="lazy" alt="" src="/diagramas/miniaturas/' + d.a.replace(/\.svg$/, '.webp') + '"></button>' +
       '<div class="tags"><span class="tag">' + d.d + '</span><span class="tag">' + clave + '</span></div>' +
       '<h3>' + d.t + '</h3><p>' + d.r + '</p><button class="more" type="button">' + TX.mas + '</button>' +
       '<div class="go"><button type="button">' + ct.ver + '</button></div>';
