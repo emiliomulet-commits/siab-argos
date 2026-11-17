@@ -2992,8 +2992,24 @@
   ]
  },
  {
+  "id": "5b8fa4a6e6",
+  "src": "Ver animación",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
   "id": "43c84cf4f3",
   "src": "(en español)",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "269835e32e",
+  "src": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m10 8 6 4-6 4z\" fill=\"currentColor\"/></svg>",
   "kind": "js",
   "pages": [
    "index.html"
@@ -3048,6 +3064,14 @@
   ]
  },
  {
+  "id": "8bd8a18fb7",
+  "src": "\" title=\"",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
   "id": "e2de66264a",
   "src": "<div class=\"anim-wrap\">",
   "kind": "js",
@@ -3082,6 +3106,14 @@
  {
   "id": "8e4e791ab8",
   "src": "<div class=\"anim-acc\">",
+  "kind": "js",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "a9f0d9bc6d",
+  "src": "<button type=\"button\" data-a=\"anim\">",
   "kind": "js",
   "pages": [
    "index.html"
