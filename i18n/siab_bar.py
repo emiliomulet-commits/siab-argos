@@ -119,7 +119,7 @@ def current_product(root):
 
 def pages(root):
     for d, dirs, files in os.walk(root):
-        dirs[:] = [x for x in dirs if not x.startswith(".") and x not in ("i18n", "assets", "node_modules")]
+        dirs[:] = [x for x in dirs if not x.startswith(".") and x not in ("i18n", "assets", "node_modules", "presentaciones")]
         for f in files:
             if f.endswith(".html"):
                 yield os.path.join(d, f)

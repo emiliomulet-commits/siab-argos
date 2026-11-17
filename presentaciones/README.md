@@ -10,3 +10,7 @@ Animación con GSAP (`assets/gsap.min.js`, licencia estándar gratuita de GSAP).
 El emblema de la UE se usa de forma informativa, sin sugerir vínculo ni aval de la UE (condiciones de uso por terceros de la Comisión Europea).
 
 Generado con `build_d01.py` (fuera del repositorio). Piloto D01 publicado el 17/11/2026, pendiente de aprobación; no está enlazado desde la web ni indexado.
+
+## D06–D25 (motor genérico)
+
+`assets/motor.js` anima el diagrama fijo de `/diagramas/` escena a escena (cámara, texto que se escribe, flechas que se dibujan, recuadros que se iluminan). Cada carpeta `dNN/` lleva `index.html` (escenas y tiempos), `voz.mp3` (locución ElevenLabs, voz Martin Osborne, modelo v4) y `argos-dNN.mp4` (1080p). Modos: presentación (por defecto), `?modo=web` (sin sonido) y `?modo=video` (con locución).

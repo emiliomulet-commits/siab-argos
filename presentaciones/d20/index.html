@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D20 · Una brecha de datos: 72 horas para notificar · Presentación animada</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://www.softwareinabox.eu/assets/fonts.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#0B1F3A;color:#fff;font-family:'Hanken Grotesk',system-ui,sans-serif;overflow:hidden}
+#wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#stage{width:100%;height:100%;display:block}
+.ui{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:14px;padding:12px 18px;background:linear-gradient(0deg,rgba(5,14,26,.92),rgba(5,14,26,0));transition:opacity .3s}
+body.ui-off .ui{opacity:0;pointer-events:none}
+body.idle .ui{opacity:0}
+.ui button{font:inherit;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:8px;height:38px;min-width:38px;padding:0 12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:14px}
+.ui button:hover,.ui button:focus-visible{border-color:#C9A227;outline:none}
+.ui svg{width:18px;height:18px}
+.scenes{display:flex;gap:6px;flex:1;min-width:0}
+.scenes button{flex:1;min-width:0;height:auto;padding:6px 8px;display:block;text-align:left;font-size:12.5px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative}
+.scenes button b{display:block;font-size:11px;color:#C9A227}
+.scenes button i{position:absolute;left:0;bottom:0;height:3px;background:#C9A227;width:0;border-radius:2px}
+.scenes button.on{border-color:#C9A227;background:rgba(201,162,39,.15)}
+.hint{font-size:12.5px;color:#AFC0D2;white-space:nowrap}
+#start{position:fixed;inset:0;display:none;align-items:flex-end;justify-content:center;padding-bottom:110px;pointer-events:none}
+#start span{background:rgba(5,14,26,.75);border:1px solid rgba(201,162,39,.6);border-radius:999px;padding:10px 20px;font-size:15px;color:#fff}
+body.pres.at-start #start,body.video.at-start #start{display:flex}
+body.video #start span{pointer-events:auto;cursor:pointer;font-size:17px;padding:14px 26px}
+body.video .hint{display:none}
+body.web .hint,body.web #fs{display:none}
+body.web .scenes button span{display:none}
+.rm-note{position:fixed;top:14px;left:50%;transform:translateX(-50%);background:rgba(5,14,26,.8);border-radius:999px;padding:8px 16px;font-size:13px;display:none}
+body.reduced .rm-note{display:block}
+body.embed .ui{padding:6px 8px;gap:6px}
+body.embed .ui button{height:28px;min-width:28px;padding:0 6px;border-radius:6px}
+body.embed .ui svg{width:14px;height:14px}
+body.embed .scenes button{padding:3px 5px}
+body.embed .scenes button b{font-size:10px}
+body.embed .hint,body.embed #fs{display:none}
+body.embed .ui{opacity:0}
+body.embed:hover .ui,body.embed.at-end .ui{opacity:1}
+@media(max-width:760px){.scenes button span{display:none}.hint{display:none}}
+</style>
+</head>
+<body class="at-start">
+<div id="wrap">
+<svg id="stage" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Una brecha de datos: 72 horas para notificar">
+<g id="cam" font-family="Calibri, Arial, sans-serif">
+  <defs>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1F3864"/><stop offset="1" stop-color="#2A4E8A"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#1F3864" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect width="1600" height="118" fill="url(#hdr)"/>
+  <rect y="118" width="1600" height="6" fill="#C9A227"/>
+  <rect x="40" y="34" rx="14" width="230" height="50" fill="#C9A227"/>
+  <text x="155" y="67" text-anchor="middle" font-size="26" font-weight="bold" fill="#1F3864">D20 · B12-P17</text>
+  <text x="300" y="56" font-size="34" font-weight="bold" fill="#FFFFFF">Una brecha de datos: 72 horas para notificar</text>
+  <text x="300" y="94" font-size="24" fill="#CFE0F5">Lo que la autoridad preguntará — y cuánto se tarda en responder</text>
+
+  <!-- Reloj central -->
+  <g filter="url(#sh)"><circle cx="800" cy="300" r="105" fill="#1F3864"/></g>
+  <circle cx="800" cy="300" r="105" fill="none" stroke="#C9A227" stroke-width="5"/>
+  <circle cx="800" cy="300" r="78" fill="none" stroke="#CFE0F5" stroke-width="3"/>
+  <line x1="800" y1="300" x2="800" y2="243" stroke="#C9A227" stroke-width="7" stroke-linecap="round"/>
+  <line x1="800" y1="300" x2="843" y2="322" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <text x="800" y="435" text-anchor="middle" font-size="30" font-weight="bold" fill="#C0392B">72 HORAS</text>
+  <text x="800" y="468" text-anchor="middle" font-size="20" fill="#41556F">art. 33 RGPD · notificación a la autoridad</text>
+
+  <!-- Preguntas de la autoridad -->
+  <g filter="url(#sh)"><rect x="80" y="185" rx="14" width="520" height="270" fill="#F4F6FA" stroke="#B8C4D8" stroke-width="2"/></g>
+  <text x="340" y="230" text-anchor="middle" font-size="24" font-weight="bold" fill="#1F3864">Lo que hay que saber responder</text>
+  <g font-size="21" fill="#26324A">
+    <text x="115" y="278">▪  ¿Qué sistemas están afectados?</text>
+    <text x="115" y="318">▪  ¿Qué categorías y volúmenes de datos?</text>
+    <text x="115" y="358">▪  ¿A qué terceros se cedían?</text>
+    <text x="115" y="398">▪  ¿Qué controles había antes del incidente?</text>
+    <text x="115" y="438">▪  ¿Qué medidas se han tomado?</text>
+  </g>
+
+  <g filter="url(#sh)"><rect x="1000" y="185" rx="14" width="520" height="270" fill="#F4F6FA" stroke="#B8C4D8" stroke-width="2"/></g>
+  <text x="1260" y="230" text-anchor="middle" font-size="24" font-weight="bold" fill="#1F3864">Lo que evalúa la autoridad</text>
+  <g font-size="21" fill="#26324A">
+    <text x="1035" y="285">▪  La diligencia previa del responsable</text>
+    <text x="1035" y="330">▪  El estado real de los controles</text>
+    <text x="1035" y="375">▪  La calidad y plazo de la notificación</text>
+    <text x="1035" y="420">▪  La trazabilidad de lo ocurrido</text>
+  </g>
+
+  <!-- Comparativa -->
+  <g filter="url(#sh)">
+    <rect x="80" y="520" rx="18" width="700" height="330" fill="#FBEAEA" stroke="#C0392B" stroke-width="3"/>
+    <rect x="820" y="520" rx="18" width="700" height="330" fill="#EAF6EF" stroke="#2E8B57" stroke-width="3"/>
+  </g>
+  <rect x="80" y="520" rx="18" width="700" height="64" fill="#C0392B"/>
+  <text x="430" y="562" text-anchor="middle" font-size="26" font-weight="bold" fill="#FFFFFF">SIN INVENTARIO VIVO</text>
+  <g font-size="22" fill="#7A3A32">
+    <text x="120" y="630">▪  Semanas reconstruyendo qué sistemas y</text>
+    <text x="146" y="660">qué datos hay, mientras el reloj corre</text>
+    <text x="120" y="700">▪  Notificación incompleta o tardía</text>
+    <text x="120" y="740">▪  Sin evidencia del estado previo de los</text>
+    <text x="146" y="770">controles: la diligencia no se puede probar</text>
+    <text x="120" y="815" font-weight="bold">Resultado: expediente cuesta arriba</text>
+  </g>
+
+  <rect x="820" y="520" rx="18" width="700" height="64" fill="#2E8B57"/>
+  <text x="1170" y="562" text-anchor="middle" font-size="26" font-weight="bold" fill="#FFFFFF">CON ARGOS</text>
+  <g font-size="22" fill="#3B5A48">
+    <text x="860" y="630">▪  El inventario vivo responde en horas:</text>
+    <text x="886" y="660">sistemas, categorías, volúmenes, cesiones</text>
+    <text x="860" y="700">▪  Notificación completa y en plazo</text>
+    <text x="860" y="740">▪  La cadena de evidencias documenta el</text>
+    <text x="886" y="770">estado de los controles antes del incidente</text>
+    <text x="860" y="815" font-weight="bold">Resultado: la diligencia queda demostrada</text>
+  </g>
+
+  <!-- Banda inferior -->
+  <g filter="url(#sh)"><rect x="80" y="880" rx="14" width="1440" height="56" fill="#1F3864"/></g>
+  <text x="800" y="917" text-anchor="middle" font-size="23" font-weight="bold" fill="#FFFFFF">ARGOS no gestiona el incidente: hace posible responder a él con datos, no con estimaciones</text>
+
+  <text x="1560" y="975" text-anchor="end" font-size="16" fill="#9AA7BB">ARGOS · Software in a Box</text>
+</g>
+<g id="outro" opacity="0">
+ <rect x="-400" y="-400" width="2400" height="1800" fill="#0B1F3A" opacity=".95"/>
+ <g id="outMark">
+  <image href="/assets/brand/argos-symbol.svg" x="560" y="330" width="170" height="170"/>
+  <text x="760" y="425" font-family="Montserrat,sans-serif" font-size="78" font-weight="700" fill="#fff" letter-spacing="3">ARG<tspan fill="#C9A227">O</tspan>S</text>
+  <text x="764" y="472" font-family="Hanken Grotesk,sans-serif" font-size="19" font-weight="700" letter-spacing="6" fill="#AFC0D2">VERIFIED COMPLIANCE AGENT</text>
+ </g>
+</g>
+</svg>
+</div>
+<div id="start"><span>Pulse → o la barra espaciadora para empezar</span></div>
+<p class="rm-note">Movimiento reducido: se muestra el diagrama completo. <button id="rm-play" style="margin-left:8px">Ver animación</button></p>
+<div class="ui" role="toolbar" aria-label="Controles de la presentación">
+ <button id="play" aria-label="Reproducir"><svg viewBox="0 0 24 24" fill="currentColor"><path id="pi" d="M8 5v14l11-7z"/></svg></button>
+ <button id="prev" aria-label="Escena anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+ <button id="next" aria-label="Escena siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+ <div class="scenes" id="scenes"></div>
+ <button id="replay" aria-label="Volver a ver"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button>
+ <button id="fs" aria-label="Pantalla completa (F)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+ <span class="hint">← → espacio · 1–6 · F · H oculta</span>
+</div>
+<script src="/presentaciones/assets/gsap.min.js"></script>
+<script>window.ANIM = {"escenas": [{"r": [0, 0, 1600, 124], "t": 0.0, "n": "Apertura"}, {"r": [670, 170, 260, 300], "t": 4.59, "n": "El reloj empieza"}, {"r": [70, 170, 1460, 300], "t": 6.73, "n": "Hay que saber"}, {"r": [70, 505, 720, 360], "t": 15.55, "n": "Sin inventario vivo"}, {"r": [800, 505, 730, 360], "t": 23.59, "n": "Con ARGOS el"}, {"r": null, "t": 30.35, "n": "Cierre"}], "fin": 36.44, "audio": "voz.mp3"};</script>
+<script src="/presentaciones/assets/motor.js"></script>
+</body>
+</html>
