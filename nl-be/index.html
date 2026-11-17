@@ -847,10 +847,10 @@ window.ARGOS_CHAT_URL = "https://argos-chat.emilio-mulet-b52.workers.dev/chat"; 
   <div class="wrap">
     <div class="head"><div class="eyebrow">Zo werkt het</div><h2>Hoe ARGOS werkt</h2><p class="sub">ARGOS maakt van elke wettelijke verplichting een test die op uw echte systemen draait. Zo verloopt een controlecampagne.</p></div>
     <ol class="steps">
-      <li><a class="th" href="/diagramas/D06__B03-P01__arquitectura-7-capas.svg" target="_blank" rel="noopener"><img src="/diagramas/D06__B03-P01__arquitectura-7-capas.svg" alt="Diagram van de architectuur in zeven lagen" loading="lazy"></a><div class="tx"><h3>Inventariseert en classificeert</h3><p>Ontdekt uw systemen, lokaliseert persoonsgegevens en brengt in kaart waar ze naartoe stromen, met alleen-lezen connectoren.</p></div></li>
-      <li><a class="th" href="/diagramas/D03__B01-P04__sujeto-sintetico.svg" target="_blank" rel="noopener"><img src="/diagramas/D03__B01-P04__sujeto-sintetico.svg" alt="Diagram van de synthetische persoon" loading="lazy"></a><div class="tx"><h3>Stelt de systemen op de proef</h3><p>Voegt synthetische personen toe, voert test-inzage- en verwijderverzoeken uit en controleert of de verwijdering echt plaatsvindt.</p></div></li>
-      <li><a class="th" href="/diagramas/D07__B03-P02__ia-propone-motor-dispone.svg" target="_blank" rel="noopener"><img src="/diagramas/D07__B03-P02__ia-propone-motor-dispone.svg" alt="Diagram: de AI stelt voor, de engine beslist" loading="lazy"></a><div class="tx"><h3>Velt oordelen</h3><p>Een deterministische regelengine beoordeelt elk bewijs. Het AI-model doet voorstellen; het beslist nooit over het oordeel.</p></div></li>
-      <li><a class="th" href="/diagramas/D10__B04-P06-07__evidencia-credencial.svg" target="_blank" rel="noopener"><img src="/diagramas/D10__B04-P06-07__evidencia-credencial.svg" alt="Diagram van bewijs als verifieerbaar bewijs" loading="lazy"></a><div class="tx"><h3>Ondertekent het bewijs</h3><p>Het rapport wordt uitgegeven als verifieerbaar bewijs: een derde controleert de integriteit zonder de data te zien.</p></div></li>
+      <li><a class="th" href="/diagramas/miniaturas/D06__B03-P01__arquitectura-7-capas.webp" target="_blank" rel="noopener"><img src="/diagramas/miniaturas/D06__B03-P01__arquitectura-7-capas.webp" alt="Diagram van de architectuur in zeven lagen" loading="lazy"></a><div class="tx"><h3>Inventariseert en classificeert</h3><p>Ontdekt uw systemen, lokaliseert persoonsgegevens en brengt in kaart waar ze naartoe stromen, met alleen-lezen connectoren.</p></div></li>
+      <li><a class="th" href="/diagramas/miniaturas/D03__B01-P04__sujeto-sintetico.webp" target="_blank" rel="noopener"><img src="/diagramas/miniaturas/D03__B01-P04__sujeto-sintetico.webp" alt="Diagram van de synthetische persoon" loading="lazy"></a><div class="tx"><h3>Stelt de systemen op de proef</h3><p>Voegt synthetische personen toe, voert test-inzage- en verwijderverzoeken uit en controleert of de verwijdering echt plaatsvindt.</p></div></li>
+      <li><a class="th" href="/diagramas/miniaturas/D07__B03-P02__ia-propone-motor-dispone.webp" target="_blank" rel="noopener"><img src="/diagramas/miniaturas/D07__B03-P02__ia-propone-motor-dispone.webp" alt="Diagram: de AI stelt voor, de engine beslist" loading="lazy"></a><div class="tx"><h3>Velt oordelen</h3><p>Een deterministische regelengine beoordeelt elk bewijs. Het AI-model doet voorstellen; het beslist nooit over het oordeel.</p></div></li>
+      <li><a class="th" href="/diagramas/miniaturas/D10__B04-P06-07__evidencia-credencial.webp" target="_blank" rel="noopener"><img src="/diagramas/miniaturas/D10__B04-P06-07__evidencia-credencial.webp" alt="Diagram van bewijs als verifieerbaar bewijs" loading="lazy"></a><div class="tx"><h3>Ondertekent het bewijs</h3><p>Het rapport wordt uitgegeven als verifieerbaar bewijs: een derde controleert de integriteit zonder de data te zien.</p></div></li>
     </ol>
   </div>
 </section>
@@ -923,7 +923,7 @@ window.ARGOS_CHAT_URL = "https://argos-chat.emilio-mulet-b52.workers.dev/chat"; 
       </ol>
       <p style="margin-top:22px;font-size:15.5px;color:var(--ink-soft)">De waarde begint in de eerste fase: de inventaris en het differentiële register zijn beschikbaar vóór de eerste campagne.</p>
     </div>
-    <figure><img src="/diagramas/D13__B05-P03__proceso-implantacion.svg" alt="Diagram van het invoeringsproces van ARGOS" loading="lazy"><figcaption>Invoeringsproces. <a class="lk" href="/diagramas/D12__B05-P01__tres-tallas.svg" target="_blank" rel="noopener">Bekijk de drie formaten</a></figcaption></figure>
+    <figure><img src="/diagramas/miniaturas/D13__B05-P03__proceso-implantacion.webp" alt="Diagram van het invoeringsproces van ARGOS" loading="lazy"><figcaption>Invoeringsproces. <a class="lk" href="/diagramas/miniaturas/D12__B05-P01__tres-tallas.webp" target="_blank" rel="noopener">Bekijk de drie formaten</a></figcaption></figure>
   </div>
 </section>
 
@@ -4058,7 +4058,7 @@ if(!cargarConv()){
     const d = DIAGRAMAS[clave]; if(!d) continue;
     const el = document.createElement("article"); el.className = "tc";
     el.innerHTML =
-      '<button class="art" type="button" aria-label="' + d.t.replace(/"/g, "&quot;") + '"><img loading="lazy" alt="" src="/diagramas/' + d.a + '"></button>' +
+      '<button class="art" type="button" aria-label="' + d.t.replace(/"/g, "&quot;") + '"><img loading="lazy" alt="" src="/diagramas/miniaturas/' + d.a.replace(/\.svg$/, '.webp') + '"></button>' +
       '<div class="tags"><span class="tag">' + d.d + '</span><span class="tag">' + clave + '</span></div>' +
       '<h3>' + d.t + '</h3><p>' + d.r + '</p><button class="more" type="button">' + TX.mas + '</button>' +
       '<div class="go"><button type="button">' + ct.ver + '</button></div>';
