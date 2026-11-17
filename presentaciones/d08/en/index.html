@@ -171,6 +171,7 @@ body.embed:hover .ui,body.embed.at-end .ui{opacity:1}
     let room = Infinity;
     if(host){ const pad = 10; room = (a === "middle" ? 2*Math.min(px - host.x, host.x + host.w - px) : a === "end" ? px - host.x : host.x + host.w - px) - pad; room /= m.a; }
     else room = Math.max(w*1.3, 60);
+    if(host && room < w*.98) room = Math.max(w*1.3, 60);   /* el recuadro hallado no contiene ni el original: no es su contenedor */
     if(full) t.textContent = old;
     if(L > room && room > 0){ t.setAttribute("font-size", (fs*Math.max(.6, room/L)).toFixed(1)); t.style.fontSize = ""; }
   }); })();
