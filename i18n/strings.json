@@ -48,6 +48,22 @@
   ]
  },
  {
+  "id": "4c6c0c33e4",
+  "src": "<a href=\"#despachos\">Programa de despachos socios</a>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "d75e561174",
+  "src": "<a href=\"#respaldo\">Respaldo europeo</a>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
   "id": "d189bf341c",
   "src": "Normativa",
   "kind": "html",
@@ -144,8 +160,8 @@
   ]
  },
  {
-  "id": "4c00394c93",
-  "src": "<a href=\"#como-funciona\">Cómo funciona</a><a href=\"#normas\">Normativa</a><a href=\"#entregables\">Entregables</a><a href=\"#comparativa\">Comparativa</a><a href=\"#implantacion\">Implantación</a><a href=\"#preguntas\">Preguntas frecuentes</a>",
+  "id": "e075d43080",
+  "src": "<a href=\"#como-funciona\">Cómo funciona</a><a href=\"#normas\">Normativa</a><a href=\"#entregables\">Entregables</a><a href=\"#comparativa\">Comparativa</a><a href=\"#implantacion\">Implantación</a><a href=\"#despachos\">Despachos socios</a><a href=\"#preguntas\">Preguntas frecuentes</a>",
   "kind": "html",
   "pages": [
    "index.html"
@@ -880,6 +896,366 @@
   ]
  },
  {
+  "id": "9546cf30ce",
+  "src": "Programa de despachos socios",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "040b35ddc7",
+  "src": "ARGOS llega a Europa de la mano de los despachos de abogados",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "5cf66719f8",
+  "src": "Buscamos diez despachos socios en siete países de la UE y unos veinte Business Partners. ARGOS aporta la evidencia técnica; el despacho, el criterio jurídico y la firma de la auditoría.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "af0cce280f",
+  "src": "Despliegue",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "2372aa9304",
+  "src": "Un técnico de Software in a Box instala ARGOS en el cliente y ejecuta el inventario y los retos.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "85e4a25ada",
+  "src": "Auditoría legal",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "63bca373c7",
+  "src": "El despacho interpreta la evidencia, firma la auditoría de cumplimiento y asesora al cliente.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "952237b53d",
+  "src": "Remediación",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "aba1877968",
+  "src": "Los técnicos de Software in a Box aplican las medidas correctoras y ARGOS vuelve a verificarlas.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "3bd260e761",
+  "src": "10 plazas · una por ciudad",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "7a31211d18",
+  "src": "Despacho socio",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "2cef501763",
+  "src": "Un 5 % del capital de la sociedad ARGOS y derecho a voto.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "334689d514",
+  "src": "Una sola plaza por ciudad, en siete países de la UE.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "ae4e482753",
+  "src": "Coordina a los Business Partners de su territorio.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "cb9397578f",
+  "src": "Unos 20 despachos",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "a7b024a1d6",
+  "src": "Business Partner",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "ab790063e3",
+  "src": "Ofrece ARGOS a sus clientes sin entrar en el capital.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "9f9acb2566",
+  "src": "Formación y certificación como auditor ARGOS.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "702aeba0b1",
+  "src": "Apoyo técnico de Software in a Box en cada auditoría.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "fb59631e44",
+  "src": "<b>España</b> · Madrid",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "8b0a428484",
+  "src": "<b>España</b> · Barcelona",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "20f8767e71",
+  "src": "<b>Francia</b> · París",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "e95ab20dd1",
+  "src": "<b>Francia</b> · segunda ciudad",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "f7b25f599c",
+  "src": "<b>Alemania</b> · dos ciudades",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "6797f89222",
+  "src": "<b>Países Bajos</b> · Ámsterdam",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "d4b7e776e6",
+  "src": "<b>Bélgica</b> · Bruselas",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "cac875e2c6",
+  "src": "<b>Dinamarca</b> · Copenhague",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "3b347be620",
+  "src": "<b>Italia</b> · Milán",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "2c1f6afddb",
+  "src": "Solicitar plaza",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "4789afd91e",
+  "src": "Ver el vídeo para despachos (3 min)",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "9bcd31bf5f",
+  "src": "<b>Solicitudes hasta el 15 de enero de 2027.</b> Solo hay una plaza por ciudad.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "9d814be930",
+  "src": "Respaldo europeo",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "68ca0b8a5b",
+  "src": "Construido sobre I+D europea",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "c23416830b",
+  "src": "ARGOS es un producto de Software in a Box, la empresa tecnológica de Ullswater Investments. Su base técnica procede de proyectos europeos de datos e inteligencia artificial.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "174338b67d",
+  "src": "2024–2026 · NextGenerationEU",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "96053a66a7",
+  "src": "Tres espacios de datos federados",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "ada2aa6950",
+  "src": "Global Data Care (salud), PROCUREDATA (contratación) y EcoDataNet (economía circular): ahí desarrolló el equipo los conectores, las políticas ODRL y las credenciales verificables Gaia-X que usa ARGOS.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "7914d48a0f",
+  "src": "2027–2030 · ITEA 4 · Eureka",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "f780f2472b",
+  "src": "HOSKIT (propuesta 26013)",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "360a55df3e",
+  "src": "ARGOS es la herramienta de evaluación del cumplimiento de datos de la propuesta, coordinada por Fraunhofer FOKUS, con Software in a Box como coordinador nacional de España.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "985078351e",
+  "src": "Ullswater Investments · EU Funding Advisors",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "7f50415efb",
+  "src": "Un proyecto estrella de Ullswater",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "a2791aa4c8",
+  "src": "La firma de asesoramiento en financiación europea, con sedes en Madrid y Bruselas, impulsa ARGOS y su llegada al mercado europeo.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "c205723370",
+  "src": "<a class=\"lk\" href=\"https://www.ullswaterinvestments.com/es/projects/argos/\">Conocer el proyecto en Ullswater Investments →</a>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "5f9ee7d49d",
+  "src": "La financiación NextGenerationEU sufragó los demostradores de espacios de datos, no ARGOS como producto. HOSKIT es una propuesta pendiente de evaluación.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
   "id": "a4d114c5a9",
   "src": "Preguntas frecuentes",
   "kind": "html",
@@ -1080,8 +1456,8 @@
   ]
  },
  {
-  "id": "aeaf57d3fd",
-  "src": "<span id=\"i18n-pie-nota\">Un producto de Software in a Box · Madrid</span> <a href=\"https://www.softwareinabox.eu/aviso-legal.html\">Aviso legal</a><a href=\"https://www.softwareinabox.eu/privacidad.html\">Privacidad</a><a href=\"https://www.softwareinabox.eu/cookies.html\">Cookies</a> <span class=\"copy\">© 2026 Software in a Box</span>",
+  "id": "290af9421b",
+  "src": "<span id=\"i18n-pie-nota\">Un producto de Software in a Box · Madrid</span> <span class=\"ull-sello\">Un proyecto impulsado por <a href=\"https://www.ullswaterinvestments.com/es/projects/argos/\">Ullswater Investments · EU Funding Advisors</a></span> <a href=\"https://www.softwareinabox.eu/aviso-legal.html\">Aviso legal</a><a href=\"https://www.softwareinabox.eu/privacidad.html\">Privacidad</a><a href=\"https://www.softwareinabox.eu/cookies.html\">Cookies</a> <span class=\"copy\">© 2026 Software in a Box</span>",
   "kind": "html",
   "pages": [
    "index.html"
@@ -1248,16 +1624,16 @@
   ]
  },
  {
-  "id": "935f72ad42",
-  "src": "Su pregunta",
+  "id": "af8ad38bca",
+  "src": "Escriba su pregunta sobre ARGOS…",
   "kind": "attr",
   "pages": [
    "index.html"
   ]
  },
  {
-  "id": "af8ad38bca",
-  "src": "Escriba su pregunta sobre ARGOS…",
+  "id": "935f72ad42",
+  "src": "Su pregunta",
   "kind": "attr",
   "pages": [
    "index.html"
@@ -1314,6 +1690,14 @@
  {
   "id": "ff9b19e839",
   "src": "Diagrama del proceso de implantación de ARGOS",
+  "kind": "attr",
+  "pages": [
+   "index.html"
+  ]
+ },
+ {
+  "id": "e27314ccfb",
+  "src": "Plazas de despacho socio",
   "kind": "attr",
   "pages": [
    "index.html"
@@ -1400,16 +1784,16 @@
   ]
  },
  {
-  "id": "9aca4c78e1",
-  "src": "Buscar diagrama",
+  "id": "79439a2584",
+  "src": "Buscar entre los 25 diagramas…",
   "kind": "attr",
   "pages": [
    "index.html"
   ]
  },
  {
-  "id": "79439a2584",
-  "src": "Buscar entre los 25 diagramas…",
+  "id": "9aca4c78e1",
+  "src": "Buscar diagrama",
   "kind": "attr",
   "pages": [
    "index.html"
