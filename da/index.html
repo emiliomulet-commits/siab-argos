@@ -692,6 +692,34 @@ body.panel-abierto .i18n-sw{display:none}
 .anim-wrap{width:100%;align-self:flex-start}
 .lightbox{z-index:3000}
 
+
+/* Programa de despachos socios y respaldo europeo (nov 2026) */
+.dsp-fases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:34px;counter-reset:f}
+.dsp-fases div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:22px 22px 20px;position:relative}
+.dsp-fases div::before{counter-increment:f;content:counter(f);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--gold);color:#0B1F3A;font:800 16px 'Montserrat',sans-serif;margin-bottom:12px}
+.dsp-fases h3{color:#fff;font-size:18px;margin-bottom:6px}.dsp-fases p{color:#C9D3E0;font-size:15.5px;line-height:1.55}
+.dsp-niveles{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.dsp-niveles>div{border-radius:14px;padding:26px 26px 22px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04)}
+.dsp-niveles>div.socio{border-color:rgba(201,162,39,.65);background:linear-gradient(160deg,rgba(201,162,39,.16),rgba(255,255,255,.03))}
+.dsp-niveles .k{font:700 12px 'Montserrat',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.dsp-niveles h3{color:#fff;font-size:22px;margin:6px 0 12px}
+.dsp-niveles ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.dsp-niveles li{color:#DCE3EE;font-size:15.5px;padding-left:24px;position:relative;line-height:1.5}.dsp-niveles li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:800}
+.dsp-plazas{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 0;padding:0;list-style:none}
+.dsp-plazas li{border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 14px;font-size:14px;color:#E6EBF2}.dsp-plazas li b{color:var(--gold)}
+.dsp-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;margin-top:30px}
+.dsp-cta .tbtn{text-decoration:none}.dsp-cta .tbtn.outline{border:2px solid rgba(255,255,255,.6);color:#fff;background:transparent}
+.dsp-cta p{color:#C9D3E0;font-size:15px;margin:0}.dsp-cta p b{color:#fff}
+.rsp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rsp-grid>div{background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:12px;padding:24px}
+.rsp-grid>div.ull{border-top-color:var(--gold)}
+.rsp-grid .k{font:700 12px 'Montserrat',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-t)}
+.rsp-grid h3{font-size:19px;color:var(--navy-deep);margin:6px 0 8px}.rsp-grid p{font-size:15.5px;color:var(--ink-soft);line-height:1.55}
+.rsp-grid .rsp-link{margin-top:12px}
+.rsp-nota{font-size:13.5px;color:var(--ink-soft);margin-top:18px;max-width:60em}
+.fbot .ull-sello{display:inline-flex;align-items:center;gap:8px;color:#D9DEE5}.fbot .ull-sello::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.fbot .ull-sello a{color:var(--gold);font-weight:700}
+@media (max-width:900px){.dsp-fases,.rsp-grid{grid-template-columns:1fr}.dsp-niveles{grid-template-columns:1fr}}
 </style>
 <script>
 window.ARGOS_API = false; /* registro y contacto: sin servidor propio (contacto por correo) */
@@ -798,13 +826,13 @@ window.ARGOS_CHAT_URL = "https://argos-chat.emilio-mulet-b52.workers.dev/chat"; 
 <header class="top">
  <div class="wrap">
   <a class="brand" href="#top" aria-label="ARGOS"><img class="marca-img" src="/assets/brand/argos-symbol.svg" width="40" height="40" alt="" aria-hidden="true"><span class="bw"><span class="nm">ARG<span class="o">O</span>S</span><span class="tg">VERIFIED COMPLIANCE AGENT</span></span></a>
-  <nav class="nav" aria-label="Hovedmenu"><div class="dd"><button type="button" aria-expanded="false" aria-controls="m1">Produkt <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2 4 4 4 4-4"/></svg></button><ul id="m1"><li><a href="#como-funciona">Sådan virker ARGOS</a></li><li><a href="#principios">Tre principper, intet med småt</a></li><li><a href="#implantacion">Udrulning uden at forstyrre driften</a></li></ul></div><div class="dd"><button type="button" aria-expanded="false" aria-controls="m2">Regulering <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2 4 4 4 4-4"/></svg></button><ul id="m2"><li><a href="#normas">Hvilke regler den verificerer</a></li><li><a href="#entregables">Det får I efter hver verifikation</a></li><li><a href="#comparativa">ARGOS sammenlignet med andre værktøjer</a></li></ul></div><div class="dd"><button type="button" aria-expanded="false" aria-controls="m3">Ressourcer <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2 4 4 4 4-4"/></svg></button><ul id="m3"><li><a href="#destacados">Mest sete</a></li><li><a href="#galeria" data-open-gallery>ARGOS · 25 diagrammer</a></li><li><a href="#preguntas">Spørgsmål fra DPO'en og CISO'en</a></li><li><a href="https://www.softwareinabox.eu/regulacion/">EU-regulering</a></li></ul></div></nav>
+  <nav class="nav" aria-label="Hovedmenu"><div class="dd"><button type="button" aria-expanded="false" aria-controls="m1">Produkt <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2 4 4 4 4-4"/></svg></button><ul id="m1"><li><a href="#como-funciona">Sådan virker ARGOS</a></li><li><a href="#principios">Tre principper, intet med småt</a></li><li><a href="#implantacion">Udrulning uden at forstyrre driften</a></li><li><a href="#despachos">Program for partnerkontorer</a></li><li><a href="#respaldo">Europæisk forankring</a></li></ul></div><div class="dd"><button type="button" aria-expanded="false" aria-controls="m2">Regulering <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2 4 4 4 4-4"/></svg></button><ul id="m2"><li><a href="#normas">Hvilke regler den verificerer</a></li><li><a href="#entregables">Det får I efter hver verifikation</a></li><li><a href="#comparativa">ARGOS sammenlignet med andre værktøjer</a></li></ul></div><div class="dd"><button type="button" aria-expanded="false" aria-controls="m3">Ressourcer <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m2 4 4 4 4-4"/></svg></button><ul id="m3"><li><a href="#destacados">Mest sete</a></li><li><a href="#galeria" data-open-gallery>ARGOS · 25 diagrammer</a></li><li><a href="#preguntas">Spørgsmål fra DPO'en og CISO'en</a></li><li><a href="https://www.softwareinabox.eu/regulacion/">EU-regulering</a></li></ul></div></nav>
   <button class="tbtn white abrir-lead" type="button">Book en demo</button>
   <button class="tbtn outline" type="button" data-open-assistant><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/></svg><span>Prøv assistenten</span></button>
   <button class="burger" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   <button class="btn-idioma" id="btn-idioma" aria-label="Change language" hidden style="display:none">EN</button>
  </div>
- <nav class="mnav" id="mnav" aria-label="Mobilmenu"><a href="#como-funciona">Sådan virker det</a><a href="#normas">Regulering</a><a href="#entregables">Leverancer</a><a href="#comparativa">Sammenligning</a><a href="#implantacion">Implementering</a><a href="#preguntas">Ofte stillede spørgsmål</a></nav>
+ <nav class="mnav" id="mnav" aria-label="Mobilmenu"><a href="#como-funciona">Sådan virker det</a><a href="#normas">Regulering</a><a href="#entregables">Leverancer</a><a href="#comparativa">Sammenligning</a><a href="#implantacion">Implementering</a><a href="#despachos">Partnerkontorer</a><a href="#preguntas">Ofte stillede spørgsmål</a></nav>
 </header>
 
 <section class="hero" id="top" aria-labelledby="i18n-hero-titulo">
@@ -927,6 +955,41 @@ window.ARGOS_CHAT_URL = "https://argos-chat.emilio-mulet-b52.workers.dev/chat"; 
   </div>
 </section>
 
+<section class="s on-dark" id="despachos">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Program for partnerkontorer</div><h2>ARGOS kommer til Europa gennem advokatkontorer</h2><p class="sub">Vi søger ti partnerkontorer i syv EU-lande og omkring tyve Business Partners. ARGOS leverer den tekniske dokumentation; advokatkontoret leverer den juridiske vurdering og underskriver revisionen.</p></div>
+    <div class="dsp-fases">
+      <div><h3>Udrulning</h3><p>En tekniker fra Software in a Box installerer ARGOS hos kunden og gennemfører kortlægningen og testene.</p></div>
+      <div><h3>Juridisk revision</h3><p>Advokatkontoret fortolker dokumentationen, underskriver compliance-revisionen og rådgiver kunden.</p></div>
+      <div><h3>Afhjælpning</h3><p>Teknikere fra Software in a Box gennemfører de korrigerende tiltag, og ARGOS verificerer dem igen.</p></div>
+    </div>
+    <div class="dsp-niveles">
+      <div class="socio"><div class="k">10 pladser · én pr. by</div><h3>Partnerkontor</h3><ul><li>5 % af kapitalen i ARGOS-selskabet og stemmeret.</li><li>Kun én plads pr. by, i syv EU-lande.</li><li>Koordinerer Business Partners i sit område.</li></ul></div>
+      <div><div class="k">Omkring 20 kontorer</div><h3>Business Partner</h3><ul><li>Tilbyder ARGOS til sine klienter uden at indskyde kapital.</li><li>Uddannelse og certificering som ARGOS-revisor.</li><li>Teknisk støtte fra Software in a Box ved hver revision.</li></ul></div>
+    </div>
+    <ul class="dsp-plazas" aria-label="Pladser til partnerkontorer">
+      <li><b>Spanien</b> · Madrid</li><li><b>Spanien</b> · Barcelona</li><li><b>Frankrig</b> · Paris</li><li><b>Frankrig</b> · anden by</li><li><b>Tyskland</b> · to byer</li><li><b>Nederlandene</b> · Amsterdam</li><li><b>Belgien</b> · Bruxelles</li><li><b>Danmark</b> · København</li><li><b>Italien</b> · Milano</li>
+    </ul>
+    <div class="dsp-cta">
+      <a class="tbtn btn-oro" href="mailto:emilio.mulet@softwareinabox.eu?subject=ARGOS%20-%20Solicitud%20de%20plaza%20de%20despacho%20socio">Ansøg om en plads</a>
+      <a class="tbtn outline" href="/video/">Se videoen for advokatkontorer (3 min, spansk)</a>
+      <p><b>Ansøgningsfrist 15. januar 2027.</b> Kun én plads pr. by.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s soft" id="respaldo">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Europæisk forankring</div><h2>Bygget på europæisk F&U</h2><p class="sub">ARGOS er et produkt fra Software in a Box, teknologivirksomheden i Ullswater Investments. Det tekniske grundlag stammer fra europæiske projekter om data og kunstig intelligens.</p></div>
+    <div class="rsp-grid">
+      <div><div class="k">2024–2026 · NextGenerationEU</div><h3>Tre fødererede datarum</h3><p>Global Data Care (sundhed), PROCUREDATA (indkøb) og EcoDataNet (cirkulær økonomi): her udviklede teamet de konnektorer, ODRL-politikker og verificerbare Gaia-X-legitimationsbeviser, som ARGOS bruger.</p></div>
+      <div><div class="k">2027–2030 · ITEA 4 · Eureka</div><h3>HOSKIT (forslag 26013)</h3><p>ARGOS er værktøjet til vurdering af datacompliance i forslaget, som koordineres af Fraunhofer FOKUS, med Software in a Box som national koordinator for Spanien.</p></div>
+      <div class="ull"><div class="k">Ullswater Investments · EU Funding Advisors</div><h3>Et flagskibsprojekt fra Ullswater</h3><p>Rådgivningsfirmaet for EU-finansiering med kontorer i Madrid og Bruxelles driver ARGOS og dets vej ind på det europæiske marked.</p><p class="rsp-link"><a class="lk" href="https://www.ullswaterinvestments.com/projects/argos/">Læs historien hos Ullswater Investments →</a></p></div>
+    </div>
+    <p class="rsp-nota">NextGenerationEU-midlerne finansierede datarum-demonstratorerne, ikke ARGOS som produkt. HOSKIT er et forslag, der afventer evaluering.</p>
+  </div>
+</section>
+
 <section class="s faq" id="preguntas">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Ofte stillede spørgsmål</div><h2>Spørgsmål fra DPO'en og CISO'en</h2><p class="sub">De mest almindelige spørgsmål, før ARGOS udrulles. I kan spørge <a class="lk" href="#asistente" data-open-assistant>assistenten</a> om alt andet.</p></div>
@@ -953,10 +1016,11 @@ window.ARGOS_CHAT_URL = "https://argos-chat.emilio-mulet-b52.workers.dev/chat"; 
    <div><h4>Regulering</h4><a href="#normas">Hvilke regler den verificerer</a><a href="#entregables">Det får I efter hver verifikation</a><a href="#comparativa">ARGOS sammenlignet med andre værktøjer</a></div>
    <div><h4>Ressourcer</h4><a href="#destacados">Mest sete</a><a href="#galeria" data-open-gallery>ARGOS · 25 diagrammer</a><a href="#preguntas">Spørgsmål fra DPO'en og CISO'en</a></div>
    <div><h4>Software in a Box</h4><a href="https://www.softwareinabox.eu/da/">www.softwareinabox.eu</a><a href="https://cognitiv.softwareinabox.eu/da/">COGNITIV</a><a href="https://datos.softwareinabox.eu/da/">Datarum</a><a href="https://www.softwareinabox.eu/regulacion/">EU-regulering</a></div>
-   <div><h4>Kontakt</h4><a href="#contacto" class="abrir-lead">Book en demo</a><a href="#asistente" data-open-assistant>Prøv assistenten</a><a href="https://argos.softwareinabox.eu/taskforce/" rel="nofollow">🔒 Teamområde</a></div>
+   <div><h4>Kontakt</h4><a href="#contacto" class="abrir-lead">Book en demo</a><a href="#despachos">Program for partnerkontorer</a><a href="#asistente" data-open-assistant>Prøv assistenten</a><a href="https://argos.softwareinabox.eu/taskforce/" rel="nofollow">🔒 Teamområde</a></div>
   </div>
   <div class="fbot">
-   <span id="i18n-pie-nota">Et produkt fra Software in a Box · Madrid</span> <a href="https://www.softwareinabox.eu/da/juridisk-meddelelse.html">Juridisk meddelelse</a><a href="https://www.softwareinabox.eu/da/privatliv.html">Privatliv</a><a href="https://www.softwareinabox.eu/da/cookies.html">Cookies</a> <span class="copy">© 2026 Software in a Box</span>
+   <span id="i18n-pie-nota">Et produkt fra Software in a Box · Madrid</span>
+   <span class="ull-sello">Et projekt drevet af <a href="https://www.ullswaterinvestments.com/projects/argos/">Ullswater Investments · EU Funding Advisors</a></span> <a href="https://www.softwareinabox.eu/da/juridisk-meddelelse.html">Juridisk meddelelse</a><a href="https://www.softwareinabox.eu/da/privatliv.html">Privatliv</a><a href="https://www.softwareinabox.eu/da/cookies.html">Cookies</a> <span class="copy">© 2026 Software in a Box</span>
   </div>
  </div>
 </footer>
