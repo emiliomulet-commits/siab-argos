@@ -1,0 +1,66 @@
+name: Mover vídeos de presentaciones a R2
+
+# Sube presentaciones/**/*.mp4 al bucket R2 "argos-videos" (misma ruta),
+# comprueba que están todos y, solo entonces, los quita del repositorio.
+# Necesita dos secretos del repositorio (Settings → Secrets and variables → Actions):
+#   R2_ACCESS_KEY_ID y R2_SECRET_ACCESS_KEY  (token de R2 con "Object Read & Write" sobre argos-videos)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/r2-mover.txt']
+
+permissions:
+  contents: write
+
+jobs:
+  mover:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      ENDPOINT: https://b52dc1d40f03275f8cb9fe5ae9d5d9c9.r2.cloudflarestorage.com
+      BUCKET: argos-videos
+    steps:
+      - name: Comprobar secretos
+        run: |
+          if [ -z "$AWS_ACCESS_KEY_ID" ] || [ -z "$AWS_SECRET_ACCESS_KEY" ]; then
+            echo "::error::Faltan los secretos R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY"; exit 1
+          fi
+
+      - uses: actions/checkout@v4
+
+      - name: Subir a R2
+        run: |
+          n=$(find presentaciones -name '*.mp4' | wc -l)
+          echo "Vídeos locales: $n"
+          [ "$n" -gt 0 ] || { echo "No hay vídeos que mover"; exit 0; }
+          aws s3 sync presentaciones "s3://$BUCKET/presentaciones" \
+            --exclude '*' --include '*.mp4' --content-type video/mp4 \
+            --endpoint-url "$ENDPOINT" --no-progress
+
+      - name: Verificar que están todos y con el mismo tamaño
+        run: |
+          find presentaciones -name '*.mp4' -printf '%p %s\n' | sort > local.txt
+          aws s3api list-objects-v2 --bucket "$BUCKET" --prefix presentaciones/ \
+            --endpoint-url "$ENDPOINT" --query 'Contents[].[Key,Size]' --output text \
+            | awk '{print $1" "$2}' | grep '\.mp4 ' | sort > remoto.txt
+          echo "Local: $(wc -l < local.txt) · R2: $(wc -l < remoto.txt)"
+          faltan=$(comm -23 local.txt remoto.txt)
+          if [ -n "$faltan" ]; then echo "::error::No coinciden:"; echo "$faltan"; exit 1; fi
+          echo "Todo verificado"
+
+      - name: Quitar los vídeos del repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git rm -q -r --cached -- $(find presentaciones -name '*.mp4')
+          find presentaciones -name '*.mp4' -delete
+          grep -qxF 'presentaciones/**/*.mp4' .gitignore 2>/dev/null || echo 'presentaciones/**/*.mp4' >> .gitignore
+          git add .gitignore
+          git commit -m "Vídeos de presentaciones movidos a R2 (bucket argos-videos)" \
+            -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" \
+            -m "Claude-Session: https://claude.ai/code/session_01UiS8KxMyv7XkJv4tsEA4nM"
+          git push
