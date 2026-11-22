@@ -41,10 +41,10 @@ Fuente: https://argos.softwareinabox.eu/normativa/rgpd-lopdgdd/
 # El EHDS en 4 minutos: qué cambia el Espacio Europeo de Datos Sanitarios para hospitales y empresas de salud
 
 ## Urgencias
-Una paciente llega a urgencias en Lisboa. Su historial está en Madrid. Sus pruebas en otro sistema. Su medicación en papel.
+Una paciente llega a urgencias en Lisboa. Su historial está en Madrid. Sus pruebas en otro sistema. Su medicación en papel. Y el médico decide a ciegas.
 
 ## La norma
-Y el médico decide a ciegas. El espacio europeo de datos sanitarios quiere acabar con eso. Es un reglamento europeo de 105 artículos, en vigor desde marzo de 2025. Da a cada persona acceso y control sobre sus datos de salud en toda Europa, y obliga a los sistemas de historia clínica a ser interoperables. Y las multas por incumplir las reglas de reutilización llegan a 20 millones de euros, o al 4% de la facturación.
+El espacio europeo de datos sanitarios quiere acabar con eso. Es un reglamento europeo de 105 artículos, en vigor desde marzo de 2025. Da a cada persona acceso y control sobre sus datos de salud en toda Europa, y obliga a los sistemas de historia clínica a ser interoperables. Y las multas por incumplir las reglas de reutilización llegan a 20 millones de euros, o al 4% de la facturación.
 
 ## Qué cambia
 Para hospitales, fabricantes y empresas de salud cambia mucho. El paciente podrá ver sus datos al instante, y saber quién ha accedido. Los sistemas de historia clínica serán un producto con marcado CE. Habrá que intercambiar datos en un formato europeo común. Los datos se podrán reutilizar, pero solo con permiso. Y cada acceso deberá quedar registrado.
@@ -59,13 +59,13 @@ Funciona en varios planos. Uso primario. El paciente accede a sus datos, los com
 Los datos prioritarios llegan en dos grupos. Primero, la historia resumida del paciente y la receta y la dispensación electrónicas. Después, las imágenes médicas y los resultados de laboratorio y los informes de alta. Todo en el formato europeo de intercambio de historiales médicos.
 
 ## Calendario
-El calendario es largo, pero ya ha empezado. 26 de marzo de 2027. Aplicación general. 2029. El primer grupo de datos en todos los Estados y el arranque del uso secundario. 2031. El segundo grupo. Y 2035.
+El calendario es largo, pero ya ha empezado. 26 de marzo de 2027. Aplicación general. 2029. El primer grupo de datos en todos los Estados y el arranque del uso secundario. 2031. El segundo grupo. Y 2035. Las últimas fases.
 
 ## Derechos
-Las últimas fases. El paciente gana derechos. Acceso inmediato y gratuito. Añadir información y pedir la rectificación. Llevar sus datos a otro profesional, también en otro estado. Restringir quién ve qué.
+El paciente gana derechos. Acceso inmediato y gratuito. Añadir información y pedir la rectificación. Llevar sus datos a otro profesional, también en otro estado. Restringir quién ve qué. Y saber quién ha accedido y cuándo.
 
 ## En España
-Y saber quién ha accedido y cuándo. En España, el Espacio Nacional de Datos de Salud ya funciona como una red federada, con más de 330 conjuntos de datos en su catálogo. La Oficina del Dato del Sistema Nacional de Salud actúa como organismo de acceso coordinador. Las comunidades autónomas serían las autoridades regionales de salud digital. Y la futura ley de salud digital, todavía en anteproyecto, completará el modelo.
+En España, el Espacio Nacional de Datos de Salud ya funciona como una red federada, con más de 330 conjuntos de datos en su catálogo. La Oficina del Dato del Sistema Nacional de Salud actúa como organismo de acceso coordinador. Las comunidades autónomas serían las autoridades regionales de salud digital. Y la futura ley de salud digital, todavía en anteproyecto, completará el modelo.
 
 ## Qué hacer
 ¿Qué hacer ahora? Inventariar los sistemas que tratan datos prioritarios. Preparar la interoperabilidad y el registro de accesos. Y ordenar los datos para su reutilización. ARGOS verifica el EHDS y el RGPD a la vez, con pruebas activas sobre los sistemas reales y sin que los datos salgan del hospital. EHDS, el dato de salud al servicio del paciente.
@@ -120,10 +120,10 @@ La directiva europea NIS2 fija multas de hasta 10 millones de euros o el 2% de l
 En España la situación es singular. No hay ley de transposición. El anteproyecto nunca llegó a las Cortes. La Comisión llevó a España al Tribunal de Justicia en julio de 2026. Sigue vigente la normativa de 2018, la antigua NIS. Pero los clientes ya exigen NIS2 en los contratos. Y quien opera en otros países ya está obligado allí.
 
 ## NIS2
-NIS2 es la directiva europea de ciberseguridad para los sectores esenciales e importantes y para toda su cadena de suministro. El vacío legal no protege.
+NIS2 es la directiva europea de ciberseguridad para los sectores esenciales e importantes y para toda su cadena de suministro. El vacío legal no protege. La cadena entera responde.
 
 ## Cuatro pasos
-La cadena entera responde. Lo que exige, en cuatro pasos. Comprobar si se es entidad obligada, esencial o importante. Registrarse ante la autoridad nacional. Aplicar las 10 medidas de gestión de riesgos aprobadas por la dirección. Y notificar los incidentes significativos en plazo. La seguridad de los proveedores es una de esas 10 medidas.
+Lo que exige, en cuatro pasos. Comprobar si se es entidad obligada, esencial o importante. Registrarse ante la autoridad nacional. Aplicar las 10 medidas de gestión de riesgos aprobadas por la dirección. Y notificar los incidentes significativos en plazo. La seguridad de los proveedores es una de esas 10 medidas.
 
 ## Diez medidas
 Entre las 10 medidas, cuatro marcan la diferencia. Análisis de riesgos y políticas de seguridad. Gestión de incidentes y continuidad del negocio. Seguridad de la cadena de suministro. Y autenticación multifactor y cifrado. Artículo 21 de la directiva.
@@ -146,10 +146,10 @@ Fuente: https://argos.softwareinabox.eu/normativa/nis2/
 # El Data Act y la DGA en 4 minutos: de quién son los datos de los productos conectados
 
 ## ¿De quién son?
-Tu tractor genera datos. Tu maquinaria, también. Tu ascensor, tu coche, tu contador. Pero esos datos se los queda el fabricante.
+Tu tractor genera datos. Tu maquinaria, también. Tu ascensor, tu coche, tu contador. Pero esos datos se los queda el fabricante. ¿De quién son, en realidad?
 
 ## La norma
-¿De quién son, en realidad? El Reglamento europeo de Datos, el Data Act, se aplica en toda la Unión desde el 12 de septiembre de 2025. El usuario de un producto conectado tiene derecho a acceder a sus datos, de forma sencilla, segura y gratuita, y a compartirlos con quien elija. Y desde el 12 de enero de 2027 ningún proveedor de nube podrá cobrar por la salida.
+El Reglamento europeo de Datos, el Data Act, se aplica en toda la Unión desde el 12 de septiembre de 2025. El usuario de un producto conectado tiene derecho a acceder a sus datos, de forma sencilla, segura y gratuita, y a compartirlos con quien elija. Y desde el 12 de enero de 2027 ningún proveedor de nube podrá cobrar por la salida.
 
 ## En España
 En España la norma obliga, pero falta quien la vigile. No hay autoridad competente designada. No hay régimen sancionador nacional. La Agencia de Protección de Datos supervisa solo lo que afecta a datos personales. Los derechos ya se pueden exigir ante los tribunales. Y una cláusula abusiva sobre datos es nula, sin necesidad de sanción.
@@ -181,10 +181,10 @@ Fuente: https://argos.softwareinabox.eu/normativa/data-act-dga/
 # El ENS y las ISO 27001 y 27701 en 4 minutos: la llave del mercado público
 
 ## La licitación
-Una licitación pública, un servicio en la nube, una oferta impecable y una línea en el pliego.
+Una licitación pública, un servicio en la nube, una oferta impecable y una línea en el pliego. Tiene certificación ENS?
 
 ## 73 medidas
-¿Tiene certificación ENS? El Esquema Nacional de Seguridad, el Real Decreto 311/2022, reúne 73 medidas de seguridad. Es obligatorio para todo el sector público y para los proveedores que le prestan servicios o soluciones tecnológicas. Sin certificado, el proveedor queda fuera de muchas licitaciones.
+El Esquema Nacional de Seguridad, el Real Decreto 311/2022, reúne 73 medidas de seguridad. Es obligatorio para todo el sector público y para los proveedores que le prestan servicios o soluciones tecnológicas. Sin certificado, el proveedor queda fuera de muchas licitaciones.
 
 ## Certificarse
 Y la certificación no es un trámite. Hay que categorizar cada sistema según su impacto, hacer el análisis de riesgos, justificar cada medida en la declaración de aplicabilidad, superar la auditoría de una entidad acreditada y renovarla cada dos años.
@@ -202,10 +202,10 @@ Tres categorías. Básica, 52 medidas y autoevaluación. Media, 68 medidas con a
 Y para el mercado privado, las normas ISO. ISO 27001, el sistema de gestión de la seguridad de la información. ISO 27701, la gestión de la privacidad. El certificado ENS tiene una validez de dos años. Y certificarse lleva entre seis y nueve meses.
 
 ## Quién
-¿Quién debe cumplirlo? El Estado, las comunidades autónomas y las entidades locales, los organismos públicos y las universidades públicas. Las empresas que desarrollan, mantienen o operan sistemas para el sector público. Los servicios en la nube que soportan procesos o datos públicos.
+¿Quién debe cumplirlo? El Estado, las comunidades autónomas y las entidades locales, los organismos públicos y las universidades públicas. Las empresas que desarrollan, mantienen o operan sistemas para el sector público. Los servicios en la nube que soportan procesos o datos públicos. Y los servicios gestionados de seguridad.
 
 ## CCN
-Y los servicios gestionados de seguridad. Detrás está el Centro Criptológico Nacional, con su equipo de respuesta, el CCN-CERT. Publica las guías de seguridad y el catálogo de productos cualificados. Las entidades acreditadas por ENAC emiten las certificaciones de categoría media y alta. Y su perfil para NIS2 tiende el puente con Europa.
+Detrás está el Centro Criptológico Nacional, con su equipo de respuesta, el CCN-CERT. Publica las guías de seguridad y el catálogo de productos cualificados. Las entidades acreditadas por ENAC emiten las certificaciones de categoría media y alta. Y su perfil para NIS2 tiende el puente con Europa.
 
 ## Qué hacer
 ¿Qué hacer? Categorizar ya, certificar en seis a nueve meses y renovar cada dos años, vigilando dónde están los datos de categoría alta. ARGOS mantiene la declaración de aplicabilidad y el registro de evidencias y lo cruza con NIS2, el RGPD y el reglamento de IA para no duplicar trabajo. ENS, la llave del mercado público.
