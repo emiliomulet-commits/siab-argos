@@ -1,0 +1,208 @@
+# EU-Vorschriften in 4 Minuten · ARGOS
+
+Vollständige Transkripte der animierten Präsentationen. Stand: November 2026. Allgemeine Information, keine Rechtsberatung.
+
+
+# DSGVO in 4 Minuten: Geahndet wird vor allem das Grundsätzliche
+URL: https://argos.softwareinabox.eu/de/vorschriften/dsgvo/
+
+## Kleine Fehler
+Eine E-Mail an den falschen Empfänger. Eine Sicherung, die niemand gelöscht hat. Daten außerhalb Europas. Scheinbar harmlos. Bis die Beschwerde kommt.
+
+## Bußgelder
+Die Datenschutz-Grundverordnung gilt seit 2018. Ihre Bußgelder reichen bis zu zwanzig Millionen Euro oder vier Prozent des weltweiten Umsatzes. In Deutschland ergänzt sie das Bundesdatenschutzgesetz. Die Aufsicht teilen sich Bund und Länder.
+
+## Was geahndet wird
+Geahndet wird vor allem das Grundsätzliche. Verarbeitungen ohne klare Rechtsgrundlage. Ein Verzeichnis, das nicht der Wirklichkeit entspricht. Daten, die zu lange aufbewahrt werden. Auftragsverarbeiter ohne Kontrolle. Und Sicherheit, die nur auf dem Papier steht.
+
+## DSGVO
+Die DSGVO ist die Grundlage der gesamten Daten-Governance in Europa. Es reicht nicht, Compliance zu erklären. Man muss sie nachweisen können.
+
+## Was sie verlangt
+Was sie heute verlangt. Eine Rechtsgrundlage und Transparenz für jede Verarbeitung. Ein Verzeichnis und, bei hohem Risiko, eine Folgenabschätzung. Datenschutz durch Technikgestaltung und einen Vertrag mit jedem Auftragsverarbeiter. Und Datenpannen binnen 72 Stunden melden. Übermittlungen außerhalb des EWR nur mit Garantien.
+
+## Digital-Omnibus
+Und was kommt: der Digital-Omnibus, ein Vorschlag in Verhandlung. Er würde den Begriff personenbezogener Daten berühren, doch Aufsicht und Rat bremsen. Er würde das berechtigte Interesse für KI anerkennen. Und nur Pannen mit hohem Risiko wären zu melden, binnen 96 Stunden. Aber es ist kein Gesetz: Heute gilt die DSGVO, wie sie ist.
+
+## Termine
+Wichtige Daten. 25. Mai 2018: Die DSGVO gilt. 1. Januar 2026: Die neue Verfahrensverordnung tritt in Kraft. 2. April 2027: Sie gilt für neue grenzüberschreitende Fälle. Und Ende 2027: das Ziel für den Abschluss der Vereinfachung.
+
+## Die Kette
+Jedes Glied der Kette hat seine Rolle. Der Hersteller: Datenschutz durch Technikgestaltung. Der Großhändler: Verträge für Support und Services. Der Integrator: Maßnahmen und Unterauftragnehmer. Und der Endkunde: Rechtsgrundlagen, Verzeichnis, Folgenabschätzung.
+
+## In Deutschland
+In Deutschland wacht eine Bundesbeauftragte, und jedes Land hat seine eigene Aufsichtsbehörde. Die Datenschutzkonferenz stimmt ihre gemeinsame Linie ab. Das Bundesdatenschutzgesetz regelt die nationalen Besonderheiten. Und beim Data Act wacht die Bundesbeauftragte über personenbezogene Daten.
+
+## Was tun
+Was jetzt zu tun ist. Die DSGVO heute erfüllen, Datenpannen im Griff haben und das KI-Training absichern. ARGOS weist es nach, statt es zu erklären: ein reales Verzeichnis, Folgenabschätzungen und Nachweise für jede Maßnahme, innerhalb Ihres Perimeters. DSGVO: Compliance heißt, sie nachweisen zu können.
+
+
+# EHDS in 4 Minuten: Für Kliniken, Hersteller und Gesundheitsunternehmen
+URL: https://argos.softwareinabox.eu/de/vorschriften/ehds/
+
+## Notaufnahme
+Eine Patientin kommt in eine Notaufnahme im Ausland. Ihre Akte liegt zu Hause. Ihre Befunde, in einem anderen System. Ihre Medikation, auf Papier. Und der Arzt entscheidet im Blindflug.
+
+## Die Verordnung
+Der Europäische Gesundheitsdatenraum will das beenden. Eine Verordnung mit 105 Artikeln, in Kraft seit März 2025. Sie gibt jedem Zugang und Kontrolle über seine Gesundheitsdaten in Europa und macht Patientenakten interoperabel. Bei der Sekundärnutzung drohen bis zu zwanzig Millionen Euro Bußgeld.
+
+## Was sich ändert
+Für Kliniken und Hersteller ändert sich viel. Patienten sehen ihre Daten sofort und wissen, wer zugegriffen hat. Patientenaktensysteme werden zum Produkt mit CE-Kennzeichnung. Daten werden in einem gemeinsamen europäischen Format ausgetauscht. Weiterverwendung nur mit Genehmigung. Und jeder Zugriff wird protokolliert.
+
+## EHDS
+Der EHDS ist der erste sektorale gemeinsame Datenraum der EU. Von eingeschlossenen Daten zu Daten, die mit dem Patienten reisen.
+
+## Funktionsweise
+So funktioniert er. Primärnutzung: Patienten sehen, ergänzen, beschränken und teilen ihre Daten, auch im Ausland. Reguliertes Produkt: Interoperabilität und Zugriffsprotokoll, mit CE-Kennzeichnung. Sekundärnutzung: Zugangsstellen genehmigen Forschung, Innovation und KI. Immer in sicheren Verarbeitungsumgebungen, standardmäßig anonymisiert. Und nie, um zu diskriminieren oder Menschen zu reidentifizieren.
+
+## Vorrangige Daten
+Die vorrangigen Daten kommen in zwei Gruppen. Zuerst die Patientenkurzakte, das E-Rezept und die elektronische Abgabe. Dann Bilder und Laborbefunde, und Entlassberichte. Alles im europäischen Austauschformat für Patientenakten.
+
+## Zeitplan
+Der Zeitplan ist lang, aber er läuft. 26. März 2027: allgemeine Geltung. 2029: die erste Datengruppe in allen Staaten und der Start der Sekundärnutzung. 2031: die zweite Gruppe. Und 2035: die letzten Phasen.
+
+## Rechte
+Patienten gewinnen Rechte. Sofortiger und kostenloser Zugang. Ergänzen und Berichtigung verlangen. Daten zu anderen Ärzten mitnehmen, auch im Ausland. Bestimmen, wer was sieht. Und wissen, wer zugegriffen hat, und wann.
+
+## In Deutschland
+Deutschland hat vorgelegt: das Gesundheitsdatennutzungsgesetz regelt bereits die Nutzung von Gesundheitsdaten für die Forschung. Das Forschungsdatenzentrum Gesundheit beim BfArM stellt Daten bereit. Die elektronische Patientenakte für alle wird ausgerollt. Der EHDS baut darauf auf.
+
+## Was tun
+Was jetzt zu tun ist. Systeme inventarisieren, Interoperabilität und Protokoll vorbereiten, Daten für die Weiterverwendung ordnen. ARGOS prüft EHDS und DSGVO zugleich, mit aktiven Tests an den realen Systemen und ohne dass Daten die Klinik verlassen. EHDS: Gesundheitsdaten im Dienst der Patienten.
+
+
+# KI-Verordnung in 4 Minuten: Deutschland: voll durchsetzbar
+URL: https://argos.softwareinabox.eu/de/vorschriften/ki-verordnung/
+
+## Unsichtbare Entscheidungen
+Ein Algorithmus sortiert deinen Lebenslauf aus. Ein anderer entscheidet über deinen Kredit. Ein anderer erkennt dein Gesicht am Flughafen. Niemand hat es dir erklärt. Ab jetzt muss es jemand tun.
+
+## Bußgelder
+Die europäische KI-Verordnung sieht Bußgelder vor bis zu fünfunddreißig Millionen Euro oder sieben Prozent des weltweiten Umsatzes. Seit August 2026 gilt sie allgemein: KI kennzeichnen und Teams schulen. Und in Deutschland gibt es eine Behörde, die das durchsetzen kann.
+
+## In Deutschland
+In Deutschland ist die Verordnung voll durchsetzbar. Seit Juli 2026 gilt das nationale Durchführungsgesetz. Die Bundesnetzagentur ist Marktüberwachung und zentrale Anlaufstelle. Eine unabhängige Kammer überwacht besonders sensible Hochrisiko-Systeme. Der Betriebsrat bestimmt bei Überwachung mit. Und wer den Zweck eines Systems ändert, wird selbst Anbieter.
+
+## AI Act
+Die KI-Verordnung, angepasst durch den Digital-Omnibus, ordnet künstliche Intelligenz nach Risikostufen. Die Einstufung entscheidet alles. Und zwar nach Zweck, nicht nach Technik.
+
+## Vier Stufen
+Vier Stufen. Unannehmbar: verboten, etwa Social Scoring. Hochrisiko: Beschäftigung, Kredit, Bildung, Biometrie. Transparenz: auf KI hinweisen und synthetische Inhalte kennzeichnen. Und minimales Risiko, die meisten Anwendungen in Unternehmen. Für alle gilt die Pflicht zur KI-Kompetenz.
+
+## Hochrisiko
+Hochrisiko verlangt ein vollständiges Managementsystem. Risikomanagement über den ganzen Lebenszyklus. Geeignete, repräsentative Daten mit Kontrolle von Verzerrungen. Technische Dokumentation und automatische Protokollierung. Und menschliche Aufsicht, Genauigkeit, Robustheit und Cybersicherheit. Artikel 9 bis 15 der Verordnung.
+
+## Termine
+Die Termine nach dem Omnibus. 2. August 2026: allgemeine Geltung und Transparenz. 2. Dezember 2026: Ende der Schonfrist für die Kennzeichnung. 2. Dezember 2027: Hochrisiko nach Anhang drei. Und 2. August 2028: KI in regulierten Produkten.
+
+## Europa
+In Europa geht jedes Land sein eigenes Tempo. Deutschland hat sein Gesetz in Kraft. Italien ebenso. Dänemark war das erste Land mit nationalem Gesetz. Die Niederlande konsultieren ihren Entwurf. Frankreich berät im Parlament. Und Spanien, Portugal und Belgien warten noch auf ihr Gesetz.
+
+## Aufsicht
+In Deutschland bündelt die Bundesnetzagentur die Aufsicht über KI, Data Act und Datenaustausch. Ihr KI-Service-Desk hilft Unternehmen. Bußgeldverfahren laufen nach dem Ordnungswidrigkeitengesetz. Und Datenschutzbehörden und Betriebsräte reden mit.
+
+## Was tun
+Was jetzt zu tun ist. KI-Systeme erfassen und einstufen, Transparenz erfüllen, Teams schulen, Betriebsrat einbinden. ARGOS weist es nach: Protokolle, menschliche Aufsicht und nachvollziehbare Urteile, mit lokal laufender KI. KI-Verordnung: Die KI schlägt vor, der Mensch entscheidet.
+
+
+# NIS2 in 4 Minuten: Deutschland: gilt jetzt, ohne Schonfrist
+URL: https://argos.softwareinabox.eu/de/vorschriften/nis2/
+
+## Der Angriff
+Montag, sechs Uhr morgens. Die Systeme starten nicht. Die Dateien: verschlüsselt. Der Dienstleister antwortet nicht. Wer meldet was, an wen, und wie schnell?
+
+## Bußgelder
+Die NIS2-Richtlinie sieht Bußgelder vor bis zu zehn Millionen Euro oder zwei Prozent des Umsatzes für besonders wichtige Einrichtungen. Und sie verlangt, erhebliche Vorfälle in drei Stufen zu melden: 24 Stunden, 72 Stunden und ein Monat. Die Geschäftsleitung billigt die Maßnahmen und haftet dafür.
+
+## In Deutschland
+In Deutschland gilt NIS2 bereits, und zwar ohne Schonfrist. Das neue BSI-Gesetz ist seit Dezember 2025 in Kraft. Rund 29.500 Einrichtungen fallen unter die Aufsicht des BSI. Die Registrierungsfrist ist abgelaufen. Die Geschäftsleitung muss billigen, überwachen und sich schulen lassen. Und das BSI kann kritische Komponenten untersagen.
+
+## NIS2
+NIS2 ist die europäische Cybersicherheitsrichtlinie für wesentliche Sektoren und ihre Lieferkette. Abwarten schützt nicht. Die ganze Kette haftet.
+
+## Vier Schritte
+Was sie verlangt, in vier Schritten. Prüfen, ob man betroffen ist: besonders wichtig oder wichtig. Sich beim BSI registrieren. Die zehn Maßnahmen umsetzen, gebilligt von der Leitung. Und erhebliche Vorfälle fristgerecht melden. Die Sicherheit der Lieferanten ist eine dieser zehn Maßnahmen.
+
+## Zehn Maßnahmen
+Von den zehn Maßnahmen machen vier den Unterschied. Risikoanalyse und Sicherheitsrichtlinien. Vorfallbewältigung und Betriebskontinuität. Sicherheit der Lieferkette. Und Multi-Faktor-Authentifizierung und Verschlüsselung. Artikel 21 der Richtlinie.
+
+## Termine
+Die deutschen Termine. 17. Oktober 2024: Frist für die Umsetzung. 6. Dezember 2025: das neue BSI-Gesetz tritt in Kraft. 6. März 2026: die gesetzliche Registrierungsfrist. Und heute: Bis zu 500.000 Euro Bußgeld drohen allein für eine fehlende Registrierung.
+
+## Europa
+In Europa ist NIS2 vielerorts Gesetz. Deutschland: rund 29.500 Einrichtungen, die Leitung haftet persönlich. Italien verlangt die Basismaßnahmen seit Oktober 2026. Belgien setzt auf CyberFundamentals. Portugal macht Geschäftsführer haftbar. Die Niederlande: ohne Übergangsfrist. Dänemark: Aufsicht nach Sektoren. Frankreich und Spanien sind noch ohne Gesetz.
+
+## Das BSI
+In Deutschland gibt es eine zentrale Behörde: das Bundesamt für Sicherheit in der Informationstechnik. Bei ihm registrieren sich die Einrichtungen und melden ihre Vorfälle. Für die Leitung gilt Paragraf 38 des BSI-Gesetzes, nicht delegierbar. Und wer Kunden in Deutschland beliefert, bekommt NIS2 per Vertrag.
+
+## Was tun
+Was jetzt zu tun ist. Betroffenheit prüfen, registrieren, Maßnahmen umsetzen, Meldungen vorbereiten, Lieferanten verpflichten. ARGOS prüft es fortlaufend, mit Sonden an den realen Systemen und Nachweisen für Prüfer und Kunden. NIS2: Cybersicherheit muss man nachweisen.
+
+
+# Data Act und DGA in 4 Minuten: Deutschland: eine Behörde mit Biss
+URL: https://argos.softwareinabox.eu/de/vorschriften/data-act-dga/
+
+## Wem gehören sie?
+Dein Traktor erzeugt Daten. Deine Maschinen auch. Dein Aufzug, dein Auto, dein Zähler. Doch die Daten behält der Hersteller. Wem gehören sie eigentlich?
+
+## Die Verordnung
+Der europäische Data Act gilt in der ganzen Union seit dem 12. September 2025. Nutzer vernetzter Produkte haben das Recht, auf ihre Daten zuzugreifen, einfach, sicher und kostenlos, und sie mit Dritten zu teilen. Und ab dem 12. Januar 2027 darf kein Cloud-Anbieter mehr für den Wechsel kassieren.
+
+## In Deutschland
+In Deutschland gibt es bereits eine Behörde mit Biss. Das Durchführungsgesetz gilt seit Mai 2026. Die Bundesnetzagentur ist zentrale Anlaufstelle. Für personenbezogene Daten ist die Bundesbeauftragte zuständig, nicht die Länder. Seit Mai gingen mehr als 700 Beschwerden ein. Und die Behörde kann auch von Amts wegen tätig werden.
+
+## Data Act
+Der Data Act und der Data Governance Act bilden den europäischen Rahmen für Datenzugang und Datenteilung. Industriedaten gehören nicht mehr automatisch dem Hersteller.
+
+## Pflichten
+Was er vom Hersteller verlangt. Produkte so gestalten, dass Nutzer auf ihre Daten zugreifen. Vor Vertragsschluss informieren, welche Daten entstehen und wie man zugreift. Mit Dritten nach Wahl des Nutzers teilen, zu fairen Bedingungen. Und Geschäftsgeheimnisse mit vereinbarten Maßnahmen schützen. Nicht personenbezogene Daten nur wie mit dem Nutzer vereinbart.
+
+## Der DGA
+Der Data Governance Act ergänzt das Bild. Weiterverwendung geschützter Daten des öffentlichen Sektors. Neutrale, registrierte Datenvermittlungsdienste. Und Datenaltruismus für das Gemeinwohl. Der Digital-Omnibus will ihn in den Data Act integrieren.
+
+## Termine
+Die Termine. 24. September 2023: Der Data Governance Act gilt. 12. September 2025: Der Data Act gilt. 12. September 2026: Datenzugang ab Design. Und 12. Januar 2027: Schluss mit Wechselentgelten in der Cloud.
+
+## Europa
+In Europa ist die Karte uneinheitlich. Deutschland: die Bundesnetzagentur, mit mehr als 700 Beschwerden. Die Niederlande, mit Gesetz und Behörde. Dänemark, wo nur Gerichte Bußgelder verhängen. Frankreich: Cloud-Ausstieg schon für null Euro. Belgien bereitet seine Behörde vor. Und Spanien, Portugal und Italien sind noch ohne Behörde.
+
+## Die BNetzA
+In Deutschland bündelt die Bundesnetzagentur Daten, Cloud und KI. Hersteller, Anbieter, Nutzer und Dritte können sich beschweren. Gegen ihre Entscheidungen geht es vor die Verwaltungsgerichte. Und wer aus dem Ausland nach Deutschland liefert, muss hier antworten.
+
+## Was tun
+Was jetzt zu tun ist. Datenblätter je Produkt, ein Verfahren für Zugangsanfragen, faire Verträge und ein Plan für den Cloud-Ausstieg. ARGOS prüft, ob der Zugang wirklich funktioniert, mit Tests an den realen Systemen und Nachweisen für Kunden und Behörde. Data Act: Daten im Dienst derer, die sie erzeugen.
+
+
+# C5 und ISO in 4 Minuten: Ein Nachweis ist kein Formular
+URL: https://argos.softwareinabox.eu/de/vorschriften/c5-iso-27001/
+
+## Die Ausschreibung
+Eine öffentliche Ausschreibung. Ein Cloud-Dienst. Ein tadelloses Angebot. Und eine Zeile in den Vergabeunterlagen. Haben Sie ein C5-Testat?
+
+## C5
+In Deutschland heißt der Maßstab für Cloud-Sicherheit C5, der Kriterienkatalog des BSI. Öffentliche Auftraggeber und regulierte Kunden verlangen ihn, solange es kein europäisches Cloud-Schema gibt. Ohne Testat bleiben viele Türen zu.
+
+## Der Nachweis
+Und ein Nachweis ist kein Formular. Den Geltungsbereich festlegen. Die Risiken analysieren. Jede Maßnahme in der Erklärung zur Anwendbarkeit begründen. Ein unabhängiges Audit bestehen. Und es regelmäßig erneuern.
+
+## Der Rahmen
+Neben C5 steht der IT-Grundschutz des BSI und die internationale Norm ISO 27001, ergänzt um ISO 27701 für den Datenschutz. Das ist der Maßstab, bis das europäische Cloud-Schema kommt.
+
+## ISMS-Kreislauf
+Ein Managementsystem für Informationssicherheit folgt einem Kreislauf. Kontext und Geltungsbereich. Risikobewertung und Behandlung. Umsetzung der Maßnahmen. Und Audit und kontinuierliche Verbesserung. NIS2-Einrichtungen melden erhebliche Vorfälle dem BSI.
+
+## 93 Maßnahmen
+Die ISO 27001 enthält 93 Maßnahmen in vier Themen. Organisatorische Maßnahmen. Personenbezogene Maßnahmen. Physische Maßnahmen. Und technologische Maßnahmen. Der IT-Grundschutz übersetzt sie in konkrete Bausteine.
+
+## Nachweise
+Die Nachweise im Überblick. ISO 27001: das Managementsystem für Informationssicherheit. ISO 27701: das Managementsystem für den Datenschutz. C5: das Testat für Cloud-Dienste. Und das europäische Schema, noch in Verhandlung.
+
+## Wer verlangt es
+Wer verlangt es? Bund, Länder und Kommunen. Kritische Infrastrukturen und NIS2-Einrichtungen. Banken und Versicherungen. Kliniken und Gesundheitswesen. Und Unternehmen, die Cloud-Dienste einkaufen.
+
+## Das BSI
+Dahinter steht das BSI, auch als nationale Zertifizierungsbehörde. Es veröffentlicht C5 und den IT-Grundschutz. Unabhängige Prüfer erstellen die Testate. Und in Europa verhandelt man über das neue Cybersicherheitsgesetz und das Cloud-Schema.
+
+## Was tun
+Was jetzt zu tun ist. Geltungsbereich festlegen, Risiken bewerten, das Testat planen und wissen, wo die sensiblen Daten liegen. ARGOS pflegt Erklärung zur Anwendbarkeit und Nachweise, und verknüpft sie mit NIS2, DSGVO und KI-Verordnung, ohne Doppelarbeit. C5 und ISO: Vertrauen, das man nachweisen kann.
+

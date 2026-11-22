@@ -1,0 +1,208 @@
+# EU-regler på 4 minutter · ARGOS
+
+Fulde transskriptioner af de animerede præsentationer. Status: november 2026. Generel information, ikke juridisk rådgivning.
+
+
+# GDPR på 4 minutter: Der gives oftest bøder for det grundlæggende
+URL: https://argos.softwareinabox.eu/da/regler/gdpr/
+
+## Små fejl
+En e-mail til den forkerte modtager. En backup, som ingen slettede. Data uden for Europa. Tilsyneladende uskyldigt. Indtil klagen kommer.
+
+## Bøderne
+Databeskyttelsesforordningen har gældt siden 2018, med bøder op til tyve millioner euro eller fire procent af den globale omsætning. I Danmark suppleres den af databeskyttelsesloven. Datatilsynet fører tilsyn, men bøderne gives af domstolene.
+
+## Hvad straffes
+Der gives oftest bøder for det grundlæggende. Behandling uden klart retsgrundlag. En fortegnelse, der ikke svarer til virkeligheden. Data, der gemmes for længe. Databehandlere uden kontrol. Og sikkerhed, der kun findes på papiret.
+
+## GDPR
+GDPR er fundamentet for al datastyring i Europa. Det er ikke nok at sige, at man overholder reglerne. Man skal kunne bevise det.
+
+## Hvad den kræver
+Hvad den kræver i dag. Et retsgrundlag og gennemsigtighed for hver behandling. En fortegnelse og, ved høj risiko, en konsekvensanalyse. Databeskyttelse gennem design, og en aftale med hver databehandler. Og anmeldelse af brud inden for 72 timer. Overførsler uden for EØS, altid med garantier.
+
+## Digital omnibus
+Og hvad der kommer: den digitale omnibus, stadig under forhandling. Den ville røre ved begrebet personoplysning, men Rådet bremser. Den ville anerkende legitim interesse for AI. Og kun brud med høj risiko skulle anmeldes, inden for 96 timer. Men det er ikke lov: i dag gælder GDPR, som den er.
+
+## Datoer
+De vigtige datoer. 25. maj 2018: GDPR gælder. 1. januar 2026: den nye procesforordning træder i kraft. 2. april 2027: den gælder for nye grænseoverskridende sager. Og udgangen af 2027: forenklingen afsluttet.
+
+## Kæden
+Hvert led har sin rolle. Producenten: databeskyttelse gennem design. Grossisten: aftaler om support. Integratoren: foranstaltninger og underdatabehandlere. Og slutkunden: retsgrundlag, fortegnelse og konsekvensanalyser.
+
+## I Danmark
+I Danmark fører Datatilsynet tilsyn med GDPR. Det indstiller til bøde, men det er domstolene, der idømmer den. Databeskyttelsesloven tilpasser GDPR til dansk ret. Og ved Data Act tager Datatilsynet sig fortsat af personoplysninger.
+
+## Hvad gør man
+Hvad gør man nu. Overhold GDPR i dag, styr brud på datasikkerheden og sikr træningen af AI. ARGOS beviser det i stedet for at påstå det: en reel fortegnelse, konsekvensanalyser og bevis for hver foranstaltning. GDPR: at overholde er at kunne bevise.
+
+
+# EHDS på 4 minutter: For hospitaler og producenter
+URL: https://argos.softwareinabox.eu/da/regler/ehds/
+
+## Skadestuen
+En patient kommer på en skadestue i udlandet. Hendes journal er derhjemme. Hendes prøvesvar, i et andet system. Hendes medicin, på papir. Og lægen beslutter i blinde.
+
+## Forordningen
+Det europæiske sundhedsdataområde vil ændre det. En forordning med 105 artikler, i kraft siden marts 2025. Den giver alle kontrol over egne sundhedsdata og gør journaler udvekslingsbare. Bøderne kan nå tyve millioner euro.
+
+## Hvad ændres
+For hospitaler og producenter ændrer meget sig. Patienten ser sine data med det samme, og hvem der har set dem. Journalsystemer bliver produkter med CE-mærkning. Udveksling sker i et fælles europæisk format. Genbrug kun med tilladelse. Og al adgang logges.
+
+## EHDS
+EHDS er Unionens første fælles sektorielle dataområde. Fra låste data til data, der rejser med patienten.
+
+## Sådan virker det
+Sådan virker det. Primær anvendelse: patienten ser, supplerer, begrænser og deler sine data, også i udlandet. Reguleret produkt: interoperabilitet og adgangslog, med CE-mærkning. Sekundær anvendelse: adgangsorganer giver tilladelse til forskning og AI. I sikre miljøer, med anonymiserede data. Og aldrig for at diskriminere eller genidentificere nogen.
+
+## Prioriterede data
+De prioriterede data kommer i to grupper. Først patientresuméet, e-recepten og den elektroniske udlevering. Derefter billeder og laboratoriesvar, og udskrivningsbreve. Alt i det europæiske udvekslingsformat.
+
+## Tidsplan
+Tidsplanen er lang, men den er i gang. 26. marts 2027: generel anvendelse. 2029: den første datagruppe og start på sekundær anvendelse. 2031: den anden gruppe. Og 2035: de sidste faser.
+
+## Rettigheder
+Patienten får rettigheder. Øjeblikkelig og gratis adgang. Supplere og kræve berigtigelse. Tage sine data med, også til udlandet. Bestemme, hvem der ser hvad. Og vide, hvem der har kigget, og hvornår.
+
+## I Danmark
+I Danmark er sundhed punktum d k allerede borgernes indgang til egne sundhedsdata. Sundhedsdatastyrelsen stiller registerdata til rådighed for forskning. Et fælles adgangsorgan skal udstede tilladelserne. Og EHDS harmoniserer reglerne i hele Europa.
+
+## Hvad gør man
+Hvad gør man nu. Kortlæg systemerne, forbered interoperabilitet og adgangslog, og ordn data til genbrug. ARGOS tjekker EHDS og GDPR på samme tid, med aktive tests på de rigtige systemer, uden at data forlader hospitalet. EHDS: sundhedsdata i patientens tjeneste.
+
+
+# AI-forordningen på 4 minutter: Danmark gik forrest
+URL: https://argos.softwareinabox.eu/da/regler/ai-forordningen/
+
+## Usynlige beslutninger
+En algoritme sorterer dit CV fra. En anden afgør dit lån. En tredje genkender dit ansigt i lufthavnen. Ingen har forklaret dig det. Fra nu af skal nogen gøre det.
+
+## Bøderne
+Den europæiske AI-forordning giver bøder op til femogtredive millioner euro, eller syv procent af den globale omsætning. Siden august 2026: oplys om AI og uddan medarbejderne. Og Danmark var det første land med en national lov.
+
+## I Danmark
+Danmark gik forrest. Lov nummer 467 af maj 2025 var den første nationale lov i EU. Digitaliseringsstyrelsen er markedsovervågning og kontaktpunkt. Datatilsynet fører tilsyn med personoplysninger. Medarbejderne skal informeres om AI på arbejdspladsen. Og den, der ændrer et systems formål, bliver selv udbyder.
+
+## AI Act
+AI-forordningen, tilpasset af den digitale omnibus, inddeler kunstig intelligens efter risiko. Klassificeringen afgør alt. Efter formål, ikke teknologi.
+
+## Fire niveauer
+Fire niveauer. Uacceptabel: forbudt, som social pointgivning. Høj risiko: job, kredit, uddannelse, biometri. Gennemsigtighed: oplys om AI og mærk syntetisk indhold. Og minimal risiko, det meste brug i virksomheder. For alle gælder kravet om AI-kompetencer.
+
+## Høj risiko
+Høj risiko kræver et komplet styringssystem. Risikostyring gennem hele livscyklussen. Repræsentative data, uden skævheder. Teknisk dokumentation og automatisk logning. Og menneskeligt tilsyn, robusthed og cybersikkerhed. Artikel 9 til 15 i forordningen.
+
+## Datoer
+Datoerne, efter omnibussen. 2. august 2026: generel anvendelse og gennemsigtighed. 2. december 2026: slut på overgangsperioden for mærkning. 2. december 2027: høj risiko i bilag tre. Og 2. august 2028: AI i regulerede produkter.
+
+## Europa
+I Europa går hvert land i sit eget tempo. Tyskland har sin lov i kraft. Italien også. Danmark var først. Nederlandene har et udkast i høring. Frankrig debatterer i parlamentet. Og Spanien, Portugal og Belgien venter stadig.
+
+## Myndigheder
+I Danmark er Digitaliseringsstyrelsen den centrale myndighed for AI. Datatilsynet og sektormyndighederne fører tilsyn på deres områder. Loven fastsætter sanktionerne. Og danske virksomheder har allerede en myndighed at spørge.
+
+## Hvad gør man
+Hvad gør man nu. Kortlæg og klassificér AI-systemerne, sørg for gennemsigtighed, uddan og informér medarbejderne. ARGOS beviser det: logge, menneskeligt tilsyn og sporbare afgørelser, med AI der kører lokalt. AI-forordningen: AI foreslår, mennesket beslutter.
+
+
+# NIS2 på 4 minutter: Danmark: NIS2 er allerede lov
+URL: https://argos.softwareinabox.eu/da/regler/nis2/
+
+## Angrebet
+Mandag, klokken seks om morgenen. Systemerne starter ikke. Filerne er krypteret. Leverandøren svarer ikke. Hvem underretter hvem, og hvor hurtigt?
+
+## Bøderne
+NIS2-direktivet giver bøder op til ti millioner euro eller to procent af omsætningen for væsentlige enheder. Og det kræver, at hændelser anmeldes i tre trin: 24 timer, 72 timer og en måned. Ledelsen godkender foranstaltningerne og hæfter for dem.
+
+## I Danmark
+I Danmark er NIS2 allerede lov. Cybersikkerhedsloven trådte i kraft 1. juli 2025. Styrelsen for Samfundssikkerhed koordinerer. Tilsynet ligger hos sektormyndighederne. Omkring 6.000 enheder er omfattet. Og registreringsfristen er overskredet.
+
+## NIS2
+NIS2 er det europæiske cybersikkerhedsdirektiv for væsentlige sektorer og deres forsyningskæde. At vente beskytter ikke. Hele kæden hæfter.
+
+## Fire trin
+Hvad det kræver, i fire trin. Afklar, om man er væsentlig eller vigtig. Registrér sig på virk punktum d k. Gennemfør de ti foranstaltninger, godkendt af ledelsen. Og anmeld væsentlige hændelser til tiden. Leverandørsikkerhed er en af de ti foranstaltninger.
+
+## Ti foranstaltninger
+Af de ti foranstaltninger gør fire forskellen. Risikoanalyse og sikkerhedspolitikker. Hændelseshåndtering og driftskontinuitet. Sikkerhed i forsyningskæden. Og multifaktorgodkendelse og kryptering. Artikel 21 i direktivet.
+
+## Datoer
+De danske datoer. 6. maj 2025: cybersikkerhedsloven vedtages. 1. juli 2025: den træder i kraft. Derefter: registrering på virk punktum d k. Og i dag: vejledninger fra myndighederne og et NIS2-tjek.
+
+## Europa
+I Europa er NIS2 allerede lov i mange lande. Tyskland: 29.500 enheder, ledelsen hæfter. Italien: basisforanstaltninger kræves. Belgien: CyberFundamentals. Portugal: ledere hæfter. Nederlandene: uden overgang. Danmark: tilsyn pr. sektor. Frankrig og Spanien er stadig uden lov.
+
+## Myndighederne
+I Danmark koordinerer Styrelsen for Samfundssikkerhed. Sektormyndighederne fører tilsyn i hver sektor. Registrering og anmeldelser sker på virk punktum d k. Og den, der leverer til danske kunder, får NIS2 via kontrakten.
+
+## Hvad gør man
+Hvad gør man nu. Afklar omfanget, registrér, gennemfør foranstaltningerne, forbered anmeldelser og forpligt leverandørerne. ARGOS tjekker det løbende, med sonder på de rigtige systemer og bevis til revisor og kunde. NIS2: cybersikkerhed skal bevises.
+
+
+# Data Act og DGA på 4 minutter: Danmark: tilsyn hos myndigheden, bøder ved domstolene
+URL: https://argos.softwareinabox.eu/da/regler/data-act-dga/
+
+## Hvem ejer?
+Din traktor laver data. Dine maskiner også. Din elevator, din bil, din måler. Men producenten beholder dem. Hvem ejer dem egentlig?
+
+## Forordningen
+Den europæiske dataforordning, Data Act, gælder i hele Unionen siden 12. september 2025. Den, der bruger et forbundet produkt, får gratis adgang til sine data og kan dele dem. Og fra 12. januar 2027 må ingen cloududbyder tage betaling for at skifte.
+
+## I Danmark
+I Danmark fører myndigheden tilsyn, og domstolene giver bøderne. Loven trådte i kraft i december 2025. Digitaliseringsstyrelsen er tilsynsmyndighed. Datatilsynet tager sig af personoplysninger. Bøder kan kun idømmes af domstolene. Og borgere og virksomheder kan allerede klage.
+
+## Data Act
+Data Act og forordningen om datastyring udgør den europæiske ramme for adgang til og deling af data. Industrielle data tilhører ikke længere automatisk producenten.
+
+## Forpligtelser
+Hvad den kræver af producenten. Design produktet, så brugeren kan få adgang til sine data. Informér før kontrakten om, hvilke data der dannes. Del med den tredjepart, brugeren vælger, på fair vilkår. Og beskyt forretningshemmeligheder med aftalte foranstaltninger. Ikke-personlige data kun som aftalt med brugeren.
+
+## DGA
+Forordningen om datastyring fuldender billedet. Genbrug af beskyttede offentlige data. Neutrale, registrerede dataformidlere. Og dataaltruisme, til almenvellet. Den digitale omnibus foreslår at lægge den ind i Data Act.
+
+## Datoer
+Datoerne. 24. september 2023: forordningen om datastyring gælder. 12. september 2025: Data Act gælder. 12. september 2026: adgang fra designet. Og 12. januar 2027: slut med skiftegebyrer i skyen.
+
+## Europa
+I Europa er kortet ujævnt. Tyskland: over 700 klager. Nederlandene: lov og myndighed. Danmark: bøder kun ved domstolene. Frankrig: skift fra skyen for nul euro. Belgien forbereder sin myndighed. Og Spanien, Portugal og Italien er stadig uden myndighed.
+
+## Myndigheden
+I Danmark er Digitaliseringsstyrelsen tilsynsmyndighed for Data Act. Den kan påbyde og vejlede. Bøderne afgøres ved domstolene. Og man kan klage, hvis man for eksempel ikke får adgang til data fra sit smart-tv eller sin bil.
+
+## Hvad gør man
+Hvad gør man nu. Datablade pr. produkt, en procedure for adgangsanmodninger, fair kontrakter og en exitplan for skyen. ARGOS tjekker, om adgangen virkelig fungerer, med tests på de rigtige systemer og bevis til kunden eller dommeren. Data Act: data i tjeneste for dem, der skaber dem.
+
+
+# ISO for staten på 4 minutter: Bevis er ikke en formular
+URL: https://argos.softwareinabox.eu/da/regler/iso-27001/
+
+## Udbuddet
+Et offentligt udbud. En cloudtjeneste. Et perfekt tilbud. Og én linje i udbudsmaterialet. Arbejder I efter ISO 27001?
+
+## ISO 27001
+I Danmark er standarden for staten ISO 27001. Alle statslige myndigheder skal implementere den, og der gælder tekniske minimumskrav. Uden bevis bliver mange døre lukket.
+
+## Beviset
+Og bevis er ikke en formular. Fastlæg omfanget. Analysér risiciene. Begrund hver foranstaltning i anvendelseserklæringen. Bestå en uafhængig audit. Og gentag den jævnligt.
+
+## Rammen
+ISO 27001 suppleres af ISO 27701 for privatliv. Det er standarden, indtil der kommer en europæisk cloudordning.
+
+## ISMS-cyklus
+Et ledelsessystem for informationssikkerhed følger en cyklus. Kontekst og omfang. Risikovurdering og behandling. Gennemførelse af foranstaltningerne. Og audit og løbende forbedring.
+
+## 93 kontroller
+ISO 27001 indeholder 93 kontroller i fire temaer. Organisatoriske. Personrelaterede. Fysiske. Og teknologiske.
+
+## Beviserne
+Beviserne på et øjeblik. ISO 27001: ledelsessystemet for informationssikkerhed. ISO 27701: ledelsen af privatliv. Tekniske minimumskrav: grundlaget i staten. Og den europæiske ordning, stadig under forhandling.
+
+## Hvem kræver det
+Hvem kræver det? Staten og kommunerne. NIS2-enheder. Banker og forsikring. Sundhedsvæsenet. Og virksomheder, der køber cloud.
+
+## Sikkerhedsstyrelsen
+Bag det står Sikkerhedsstyrelsen, den nationale certificeringsmyndighed. Danmark har ingen egen cloudcertificering som C 5. Kunderne beder derfor om ISO 27001. Og Europa forhandler en ny cybersikkerhedsforordning og cloudordningen.
+
+## Hvad gør man
+Hvad gør man nu. Fastlæg omfanget, vurdér risiciene, planlæg certificeringen og vid, hvor de følsomme data ligger. ARGOS holder anvendelseserklæring og beviser opdateret, og kobler dem til NIS2, GDPR og AI-forordningen, uden dobbeltarbejde. ISO for staten: tillid, der kan bevises.
+

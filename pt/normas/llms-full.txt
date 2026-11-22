@@ -1,0 +1,208 @@
+# A regulamentação europeia em 4 minutos · ARGOS
+
+Transcrições completas das apresentações animadas. Situação a novembro de 2026. Informação geral, não constitui aconselhamento jurídico.
+
+
+# RGPD em 4 minutos: O que mais se sanciona é o essencial
+URL: https://argos.softwareinabox.eu/pt/normas/rgpd/
+
+## Pequenos erros
+Um e-mail para o destinatário errado. Uma cópia de segurança que ninguém apagou. Dados fora da Europa. Aparentemente inofensivo. Até chegar a queixa.
+
+## As coimas
+O RGPD aplica-se desde 2018, com coimas até vinte milhões de euros ou quatro por cento do volume de negócios mundial. Em Portugal, é completado pela Lei 58 de 2019. E quem fiscaliza é a CNPD.
+
+## O que se sanciona
+O que mais se sanciona é o essencial. Tratamentos sem fundamento jurídico claro. Um registo que não reflete a realidade. Dados guardados tempo demais. Subcontratantes sem controlo. E segurança que só existe no papel.
+
+## RGPD
+O RGPD é a base de toda a governação de dados na Europa. Declarar que se cumpre não chega. É preciso poder prová-lo.
+
+## O que exige
+O que exige hoje. Fundamento jurídico e transparência em cada tratamento. Um registo e, se o risco for elevado, uma avaliação de impacto. Privacidade desde a conceção, e um contrato com cada subcontratante. E notificar as violações em 72 horas. As transferências fora do EEE, sempre com garantias.
+
+## Omnibus digital
+E o que vem aí: o Omnibus digital, ainda em negociação. Tocaria no conceito de dado pessoal, mas o Conselho trava. Reconheceria o interesse legítimo para a IA. E só as violações de risco elevado seriam notificadas, em 96 horas. Mas não é lei: hoje cumpre-se o RGPD tal como está.
+
+## Datas
+As datas-chave. 25 de maio de 2018: o RGPD aplica-se. 1 de janeiro de 2026: entra em vigor o novo regulamento processual. 2 de abril de 2027: aplica-se aos novos casos transfronteiriços. E final de 2027: a simplificação concluída.
+
+## A cadeia
+Cada elo tem o seu papel. O fabricante: privacidade desde a conceção. O grossista: contratos de suporte. O integrador: medidas e subcontratantes. E o cliente final: fundamentos, registo e avaliações de impacto.
+
+## Em Portugal
+Em Portugal fiscaliza a Comissão Nacional de Proteção de Dados. A Lei 58 de 2019 adapta o RGPD ao direito português. A CNPD acompanha também a inteligência artificial. E no Data Act continua competente para os dados pessoais.
+
+## O que fazer
+O que fazer agora. Cumprir o RGPD atual, controlar as violações de dados e proteger o treino da IA. O ARGOS prova-o, em vez de o declarar: um registo real, avaliações de impacto e uma prova por medida. RGPD: cumprir é poder prová-lo.
+
+
+# EHDS em 4 minutos: Para hospitais e fabricantes
+URL: https://argos.softwareinabox.eu/pt/normas/ehds/
+
+## Urgências
+Uma doente chega a umas urgências no estrangeiro. O seu processo ficou em casa. Os exames, noutro sistema. A medicação, em papel. E o médico decide às cegas.
+
+## O regulamento
+O Espaço Europeu de Dados de Saúde quer mudar isso. Um regulamento de 105 artigos, em vigor desde março de 2025. Dá a cada pessoa o controlo dos seus dados de saúde, e torna os registos interoperáveis. As coimas chegam aos vinte milhões de euros.
+
+## O que muda
+Para hospitais e fabricantes, muda muito. O doente vê os seus dados de imediato, e quem lhes acedeu. Os sistemas de registo de saúde eletrónico passam a ter marcação CE. O intercâmbio faz-se num formato europeu comum. A reutilização, só com autorização. E cada acesso fica registado.
+
+## EHDS
+O EHDS é o primeiro espaço comum de dados setorial da União. De dados fechados a dados que viajam com o doente.
+
+## Como funciona
+Como funciona. Utilização primária: o doente consulta, completa, limita e partilha os seus dados, também no estrangeiro. Produto regulado: interoperabilidade e registo de acessos, com marcação CE. Utilização secundária: organismos de acesso autorizam investigação e IA. Em ambientes seguros, com dados anonimizados. E nunca para discriminar ou reidentificar ninguém.
+
+## Dados prioritários
+Os dados prioritários chegam em dois grupos. Primeiro o resumo do doente, a receita e a dispensa eletrónicas. Depois as imagens e as análises, e as notas de alta. Tudo no formato europeu de intercâmbio.
+
+## Calendário
+O calendário é longo, mas já começou. 26 de março de 2027: aplicação geral. 2029: o primeiro grupo de dados e o início da utilização secundária. 2031: o segundo grupo. E 2035: as últimas fases.
+
+## Direitos
+O doente ganha direitos. Acesso imediato e gratuito. Completar e pedir retificação. Levar os dados consigo, também para o estrangeiro. Decidir quem vê o quê. E saber quem consultou, e quando.
+
+## Em Portugal
+Em Portugal, o Registo de Saúde Eletrónico e a SPMS já ligam o Serviço Nacional de Saúde. A receita sem papel é uma realidade há anos. Um anteprojeto de Lei da Saúde Digital esteve em consulta pública. E o EHDS harmonizará as regras em toda a Europa.
+
+## O que fazer
+O que fazer agora. Inventariar os sistemas, preparar a interoperabilidade e o registo de acessos, organizar os dados para reutilização. O ARGOS verifica o EHDS e o RGPD ao mesmo tempo, com testes ativos nos sistemas reais, sem que os dados saiam do hospital. EHDS: o dado de saúde ao serviço do doente.
+
+
+# Regulamento da IA em 4 minutos: Portugal: aplicação direta, lei pendente
+URL: https://argos.softwareinabox.eu/pt/normas/regulamento-ia/
+
+## Decisões invisíveis
+Um algoritmo descarta o teu currículo. Outro decide o teu crédito. Outro reconhece a tua cara no aeroporto. Ninguém te explicou. A partir de agora, alguém terá de o fazer.
+
+## As coimas
+O regulamento europeu da IA prevê coimas até trinta e cinco milhões de euros, ou sete por cento do volume de negócios mundial. Desde agosto de 2026: assinalar a IA e formar as pessoas. E Portugal ainda não tem lei nacional.
+
+## Em Portugal
+Em Portugal, o regulamento aplica-se diretamente. O Governo anunciou a ANACOM como autoridade de fiscalização. Mas ainda não há diploma de execução. A CNPD mantém-se competente para os dados pessoais. O Código do Trabalho já obriga a informar sobre algoritmos e IA. E quem altera a finalidade de um sistema passa a ser fornecedor.
+
+## AI Act
+O regulamento da IA, ajustado pelo Omnibus digital, classifica a inteligência artificial por níveis de risco. A classificação decide tudo. Pela finalidade, não pela tecnologia.
+
+## Quatro níveis
+Quatro níveis. Inaceitável: proibido, como a classificação social. Risco elevado: emprego, crédito, educação, biometria. Transparência: assinalar a IA e marcar conteúdos sintéticos. E risco mínimo, a maioria dos usos nas empresas. Para todos, a obrigação de literacia em IA.
+
+## Risco elevado
+O risco elevado exige um sistema de gestão completo. Gestão de riscos em todo o ciclo de vida. Dados representativos, sem enviesamentos. Documentação técnica e registo automático. E supervisão humana, robustez e cibersegurança. Artigos 9 a 15 do regulamento.
+
+## Datas
+As datas, depois do Omnibus. 2 de agosto de 2026: aplicação geral e transparência. 2 de dezembro de 2026: fim do período de tolerância para a marcação. 2 de dezembro de 2027: o risco elevado do anexo três. E 2 de agosto de 2028: a IA em produtos regulados.
+
+## Europa
+Na Europa, cada país tem o seu ritmo. A Alemanha tem a sua lei em vigor. A Itália também. A Dinamarca foi a primeira. Os Países Baixos têm o projeto em consulta. A França debate-o no Parlamento. E Espanha, Portugal e Bélgica ainda esperam.
+
+## Autoridades
+Em Portugal, a ANACOM será a fiscalização do mercado e o ponto de contacto único. A CNPD continua a vigiar os dados pessoais. As autoridades setoriais acompanham a banca e os seguros. E as coimas nacionais chegarão com o diploma de execução.
+
+## O que fazer
+O que fazer agora. Inventariar e classificar os sistemas, garantir a transparência, formar e informar os trabalhadores. O ARGOS prova-o: registos, supervisão humana e veredictos rastreáveis, com IA a correr localmente. Regulamento da IA: a IA propõe, a pessoa decide.
+
+
+# NIS2 em 4 minutos: Portugal: a NIS2 já é lei
+URL: https://argos.softwareinabox.eu/pt/normas/nis2/
+
+## O ataque
+Segunda-feira, seis da manhã. Os sistemas não arrancam. Os ficheiros estão cifrados. O fornecedor não responde. Quem avisa quem, e em quanto tempo?
+
+## As coimas
+A diretiva NIS2 prevê coimas até dez milhões de euros ou dois por cento do volume de negócios para as entidades essenciais. E obriga a notificar incidentes em três tempos: 24 horas, 72 horas e um mês. Os órgãos de gestão aprovam as medidas e respondem por elas.
+
+## Em Portugal
+Em Portugal, a NIS2 já é lei. O Decreto-Lei 125 de 2025 está em vigor desde abril de 2026. Substitui a Lei 46 de 2018. O CNCS concretizou-o com o Regulamento 756 de 2026. Os gestores respondem pessoalmente. E os clientes já o exigem nos contratos.
+
+## NIS2
+A NIS2 é a diretiva europeia de cibersegurança dos setores essenciais, e da sua cadeia de abastecimento. Esperar não protege. Toda a cadeia responde.
+
+## Quatro passos
+O que exige, em quatro passos. Qualificar-se: entidade essencial ou importante. Registar-se no CNCS. Aplicar as dez medidas, aprovadas pela gestão. E notificar os incidentes nos prazos. A segurança dos fornecedores é uma das dez medidas.
+
+## Dez medidas
+Das dez medidas, quatro fazem a diferença. Análise de riscos e políticas de segurança. Gestão de incidentes e continuidade do negócio. Segurança da cadeia de abastecimento. E autenticação multifator e cifragem. Artigo 21 da diretiva.
+
+## Datas
+As datas portuguesas. 17 de outubro de 2024: o prazo de transposição. 3 de abril de 2026: entra em vigor o novo regime. 2026: o Regulamento 756 do CNCS. E hoje: qualificar, registar, aplicar e notificar.
+
+## Europa
+Na Europa, a NIS2 já é lei em muitos países. Alemanha: 29 500 entidades, gestão responsável. Itália: medidas de base exigíveis. Bélgica: CyberFundamentals. Portugal: gestores responsáveis. Países Baixos: sem transição. Dinamarca: supervisão por setor. França e Espanha ainda sem lei.
+
+## O CNCS
+Em Portugal, o Centro Nacional de Cibersegurança é a autoridade, com o CERT ponto PT. A ANACOM acompanha o setor das comunicações. A qualificação, o registo e as coimas são do CNCS. E há responsabilidade pessoal por dolo ou culpa grave.
+
+## O que fazer
+O que fazer agora. Verificar o âmbito, registar-se, aplicar as medidas, preparar as notificações e envolver os fornecedores. O ARGOS verifica-o em contínuo, com sondas nos sistemas reais e provas para o auditor e o cliente. NIS2: a cibersegurança prova-se.
+
+
+# Data Act e DGA em 4 minutos: Portugal: obriga, mas falta quem fiscalize
+URL: https://argos.softwareinabox.eu/pt/normas/data-act-dga/
+
+## De quem?
+O teu trator produz dados. As tuas máquinas também. O teu elevador, o teu carro, o teu contador. Mas é o fabricante que os guarda. De quem são, afinal?
+
+## O regulamento
+O Regulamento Europeu dos Dados, o Data Act, aplica-se em toda a União desde 12 de setembro de 2025. Quem usa um produto conectado pode aceder gratuitamente aos seus dados, e partilhá-los. E desde 12 de janeiro de 2027, nenhum fornecedor de nuvem pode cobrar a saída.
+
+## Em Portugal
+Em Portugal, o regulamento obriga, mas falta quem o fiscalize. Não há autoridade designada para o Data Act. Sem autoridade, não há coimas. A CNPD vigia só os dados pessoais. Os direitos já se podem exigir nos tribunais. E a ANACOM já é autoridade da DGA.
+
+## Data Act
+O Data Act e o Regulamento de Governação de Dados formam o quadro europeu de acesso e partilha de dados. O dado industrial já não pertence, por defeito, ao fabricante.
+
+## Obrigações
+O que exige ao fabricante. Desenhar o produto para que o utilizador aceda aos seus dados. Informar antes do contrato que dados gera. Partilhá-los com o terceiro que o utilizador escolher, em condições justas. E proteger os segredos comerciais com medidas acordadas. Os dados não pessoais, só como acordado com o utilizador.
+
+## A DGA
+O Regulamento de Governação de Dados completa o quadro. Reutilização de dados públicos protegidos. Intermediários de dados neutros e registados. E altruísmo de dados, para o interesse geral. O Omnibus digital propõe integrá-lo no Data Act.
+
+## Datas
+As datas. 24 de setembro de 2023: aplica-se o Regulamento de Governação de Dados. 12 de setembro de 2025: aplica-se o Data Act. 12 de setembro de 2026: acesso desde a conceção. E 12 de janeiro de 2027: fim dos custos de mudança de nuvem.
+
+## Europa
+Na Europa, o mapa é desigual. Alemanha: mais de 700 queixas. Países Baixos: lei e autoridade. Dinamarca: coimas só pelos tribunais. França: saída da nuvem a zero euros. A Bélgica prepara a sua autoridade. E Espanha, Portugal e Itália ainda sem autoridade.
+
+## O juiz
+Em Portugal, enquanto não houver autoridade, o juiz faz de regulador. O utilizador a quem negam os dados pode recorrer aos tribunais. A ANACOM, autoridade da DGA e dos serviços digitais, está perto do tema. E quem vende na Alemanha já responde perante um regulador com poder sancionatório.
+
+## O que fazer
+O que fazer agora. Fichas por produto, um procedimento de acesso, contratos justos e um plano de saída da nuvem. O ARGOS verifica se o acesso funciona mesmo, com testes nos sistemas reais e provas para o cliente, ou para o juiz. Data Act: os dados ao serviço de quem os produz.
+
+
+# CNCS e ISO em 4 minutos: Uma prova não é um formulário
+URL: https://argos.softwareinabox.eu/pt/normas/qnrcs-iso-27001/
+
+## O concurso
+Um concurso público. Um serviço na nuvem. Uma proposta impecável. E uma linha no caderno de encargos. Cumpre o Quadro Nacional de Referência?
+
+## O Quadro Nacional
+Em Portugal, a referência de cibersegurança é o Quadro Nacional de Referência para a Cibersegurança, do CNCS. Não há certificação nacional para a nuvem, por isso os clientes pedem a ISO 27001. Sem prova, muitas portas ficam fechadas.
+
+## A prova
+E uma prova não é um formulário. Definir o âmbito. Analisar os riscos. Justificar cada medida na declaração de aplicabilidade. Passar uma auditoria independente. E renová-la regularmente.
+
+## O quadro
+A norma internacional ISO 27001, com a ISO 27701 para a privacidade, é a prova mais pedida. É a referência, até chegar o esquema europeu para a nuvem.
+
+## Ciclo SGSI
+Um sistema de gestão da segurança segue um ciclo. Contexto e âmbito. Avaliação e tratamento dos riscos. Implementação das medidas. E auditoria e melhoria contínua.
+
+## 93 controlos
+A ISO 27001 contém 93 controlos em quatro temas. Organizacionais. De pessoas. Físicos. E tecnológicos.
+
+## As provas
+As provas num relance. ISO 27001: o sistema de gestão da segurança. ISO 27701: a gestão da privacidade. Quadro do CNCS: a referência nacional. E o esquema europeu, ainda em negociação.
+
+## Quem o pede
+Quem o pede? A Administração Pública. As entidades NIS2. A banca e os seguros. A saúde. E as empresas que compram nuvem.
+
+## O CNCS
+Por trás está o CNCS, autoridade nacional de certificação de cibersegurança. Publica o Quadro Nacional de Referência. Avaliadores independentes fazem as auditorias ISO. E a Europa negoceia o novo regulamento de cibersegurança e o esquema para a nuvem.
+
+## O que fazer
+O que fazer agora. Definir o âmbito, avaliar os riscos, planear a certificação e saber onde estão os dados sensíveis. O ARGOS mantém a aplicabilidade e as provas em dia, e liga-as à NIS2, ao RGPD e ao regulamento da IA, sem duplicar trabalho. CNCS e ISO: confiança que se prova.
+

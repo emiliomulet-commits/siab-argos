@@ -1,0 +1,208 @@
+# La réglementation européenne en 4 minutes · ARGOS
+
+Transcriptions complètes des présentations animées. Situation à novembre 2026. Information générale, pas un conseil juridique.
+
+
+# RGPD en 4 minutes: Ce qui est le plus sanctionné, c'est l'essentiel
+URL: https://argos.softwareinabox.eu/fr-be/reglementation/rgpd/
+
+## Petites erreurs
+Un e-mail envoyé au mauvais destinataire. Une sauvegarde que personne n'a effacée. Des données hors d'Europe. En apparence anodin. Jusqu'à la plainte.
+
+## Les amendes
+Le règlement général sur la protection des données s'applique depuis 2018. Ses amendes vont jusqu'à vingt millions d'euros ou quatre pour cent du chiffre d'affaires mondial. En Belgique, il est complété par la loi du 30 juillet 2018. Et c'est l'Autorité de protection des données qui contrôle.
+
+## Ce qui est sanctionné
+On sanctionne surtout l'essentiel. Des traitements sans base légale claire. Un registre qui ne reflète pas la réalité. Des données conservées trop longtemps. Des sous-traitants sans contrôle. Et une sécurité qui n'existe que sur le papier.
+
+## RGPD
+Le RGPD est le socle de toute la gouvernance des données en Europe. Déclarer sa conformité ne suffit pas. Il faut pouvoir la prouver.
+
+## Ce qu'il exige
+Ce qu'il exige aujourd'hui. Une base légale et de la transparence pour chaque traitement. Un registre et, en cas de risque élevé, une analyse d'impact. La protection dès la conception, et un contrat avec chaque sous-traitant. Et notifier les violations sous 72 heures. Les transferts hors de l'EEE, toujours avec des garanties.
+
+## Omnibus numérique
+Ce qui arrive : l'Omnibus numérique, encore en négociation. Il toucherait à la notion de donnée personnelle, mais le Conseil freine. Il reconnaîtrait l'intérêt légitime pour l'IA. Et seules les violations à haut risque seraient notifiées, sous 96 heures. Mais ce n'est pas la loi : aujourd'hui, le RGPD s'applique tel quel.
+
+## Dates
+Les dates clés. 25 mai 2018 : le RGPD s'applique. 1er janvier 2026 : le nouveau règlement de procédure entre en vigueur. 2 avril 2027 : il s'applique aux nouveaux cas transfrontaliers. Et fin 2027 : la simplification bouclée.
+
+## La chaîne
+Chaque maillon a son rôle. Le fabricant : la protection dès la conception. Le grossiste : les contrats de support. L'intégrateur : mesures et sous-traitants. Et le client final : bases légales, registre, analyses d'impact.
+
+## En Belgique
+En Belgique, l'Autorité de protection des données veille au respect du RGPD. Elle traite surtout des plaintes individuelles. Elle peut déjà agir sur les systèmes d'IA, par le RGPD. Et elle reste compétente pour les données personnelles dans le Data Act.
+
+## Que faire
+Que faire maintenant. Respecter le RGPD actuel, maîtriser les violations de données et sécuriser l'entraînement de l'IA. ARGOS le prouve, au lieu de le déclarer : un registre réel, des analyses d'impact et une preuve par mesure. RGPD : être conforme, c'est pouvoir le prouver.
+
+
+# EHDS en 4 minutes: Pour les hôpitaux et les fabricants
+URL: https://argos.softwareinabox.eu/fr-be/reglementation/ehds/
+
+## Urgences
+Une patiente arrive aux urgences à l'étranger. Son dossier est resté chez elle. Ses examens, dans un autre système. Ses traitements, sur papier. Et le médecin décide à l'aveugle.
+
+## Le règlement
+L'espace européen des données de santé veut y mettre fin. Un règlement de 105 articles, en vigueur depuis mars 2025. Il donne à chacun le contrôle de ses données de santé, et rend les dossiers interopérables. Les amendes atteignent vingt millions d'euros.
+
+## Ce qui change
+Pour les hôpitaux et les fabricants, beaucoup change. Le patient voit ses données tout de suite, et qui y a accédé. Les logiciels de dossier médical deviennent un produit marqué CE. Les échanges se font dans un format européen commun. La réutilisation, seulement avec autorisation. Et chaque accès est journalisé.
+
+## EHDS
+L'EHDS est le premier espace commun de données sectoriel de l'Union. De données enfermées à des données qui voyagent avec le patient.
+
+## Fonctionnement
+Comment il fonctionne. Utilisation primaire : le patient consulte, complète, restreint et partage ses données, y compris à l'étranger. Produit réglementé : interopérabilité et journal des accès, avec marquage CE. Utilisation secondaire : des organismes d'accès autorisent la recherche et l'IA. Dans des environnements sécurisés, avec des données anonymisées. Et jamais pour discriminer ou réidentifier quelqu'un.
+
+## Données prioritaires
+Les données prioritaires arrivent en deux groupes. D'abord le dossier patient résumé, la prescription et la dispensation électroniques. Ensuite l'imagerie et la biologie, et les comptes rendus de sortie. Le tout dans le format européen d'échange.
+
+## Calendrier
+Le calendrier est long, mais il a commencé. 26 mars 2027 : application générale. 2029 : le premier groupe de données et le début de l'utilisation secondaire. 2031 : le second groupe. Et 2035 : les dernières phases.
+
+## Droits
+Le patient gagne des droits. Un accès immédiat et gratuit. Compléter et demander une rectification. Emporter ses données, même à l'étranger. Décider qui voit quoi. Et savoir qui a consulté, et quand.
+
+## Au niveau national
+En Belgique, la Health Data Agency est opérationnelle depuis janvier 2024. L'organisme d'accès aux données de santé existe donc déjà. Elle réunira l'autorité de santé numérique et l'organisme d'accès. Et l'EHDS harmonisera ces règles à l'échelle européenne.
+
+## Que faire
+Que faire maintenant. Inventorier les systèmes, préparer l'interopérabilité, ordonner les données. ARGOS vérifie l'EHDS et le RGPD en même temps, avec des tests actifs sur les systèmes réels, sans que les données quittent l'hôpital. EHDS : la donnée de santé au service du patient.
+
+
+# Règlement sur l'IA en 4 minutes: Belgique : application directe, loi en attente
+URL: https://argos.softwareinabox.eu/fr-be/reglementation/reglement-ia/
+
+## Décisions invisibles
+Un algorithme écarte ton CV. Un autre décide de ton crédit. Un autre reconnaît ton visage à l'aéroport. Personne ne te l'a expliqué. Désormais, quelqu'un devra le faire.
+
+## Les amendes
+Le règlement européen sur l'IA prévoit des amendes jusqu'à trente-cinq millions d'euros, ou sept pour cent du chiffre d'affaires mondial. Depuis août 2026 : signaler l'IA et former les équipes. Chaque pays organise sa surveillance.
+
+## Au niveau national
+En Belgique, le règlement s'applique directement, mais la loi manque. Le gouvernement a annoncé l'IBPT comme autorité principale. La loi qui le désigne et fixe les sanctions n'est pas encore là. L'APD peut déjà agir par le RGPD. La convention collective 39 impose d'informer et de concerter sur les nouvelles technologies. Et qui change la finalité d'un système en devient le fournisseur.
+
+## AI Act
+Le règlement sur l'IA, ajusté par l'Omnibus numérique, classe l'intelligence artificielle par niveaux de risque. La classification décide de tout. Selon la finalité, pas la technologie.
+
+## Quatre niveaux
+Quatre niveaux. Inacceptable : interdit, comme la notation sociale. Haut risque : emploi, crédit, éducation, biométrie. Transparence : signaler l'IA et marquer les contenus synthétiques. Et risque minimal, la plupart des usages en entreprise. Pour tous, l'obligation de maîtrise de l'IA.
+
+## Haut risque
+Le haut risque exige un système de gestion complet. La gestion des risques sur tout le cycle de vie. Des données représentatives, sans biais. La documentation et la journalisation. Et le contrôle humain, la robustesse et la cybersécurité. Articles 9 à 15 du règlement.
+
+## Dates
+Les dates, après l'Omnibus. 2 août 2026 : application générale et transparence. 2 décembre 2026 : fin du délai de grâce pour le marquage. 2 décembre 2027 : le haut risque de l'annexe trois. Et 2 août 2028 : l'IA intégrée aux produits réglementés.
+
+## Europe
+En Europe, chaque pays avance à son rythme. L'Allemagne a sa loi en vigueur. L'Italie aussi. Le Danemark a été le premier à légiférer. Les Pays-Bas consultent leur projet. La France en débat au Parlement. Et l'Espagne, le Portugal et la Belgique attendent encore leur loi.
+
+## Autorités
+En Belgique, plusieurs acteurs entrent en jeu : l'IBPT, annoncé comme autorité principale. Le SPF Économie assure la coordination. L'APD et l'Organe de contrôle de l'information policière veillent sur leurs domaines. Et les sanctions nationales viendront avec la loi.
+
+## Que faire
+Que faire maintenant. Inventorier et classer les systèmes, assurer la transparence, former et informer le personnel. ARGOS le prouve : journaux, contrôle humain et verdicts traçables, avec une IA qui tourne en local. Règlement IA : l'IA propose, l'humain décide.
+
+
+# NIS2 en 4 minutes: Belgique : le bon élève
+URL: https://argos.softwareinabox.eu/fr-be/reglementation/nis2/
+
+## L'attaque
+Lundi, six heures du matin. Les systèmes ne démarrent pas. Les fichiers sont chiffrés. Le prestataire ne répond pas. Qui prévient qui, et en combien de temps ?
+
+## Les amendes
+La directive NIS2 prévoit des amendes jusqu'à dix millions d'euros ou deux pour cent du chiffre d'affaires pour les entités essentielles. Et elle impose de notifier les incidents importants en trois temps : 24 heures, 72 heures et un mois. La direction approuve les mesures et en répond.
+
+## Au niveau national
+La Belgique est le bon élève. La loi du 26 avril 2024 est en vigueur depuis octobre 2024. Une autorité unique : le Centre pour la Cybersécurité Belgique. L'enregistrement se fait sur Safeonweb at work. CyberFundamentals ou l'ISO 27001 valent présomption de conformité. Et pas d'amendes pour les administrations publiques.
+
+## NIS2
+NIS2 est la directive européenne de cybersécurité des secteurs essentiels, et de leur chaîne d'approvisionnement. Attendre ne protège pas. Toute la chaîne est responsable.
+
+## Quatre étapes
+Ce qu'elle exige, en quatre étapes. Vérifier si l'on est concerné, essentiel ou important. S'enregistrer auprès de l'autorité nationale. Appliquer les dix mesures, approuvées par la direction. Et notifier les incidents importants dans les délais. La sécurité des fournisseurs est l'une de ces dix mesures.
+
+## Dix mesures
+Parmi les dix mesures, quatre font la différence. L'analyse des risques et les politiques de sécurité. La gestion des incidents et la continuité d'activité. La sécurité de la chaîne d'approvisionnement. Et l'authentification multifacteur et le chiffrement. Article 21 de la directive.
+
+## Dates
+Les dates belges. 26 avril 2024 : la loi est adoptée. 18 octobre 2024 : elle entre en vigueur, dans les délais. Depuis : enregistrement et notification au CCB. Et aujourd'hui : vérification par un organisme agréé.
+
+## Europe
+En Europe, NIS2 est déjà la loi dans de nombreux pays. L'Allemagne : 29 500 entités, direction responsable. L'Italie : mesures de base exigées. La Belgique : CyberFundamentals. Le Portugal : dirigeants responsables. Les Pays-Bas : sans transition. Le Danemark : supervision par secteur. La France et l'Espagne sont encore sans loi.
+
+## L'autorité
+En Belgique, l'autorité unique est le Centre pour la Cybersécurité Belgique. Son référentiel CyberFundamentals a trois niveaux : Basic, Important et Essential. Avec l'ISO 27001, il donne une présomption de conformité. Aucun autre pays n'offre cet équivalent.
+
+## Que faire
+Que faire maintenant. Vérifier son périmètre, s'enregistrer, appliquer les mesures, préparer les notifications et engager les fournisseurs. ARGOS le vérifie en continu, avec des sondes sur les systèmes réels et des preuves pour l'auditeur et le client. NIS2 : la cybersécurité se prouve.
+
+
+# Data Act et DGA en 4 minutes: Belgique : l'autorité se prépare
+URL: https://argos.softwareinabox.eu/fr-be/reglementation/data-act-dga/
+
+## À qui ?
+Ton tracteur produit des données. Tes machines aussi. Ton ascenseur, ta voiture, ton compteur. Mais c'est le fabricant qui les garde. À qui appartiennent-elles, vraiment ?
+
+## Le règlement
+Le règlement européen sur les données, le Data Act, s'applique dans toute l'Union depuis le 12 septembre 2025. L'utilisateur d'un produit connecté peut accéder gratuitement à ses données, et les partager. Et dès le 12 janvier 2027, aucun fournisseur de cloud ne pourra facturer le départ.
+
+## Au niveau national
+En Belgique, l'autorité se prépare, mais les obligations sont là. L'IBPT prépare la réforme de son statut pour devenir l'autorité. Avec le SPF Économie. L'APD veille aux données personnelles. Les droits peuvent déjà être invoqués devant le juge. Et les clients le demandent déjà.
+
+## Data Act
+Le Data Act et le règlement sur la gouvernance des données forment le cadre européen d'accès et de partage. La donnée industrielle n'appartient plus, par défaut, au fabricant.
+
+## Obligations
+Ce qu'il exige du fabricant. Concevoir le produit pour que l'utilisateur accède à ses données. Informer avant le contrat des données produites et de l'accès. Partager avec le tiers choisi par l'utilisateur, à des conditions équitables. Et protéger les secrets d'affaires par des mesures convenues. Les données non personnelles, seulement selon l'accord avec l'utilisateur.
+
+## Le DGA
+Le règlement sur la gouvernance des données complète le tableau. La réutilisation de données publiques protégées. Des intermédiaires de données neutres et enregistrés. Et l'altruisme en matière de données, pour l'intérêt général. L'Omnibus numérique propose de l'intégrer au Data Act.
+
+## Dates
+Les dates. 24 septembre 2023 : le règlement sur la gouvernance des données s'applique. 12 septembre 2025 : le Data Act s'applique. 12 septembre 2026 : l'accès dès la conception. Et 12 janvier 2027 : fin des frais de changement de cloud.
+
+## Europe
+En Europe, la carte est contrastée. L'Allemagne : plus de 700 plaintes. Les Pays-Bas : loi et autorité. Le Danemark : amendes par les juges. La France : sortie du cloud à zéro euro. La Belgique prépare son autorité. Et l'Espagne, le Portugal et l'Italie sont encore sans autorité.
+
+## L'autorité
+En Belgique, le futur régulateur est l'Institut belge des services postaux et des télécommunications. Le SPF Économie l'accompagne. En attendant, le juge peut faire respecter les droits. Et les données personnelles restent sous le contrôle de l'APD.
+
+## Que faire
+Que faire maintenant. Des fiches par produit, une procédure d'accès, des contrats équitables, un plan de sortie du cloud. ARGOS vérifie que l'accès fonctionne vraiment, avec des tests sur les systèmes réels et des preuves pour le client, ou le juge. Data Act : les données au service de ceux qui les produisent.
+
+
+# CyFun et ISO en 4 minutes: Une preuve n'est pas un formulaire
+URL: https://argos.softwareinabox.eu/fr-be/reglementation/cyfun-iso-27001/
+
+## Le marché public
+Un marché public. Un service cloud. Une offre impeccable. Et une ligne dans le cahier des charges. Êtes-vous conforme CyberFundamentals ?
+
+## CyberFundamentals
+En Belgique, la référence s'appelle CyberFundamentals, le cadre du Centre pour la Cybersécurité Belgique. Avec l'ISO 27001, il vaut présomption de conformité à NIS2. Sans preuve, de nombreuses portes restent fermées.
+
+## La preuve
+Et une preuve n'est pas un formulaire. Définir le périmètre. Analyser les risques. Justifier chaque mesure dans la déclaration d'applicabilité. Réussir un audit indépendant. Et le renouveler régulièrement.
+
+## Le cadre
+CyberFundamentals s'appuie sur la norme internationale ISO 27001, complétée par l'ISO 27701 pour la vie privée. C'est la référence, en attendant le schéma européen pour le cloud.
+
+## Cycle SMSI
+Un système de management de la sécurité suit un cycle. Contexte et périmètre. Appréciation et traitement des risques. Mise en œuvre des mesures. Et audit et amélioration continue.
+
+## 93 mesures
+L'ISO 27001 contient 93 mesures en quatre thèmes. Organisationnelles. Liées aux personnes. Physiques. Et technologiques.
+
+## Les preuves
+Les preuves en un coup d'œil. ISO 27001 : le système de management de la sécurité. ISO 27701 : le management de la vie privée. CyberFundamentals : le cadre belge, en trois niveaux. Et le schéma européen, toujours en négociation.
+
+## Qui l'exige
+Qui l'exige ? Les administrations publiques. Les entités NIS2. La banque et l'assurance. Les hôpitaux. Et les entreprises qui achètent du cloud.
+
+## Le CCB
+Derrière, il y a le CCB, autorité nationale de certification. Il publie CyberFundamentals. Des organismes agréés vérifient la conformité. Et l'Europe négocie un nouveau règlement sur la cybersécurité et son schéma cloud.
+
+## Que faire
+Que faire maintenant. Définir le périmètre, évaluer les risques, planifier la qualification et savoir où sont les données sensibles. ARGOS tient la déclaration d'applicabilité et les preuves à jour, et les relie à NIS2, au RGPD et au règlement sur l'IA, sans doublons. CyberFundamentals et ISO : une confiance qui se prouve.
+

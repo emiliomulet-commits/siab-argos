@@ -1,0 +1,208 @@
+# La normativa europea in 4 minuti · ARGOS
+
+Trascrizioni complete delle presentazioni animate. Situazione a novembre 2026. Informazione generale, non costituisce consulenza legale.
+
+
+# GDPR in 4 minuti: Si sanziona soprattutto l'essenziale
+URL: https://argos.softwareinabox.eu/it/normativa/gdpr/
+
+## Piccoli errori
+Una e-mail al destinatario sbagliato. Un backup che nessuno ha cancellato. Dati fuori dall'Europa. Sviste in apparenza innocue. Finché arriva il reclamo.
+
+## Le sanzioni
+Il GDPR si applica dal 2018, con sanzioni fino a venti milioni di euro o al quattro per cento del fatturato mondiale. In Italia lo completa il Codice privacy. E a vigilare è il Garante.
+
+## Cosa si sanziona
+Si sanziona soprattutto l'essenziale. Trattamenti senza una base giuridica chiara. Un registro che non riflette la realtà. Dati conservati troppo a lungo. Responsabili esterni senza controllo. E sicurezza solo sulla carta.
+
+## GDPR
+Il GDPR è la base di tutta la governance dei dati in Europa. Dichiararsi conformi non basta. Bisogna poterlo dimostrare.
+
+## Cosa chiede
+Cosa chiede oggi. Una base giuridica e trasparenza per ogni trattamento. Un registro e, se il rischio è alto, una valutazione d'impatto. Privacy fin dalla progettazione, e un contratto con ogni responsabile. E notificare le violazioni entro 72 ore. I trasferimenti fuori dallo SEE, sempre con garanzie.
+
+## Omnibus digitale
+E cosa arriva: l'Omnibus digitale, ancora in negoziazione. Toccherebbe la nozione di dato personale, ma il Consiglio frena. Riconoscerebbe il legittimo interesse per l'IA. E solo le violazioni ad alto rischio andrebbero notificate, entro 96 ore. Ma non è legge: oggi si applica il GDPR così com'è.
+
+## Date
+Le date chiave. 25 maggio 2018: il GDPR si applica. 1° gennaio 2026: entra in vigore il nuovo regolamento procedurale. 2 aprile 2027: si applica ai nuovi casi transfrontalieri. E fine 2027: la semplificazione completata.
+
+## La catena
+Ogni anello ha il suo ruolo. Il produttore: privacy fin dalla progettazione. Il distributore: i contratti di assistenza. L'integratore: misure e sub-responsabili. E il cliente finale: basi giuridiche, registro e valutazioni d'impatto.
+
+## In Italia
+In Italia vigila il Garante per la protezione dei dati personali. Il Codice privacy adegua il GDPR al diritto italiano. Il Garante è stato tra i primi in Europa ad agire sull'intelligenza artificiale generativa. E vigila anche sui dati personali nel Data Act.
+
+## Cosa fare
+Cosa fare adesso. Rispettare il GDPR attuale, gestire le violazioni e mettere in sicurezza l'addestramento dell'IA. ARGOS lo dimostra, invece di dichiararlo: un registro reale, valutazioni d'impatto e una prova per ogni misura. GDPR: essere conformi è poterlo dimostrare.
+
+
+# EHDS in 4 minuti: Per ospedali e produttori
+URL: https://argos.softwareinabox.eu/it/normativa/ehds/
+
+## Pronto soccorso
+Una paziente arriva in pronto soccorso all'estero. La sua cartella è rimasta a casa. Gli esami, in un altro sistema. Le terapie, su carta. E il medico decide alla cieca.
+
+## Il regolamento
+Lo spazio europeo dei dati sanitari vuole cambiarlo. Un regolamento di 105 articoli, in vigore da marzo 2025. Dà a ognuno il controllo dei propri dati sanitari, e rende interoperabili le cartelle cliniche. Le sanzioni arrivano a venti milioni di euro.
+
+## Cosa cambia
+Per ospedali e produttori cambia molto. Il paziente vede subito i suoi dati, e chi li ha consultati. I sistemi di cartella clinica diventano prodotti con marcatura CE. Gli scambi avvengono in un formato europeo comune. Il riuso, solo con autorizzazione. E ogni accesso viene registrato.
+
+## EHDS
+L'EHDS è il primo spazio comune di dati settoriale dell'Unione. Da dati chiusi a dati che viaggiano con il paziente.
+
+## Come funziona
+Come funziona. Uso primario: il paziente consulta, integra, limita e condivide i dati, anche all'estero. Prodotto regolato: interoperabilità e registro degli accessi, con marcatura CE. Uso secondario: gli organismi di accesso autorizzano ricerca e IA. In ambienti sicuri, con dati anonimizzati. E mai per discriminare o reidentificare nessuno.
+
+## Dati prioritari
+I dati prioritari arrivano in due gruppi. Prima il profilo sanitario sintetico, la ricetta e la dispensazione elettroniche. Poi immagini e analisi di laboratorio, e le lettere di dimissione. Tutto nel formato europeo di scambio.
+
+## Calendario
+Il calendario è lungo, ma è iniziato. 26 marzo 2027: applicazione generale. 2029: il primo gruppo di dati e l'avvio dell'uso secondario. 2031: il secondo gruppo. E 2035: le ultime fasi.
+
+## Diritti
+Il paziente guadagna diritti. Accesso immediato e gratuito. Integrare e chiedere la rettifica. Portare i dati con sé, anche all'estero. Decidere chi vede cosa. E sapere chi ha consultato, e quando.
+
+## In Italia
+In Italia il Fascicolo Sanitario Elettronico due punto zero è già il punto di partenza. L'Ecosistema Dati Sanitari ne raccoglie i dati a livello nazionale. Regioni e Ministero della Salute ne condividono la governance. E l'EHDS armonizzerà le regole in tutta Europa.
+
+## Cosa fare
+Cosa fare adesso. Censire i sistemi, preparare interoperabilità e registro degli accessi, ordinare i dati per il riuso. ARGOS verifica EHDS e GDPR insieme, con test attivi sui sistemi reali e senza che i dati escano dall'ospedale. EHDS: il dato sanitario al servizio del paziente.
+
+
+# Regolamento sull'IA in 4 minuti: Italia: regolamento più legge nazionale
+URL: https://argos.softwareinabox.eu/it/normativa/regolamento-ia/
+
+## Decisioni invisibili
+Un algoritmo scarta il tuo curriculum. Un altro decide il tuo credito. Un altro riconosce il tuo volto in aeroporto. Nessuno te l'ha spiegato. D'ora in poi, qualcuno dovrà farlo.
+
+## Le sanzioni
+Il regolamento europeo sull'IA prevede sanzioni fino a trentacinque milioni di euro, o il sette per cento del fatturato mondiale. Da agosto 2026: segnalare l'IA e formare le persone. E l'Italia ha già una legge nazionale.
+
+## In Italia
+L'Italia ha scelto regolamento più legge nazionale. La legge 132 del 2025 è in vigore da ottobre 2025. AgID e ACN sono le autorità, con Banca d'Italia, Consob e Ivass per la finanza. Il lavoratore va informato sull'uso dell'IA. Il professionista deve informare il cliente. E la diffusione illecita di contenuti falsi creati con IA è reato.
+
+## AI Act
+Il regolamento sull'IA, aggiornato dall'Omnibus digitale, ordina l'intelligenza artificiale per livelli di rischio. La classificazione decide tutto. Per finalità, non per tecnologia.
+
+## Quattro livelli
+Quattro livelli. Inaccettabile: vietato, come il punteggio sociale. Alto rischio: lavoro, credito, istruzione, biometria. Trasparenza: segnalare l'IA e marcare i contenuti sintetici. E rischio minimo, la maggior parte degli usi aziendali. Per tutti, l'obbligo di alfabetizzazione sull'IA.
+
+## Alto rischio
+L'alto rischio richiede un sistema di gestione completo. Gestione dei rischi per tutto il ciclo di vita. Dati rappresentativi, senza distorsioni. Documentazione tecnica e registrazione automatica. E supervisione umana, robustezza e cybersicurezza. Articoli da 9 a 15 del regolamento.
+
+## Date
+Le date, dopo l'Omnibus. 2 agosto 2026: applicazione generale e trasparenza. 2 dicembre 2026: fine del periodo di grazia per la marcatura. 2 dicembre 2027: l'alto rischio dell'allegato tre. E 2 agosto 2028: l'IA nei prodotti regolati.
+
+## Europa
+In Europa ogni paese ha il suo ritmo. La Germania ha la sua legge in vigore. L'Italia, anche. La Danimarca è stata la prima. I Paesi Bassi consultano il progetto. La Francia ne discute in Parlamento. E Spagna, Portogallo e Belgio attendono ancora.
+
+## Autorità
+In Italia vigilano l'ACN, per il mercato, e l'AgID, come autorità di notifica. Banca d'Italia, Consob e Ivass seguono la finanza. Il Garante resta competente sui dati personali. E un decreto legislativo del 2026 completa il quadro.
+
+## Cosa fare
+Cosa fare adesso. Censire e classificare i sistemi, garantire la trasparenza, formare e informare i lavoratori. ARGOS lo dimostra: registri, supervisione umana e verdetti tracciabili, con l'IA che gira in locale. Regolamento IA: l'IA propone, la persona decide.
+
+
+# NIS2 in 4 minuti: Italia: legge applicata per fasi
+URL: https://argos.softwareinabox.eu/it/normativa/nis2/
+
+## L'attacco
+Lunedì, le sei del mattino. I sistemi non si avviano. I file sono cifrati. Il fornitore non risponde. Chi avvisa chi, e in quanto tempo?
+
+## Le sanzioni
+La direttiva NIS2 prevede sanzioni fino a dieci milioni di euro o il due per cento del fatturato per i soggetti essenziali. E impone di notificare gli incidenti in tre tempi: 24 ore, 72 ore e un mese. Gli organi di gestione approvano le misure e ne rispondono.
+
+## In Italia
+In Italia NIS2 è legge, applicata per fasi. Il decreto legislativo 138 del 2024 è in vigore da ottobre 2024. Un'autorità centrale: l'ACN, con il CSIRT Italia. La notifica degli incidenti è attiva da gennaio 2026. Le misure di base sono esigibili da ottobre 2026. E i clienti la chiedono già nei contratti.
+
+## NIS2
+NIS2 è la direttiva europea di cybersicurezza per i settori essenziali, e per la loro catena di fornitura. Aspettare non protegge. Tutta la catena risponde.
+
+## Quattro passi
+Cosa chiede, in quattro passi. Capire se si è soggetti essenziali o importanti. Registrarsi presso l'ACN. Applicare le dieci misure, approvate dai vertici. E notificare gli incidenti nei tempi. La sicurezza dei fornitori è una delle dieci misure.
+
+## Dieci misure
+Fra le dieci misure, quattro fanno la differenza. Analisi dei rischi e politiche di sicurezza. Gestione degli incidenti e continuità operativa. Sicurezza della catena di fornitura. E autenticazione multifattore e cifratura. Articolo 21 della direttiva.
+
+## Date
+Le date italiane. 16 ottobre 2024: entra in vigore il decreto. Gennaio 2026: parte la notifica degli incidenti. 31 ottobre 2026: le misure di base diventano esigibili. E oggi: tutte le fasi di base sono operative.
+
+## Europa
+In Europa NIS2 è già legge in molti paesi. Germania: 29.500 soggetti, vertici responsabili. Italia: misure di base esigibili. Belgio: CyberFundamentals. Portogallo: dirigenti responsabili. Paesi Bassi: senza transizione. Danimarca: vigilanza per settori. Francia e Spagna sono ancora senza legge.
+
+## L'ACN
+In Italia c'è un'autorità centrale: l'Agenzia per la Cybersicurezza Nazionale. Il CSIRT Italia riceve le notifiche. Le sue determinazioni fissano registrazione, notifiche e misure. Un unico interlocutore per oltre ottanta tipologie di soggetti.
+
+## Cosa fare
+Cosa fare adesso. Verificare il perimetro, registrarsi, applicare le misure, preparare le notifiche e coinvolgere i fornitori. ARGOS lo verifica in continuo, con sonde sui sistemi reali e prove per l'auditor e il cliente. NIS2: la cybersicurezza si dimostra.
+
+
+# Data Act e DGA in 4 minuti: Italia: obbliga, ma manca chi vigila
+URL: https://argos.softwareinabox.eu/it/normativa/data-act-dga/
+
+## Di chi sono?
+Il tuo trattore produce dati. Le tue macchine, anche. Il tuo ascensore, la tua auto, il tuo contatore. Ma i dati li tiene il produttore. Di chi sono, davvero?
+
+## Il regolamento
+Il regolamento europeo sui dati, il Data Act, si applica in tutta l'Unione dal 12 settembre 2025. Chi usa un prodotto connesso può accedere gratis ai suoi dati, e condividerli. E dal 12 gennaio 2027 nessun fornitore cloud potrà far pagare l'uscita.
+
+## In Italia
+In Italia il regolamento obbliga, ma manca chi lo vigili. Nessuna autorità competente designata. Nessun regime sanzionatorio nazionale. Il Garante vigila solo sui dati personali. I diritti si possono già far valere davanti al giudice. E per il Data Governance Act l'autorità è l'AgID.
+
+## Data Act
+Il Data Act e il regolamento sulla governance dei dati sono il quadro europeo per accedere ai dati e condividerli. Il dato industriale non appartiene più, per default, al produttore.
+
+## Obblighi
+Cosa chiede al produttore. Progettare il prodotto perché l'utente acceda ai suoi dati. Informare prima del contratto su quali dati produce. Condividerli con il terzo scelto dall'utente, a condizioni eque. E proteggere i segreti commerciali con misure concordate. I dati non personali, solo come concordato con l'utente.
+
+## Il DGA
+Il regolamento sulla governance dei dati completa il quadro. Riuso dei dati pubblici protetti. Intermediari di dati neutrali e registrati. E altruismo dei dati, per l'interesse generale. L'Omnibus digitale propone di integrarlo nel Data Act.
+
+## Date
+Le date. 24 settembre 2023: si applica il regolamento sulla governance dei dati. 12 settembre 2025: si applica il Data Act. 12 settembre 2026: accesso fin dalla progettazione. E 12 gennaio 2027: stop ai costi per cambiare cloud.
+
+## Europa
+In Europa la mappa è diseguale. Germania: oltre 700 reclami. Paesi Bassi: legge e autorità. Danimarca: sanzioni solo dai giudici. Francia: uscita dal cloud a zero euro. Il Belgio prepara la sua autorità. E Spagna, Portogallo e Italia sono ancora senza autorità.
+
+## Il giudice
+In Italia, intanto, finché manca l'autorità, il giudice fa da regolatore. L'utente che non riceve i dati può rivolgersi al tribunale. Gli spazi di dati permettono di condividere senza spostare i dati. E chi vende in Germania risponde già a un regolatore con poteri sanzionatori.
+
+## Cosa fare
+Cosa fare adesso. Schede per prodotto, una procedura di accesso, contratti equi e un piano di uscita dal cloud. ARGOS verifica che l'accesso funzioni davvero, con test sui sistemi reali e prove per il cliente, o per il giudice. Data Act: i dati al servizio di chi li produce.
+
+
+# Qualificazione ACN e ISO in 4 minuti: Una prova non è un modulo
+URL: https://argos.softwareinabox.eu/it/normativa/acn-iso-27001/
+
+## La gara
+Una gara pubblica. Un servizio cloud. Un'offerta impeccabile. E una riga nel capitolato. Il servizio è qualificato ACN?
+
+## Qualificazione ACN
+In Italia, per lavorare con la pubblica amministrazione, la chiave è la qualificazione dei servizi cloud dell'ACN. Con un catalogo pubblico, è il requisito finché non esiste uno schema europeo. Senza qualificazione, molte porte restano chiuse.
+
+## La prova
+E una prova non è un modulo. Definire il perimetro. Analizzare i rischi. Giustificare ogni misura nella dichiarazione di applicabilità. Superare un audit indipendente. E rinnovarlo regolarmente.
+
+## Il quadro
+Accanto alla qualificazione ACN c'è la norma internazionale ISO 27001, con la ISO 27701 per la privacy. È il riferimento, in attesa dello schema europeo per il cloud.
+
+## Ciclo SGSI
+Un sistema di gestione della sicurezza segue un ciclo. Contesto e perimetro. Valutazione e trattamento dei rischi. Attuazione delle misure. E audit e miglioramento continuo.
+
+## 93 controlli
+La ISO 27001 contiene 93 controlli in quattro temi. Organizzativi. Sulle persone. Fisici. E tecnologici.
+
+## Le prove
+Le prove in sintesi. ISO 27001: il sistema di gestione della sicurezza. ISO 27701: la gestione della privacy. Qualificazione ACN: il cloud per la pubblica amministrazione. E lo schema europeo, ancora in negoziazione.
+
+## Chi lo chiede
+Chi lo chiede? La pubblica amministrazione. I soggetti NIS2 e il perimetro cibernetico. Banche e assicurazioni. La sanità. E le imprese che acquistano cloud.
+
+## L'ACN
+Dietro c'è l'ACN, autorità nazionale di certificazione. Qualifica i servizi cloud per la pubblica amministrazione. Gestisce il catalogo pubblico dei servizi qualificati. E l'Europa negozia il nuovo regolamento sulla cybersicurezza e lo schema cloud.
+
+## Cosa fare
+Cosa fare adesso. Definire il perimetro, valutare i rischi, pianificare la qualificazione e sapere dove sono i dati sensibili. ARGOS tiene aggiornate applicabilità e prove, e le collega a NIS2, GDPR e regolamento sull'IA, senza doppioni. ACN e ISO: una fiducia che si dimostra.
+
