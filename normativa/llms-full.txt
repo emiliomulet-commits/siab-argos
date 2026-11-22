@@ -1,0 +1,213 @@
+# Normativa europea en 4 minutos · ARGOS
+
+Transcripciones completas de las presentaciones animadas. Situación a noviembre de 2026. Información general, no es asesoramiento jurídico.
+
+
+# El RGPD y la LOPDGDD en 4 minutos: qué exigen hoy y qué se sanciona en España
+
+## Pequeños descuidos
+Un correo enviado al destinatario equivocado, una copia de seguridad que nadie borró, un proveedor que guarda datos fuera de Europa, pequeños descuidos que parecen inofensivos, hasta que llega la reclamación.
+
+## Las multas
+El Reglamento General de Protección de Datos se aplica desde 2018 y sus multas pueden llegar a 20 millones de euros o al 4% de la facturación mundial. En España, la Agencia Española de Protección de Datos recibió en 2025 30.931 reclamaciones, un 64% más que el año anterior, y las brechas de seguridad supusieron casi el 40% de las sanciones.
+
+## Lo que se sanciona
+Lo que más se sanciona no es lo exótico, es lo básico, tratamientos sin una base jurídica clara, un registro de actividades que no refleja la realidad, datos que se conservan más de lo necesario, encargados y subencargados sin control, y medidas de seguridad que solo existen en el papel.
+
+## RGPD
+El RGPD, junto a la Ley Orgánica de Protección de Datos, es la base de toda la gobernanza del dato en Europa. No basta con declarar que se cumple, hay que poder demostrarlo.
+
+## Qué exige
+¿Qué exige hoy? Una base jurídica y transparencia para cada tratamiento, registro de actividades y evaluación de impacto cuando hay alto riesgo, privacidad desde el diseño y un contrato con cada encargado, y notificar las brechas a la autoridad en 72 horas. Las transferencias fuera del espacio económico europeo, siempre con garantías.
+
+## El Ómnibus
+Y lo que viene, el Ómnibus Digital, una propuesta de la Comisión todavía en negociación. Tocaría el concepto de dato personal, aunque las autoridades y el Consejo lo frenan. Reconocería el interés legítimo para desarrollar inteligencia artificial, con garantías, y obligaría a notificar solo las brechas de alto riesgo, en 96 horas. Pero no es ley, hoy se cumple el RGPD tal como está.
+
+## Fechas
+Fechas que conviene tener presentes. 25 de mayo de 2018, el RGPD empieza a aplicarse. 1 de enero de 2026, entra en vigor el nuevo reglamento procesal. 2 de abril de 2027, se aplica a los casos transfronterizos nuevos. Y finales de 2027, el objetivo para cerrar la simplificación.
+
+## La cadena
+Cada eslabón de la cadena tiene su papel. El fabricante, privacidad desde el diseño. El mayorista, contratos de encargo en el soporte y los servicios. El integrador, como encargado. Medidas, subencargados y transferencias. Y el cliente final, como responsable. Bases jurídicas, registro y evaluaciones de impacto.
+
+## En España
+En España hay más de 126.000 delegados de protección de datos comunicados. La agencia pone el foco en la inteligencia artificial, también en la agéntica, y prepara con la Comisión y el Comité Europeo una guía conjunta del RGPD y el Reglamento de IA. Muchas de sus actuaciones empiezan por una brecha y acaban revisando toda la gestión de la protección de datos.
+
+## Qué hacer
+¿Qué hacer ya? Cumplir el RGPD actual, tener listo el procedimiento de brechas y documentar la base jurídica del entrenamiento de la inteligencia artificial. ARGOS lo verifica con pruebas, no con declaraciones. Un registro de actividades real, evaluaciones de impacto y la evidencia de cada medida dentro de su perímetro. RGPD, cumplir es poder demostrarlo.
+
+Fuente: https://argos.softwareinabox.eu/normativa/rgpd-lopdgdd/
+
+
+# El EHDS en 4 minutos: qué cambia el Espacio Europeo de Datos Sanitarios para hospitales y empresas de salud
+
+## Urgencias
+Una paciente llega a urgencias en Lisboa. Su historial está en Madrid. Sus pruebas en otro sistema. Su medicación en papel.
+
+## La norma
+Y el médico decide a ciegas. El espacio europeo de datos sanitarios quiere acabar con eso. Es un reglamento europeo de 105 artículos, en vigor desde marzo de 2025. Da a cada persona acceso y control sobre sus datos de salud en toda Europa, y obliga a los sistemas de historia clínica a ser interoperables. Y las multas por incumplir las reglas de reutilización llegan a 20 millones de euros, o al 4% de la facturación.
+
+## Qué cambia
+Para hospitales, fabricantes y empresas de salud cambia mucho. El paciente podrá ver sus datos al instante, y saber quién ha accedido. Los sistemas de historia clínica serán un producto con marcado CE. Habrá que intercambiar datos en un formato europeo común. Los datos se podrán reutilizar, pero solo con permiso. Y cada acceso deberá quedar registrado.
+
+## EHDS
+El EHDS es el primer espacio común de datos sectorial de la Unión Europea. Del dato clínico encerrado, a un dato que viaja con el paciente.
+
+## Cómo funciona
+Funciona en varios planos. Uso primario. El paciente accede a sus datos, los completa, los restringe y los comparte, también en otro país. Producto regulado. Interoperabilidad y registro de accesos, con autoevaluación y marcado CE. Uso secundario. Los organismos de acceso conceden permisos para investigación, innovación e inteligencia artificial. Siempre en entornos de tratamiento seguro, con datos anonimizados por defecto. Y nunca para discriminar, excluir de un seguro o reidentificar a nadie.
+
+## Datos prioritarios
+Los datos prioritarios llegan en dos grupos. Primero, la historia resumida del paciente y la receta y la dispensación electrónicas. Después, las imágenes médicas y los resultados de laboratorio y los informes de alta. Todo en el formato europeo de intercambio de historiales médicos.
+
+## Calendario
+El calendario es largo, pero ya ha empezado. 26 de marzo de 2027. Aplicación general. 2029. El primer grupo de datos en todos los Estados y el arranque del uso secundario. 2031. El segundo grupo. Y 2035.
+
+## Derechos
+Las últimas fases. El paciente gana derechos. Acceso inmediato y gratuito. Añadir información y pedir la rectificación. Llevar sus datos a otro profesional, también en otro estado. Restringir quién ve qué.
+
+## En España
+Y saber quién ha accedido y cuándo. En España, el Espacio Nacional de Datos de Salud ya funciona como una red federada, con más de 330 conjuntos de datos en su catálogo. La Oficina del Dato del Sistema Nacional de Salud actúa como organismo de acceso coordinador. Las comunidades autónomas serían las autoridades regionales de salud digital. Y la futura ley de salud digital, todavía en anteproyecto, completará el modelo.
+
+## Qué hacer
+¿Qué hacer ahora? Inventariar los sistemas que tratan datos prioritarios. Preparar la interoperabilidad y el registro de accesos. Y ordenar los datos para su reutilización. ARGOS verifica el EHDS y el RGPD a la vez, con pruebas activas sobre los sistemas reales y sin que los datos salgan del hospital. EHDS, el dato de salud al servicio del paciente.
+
+Fuente: https://argos.softwareinabox.eu/normativa/ehds/
+
+
+# El Reglamento de IA en 4 minutos: niveles de riesgo, fechas tras el Ómnibus y qué hacer en España
+
+## Decisiones invisibles
+Un algoritmo descarta tu currículum. Otro decide tu crédito. Otro reconoce tu rostro en un aeropuerto. Nadie te lo ha explicado. A partir de ahora, alguien tendrá que hacerlo.
+
+## Las multas
+El Reglamento europeo de Inteligencia Artificial fija multas de hasta 35 millones de euros, o el 7% de la facturación mundial. Desde agosto de 2026 se aplica con carácter general. Avisar de que se habla con una IA, etiquetar las ultrafalsificaciones y formar a los equipos. Y en España, las multas de más de 10 millones por sistemas de IA ya existen, por la vía del RGPD.
+
+## En España
+En España, el frente está abierto en varios sitios a la vez. El Reglamento se aplica sin ley española. El proyecto decayó en octubre de 2026. La Agencia Española de Supervisión de la Inteligencia Artificial existe, pero sin régimen sancionador nacional. La Agencia de Protección de Datos ya actúa sobre biometría y decisiones automatizadas. Cada empresa debe informar por escrito a sus trabajadores de los algoritmos que deciden sobre ellos. Y quien cambia la finalidad de un sistema pasa a ser proveedor con todas sus obligaciones.
+
+## AI Act
+El Reglamento de IA, ajustado por el Ómnibus Digital, ordena la inteligencia artificial por niveles de riesgo. La clasificación lo decide todo. Y se hace por finalidad, no por tecnología.
+
+## Cuatro niveles
+Cuatro niveles, inaceptable, prohibido, como la puntuación social o el reconocimiento de emociones en el trabajo. Alto riesgo, empleo, crédito, educación, biometría o infraestructuras críticas con requisitos estrictos. Transparencia, avisar de que se habla con una IA y marcar el contenido sintético. Y riesgo mínimo, que es la mayoría de los usos empresariales. En todos, el deber de alfabetizar en inteligencia artificial.
+
+## Alto riesgo
+El alto riesgo exige un sistema de gestión completo. Gestión de riesgos durante todo el ciclo de vida. Datos pertinentes y representativos con control de sesgos. Documentación técnica y registro automático de eventos. Y supervisión humana, precisión, robustez y ciberseguridad. Artículos 9 a 15 del reglamento.
+
+## Fechas
+Las fechas, tras el ómnibus. 2 de agosto de 2026. Aplicación general y transparencia. 2 de diciembre de 2026. Acaba el periodo de gracia para marcar el contenido generado. 2 de diciembre de 2027. El alto riesgo del anexo III. Y 2 de agosto de 2028. La IA integrada en productos regulados.
+
+## Europa
+En Europa, cada país avanza a su ritmo. Alemania ya tiene su ley nacional en vigor. Italia también. Países Bajos tiene su anteproyecto en consulta. Francia lo debate en el Parlamento. Y España, pionera con la primera agencia de supervisión de IA de Europa, espera una nueva ley.
+
+## Cuatro frentes
+En España, un sistema de IA responde ante cuatro frentes a la vez. El reglamento de IA, el RGPD, la normativa laboral y, en el sector público, la transparencia algorítmica. La Agencia Española de Supervisión de la Inteligencia Artificial, en A Coruña, ha publicado 16 guías de cumplimiento. La Agencia de Protección de Datos ya multó con 10 millones de euros un sistema de reconocimiento facial. Y el Tribunal Supremo reconoció el acceso al código fuente de un algoritmo público.
+
+## Qué hacer
+¿Qué hacer ya? Inventariar y clasificar cada sistema de IA, cumplir la transparencia, formar a los equipos e informar a los trabajadores. ARGOS lo demuestra con evidencia. Registro de eventos, supervisión humana y veredictos trazables con la IA ejecutándose en local. Reglamento de IA. La IA propone. La persona decide.
+
+Fuente: https://argos.softwareinabox.eu/normativa/reglamento-ia/
+
+
+# NIS2 en 4 minutos: qué exige, multas, fechas y la situación singular de España
+
+## El ataque
+Lunes, 6 de la mañana. Los sistemas no arrancan. Los ficheros, cifrados. El proveedor no contesta. ¿Quién avisa a quién y en cuánto tiempo?
+
+## Las multas
+La directiva europea NIS2 fija multas de hasta 10 millones de euros o el 2% de la facturación para las entidades esenciales y 7 millones para las importantes. Y obliga a notificar cada incidente significativo en tres tiempos, 24 horas, 72 horas y un mes. La dirección aprueba las medidas y responde de ellas.
+
+## España
+En España la situación es singular. No hay ley de transposición. El anteproyecto nunca llegó a las Cortes. La Comisión llevó a España al Tribunal de Justicia en julio de 2026. Sigue vigente la normativa de 2018, la antigua NIS. Pero los clientes ya exigen NIS2 en los contratos. Y quien opera en otros países ya está obligado allí.
+
+## NIS2
+NIS2 es la directiva europea de ciberseguridad para los sectores esenciales e importantes y para toda su cadena de suministro. El vacío legal no protege.
+
+## Cuatro pasos
+La cadena entera responde. Lo que exige, en cuatro pasos. Comprobar si se es entidad obligada, esencial o importante. Registrarse ante la autoridad nacional. Aplicar las 10 medidas de gestión de riesgos aprobadas por la dirección. Y notificar los incidentes significativos en plazo. La seguridad de los proveedores es una de esas 10 medidas.
+
+## Diez medidas
+Entre las 10 medidas, cuatro marcan la diferencia. Análisis de riesgos y políticas de seguridad. Gestión de incidentes y continuidad del negocio. Seguridad de la cadena de suministro. Y autenticación multifactor y cifrado. Artículo 21 de la directiva.
+
+## Fechas
+Fechas clave. 17 de octubre de 2024. Vence el plazo de transposición que España incumple. 8 de julio de 2026. La Comisión lleva a España ante el Tribunal de Justicia. 6 de octubre de 2026. La disolución de las Cortes deja el anteproyecto sin tramitar. Y hoy, el Esquema Nacional de Seguridad es el atajo.
+
+## Europa
+Fuera de España, NIS2 ya obliga. Alemania. Unas 29.500 entidades y la dirección responde personalmente. Italia exige las medidas de base desde octubre de 2026. Bélgica premia su marco CyberFundamentals. Portugal hace responsables a los gestores. Países Bajos, sin periodo transitorio. Y Dinamarca reparte la supervisión entre autoridades sectoriales.
+
+## En España
+En España, mientras tanto, hay tres equipos de respuesta. INCIBE-CERT para el sector privado, CCN-CERT para el público y ESPDEF-CERT para la defensa. INCIBE mantiene la tabla de entidades esenciales e importantes, la mejor referencia de alcance. El Centro Criptológico Nacional publicó un perfil para encajar NIS2 en el Esquema Nacional de Seguridad, y su categoría alta cubre buena parte de las medidas.
+
+## Qué hacer
+¿Qué hacer ya? Analizar el alcance, aplicar las diez medidas, preparar la notificación en 24 horas y exigir lo mismo a los proveedores. ARGOS lo verifica de forma continua, con sonda sobre los sistemas reales y evidencia lista para el auditor y para el cliente. NIS2. La ciberseguridad se demuestra.
+
+Fuente: https://argos.softwareinabox.eu/normativa/nis2/
+
+
+# El Data Act y la DGA en 4 minutos: de quién son los datos de los productos conectados
+
+## ¿De quién son?
+Tu tractor genera datos. Tu maquinaria, también. Tu ascensor, tu coche, tu contador. Pero esos datos se los queda el fabricante.
+
+## La norma
+¿De quién son, en realidad? El Reglamento europeo de Datos, el Data Act, se aplica en toda la Unión desde el 12 de septiembre de 2025. El usuario de un producto conectado tiene derecho a acceder a sus datos, de forma sencilla, segura y gratuita, y a compartirlos con quien elija. Y desde el 12 de enero de 2027 ningún proveedor de nube podrá cobrar por la salida.
+
+## En España
+En España la norma obliga, pero falta quien la vigile. No hay autoridad competente designada. No hay régimen sancionador nacional. La Agencia de Protección de Datos supervisa solo lo que afecta a datos personales. Los derechos ya se pueden exigir ante los tribunales. Y una cláusula abusiva sobre datos es nula, sin necesidad de sanción.
+
+## Data Act
+El Data Act y el Reglamento de Gobernanza de Datos forman el marco europeo para acceder a los datos y compartirlos. El dato industrial deja de ser por defecto del fabricante.
+
+## Qué exige
+¿Qué exige al fabricante? Diseñar el producto para que el usuario acceda a sus datos en los que se comercialicen desde septiembre de 2026. Informar antes del contrato de qué datos genera y cómo se accede a ellos. Compartirlos con el tercero que designe el usuario en condiciones justas, a una pyme solo al coste. Y proteger los secretos comerciales con medidas pactadas. Los datos no personales del usuario solo según lo pactado con él.
+
+## La DGA
+El Reglamento de Gobernanza de Datos completa el cuadro. Reutilizar datos protegidos del sector público. Servicios de intermediación de datos, neutrales y registrados. Y el altruismo de datos para el interés general. El Ómnibus Digital propone integrarlo en el Data Act.
+
+## Fechas
+Las fechas 24 de septiembre de 2023 se aplica el Reglamento de Gobernanza de Datos. 12 de septiembre de 2025 se aplica el Data Act. 12 de septiembre de 2026. Acceso a los datos desde el diseño. Y 12 de enero de 2027 se acaban los cargos por cambiar de nube.
+
+## Europa
+En Europa el mapa es desigual. Alemania, un regulador que recibió más de 700 quejas en sus primeros meses. Países Bajos con ley y autoridad en vigor. Dinamarca, donde solo los tribunales imponen multas. Francia, que ya fijó en 0 euros las tasas de salida de la nube. Y España, Portugal e Italia sin autoridad designada.
+
+## Precedente
+En España ya hay un precedente. Datadis, que desde 2020 permite al consumidor acceder a sus datos de consumo eléctrico. La ley del sector eléctrico ya reconocía ese derecho. Los espacios de datos son la vía para compartir datos sin moverlos. Y un fabricante español con clientes en Alemania ya responde allí ante un regulador con poder de sanción.
+
+## Qué hacer
+¿Qué hacer ya? Fichas informativas por producto, un procedimiento para las peticiones de acceso, contratos justos y un plan de salida de la nube. ARGOS verifica que el acceso funciona de verdad, con pruebas sobre los sistemas reales y evidencia para el cliente o para el juez. Data Act, los datos, al servicio de quien los genera.
+
+Fuente: https://argos.softwareinabox.eu/normativa/data-act-dga/
+
+
+# El ENS y las ISO 27001 y 27701 en 4 minutos: la llave del mercado público
+
+## La licitación
+Una licitación pública, un servicio en la nube, una oferta impecable y una línea en el pliego.
+
+## 73 medidas
+¿Tiene certificación ENS? El Esquema Nacional de Seguridad, el Real Decreto 311/2022, reúne 73 medidas de seguridad. Es obligatorio para todo el sector público y para los proveedores que le prestan servicios o soluciones tecnológicas. Sin certificado, el proveedor queda fuera de muchas licitaciones.
+
+## Certificarse
+Y la certificación no es un trámite. Hay que categorizar cada sistema según su impacto, hacer el análisis de riesgos, justificar cada medida en la declaración de aplicabilidad, superar la auditoría de una entidad acreditada y renovarla cada dos años.
+
+## ENS
+El ENS es el marco obligatorio de ciberseguridad del sector público español y de sus proveedores. Junto a las normas ISO 27001 y 27701 es la referencia más sólida, mientras llegan el esquema europeo de nube y la ley española de NIS2.
+
+## Dimensiones
+La categoría se fija por el impacto en cinco dimensiones. Confidencialidad, integridad y trazabilidad, autenticidad y disponibilidad. Y los incidentes se notifican al CCN-CERT.
+
+## Categorías
+Tres categorías. Básica, 52 medidas y autoevaluación. Media, 68 medidas con auditoría y certificación. Alta, las 73, con requisitos reforzados. Y perfiles específicos, como el que encaja NIS2.
+
+## ISO
+Y para el mercado privado, las normas ISO. ISO 27001, el sistema de gestión de la seguridad de la información. ISO 27701, la gestión de la privacidad. El certificado ENS tiene una validez de dos años. Y certificarse lleva entre seis y nueve meses.
+
+## Quién
+¿Quién debe cumplirlo? El Estado, las comunidades autónomas y las entidades locales, los organismos públicos y las universidades públicas. Las empresas que desarrollan, mantienen o operan sistemas para el sector público. Los servicios en la nube que soportan procesos o datos públicos.
+
+## CCN
+Y los servicios gestionados de seguridad. Detrás está el Centro Criptológico Nacional, con su equipo de respuesta, el CCN-CERT. Publica las guías de seguridad y el catálogo de productos cualificados. Las entidades acreditadas por ENAC emiten las certificaciones de categoría media y alta. Y su perfil para NIS2 tiende el puente con Europa.
+
+## Qué hacer
+¿Qué hacer? Categorizar ya, certificar en seis a nueve meses y renovar cada dos años, vigilando dónde están los datos de categoría alta. ARGOS mantiene la declaración de aplicabilidad y el registro de evidencias y lo cruza con NIS2, el RGPD y el reglamento de IA para no duplicar trabajo. ENS, la llave del mercado público.
+
+Fuente: https://argos.softwareinabox.eu/normativa/ens-iso-27001/

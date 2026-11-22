@@ -20,3 +20,8 @@ Generado con `build_d01.py` (fuera del repositorio). Piloto D01 publicado el 17/
 D03 y D04 con locución sincronizada (`add_voice.py`, fuera del repositorio) y MP4 desde el 17/11/2026.
 D04 enlazada desde el visor de la web y con botón opcional «Activar locución» en `?modo=web` (como D01 y D05).
 D02 y D03 con modo incrustado (`?embed=1`) y botón «Activar locución». Revisión del 17/11/2026: las 25 presentaciones cargan sin errores en los tres modos; enlazadas desde la web (visor y tarjetas, botón «Ver animación»).
+
+## /normativa/ · Normativa europea en 4 minutos (22/11/2026)
+
+Seis presentaciones animadas en español (RGPD y LOPDGDD, EHDS, Reglamento de IA, NIS2, Data Act y DGA, ENS e ISO 27001/27701), cada una con su página indexable en `/normativa/<norma>/`: reproductor ARGOS (se carga al pulsar), capítulos con enlace (`#t=segundos`), datos clave, transcripción completa, preguntas frecuentes, fuentes oficiales y código para incrustar. El reproductor está en `presentacion/` (con `noindex` y canonical a la página) y acepta `?t=` y el mensaje `{argosSeek: segundos}`.
+Generadas con `build.py` y `norms.py` (fuera del repositorio): transcripción con faster-whisper, pósteres con el modo render. Sitemap propio en `/normativa/sitemap.xml` (enlazado desde robots.txt), catálogo en `presentaciones.json`, feed RSS y `llms-full.txt` con las transcripciones. Subtítulos `.vtt` para YouTube en cada carpeta.

@@ -13,6 +13,15 @@
 ## Contacto
 - emilio.mulet@softwareinabox.eu · +34 601 398 868 · Madrid
 
+## Normativa europea en 4 minutos
+- [Las seis normas explicadas en 4 minutos](https://argos.softwareinabox.eu/normativa/): presentaciones animadas con locución, transcripción completa, datos clave y fuentes oficiales (situación a noviembre de 2026).
+- [El RGPD y la LOPDGDD en 4 minutos: qué exigen hoy y qué se sanciona en España](https://argos.softwareinabox.eu/normativa/rgpd-lopdgdd/): Lo que más se sanciona es lo básico: base jurídica, registro, conservación, encargados y seguridad.
+- [El EHDS en 4 minutos: qué cambia el Espacio Europeo de Datos Sanitarios para hospitales y empresas de salud](https://argos.softwareinabox.eu/normativa/ehds/): Del dato clínico encerrado a un dato que viaja con el paciente. Calendario de 2027 a 2035.
+- [El Reglamento de IA en 4 minutos: niveles de riesgo, fechas tras el Ómnibus y qué hacer en España](https://argos.softwareinabox.eu/normativa/reglamento-ia/): La clasificación lo decide todo, y se hace por finalidad. Alto riesgo del anexo III desde diciembre de 2027.
+- [NIS2 en 4 minutos: qué exige, multas, fechas y la situación singular de España](https://argos.softwareinabox.eu/normativa/nis2/): España sin ley de transposición, pero los clientes ya exigen NIS2 en los contratos.
+- [El Data Act y la DGA en 4 minutos: de quién son los datos de los productos conectados](https://argos.softwareinabox.eu/normativa/data-act-dga/): El dato industrial deja de ser, por defecto, del fabricante. Sin cargos por cambiar de nube desde enero de 2027.
+- [El ENS y las ISO 27001 y 27701 en 4 minutos: la llave del mercado público](https://argos.softwareinabox.eu/normativa/ens-iso-27001/): Sin certificado ENS, el proveedor queda fuera de muchas licitaciones. Certificarse lleva de 6 a 9 meses.
+
 ## Idiomas / Languages
 - [Español](https://argos.softwareinabox.eu/)
 - [English](https://argos.softwareinabox.eu/en/)

@@ -1,0 +1,340 @@
+{
+ "updated": "2026-11-22",
+ "items": [
+  {
+   "slug": "rgpd-lopdgdd",
+   "name": "RGPD y LOPDGDD",
+   "title": "El RGPD y la LOPDGDD en 4 minutos: qué exigen hoy y qué se sanciona en España",
+   "url": "https://argos.softwareinabox.eu/normativa/rgpd-lopdgdd/",
+   "duration": "3:51",
+   "description": "Presentación animada sobre el RGPD y la LOPDGDD: multas, lo que más sanciona la AEPD, obligaciones, el Ómnibus Digital, fechas y qué hacer ya. Con transcripción y fuentes oficiales.",
+   "chapters": [
+    [
+     "Pequeños descuidos",
+     0.0
+    ],
+    [
+     "Las multas",
+     17.6
+    ],
+    [
+     "Lo que se sanciona",
+     45.2
+    ],
+    [
+     "RGPD",
+     65.3
+    ],
+    [
+     "Qué exige",
+     77.4
+    ],
+    [
+     "El Ómnibus",
+     100.6
+    ],
+    [
+     "Fechas",
+     127.9
+    ],
+    [
+     "La cadena",
+     152.8
+    ],
+    [
+     "En España",
+     175.4
+    ],
+    [
+     "Qué hacer",
+     199.9
+    ]
+   ],
+   "laws": [
+    "Reglamento (UE) 2016/679",
+    "Ley Orgánica 3/2018"
+   ],
+   "updated": "2026-11-22",
+   "youtube": null
+  },
+  {
+   "slug": "ehds",
+   "name": "EHDS",
+   "title": "El EHDS en 4 minutos: qué cambia el Espacio Europeo de Datos Sanitarios para hospitales y empresas de salud",
+   "url": "https://argos.softwareinabox.eu/normativa/ehds/",
+   "duration": "3:45",
+   "description": "Presentación animada sobre el Espacio Europeo de Datos Sanitarios (Reglamento (UE) 2025/327): uso primario y secundario, datos prioritarios, calendario 2027-2035, derechos del paciente y situación en España.",
+   "chapters": [
+    [
+     "Urgencias",
+     0.0
+    ],
+    [
+     "La norma",
+     14.7
+    ],
+    [
+     "Qué cambia",
+     41.7
+    ],
+    [
+     "EHDS",
+     66.0
+    ],
+    [
+     "Cómo funciona",
+     76.3
+    ],
+    [
+     "Datos prioritarios",
+     112.4
+    ],
+    [
+     "Calendario",
+     131.3
+    ],
+    [
+     "Derechos",
+     152.5
+    ],
+    [
+     "En España",
+     168.9
+    ],
+    [
+     "Qué hacer",
+     193.8
+    ]
+   ],
+   "laws": [
+    "Reglamento (UE) 2025/327"
+   ],
+   "updated": "2026-11-22",
+   "youtube": null
+  },
+  {
+   "slug": "reglamento-ia",
+   "name": "Reglamento de IA",
+   "title": "El Reglamento de IA en 4 minutos: niveles de riesgo, fechas tras el Ómnibus y qué hacer en España",
+   "url": "https://argos.softwareinabox.eu/normativa/reglamento-ia/",
+   "duration": "4:09",
+   "description": "Presentación animada sobre el Reglamento (UE) 2024/1689 de inteligencia artificial, ajustado por el Reglamento (UE) 2026/1744: multas, cuatro niveles de riesgo, requisitos de alto riesgo, fechas y situación en España.",
+   "chapters": [
+    [
+     "Decisiones invisibles",
+     0.0
+    ],
+    [
+     "Las multas",
+     15.4
+    ],
+    [
+     "En España",
+     42.8
+    ],
+    [
+     "AI Act",
+     75.2
+    ],
+    [
+     "Cuatro niveles",
+     89.2
+    ],
+    [
+     "Alto riesgo",
+     120.1
+    ],
+    [
+     "Fechas",
+     142.4
+    ],
+    [
+     "Europa",
+     167.4
+    ],
+    [
+     "Cuatro frentes",
+     187.1
+    ],
+    [
+     "Qué hacer",
+     218.2
+    ]
+   ],
+   "laws": [
+    "Reglamento (UE) 2024/1689",
+    "Reglamento (UE) 2026/1744"
+   ],
+   "updated": "2026-11-22",
+   "youtube": null
+  },
+  {
+   "slug": "nis2",
+   "name": "NIS2",
+   "title": "NIS2 en 4 minutos: qué exige, multas, fechas y la situación singular de España",
+   "url": "https://argos.softwareinabox.eu/normativa/nis2/",
+   "duration": "3:46",
+   "description": "Presentación animada sobre la Directiva NIS2 (UE) 2022/2555: multas, notificación en 24 h, 72 h y un mes, las diez medidas del artículo 21, fechas, Europa y la situación de España sin ley de transposición.",
+   "chapters": [
+    [
+     "El ataque",
+     0.0
+    ],
+    [
+     "Las multas",
+     14.8
+    ],
+    [
+     "España",
+     38.4
+    ],
+    [
+     "NIS2",
+     64.0
+    ],
+    [
+     "Cuatro pasos",
+     76.8
+    ],
+    [
+     "Diez medidas",
+     99.8
+    ],
+    [
+     "Fechas",
+     119.1
+    ],
+    [
+     "Europa",
+     143.8
+    ],
+    [
+     "En España",
+     171.3
+    ],
+    [
+     "Qué hacer",
+     198.6
+    ]
+   ],
+   "laws": [
+    "Directiva (UE) 2022/2555",
+    "Reglamento de Ejecución (UE) 2024/2690",
+    "Real Decreto-ley 12/2018"
+   ],
+   "updated": "2026-11-22",
+   "youtube": null
+  },
+  {
+   "slug": "data-act-dga",
+   "name": "Data Act y DGA",
+   "title": "El Data Act y la DGA en 4 minutos: de quién son los datos de los productos conectados",
+   "url": "https://argos.softwareinabox.eu/normativa/data-act-dga/",
+   "duration": "3:42",
+   "description": "Presentación animada sobre el Data Act (Reglamento (UE) 2023/2854) y el Reglamento de Gobernanza de Datos (UE) 2022/868: derechos del usuario, obligaciones del fabricante, cambio de nube, fechas y situación en España.",
+   "chapters": [
+    [
+     "¿De quién son?",
+     0.0
+    ],
+    [
+     "La norma",
+     15.1
+    ],
+    [
+     "En España",
+     39.1
+    ],
+    [
+     "Data Act",
+     61.8
+    ],
+    [
+     "Qué exige",
+     74.7
+    ],
+    [
+     "La DGA",
+     105.4
+    ],
+    [
+     "Fechas",
+     124.2
+    ],
+    [
+     "Europa",
+     148.1
+    ],
+    [
+     "Precedente",
+     172.3
+    ],
+    [
+     "Qué hacer",
+     194.2
+    ]
+   ],
+   "laws": [
+    "Reglamento (UE) 2023/2854",
+    "Reglamento (UE) 2022/868"
+   ],
+   "updated": "2026-11-22",
+   "youtube": null
+  },
+  {
+   "slug": "ens-iso-27001",
+   "name": "ENS e ISO 27001/27701",
+   "title": "El ENS y las ISO 27001 y 27701 en 4 minutos: la llave del mercado público",
+   "url": "https://argos.softwareinabox.eu/normativa/ens-iso-27001/",
+   "duration": "3:13",
+   "description": "Presentación animada sobre el Esquema Nacional de Seguridad (Real Decreto 311/2022) y las normas ISO/IEC 27001 y 27701: categorías, medidas, certificación, quién debe cumplirlo y relación con NIS2.",
+   "chapters": [
+    [
+     "La licitación",
+     0.0
+    ],
+    [
+     "73 medidas",
+     12.9
+    ],
+    [
+     "Certificarse",
+     32.6
+    ],
+    [
+     "ENS",
+     50.1
+    ],
+    [
+     "Dimensiones",
+     68.5
+    ],
+    [
+     "Categorías",
+     82.4
+    ],
+    [
+     "ISO",
+     100.3
+    ],
+    [
+     "Quién",
+     121.0
+    ],
+    [
+     "CCN",
+     142.6
+    ],
+    [
+     "Qué hacer",
+     163.0
+    ]
+   ],
+   "laws": [
+    "Real Decreto 311/2022"
+   ],
+   "updated": "2026-11-22",
+   "youtube": null
+  }
+ ]
+}

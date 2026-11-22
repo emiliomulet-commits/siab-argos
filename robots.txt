@@ -4,3 +4,4 @@ Disallow: /kb/
 Disallow: /worker/
 Disallow: /taskforce/
 Sitemap: https://argos.softwareinabox.eu/sitemap.xml
+Sitemap: https://argos.softwareinabox.eu/normativa/sitemap.xml
