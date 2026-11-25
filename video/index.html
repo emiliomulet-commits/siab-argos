@@ -40,6 +40,19 @@ video{display:block;width:100%;height:auto}
 .btn{display:inline-block;padding:16px 30px;border-radius:999px;background:#C9A227;color:#0B1F3A;font-weight:800;text-decoration:none;font-family:Montserrat,sans-serif}
 .btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
 .note{color:#8fa3bb;font-size:13px;margin-top:28px}
+.dosier{margin:56px 0 10px;padding:32px;border-radius:18px;background:linear-gradient(180deg,#0f2747,#0B1F3A);border:1px solid rgba(201,162,39,.3)}
+.dosier h2{font-family:Montserrat,sans-serif;font-size:clamp(24px,3vw,34px);margin:8px 0 10px}
+.dosier .lead{font-size:17px}
+.pages{display:flex;gap:16px;overflow-x:auto;padding:22px 2px 14px;scroll-snap-type:x mandatory}
+.pages button{flex:0 0 220px;scroll-snap-align:start;padding:0;border:0;background:none;cursor:zoom-in}
+.pages img{width:220px;height:auto;display:block;border-radius:6px;box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.pages span{display:block;color:#8fa3bb;font-size:12px;margin-top:6px;text-align:left}
+.dl{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:16px}
+.dl small{color:#AFC0D2;font-size:13px;max-width:560px}
+#lb{position:fixed;inset:0;background:rgba(2,8,18,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:24px}
+#lb.on{display:flex}#lb img{max-height:92vh;max-width:92vw;border-radius:6px}
+#lb .nav{position:absolute;top:50%;transform:translateY(-50%);font-size:44px;color:#fff;background:none;border:0;cursor:pointer;padding:20px}
+#lb .prev{left:8px}#lb .next{right:8px}#lb .x{position:absolute;top:14px;right:22px;font-size:34px;color:#fff;background:none;border:0;cursor:pointer}
 @media (max-width:760px){.chapters{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -62,6 +75,27 @@ video{display:block;width:100%;height:auto}
     <button data-t="146.5"><b>2:26</b>Plazos y solicitud</button>
   </div>
 
+
+  <section class="dosier" id="dosier">
+    <div class="kicker">Documentación para despachos</div>
+    <h2>Dosier de presentación de ARGOS</h2>
+    <p class="lead">Qué es ARGOS, cómo funciona y qué papel proponemos a los despachos socios. Aquí puede leer las primeras páginas; el documento completo (47 páginas, PDF) se descarga con un email del despacho autorizado.</p>
+    <div class="pages" id="pg">
+      <button data-i="0"><img src="dosier/pagina-01.jpg" alt="Dosier ARGOS · página 1" loading="lazy"><span>1 · Portada</span></button>
+      <button data-i="1"><img src="dosier/pagina-02.jpg" alt="Dosier ARGOS · página 2" loading="lazy"><span>2 · Índice</span></button>
+      <button data-i="2"><img src="dosier/pagina-03.jpg" alt="Dosier ARGOS · página 3" loading="lazy"><span>3 · Resumen ejecutivo</span></button>
+      <button data-i="3"><img src="dosier/pagina-04.jpg" alt="Dosier ARGOS · página 4" loading="lazy"><span>4 · Resumen ejecutivo (cont.)</span></button>
+      <button data-i="4"><img src="dosier/pagina-05.jpg" alt="Dosier ARGOS · página 5" loading="lazy"><span>5 · Por qué ahora</span></button>
+      <button data-i="5"><img src="dosier/pagina-06.jpg" alt="Dosier ARGOS · página 6" loading="lazy"><span>6 · Por qué ahora (cont.)</span></button>
+      <button data-i="6"><img src="dosier/pagina-07.jpg" alt="Dosier ARGOS · página 7" loading="lazy"><span>7 · El mercado</span></button>
+      <button data-i="7"><img src="dosier/pagina-08.jpg" alt="Dosier ARGOS · página 8" loading="lazy"><span>8 · El mercado (cont.)</span></button>
+    </div>
+    <div class="dl">
+      <a class="btn" href="/despachos/dosier/descargar/">Descargar el dosier completo (PDF)</a>
+      <small>Descarga reservada a despachos invitados. Introduzca su email profesional y recibirá un código de acceso de un solo uso.</small>
+    </div>
+  </section>
+
   <div class="grid">
     <div class="card"><div class="n">5 %</div><p>de la sociedad para cada despacho socio, con derecho a voto y vesting ligado a su compromiso con ARGOS.</p></div>
     <div class="card"><div class="n">15 ene 2027</div><p>Cierre de solicitudes. Preselección y entrevistas entre enero y febrero.</p></div>
@@ -77,6 +111,15 @@ video{display:block;width:100%;height:auto}
 <script>
 const v=document.getElementById('v');
 document.querySelectorAll('#ch button').forEach(b=>b.addEventListener('click',()=>{v.currentTime=+b.dataset.t;v.play();v.scrollIntoView({behavior:'smooth',block:'center'});}));
+</script>
+<div id="lb" role="dialog" aria-label="Vista ampliada del dosier"><button class="x" aria-label="Cerrar">×</button><button class="nav prev" aria-label="Anterior">‹</button><img alt=""><button class="nav next" aria-label="Siguiente">›</button></div>
+<script>
+(()=>{const imgs=[...document.querySelectorAll('#pg img')].map(i=>i.src),lb=document.getElementById('lb'),im=lb.querySelector('img');let k=0;
+const show=i=>{k=(i+imgs.length)%imgs.length;im.src=imgs[k];im.alt='Dosier ARGOS · página '+(k+1);lb.classList.add('on');};
+document.querySelectorAll('#pg button').forEach(b=>b.addEventListener('click',()=>show(+b.dataset.i)));
+lb.querySelector('.prev').onclick=e=>{e.stopPropagation();show(k-1)};lb.querySelector('.next').onclick=e=>{e.stopPropagation();show(k+1)};
+lb.querySelector('.x').onclick=()=>lb.classList.remove('on');lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('on')});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowRight')show(k+1);if(e.key==='ArrowLeft')show(k-1);});})();
 </script>
 </body>
 </html>
