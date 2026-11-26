@@ -96,6 +96,27 @@ video{display:block;width:100%;height:auto}
     </div>
   </section>
 
+
+  <section class="dosier" id="guia-tecnica">
+    <div class="kicker">Para los equipos técnicos de los despachos</div>
+    <h2>Guía técnica de ARGOS para Business Partners</h2>
+    <p class="lead">Cómo funciona ARGOS por dentro: despliegue en el perímetro del cliente, conectores de solo lectura, motor de retos, IA local, evidencia firmada y credencial verificable. Incluye el manual de usuario completo de la consola y el ecosistema tecnológico previsto. Aquí puede ver algunas páginas; la guía completa (72 páginas, PDF) se descarga con un email del despacho autorizado.</p>
+    <div class="pages" id="pg2">
+      <button data-i="0"><img src="guia/pagina-01.jpg" alt="Guía técnica ARGOS · portada" loading="lazy"><span>Portada</span></button>
+      <button data-i="1"><img src="guia/pagina-02.jpg" alt="Guía técnica ARGOS · índice" loading="lazy"><span>Índice general</span></button>
+      <button data-i="2"><img src="guia/pagina-03.jpg" alt="Guía técnica ARGOS · capítulo 8" loading="lazy"><span>Cap. 8 · Cómo funciona ARGOS</span></button>
+      <button data-i="3"><img src="guia/pagina-04.jpg" alt="Guía técnica ARGOS · ciclo de auditoría" loading="lazy"><span>El ciclo de auditoría</span></button>
+      <button data-i="4"><img src="guia/pagina-05.jpg" alt="Guía técnica ARGOS · despliegue on-premise" loading="lazy"><span>Despliegue on-premise</span></button>
+      <button data-i="5"><img src="guia/pagina-06.jpg" alt="Guía técnica ARGOS · ecosistema tecnológico" loading="lazy"><span>8.11 · Ecosistema y hoja de ruta</span></button>
+      <button data-i="6"><img src="guia/pagina-07.jpg" alt="Guía técnica ARGOS · manual de la consola" loading="lazy"><span>Manual de la consola</span></button>
+      <button data-i="7"><img src="guia/pagina-08.jpg" alt="Guía técnica ARGOS · qué es ARGOS" loading="lazy"><span>Manual · Qué es ARGOS</span></button>
+    </div>
+    <div class="dl">
+      <a class="btn" href="/despachos/dosier/descargar/?doc=guia">Descargar la guía técnica (PDF)</a>
+      <small>Descarga reservada a despachos invitados. Introduzca su email profesional y recibirá un código de acceso de un solo uso. Documento confidencial: le rogamos que no lo difunda fuera del despacho.</small>
+    </div>
+  </section>
+
   <div class="grid">
     <div class="card"><div class="n">5 %</div><p>de la sociedad para cada despacho socio, con derecho a voto y vesting ligado a su compromiso con ARGOS.</p></div>
     <div class="card"><div class="n">15 ene 2027</div><p>Cierre de solicitudes. Preselección y entrevistas entre enero y febrero.</p></div>
@@ -112,11 +133,12 @@ video{display:block;width:100%;height:auto}
 const v=document.getElementById('v');
 document.querySelectorAll('#ch button').forEach(b=>b.addEventListener('click',()=>{v.currentTime=+b.dataset.t;v.play();v.scrollIntoView({behavior:'smooth',block:'center'});}));
 </script>
-<div id="lb" role="dialog" aria-label="Vista ampliada del dosier"><button class="x" aria-label="Cerrar">×</button><button class="nav prev" aria-label="Anterior">‹</button><img alt=""><button class="nav next" aria-label="Siguiente">›</button></div>
+<div id="lb" role="dialog" aria-label="Vista ampliada del documento"><button class="x" aria-label="Cerrar">×</button><button class="nav prev" aria-label="Anterior">‹</button><img alt=""><button class="nav next" aria-label="Siguiente">›</button></div>
 <script>
-(()=>{const imgs=[...document.querySelectorAll('#pg img')].map(i=>i.src),lb=document.getElementById('lb'),im=lb.querySelector('img');let k=0;
-const show=i=>{k=(i+imgs.length)%imgs.length;im.src=imgs[k];im.alt='Dosier ARGOS · página '+(k+1);lb.classList.add('on');};
-document.querySelectorAll('#pg button').forEach(b=>b.addEventListener('click',()=>show(+b.dataset.i)));
+(()=>{const lb=document.getElementById('lb'),im=lb.querySelector('img');let imgs=[],k=0,label='';
+const show=i=>{k=(i+imgs.length)%imgs.length;im.src=imgs[k];im.alt=label+' · página '+(k+1);lb.classList.add('on');};
+[['#pg','Dosier ARGOS'],['#pg2','Guía técnica ARGOS']].forEach(([sel,lab])=>{const g=[...document.querySelectorAll(sel+' img')].map(i=>i.src);
+document.querySelectorAll(sel+' button').forEach(b=>b.addEventListener('click',()=>{imgs=g;label=lab;show(+b.dataset.i)}));});
 lb.querySelector('.prev').onclick=e=>{e.stopPropagation();show(k-1)};lb.querySelector('.next').onclick=e=>{e.stopPropagation();show(k+1)};
 lb.querySelector('.x').onclick=()=>lb.classList.remove('on');lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('on')});
 document.addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowRight')show(k+1);if(e.key==='ArrowLeft')show(k-1);});})();
